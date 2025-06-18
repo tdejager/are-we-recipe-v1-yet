@@ -1,0 +1,11 @@
+{
+  "name": "are-we-rattler-build-yet",
+  "version": "0.1.0",
+  "description": "A Leptos website showing conda-forge meta.yaml to recipe.yaml transition",
+  "devDependencies": {
+    "tailwindcss": "^4.0.0"
+  },
+  "scripts": {
+    "build-css": "pnpm exec tailwindcss -i ./input.css -o ./style.css --watch"
+  }
+}
