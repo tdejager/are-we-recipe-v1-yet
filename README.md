@@ -6,12 +6,6 @@ A website tracking the progress of migrating conda-forge recipes from the legacy
 
 This project monitors the adoption of [Recipe v1](https://github.com/conda/ceps/blob/main/cep-0013.md), the new standardized format for conda package recipes. Recipe v1 provides better structure, validation, and tooling support compared to the legacy `meta.yaml` format.
 
-**Key Features:**
-- 📊 Real-time statistics on Recipe v1 adoption across conda-forge
-- 📈 Visual progress tracking with interactive charts
-- 🔗 Links to relevant CEPs and documentation
-- 🤖 Automated daily data collection via GitHub Actions
-
 ## 🏗️ Architecture
 
 The project consists of two main components:
@@ -29,7 +23,7 @@ The project consists of two main components:
 ## 🚀 Development
 
 ### Prerequisites
-- [Pixi](https://pixi.sh/) package manager
+- [pixi](https://pixi.sh/) package manager
 
 ### Quick Start
 
@@ -94,14 +88,6 @@ Two GitHub Actions workflows handle automation:
 - **Purpose**: Builds and deploys to GitHub Pages
 - **Output**: Static site at `https://your-username.github.io/are-we-recipe-v1-yet/`
 
-## 🎨 Design
-
-Inspired by [Are We Web Yet?](https://arewewebyet.org/), the design features:
-- Clean, developer-friendly typography
-- Neutral color palette with emerald accents
-- Professional Inter font from Google Fonts
-- Responsive layout with accessible design
-
 ## 📚 Learn More
 
 - [Recipe v1 Specification (CEP-0013)](https://github.com/conda/ceps/blob/main/cep-0013.md)
@@ -114,10 +100,6 @@ Contributions are welcome! Please feel free to:
 - Report bugs or request features via GitHub Issues
 - Submit pull requests for improvements
 - Suggest design enhancements
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
