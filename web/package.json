@@ -1,5 +1,5 @@
 {
-  "name": "are-we-rattler-build-yet",
+  "name": "are-we-recipe-v1-yet",
   "version": "0.1.0",
   "description": "A Leptos website showing conda-forge meta.yaml to recipe.yaml transition",
   "devDependencies": {

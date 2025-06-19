@@ -1,0 +1,9 @@
+[package]
+name = "are-we-recipe-v1-yet-web"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+leptos = { version = "0.8.2", features = ["csr"] }
+serde = { workspace = true }
+toml = { workspace = true }
