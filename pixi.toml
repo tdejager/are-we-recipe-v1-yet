@@ -1,5 +1,5 @@
 [project]
-name = "are-we-rattler-build-yet"
+name = "are-we-recipe-v1-yet"
 version = "0.1.0"
 description = "A Leptos website showing conda-forge meta.yaml to recipe.yaml transition"
 channels = ["conda-forge"]
@@ -13,8 +13,9 @@ pnpm = "10.12.*"
 rust-std-wasm32-unknown-unknown = ">=1.87.0,<2"
 
 [tasks]
-dev = "trunk serve --open"
-build = "trunk build"
-clean = "trunk clean"
-post-install = "pnpm install"
+dev = { cmd = "trunk serve --open", cwd = "web" }
+build = { cmd = "trunk build", cwd = "web" }
+clean = { cmd = "trunk clean", cwd = "web" }
+post-install = { cmd = "pnpm install", cwd = "web" }
 setup = { depends-on = ["install-deps"] }
+collect-data = "cargo run -p data-collector"
