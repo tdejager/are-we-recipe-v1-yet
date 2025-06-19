@@ -103,4 +103,4 @@ Contributions are welcome! Please feel free to:
 
 ---
 
-Built with ❤️ by the conda community • Powered by [Leptos](https://leptos.dev/) and [rattler-build](https://rattler.build)
+Built with ❤️ by the conda community • Powered by [Leptos](https://leptos.dev/) and [pixi](https://pixi.sh/)
