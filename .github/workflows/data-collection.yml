@@ -22,6 +22,13 @@ jobs:
         with:
           pixi-version: v0.48.2
 
+      - name: Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            data-collector
+          cache-on-failure: true
+
       - name: Run data collector
         env:
           GITHUB_TOKEN: ${{ secrets.CI_TOKEN }}

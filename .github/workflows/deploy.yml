@@ -32,6 +32,13 @@ jobs:
         with:
           pixi-version: v0.48.2
 
+      - name: Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: |
+            web
+          cache-on-failure: true
+
       - name: Build application
         run: |
           cd web
