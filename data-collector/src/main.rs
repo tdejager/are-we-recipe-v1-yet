@@ -3,7 +3,7 @@ use chrono::Utc;
 use clap::{Parser, Subcommand};
 use indicatif::{ProgressBar, ProgressStyle};
 use serde::{Deserialize, Serialize};
-use std::collections::HashMap;
+use std::collections::BTreeMap;
 use std::fs;
 use std::path::Path;
 use std::process::Command;
@@ -17,7 +17,7 @@ struct FeedstockStats {
     unknown_count: u32,
     last_updated: String,
     #[serde(default)]
-    feedstock_states: HashMap<String, RecipeType>,
+    feedstock_states: BTreeMap<String, RecipeType>,
     #[serde(default)]
     historical_snapshots: Vec<HistoricalSnapshot>,
 }
@@ -159,7 +159,7 @@ fn collect_stats_from_node_attrs(force_reload: bool, verbose: bool) -> Result<Fe
         .unwrap(),
     );
 
-    let mut feedstock_states = HashMap::new();
+    let mut feedstock_states = BTreeMap::new();
     let mut processed = 0;
 
     // Process each JSON file
