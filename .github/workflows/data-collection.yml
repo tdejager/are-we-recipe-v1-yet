@@ -24,7 +24,7 @@ jobs:
       - name: Run data collector
         env:
           GITHUB_TOKEN: ${{ secrets.CI_TOKEN }}
-        run: pixi run data-collection
+        run: pixi run collect-data
 
       - name: Check for changes
         id: git-check
