@@ -2,8 +2,11 @@ use leptos::prelude::*;
 
 #[component]
 fn App() -> impl IntoView {
-    let converted_recipes = 4500;
-    let total_recipes = 25000;
+    let stats = include_str!("stats.toml");
+    let toml_data: toml::Table = toml::from_str(stats).unwrap();
+    
+    let converted_recipes = toml_data.get("recipe_v1_count").unwrap().as_integer().unwrap() as u32;
+    let total_recipes = toml_data.get("total_feedstocks").unwrap().as_integer().unwrap() as u32;
     let percentage = (converted_recipes as f64 / total_recipes as f64 * 100.0) as u32;
 
     view! {
