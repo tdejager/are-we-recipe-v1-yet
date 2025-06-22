@@ -8,6 +8,15 @@ fn App() -> impl IntoView {
     let converted_recipes = toml_data.get("recipe_v1_count").unwrap().as_integer().unwrap() as u32;
     let total_recipes = toml_data.get("total_feedstocks").unwrap().as_integer().unwrap() as u32;
     let percentage = (converted_recipes as f64 / total_recipes as f64 * 100.0) as u32;
+    
+    let recently_updated = toml_data.get("recently_updated")
+        .and_then(|v| v.as_table())
+        .map(|table| {
+            table.iter().map(|(name, date)| {
+                (name.clone(), date.as_str().unwrap_or("").to_string())
+            }).collect::<Vec<_>>()
+        })
+        .unwrap_or_default();
 
     view! {
         <div class="min-h-screen bg-gray-50">
@@ -44,6 +53,9 @@ fn App() -> impl IntoView {
                         <MigrationStats converted=converted_recipes total=total_recipes percentage=percentage />
                     </div>
                 </main>
+                <div class="mt-8">
+                    <RecentlyUpdated feedstocks=recently_updated />
+                </div>
             </div>
             <div class="mx-4 mt-8 mb-6">
             <a class="" href="https://rattler.build" target="_blank">
@@ -61,13 +73,25 @@ fn App() -> impl IntoView {
 #[component]
 fn MigrationChart(converted: u32, total: u32) -> impl IntoView {
     let percentage = converted as f64 / total as f64 * 100.0;
-    let converted_angle = percentage * 3.6;
+    
+    // SVG circle constants
+    const CIRCLE_RADIUS: f64 = 80.0;
+    const DEGREES_PER_PERCENT: f64 = 3.6; // 360 degrees / 100 percent
+    
+    // Calculate circumference: 2π * radius
+    let circumference = 2.0 * std::f64::consts::PI * CIRCLE_RADIUS;
+    
+    // Convert percentage to degrees, then to arc length
+    let converted_angle = percentage * DEGREES_PER_PERCENT;
+    let arc_length = (converted_angle / 360.0) * circumference;
+    let remaining_length = circumference - arc_length;
 
     view! {
         <div class="flex flex-col items-center">
             <h2 class="text-2xl font-semibold text-gray-900 mb-8">Migration Progress</h2>
             <div class="relative w-64 h-64">
                 <svg class="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
+                    // Background circle (full circumference)
                     <circle
                         cx="100"
                         cy="100"
@@ -76,6 +100,7 @@ fn MigrationChart(converted: u32, total: u32) -> impl IntoView {
                         stroke="#e5e7eb"
                         stroke-width="20"
                     />
+                    // Progress circle (partial circumference based on percentage)
                     <circle
                         cx="100"
                         cy="100"
@@ -83,7 +108,7 @@ fn MigrationChart(converted: u32, total: u32) -> impl IntoView {
                         fill="none"
                         stroke="#F9C500"
                         stroke-width="20"
-                        stroke-dasharray=format!("{} {}", converted_angle * 1.396, 502.65 - converted_angle * 1.396)
+                        stroke-dasharray=format!("{:.2} {:.2}", arc_length, remaining_length)
                         stroke-linecap="round"
                         class="transition-all duration-1000 ease-out"
                     />
@@ -131,6 +156,55 @@ fn MigrationStats(converted: u32, total: u32, percentage: u32) -> impl IntoView 
             </div>
         </div>
     }
+}
+
+#[component]
+fn RecentlyUpdated(feedstocks: Vec<(String, String)>) -> impl IntoView {
+    if feedstocks.is_empty() {
+        return view! {}.into_any();
+    }
+
+    // Helper function to format ISO date to human readable
+    let format_date = |iso_date: &str| -> String {
+        // Parse ISO date like "2025-06-22T12:20:59.983799+00:00"
+        if let Some(date_part) = iso_date.split('T').next() {
+            if let Ok(date) = chrono::NaiveDate::parse_from_str(date_part, "%Y-%m-%d") {
+                return date.format("%b %d, %Y").to_string();
+            }
+        }
+        iso_date.to_string() // Fallback to original if parsing fails
+    };
+
+    view! {
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+            <h2 class="text-lg font-medium text-gray-800 mb-4">Recently Updated to Recipe v1</h2>
+            <div class="flex items-center text-xs font-bold text-gray-500 uppercase tracking-wide mb-3">
+                <span>Recipe Name</span>
+                <span class="flex-1"></span>
+                <span>Change Detected</span>
+            </div>
+            <ul class="space-y-2">
+                {feedstocks.into_iter().map(|(name, date)| {
+                    let formatted_date = format_date(&date);
+                    let github_url = format!("https://github.com/conda-forge/{}", name);
+                    view! {
+                        <li class="flex items-center text-gray-700">
+                            <a 
+                                href=github_url
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="font-medium text-blue-600 hover:text-blue-800 hover:underline"
+                            >
+                                {name.replace("-feedstock", "")}
+                            </a>
+                            <span class="flex-1 border-b border-dotted border-gray-300 mx-3"></span>
+                            <span class="text-sm text-gray-600">{formatted_date}</span>
+                        </li>
+                    }
+                }).collect::<Vec<_>>()}
+            </ul>
+        </div>
+    }.into_any()
 }
 
 fn main() {
