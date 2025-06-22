@@ -16,20 +16,15 @@ struct FeedstockStats {
     meta_yaml_count: u32,
     unknown_count: u32,
     last_updated: String,
+    last_run: String,
     #[serde(default)]
-    feedstock_states: BTreeMap<String, RecipeType>,
-    #[serde(default)]
-    historical_snapshots: Vec<HistoricalSnapshot>,
+    feedstock_states: BTreeMap<String, FeedstockEntry>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
-struct HistoricalSnapshot {
-    timestamp: String,
-    total_feedstocks: u32,
-    recipe_v1_count: u32,
-    meta_yaml_count: u32,
-    unknown_count: u32,
-    newly_converted: Vec<String>, // Feedstocks that converted to Recipe v1 in this snapshot
+struct FeedstockEntry {
+    recipe_type: RecipeType,
+    last_changed: String,
 }
 
 const CF_GRAPH_REPO_URL: &str = "https://github.com/regro/cf-graph-countyfair.git";
@@ -160,6 +155,7 @@ fn collect_stats_from_node_attrs(force_reload: bool, verbose: bool) -> Result<Fe
     );
 
     let mut feedstock_states = BTreeMap::new();
+    let current_time = Utc::now().to_rfc3339();
     let mut processed = 0;
 
     // Process each JSON file
@@ -169,7 +165,25 @@ fn collect_stats_from_node_attrs(force_reload: bool, verbose: bool) -> Result<Fe
                 let feedstock_name = format!("{}-feedstock", node_data.feedstock_name);
                 let recipe_type = determine_recipe_type_from_node(&node_data);
 
-                feedstock_states.insert(feedstock_name, recipe_type);
+                // Check if this feedstock changed from previous run
+                let last_changed = if let Some(ref existing) = existing_stats {
+                    if let Some(existing_entry) = existing.feedstock_states.get(&feedstock_name) {
+                        if existing_entry.recipe_type != recipe_type {
+                            current_time.clone() // Recipe type changed, update timestamp
+                        } else {
+                            existing_entry.last_changed.clone() // No change, keep existing timestamp
+                        }
+                    } else {
+                        current_time.clone() // New feedstock, use current timestamp
+                    }
+                } else {
+                    current_time.clone() // First run, use current timestamp
+                };
+
+                feedstock_states.insert(feedstock_name, FeedstockEntry {
+                    recipe_type,
+                    last_changed,
+                });
                 processed += 1;
 
                 if verbose && processed % 1000 == 0 {
@@ -190,15 +204,15 @@ fn collect_stats_from_node_attrs(force_reload: bool, verbose: bool) -> Result<Fe
     // Calculate counts from the HashMap
     let recipe_v1_count = feedstock_states
         .values()
-        .filter(|&t| *t == RecipeType::RecipeV1)
+        .filter(|entry| entry.recipe_type == RecipeType::RecipeV1)
         .count() as u32;
     let meta_yaml_count = feedstock_states
         .values()
-        .filter(|&t| *t == RecipeType::MetaYaml)
+        .filter(|entry| entry.recipe_type == RecipeType::MetaYaml)
         .count() as u32;
     let unknown_count = feedstock_states
         .values()
-        .filter(|&t| *t == RecipeType::Unknown)
+        .filter(|entry| entry.recipe_type == RecipeType::Unknown)
         .count() as u32;
     let total_feedstocks = processed;
 
@@ -209,25 +223,19 @@ fn collect_stats_from_node_attrs(force_reload: bool, verbose: bool) -> Result<Fe
     println!("📄 Legacy (conda-build or other): {}", meta_yaml_count);
     println!("❓ Unknown/Other: {}", unknown_count);
 
-    // Track historical changes
-    let mut historical_snapshots = existing_stats
-        .as_ref()
-        .map(|s| s.historical_snapshots.clone())
-        .unwrap_or_default();
-
     // Find newly converted feedstocks
     let newly_converted = if let Some(ref existing) = existing_stats {
         feedstock_states
             .iter()
-            .filter(|(name, recipe_type)| {
-                **recipe_type == RecipeType::RecipeV1
+            .filter(|(name, entry)| {
+                entry.recipe_type == RecipeType::RecipeV1
                     && existing
                         .feedstock_states
                         .get(*name)
-                        .map_or(true, |old_type| *old_type != RecipeType::RecipeV1)
+                        .map_or(true, |old_entry| old_entry.recipe_type != RecipeType::RecipeV1)
             })
             .map(|(name, _)| name.clone())
-            .collect()
+            .collect::<Vec<_>>()
     } else {
         Vec::new()
     };
@@ -241,32 +249,14 @@ fn collect_stats_from_node_attrs(force_reload: bool, verbose: bool) -> Result<Fe
         }
     }
 
-    // Add current snapshot to history
-    let current_snapshot = HistoricalSnapshot {
-        timestamp: Utc::now().to_rfc3339(),
-        total_feedstocks,
-        recipe_v1_count,
-        meta_yaml_count,
-        unknown_count,
-        newly_converted,
-    };
-
-    historical_snapshots.push(current_snapshot);
-
-    // Keep only last 100 snapshots to prevent file from growing too large
-    if historical_snapshots.len() > 100 {
-        let start_idx = historical_snapshots.len() - 100;
-        historical_snapshots = historical_snapshots.into_iter().skip(start_idx).collect();
-    }
-
     Ok(FeedstockStats {
         total_feedstocks,
         recipe_v1_count,
         meta_yaml_count,
         unknown_count,
         last_updated: Utc::now().to_rfc3339(),
+        last_run: current_time,
         feedstock_states,
-        historical_snapshots,
     })
 }
 
