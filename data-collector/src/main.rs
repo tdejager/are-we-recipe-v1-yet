@@ -16,7 +16,6 @@ struct FeedstockStats {
     meta_yaml_count: u32,
     unknown_count: u32,
     last_updated: String,
-    last_run: String,
     #[serde(default)]
     feedstock_states: BTreeMap<String, FeedstockEntry>,
 }
@@ -105,12 +104,14 @@ fn main() -> Result<()> {
 }
 
 fn load_existing_stats_if_exists() -> Option<FeedstockStats> {
-    let stats_file = "../feedstock-stats.toml";
-    let content = fs::read_to_string(stats_file).ok()?;
+    let path = std::env::var("CARGO_MANIFEST_DIR").ok()?;
+    let stats_file = format!("{}/../feedstock-stats.toml", path);
+    println!("🔍 Looking for existing stats at: {}", stats_file);
+    let content = fs::read_to_string(&stats_file).ok()?;
     let stats: FeedstockStats = toml::from_str(&content).ok()?;
     println!(
-        "📂 Loaded existing stats: {} total feedstocks",
-        stats.total_feedstocks
+        "📂 Loaded existing stats: {} total feedstocks, {} feedstock_states entries",
+        stats.total_feedstocks, stats.feedstock_states.len()
     );
     Some(stats)
 }
@@ -165,15 +166,30 @@ fn collect_stats_from_node_attrs(force_reload: bool, verbose: bool) -> Result<Fe
                 let feedstock_name = format!("{}-feedstock", node_data.feedstock_name);
                 let recipe_type = determine_recipe_type_from_node(&node_data);
 
-                // Check if this feedstock changed from previous run
+                // Timestamp logic:
+                // 1. New feedstock -> use current timestamp
+                // 2. Existing feedstock, no conversion -> keep existing timestamp  
+                // 3. Existing feedstock converted to RecipeV1 -> use current timestamp
                 let last_changed = if let Some(ref existing) = existing_stats {
                     if let Some(existing_entry) = existing.feedstock_states.get(&feedstock_name) {
-                        if existing_entry.recipe_type != recipe_type {
-                            current_time.clone() // Recipe type changed, update timestamp
+                        // Feedstock already exists - only update if converted to RecipeV1
+                        if existing_entry.recipe_type != RecipeType::RecipeV1 
+                            && recipe_type == RecipeType::RecipeV1 {
+                            if verbose {
+                                println!("🔄 CONVERTED: {} from {:?} to {:?}", feedstock_name, existing_entry.recipe_type, recipe_type);
+                            }
+                            current_time.clone() // Converted to RecipeV1, update timestamp
                         } else {
-                            existing_entry.last_changed.clone() // No change, keep existing timestamp
+                            if verbose && processed < 5 {
+                                println!("📌 KEEPING: {} - {:?} (old: {}, keeping: {})", 
+                                    feedstock_name, recipe_type, current_time, existing_entry.last_changed);
+                            }
+                            existing_entry.last_changed.clone() // No conversion, keep existing timestamp
                         }
                     } else {
+                        if verbose && processed < 5 {
+                            println!("🆕 NEW: {} - {:?}", feedstock_name, recipe_type);
+                        }
                         current_time.clone() // New feedstock, use current timestamp
                     }
                 } else {
@@ -255,7 +271,6 @@ fn collect_stats_from_node_attrs(force_reload: bool, verbose: bool) -> Result<Fe
         meta_yaml_count,
         unknown_count,
         last_updated: Utc::now().to_rfc3339(),
-        last_run: current_time,
         feedstock_states,
     })
 }

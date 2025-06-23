@@ -6,7 +6,7 @@ fn main() {
         .parent()
         .unwrap()
         .join("feedstock-stats.toml");
-    
+
     let output_path = "src/stats.toml";
 
     if let Ok(content) = fs::read_to_string(&input_path) {
@@ -33,14 +33,20 @@ fn main() {
             // Walk over the feedstocks to generate the 10 feedstocks that were most recently updated to recipe_v1
             if let Some(feedstocks) = toml_data.get("feedstock_states") {
                 if let Some(feedstocks_table) = feedstocks.as_table() {
-                    let mut recent_feedstocks: Vec<_> = feedstocks_table.iter()
+                    let mut recent_feedstocks: Vec<_> = feedstocks_table
+                        .iter()
                         .filter_map(|(name, state)| {
                             // Only include recipe_v1 feedstocks
-                            if state.get("recipe_type").and_then(|recipe_type| {
-                                recipe_type.as_str().map(|s| s == "recipe_v1")
-                            }).unwrap_or(false) {
+                            if state
+                                .get("recipe_type")
+                                .and_then(|recipe_type| {
+                                    recipe_type.as_str().map(|s| s == "recipe_v1")
+                                })
+                                .unwrap_or(false)
+                            {
                                 state.get("last_changed").and_then(|date| {
-                                    date.as_str().map(|date_str| (name.clone(), date_str.to_string()))
+                                    date.as_str()
+                                        .map(|date_str| (name.clone(), date_str.to_string()))
                                 })
                             } else {
                                 None
@@ -59,17 +65,17 @@ fn main() {
                     for (name, date) in recent_feedstocks {
                         recent_table.insert(name, toml::Value::String(date));
                     }
-                    
-                    summary.insert("recently_updated".to_string(), toml::Value::Table(recent_table));
+
+                    summary.insert(
+                        "recently_updated".to_string(),
+                        toml::Value::Table(recent_table),
+                    );
                 }
             }
 
             // Write the complete summary with recently_updated data
             let summary_toml = toml::to_string(&summary).unwrap();
             fs::write(output_path, summary_toml).expect("Failed to write summary");
-
         }
     }
-
-    println!("cargo:rerun-if-changed={}", input_path.display());
 }

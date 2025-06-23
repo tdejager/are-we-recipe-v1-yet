@@ -51,3 +51,10 @@ jobs:
 
           Co-Authored-By: GitHub Action <action@github.com>"
           git push
+
+      - name: Trigger website deployment
+        if: steps.git-check.outputs.changed == 'true'
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          event-type: data-updated
