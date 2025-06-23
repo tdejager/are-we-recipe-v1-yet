@@ -17,6 +17,10 @@ fn App() -> impl IntoView {
             }).collect::<Vec<_>>()
         })
         .unwrap_or_default();
+    
+    let last_updated = toml_data.get("last_updated")
+        .and_then(|v| v.as_str())
+        .unwrap_or("");
 
     view! {
         <div class="min-h-screen bg-gray-50">
@@ -54,7 +58,7 @@ fn App() -> impl IntoView {
                     </div>
                 </main>
                 <div class="mt-8">
-                    <RecentlyUpdated feedstocks=recently_updated />
+                    <RecentlyUpdated feedstocks=recently_updated last_updated=last_updated.to_string() />
                 </div>
             </div>
             <div class="mx-4 mt-8 mb-6">
@@ -159,25 +163,29 @@ fn MigrationStats(converted: u32, total: u32, percentage: u32) -> impl IntoView 
 }
 
 #[component]
-fn RecentlyUpdated(feedstocks: Vec<(String, String)>) -> impl IntoView {
+fn RecentlyUpdated(feedstocks: Vec<(String, String)>, last_updated: String) -> impl IntoView {
     if feedstocks.is_empty() {
         return view! {}.into_any();
     }
 
     // Helper function to format ISO date to human readable
     let format_date = |iso_date: &str| -> String {
-        // Parse ISO date like "2025-06-22T12:20:59.983799+00:00"
         if let Some(date_part) = iso_date.split('T').next() {
             if let Ok(date) = chrono::NaiveDate::parse_from_str(date_part, "%Y-%m-%d") {
                 return date.format("%b %d, %Y").to_string();
             }
         }
-        iso_date.to_string() // Fallback to original if parsing fails
+        iso_date.to_string()
     };
+    
+    let formatted_date = format_date(&last_updated);
 
     view! {
         <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
-            <h2 class="text-lg font-medium text-gray-800 mb-4">Recently Updated to Recipe v1</h2>
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-lg font-medium text-gray-800">Recently Updated to Recipe v1</h2>
+                <span class="text-xs text-gray-400">"Updated " {formatted_date}</span>
+            </div>
             <div class="flex items-center text-xs font-bold text-gray-500 uppercase tracking-wide mb-3">
                 <span>Recipe Name</span>
                 <span class="flex-1"></span>

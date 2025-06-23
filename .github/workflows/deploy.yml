@@ -8,6 +8,8 @@ on:
       - "feedstock-stats.toml"
       - ".github/workflows/deploy.yml"
   workflow_dispatch: # Allow manual triggering
+  repository_dispatch:
+    types: [data-updated]
 
 permissions:
   contents: read
