@@ -4,21 +4,34 @@ use leptos::prelude::*;
 fn App() -> impl IntoView {
     let stats = include_str!("stats.toml");
     let toml_data: toml::Table = toml::from_str(stats).unwrap();
-    
-    let converted_recipes = toml_data.get("recipe_v1_count").unwrap().as_integer().unwrap() as u32;
-    let total_recipes = toml_data.get("total_feedstocks").unwrap().as_integer().unwrap() as u32;
+
+    let converted_recipes = toml_data
+        .get("recipe_v1_count")
+        .unwrap()
+        .as_integer()
+        .unwrap() as u32;
+    let total_recipes = toml_data
+        .get("total_feedstocks")
+        .unwrap()
+        .as_integer()
+        .unwrap() as u32;
     let percentage = (converted_recipes as f64 / total_recipes as f64 * 100.0) as u32;
-    
-    let recently_updated = toml_data.get("recently_updated")
+
+    let mut recently_updated = toml_data
+        .get("recently_updated")
         .and_then(|v| v.as_table())
         .map(|table| {
-            table.iter().map(|(name, date)| {
-                (name.clone(), date.as_str().unwrap_or("").to_string())
-            }).collect::<Vec<_>>()
+            table
+                .iter()
+                .map(|(name, date)| (name.clone(), date.as_str().unwrap_or("").to_string()))
+                .collect::<Vec<_>>()
         })
         .unwrap_or_default();
-    
-    let last_updated = toml_data.get("last_updated")
+
+    recently_updated.sort_by(|a, b| b.1.cmp(&a.1)); // Sort by date descending
+
+    let last_updated = toml_data
+        .get("last_updated")
         .and_then(|v| v.as_str())
         .unwrap_or("");
 
@@ -77,14 +90,14 @@ fn App() -> impl IntoView {
 #[component]
 fn MigrationChart(converted: u32, total: u32) -> impl IntoView {
     let percentage = converted as f64 / total as f64 * 100.0;
-    
+
     // SVG circle constants
     const CIRCLE_RADIUS: f64 = 80.0;
     const DEGREES_PER_PERCENT: f64 = 3.6; // 360 degrees / 100 percent
-    
+
     // Calculate circumference: 2π * radius
     let circumference = 2.0 * std::f64::consts::PI * CIRCLE_RADIUS;
-    
+
     // Convert percentage to degrees, then to arc length
     let converted_angle = percentage * DEGREES_PER_PERCENT;
     let arc_length = (converted_angle / 360.0) * circumference;
@@ -177,7 +190,7 @@ fn RecentlyUpdated(feedstocks: Vec<(String, String)>, last_updated: String) -> i
         }
         iso_date.to_string()
     };
-    
+
     let formatted_date = format_date(&last_updated);
 
     view! {
@@ -197,7 +210,7 @@ fn RecentlyUpdated(feedstocks: Vec<(String, String)>, last_updated: String) -> i
                     let github_url = format!("https://github.com/conda-forge/{}", name);
                     view! {
                         <li class="flex items-center text-gray-700">
-                            <a 
+                            <a
                                 href=github_url
                                 target="_blank"
                                 rel="noopener noreferrer"
