@@ -16,9 +16,9 @@ The project consists of two main components:
 - **Build**: Trunk for WASM compilation
 
 ### Data Collector (`data-collector/`)
-- **Purpose**: Analyzes conda-forge repositories via GitHub API
+- **Purpose**: Analyzes conda-forge feedstocks via cf-graph-countyfair sparse checkout
 - **Output**: Generates `feedstock-stats.toml` with current statistics
-- **Automation**: Runs daily via GitHub Actions
+- **Method**: Uses git sparse checkout for efficient metadata access
 
 ## 🚀 Development
 
@@ -50,43 +50,27 @@ pixi run dev           # Start dev server with hot reload
 pixi run build         # Production build
 
 # Data Collection
-pixi run data-collection  # Run data collector (requires GITHUB_TOKEN)
-```
-
-### Environment Setup
-
-For data collection, create a `.env` file:
-
-```bash
-GITHUB_TOKEN=your_github_personal_access_token_here
+pixi run collect-data         # Run data collector
+pixi run collect-data-fresh   # Force fresh sparse checkout
+pixi run collect-data-verbose # Run with verbose output
 ```
 
 ## 📊 Data Collection
 
 The data collector:
-1. Searches for conda-forge feedstock repositories
-2. Analyzes each repository's structure to detect recipe format
-3. Categorizes feedstocks as: Recipe v1, meta.yaml, or Unknown
+1. Uses git sparse checkout to download cf-graph-countyfair metadata
+2. Analyzes ~26k feedstock JSON files efficiently
+3. Detects Recipe v1 by checking `conda_build_tool: "rattler-build"` in conda-forge.yml
 4. Outputs statistics to `feedstock-stats.toml`
 
 Categories:
-- **Recipe v1**: Repositories with `recipe/recipe.yaml`
-- **meta.yaml**: Repositories with `recipe/meta.yaml`
-- **Unknown**: Repositories with neither, both, or inaccessible
+- **Recipe v1**: Feedstocks using rattler-build
+- **meta.yaml**: Feedstocks using conda-build
+- **Unknown**: Feedstocks with no clear build tool specified
 
 ## 🤖 Automation
 
-Two GitHub Actions workflows handle automation:
-
-### Data Collection (`data-collection.yml`)
-- **Schedule**: Daily at 2 AM UTC
-- **Purpose**: Updates feedstock statistics
-- **Trigger**: Scheduled + manual dispatch
-
-### Deployment (`deploy.yml`)
-- **Trigger**: Push to main branch (when web files or stats change)
-- **Purpose**: Builds and deploys to GitHub Pages
-- **Output**: Static site at `https://your-username.github.io/are-we-recipe-v1-yet/`
+GitHub Actions workflows handle daily data collection and deployment. The data collector uses sparse checkout for efficient CI/CD execution.
 
 ## 📚 Learn More
 
