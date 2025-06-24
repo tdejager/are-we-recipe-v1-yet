@@ -76,6 +76,7 @@ fn main() {
             // Write the complete summary with recently_updated data
             let summary_toml = toml::to_string(&summary).unwrap();
             fs::write(output_path, summary_toml).expect("Failed to write summary");
+            println!("cargo:rerun-if-changed={}", input_path.display());
         }
     }
 }
