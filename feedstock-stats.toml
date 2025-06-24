@@ -1,8 +1,8 @@
-total_feedstocks = 26413
-recipe_v1_count = 1660
-meta_yaml_count = 24753
+total_feedstocks = 26416
+recipe_v1_count = 1662
+meta_yaml_count = 24754
 unknown_count = 0
-last_updated = "2025-06-23T13:09:35.711240674+00:00"
+last_updated = "2025-06-24T02:35:47.160869975+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -90460,6 +90460,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.sissopp-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-06-24T02:35:42.900864240+00:00"
+
 [feedstock_states.sithom-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -92337,8 +92341,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.sphinx-sitemap-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-06-24T02:35:42.900864240+00:00"
 
 [feedstock_states.sphinx-subfigure-feedstock]
 recipe_type = "meta_yaml"
@@ -101172,6 +101176,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.vir-simd-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-06-24T02:35:42.900864240+00:00"
+
 [feedstock_states.viresclient-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -105319,6 +105327,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.zenoh-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.zenoh-pico-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-06-24T02:35:42.900864240+00:00"
 
 [feedstock_states.zenoh-plugin-webserver-feedstock]
 recipe_type = "meta_yaml"
