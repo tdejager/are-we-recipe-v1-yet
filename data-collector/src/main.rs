@@ -103,6 +103,9 @@ async fn main() -> Result<()> {
     fs::write(format!("{}/../feedstock-stats.toml", path), toml_content)
         .context("Failed to write feedstock-stats.toml")?;
 
+    // Clean up sparse checkout repository
+    cleanup_sparse_checkout_repo(cli.verbose)?;
+
     println!("✅ Analysis complete!");
     println!("📊 Total feedstocks: {}", stats.total_feedstocks);
     println!("📝 Recipe v1 (recipe.yaml): {}", stats.recipe_v1_count);
@@ -401,15 +404,9 @@ fn ensure_sparse_checkout_repo(force_reload: bool, verbose: bool) -> Result<()> 
             }
         }
     } else {
-        println!("📂 Using existing sparse checkout repository");
-
-        // Verify that node_attrs directory exists
-        let node_attrs_check = repo_path.join("node_attrs");
-        if !node_attrs_check.exists() {
-            println!("⚠️  node_attrs directory missing, will re-create sparse checkout...");
-            fs::remove_dir_all(repo_path).context("Failed to remove incomplete repository")?;
-            return ensure_sparse_checkout_repo(true, verbose); // Recursive call to re-create
-        }
+        println!("📂 Existing sparse checkout found, removing for fresh clone...");
+        fs::remove_dir_all(repo_path).context("Failed to remove existing repository")?;
+        return ensure_sparse_checkout_repo(false, verbose); // Recursive call to re-create fresh
     }
 
     Ok(())
@@ -423,6 +420,22 @@ fn parse_node_attrs_file(path: &Path) -> Result<NodeAttrsJson> {
         .with_context(|| format!("Failed to parse JSON in file: {:?}", path))?;
 
     Ok(node_data)
+}
+
+fn cleanup_sparse_checkout_repo(verbose: bool) -> Result<()> {
+    let repo_path = Path::new(CF_GRAPH_LOCAL_PATH);
+    
+    if repo_path.exists() {
+        if verbose {
+            println!("🗑️  Cleaning up sparse checkout repository...");
+        }
+        fs::remove_dir_all(repo_path).context("Failed to remove sparse checkout repository")?;
+        if verbose {
+            println!("✅ Sparse checkout repository cleaned up");
+        }
+    }
+    
+    Ok(())
 }
 
 fn determine_recipe_type_from_node(node_data: &NodeAttrsJson) -> RecipeType {

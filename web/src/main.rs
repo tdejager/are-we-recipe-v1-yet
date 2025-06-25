@@ -274,7 +274,7 @@ fn TopUnconvertedRanking(feedstocks: Vec<(String, u64, String)>) -> impl IntoVie
                     "Ranking: Unconverted Feedstocks by Downloads"
                 </h2>
                 <p class="text-gray-600">
-                    "Most downloaded feedstocks that haven't been converted to Recipe v1 yet. Migrate these to make a big impackt."
+                    "Most downloaded feedstocks that haven't been converted to Recipe v1 yet. Migrate these to make a big impact :)"
                 </p>
             </div>
             <div class="flex items-center text-xs font-bold text-gray-500 uppercase tracking-wide mb-3">
