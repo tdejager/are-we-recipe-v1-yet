@@ -35,6 +35,22 @@ fn App() -> impl IntoView {
         .and_then(|v| v.as_str())
         .unwrap_or("");
 
+    let top_unconverted = toml_data
+        .get("top_unconverted_by_downloads")
+        .and_then(|v| v.as_array())
+        .map(|arr| {
+            arr.iter()
+                .filter_map(|item| {
+                    let table = item.as_table()?;
+                    let name = table.get("name")?.as_str()?.to_string();
+                    let downloads = table.get("downloads")?.as_integer()?;
+                    let recipe_type = table.get("recipe_type")?.as_str()?.to_string();
+                    Some((name, downloads as u64, recipe_type))
+                })
+                .collect::<Vec<_>>()
+        })
+        .unwrap_or_default();
+
     view! {
         <div class="min-h-screen bg-gray-50">
             <header class="text-center py-16 px-4">
@@ -72,6 +88,9 @@ fn App() -> impl IntoView {
                 </main>
                 <div class="mt-8">
                     <RecentlyUpdated feedstocks=recently_updated last_updated=last_updated.to_string() />
+                </div>
+                <div class="mt-8">
+                    <TopUnconvertedRanking feedstocks=top_unconverted />
                 </div>
             </div>
             <div class="mx-4 mt-8 mb-6">
@@ -224,6 +243,78 @@ fn RecentlyUpdated(feedstocks: Vec<(String, String)>, last_updated: String) -> i
                     }
                 }).collect::<Vec<_>>()}
             </ul>
+        </div>
+    }.into_any()
+}
+
+#[component]
+fn TopUnconvertedRanking(feedstocks: Vec<(String, u64, String)>) -> impl IntoView {
+    if feedstocks.is_empty() {
+        return view! {}.into_any();
+    }
+
+    // Helper function to format download counts
+    let format_downloads = |count: u64| -> String {
+        if count >= 1_000_000 {
+            format!("{:.1}M", count as f64 / 1_000_000.0)
+        } else if count >= 1_000 {
+            format!("{:.1}K", count as f64 / 1_000.0)
+        } else {
+            count.to_string()
+        }
+    };
+
+    // Take only the top 20 for display
+    let top_feedstocks: Vec<_> = feedstocks.into_iter().take(20).collect();
+
+    view! {
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+            <div class="mb-6">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-2">
+                    "Ranking: Unconverted Feedstocks by Downloads"
+                </h2>
+                <p class="text-gray-600">
+                    "Most downloaded feedstocks that haven't been converted to Recipe v1 yet. Migrate these to make a big impackt."
+                </p>
+            </div>
+            <div class="flex items-center text-xs font-bold text-gray-500 uppercase tracking-wide mb-3">
+                <span class="w-8">"#"</span>
+                <span class="flex-1">"Feedstock Name"</span>
+                <span class="w-20 text-right">"Downloads"</span>
+            </div>
+            <ul class="space-y-0">
+                {top_feedstocks.into_iter().enumerate().map(|(index, (name, downloads, _recipe_type))| {
+                    let github_url = format!("https://github.com/conda-forge/{}", name);
+                    let display_name = name.replace("-feedstock", "");
+                    let formatted_downloads = format_downloads(downloads);
+
+                    view! {
+                        <li class="flex items-center py-2 border-b border-dashed border-gray-200 transition-colors {}">
+                            <span class="w-8 text-sm font-medium text-gray-500">
+                                {format!("#{}", index + 1)}
+                            </span>
+                            <div class="flex-1">
+                                <a
+                                    href=github_url
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="font-medium text-blue-600 hover:text-blue-800 hover:underline"
+                                >
+                                    {display_name}
+                                </a>
+                            </div>
+                            <span class="w-20 text-right text-sm font-medium text-gray-900">
+                                ~{formatted_downloads}
+                            </span>
+                        </li>
+                    }
+                }).collect::<Vec<_>>()}
+            </ul>
+            <div class="mt-4 text-center">
+                <p class="text-sm text-gray-500">
+                    "Showing top 20 feedstocks. Data refreshed daily."
+                </p>
+            </div>
         </div>
     }.into_any()
 }
