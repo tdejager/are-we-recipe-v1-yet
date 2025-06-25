@@ -22728,10 +22728,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
-[feedstock_states.fastmcp-feedstock]
-recipe_type = "recipe_v1"
-last_changed = "2025-06-23T13:09:31.411635005+00:00"
-
 [feedstock_states.fastmod-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -25916,10 +25912,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
-[feedstock_states.galaxy-tool-util-models-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-23T13:09:31.411635005+00:00"
-
 [feedstock_states.galaxy-util-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -28145,7 +28137,7 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.go-yq-feedstock]
-recipe_type = "recipe_v1"
+recipe_type = "meta_yaml"
 last_changed = "2025-06-23T13:09:31.411635005+00:00"
 
 [feedstock_states."go1.4-bootstrap-feedstock"]
@@ -42900,10 +42892,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
-[feedstock_states.markdown-to-confluence-feedstock]
-recipe_type = "recipe_v1"
-last_changed = "2025-06-23T13:09:31.411635005+00:00"
-
 [feedstock_states.markdown-toc-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -50455,10 +50443,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.numpy-financial-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-
-[feedstock_states.numpy-groupies-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-23T13:09:31.411635005+00:00"
 
 [feedstock_states.numpy-indexed-feedstock]
 recipe_type = "meta_yaml"
@@ -63224,10 +63208,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
-[feedstock_states.pyodps-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-23T13:09:31.411635005+00:00"
-
 [feedstock_states.pyogg-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -68408,10 +68388,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
-[feedstock_states.quackosm-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-23T13:09:31.411635005+00:00"
-
 [feedstock_states.quadax-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -70743,10 +70719,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.r-conicfit-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-
-[feedstock_states.r-connector-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-23T13:09:31.411635005+00:00"
 
 [feedstock_states.r-conquer-feedstock]
 recipe_type = "meta_yaml"
@@ -87040,10 +87012,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
-[feedstock_states.rq_geo_toolkit-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-23T13:09:31.411635005+00:00"
-
 [feedstock_states.rq_scheduler-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -90492,10 +90460,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
-[feedstock_states.sissopp-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-24T02:35:42.900864240+00:00"
-
 [feedstock_states.sithom-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -92377,7 +92341,7 @@ recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.sphinx-sitemap-feedstock]
-recipe_type = "recipe_v1"
+recipe_type = "meta_yaml"
 last_changed = "2025-06-24T02:35:42.900864240+00:00"
 
 [feedstock_states.sphinx-subfigure-feedstock]
@@ -101216,10 +101180,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
-[feedstock_states.vir-simd-feedstock]
-recipe_type = "recipe_v1"
-last_changed = "2025-06-24T02:35:42.900864240+00:00"
-
 [feedstock_states.viresclient-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -101941,7 +101901,7 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.wagtail-resume-feedstock]
-recipe_type = "recipe_v1"
+recipe_type = "meta_yaml"
 last_changed = "2025-06-23T13:09:31.411635005+00:00"
 
 [feedstock_states.wagtail-review-feedstock]
@@ -105715,3 +105675,193 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.zziplib-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[[top_unconverted_by_downloads]]
+name = "zlib-feedstock"
+downloads = 3206518
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "xz-feedstock"
+downloads = 2952734
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "blas-feedstock"
+downloads = 2838849
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "_openmp_mutex-feedstock"
+downloads = 2827175
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "tk-feedstock"
+downloads = 2789834
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "libffi-feedstock"
+downloads = 2744250
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "ncurses-feedstock"
+downloads = 2568008
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "python-dateutil-feedstock"
+downloads = 2408454
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "_libgcc_mutex-feedstock"
+downloads = 2405147
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "six-feedstock"
+downloads = 2397856
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "libopenblas-feedstock"
+downloads = 2335094
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "pthread-stubs-feedstock"
+downloads = 2010656
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "xorg-libxdmcp-feedstock"
+downloads = 1945823
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "bzip2-feedstock"
+downloads = 1924599
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "lerc-feedstock"
+downloads = 1919662
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "gettext-feedstock"
+downloads = 1871488
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "python-feedstock"
+downloads = 1859452
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "libnsl-feedstock"
+downloads = 1811367
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "pcre2-feedstock"
+downloads = 1752476
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "tomli-feedstock"
+downloads = 1732138
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "libxcb-feedstock"
+downloads = 1691576
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "brotli-feedstock"
+downloads = 1689381
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "pyparsing-feedstock"
+downloads = 1651196
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "pixman-feedstock"
+downloads = 1605222
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "kiwisolver-feedstock"
+downloads = 1600599
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "fonts-conda-forge-feedstock"
+downloads = 1561903
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "fonts-conda-ecosystem-feedstock"
+downloads = 1558619
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "cycler-feedstock"
+downloads = 1549612
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "font-ttf-source-code-pro-feedstock"
+downloads = 1540030
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "font-ttf-inconsolata-feedstock"
+downloads = 1539948
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "font-ttf-dejavu-sans-mono-feedstock"
+downloads = 1539581
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "font-ttf-ubuntu-feedstock"
+downloads = 1539456
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "xorg-kbproto-feedstock"
+downloads = 1499869
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "joblib-feedstock"
+downloads = 1495954
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "munkres-feedstock"
+downloads = 1490754
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "python_abi-feedstock"
+downloads = 1489481
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "xorg-xproto-feedstock"
+downloads = 1488681
+recipe_type = "meta_yaml"
+
+[[top_unconverted_by_downloads]]
+name = "toml-feedstock"
+downloads = 1437287
+recipe_type = "meta_yaml"

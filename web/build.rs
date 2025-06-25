@@ -73,6 +73,11 @@ fn main() {
                 }
             }
 
+            // Include top unconverted feedstocks by downloads
+            if let Some(top_unconverted) = toml_data.get("top_unconverted_by_downloads") {
+                summary.insert("top_unconverted_by_downloads".to_string(), top_unconverted.clone());
+            }
+
             // Write the complete summary with recently_updated data
             let summary_toml = toml::to_string(&summary).unwrap();
             fs::write(output_path, summary_toml).expect("Failed to write summary");

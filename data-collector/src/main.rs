@@ -3,7 +3,7 @@ use chrono::Utc;
 use clap::{Parser, Subcommand};
 use indicatif::{ProgressBar, ProgressStyle};
 use serde::{Deserialize, Serialize};
-use std::collections::BTreeMap;
+use std::collections::{BTreeMap, HashMap};
 use std::fs;
 use std::path::Path;
 use std::process::Command;
@@ -18,12 +18,21 @@ struct FeedstockStats {
     last_updated: String,
     #[serde(default)]
     feedstock_states: BTreeMap<String, FeedstockEntry>,
+    #[serde(default)]
+    top_unconverted_by_downloads: Vec<TopFeedstock>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]
 struct FeedstockEntry {
     recipe_type: RecipeType,
     last_changed: String,
+}
+
+#[derive(Debug, Serialize, Deserialize, Clone)]
+struct TopFeedstock {
+    name: String,
+    downloads: u64,
+    recipe_type: RecipeType,
 }
 
 const CF_GRAPH_REPO_URL: &str = "https://github.com/regro/cf-graph-countyfair.git";
@@ -73,16 +82,17 @@ enum RecipeType {
     Unknown, // Neither or both
 }
 
-fn main() -> Result<()> {
+#[tokio::main]
+async fn main() -> Result<()> {
     let cli = Cli::parse();
 
     println!("🚀 Starting conda-forge feedstock analysis...");
 
     let stats = match cli.command {
         Some(Commands::Analyze { force_clone }) => {
-            collect_stats_from_node_attrs(force_clone, cli.verbose)?
+            collect_stats_from_node_attrs(force_clone, cli.verbose).await?
         }
-        None => collect_stats_from_node_attrs(false, cli.verbose)?,
+        None => collect_stats_from_node_attrs(false, cli.verbose).await?,
     };
 
     // Write to TOML file
@@ -116,9 +126,14 @@ fn load_existing_stats_if_exists() -> Option<FeedstockStats> {
     Some(stats)
 }
 
-fn collect_stats_from_node_attrs(force_reload: bool, verbose: bool) -> Result<FeedstockStats> {
+async fn collect_stats_from_node_attrs(force_reload: bool, verbose: bool) -> Result<FeedstockStats> {
     // Load existing stats for historical comparison
     let existing_stats = load_existing_stats_if_exists();
+
+    // Fetch download counts
+    println!("📥 Fetching download counts from Google Cloud Storage...");
+    let download_counts = fetch_download_counts().await?;
+    println!("📊 Fetched {} download counts", download_counts.len());
 
     // Set up sparse checkout repository
     ensure_sparse_checkout_repo(force_reload, verbose)?;
@@ -265,6 +280,10 @@ fn collect_stats_from_node_attrs(force_reload: bool, verbose: bool) -> Result<Fe
         }
     }
 
+    // Calculate top unconverted feedstocks by downloads
+    let top_unconverted = calculate_top_unconverted_feedstocks(&feedstock_states, &download_counts, 50);
+    println!("🏆 Found {} top unconverted feedstocks by downloads", top_unconverted.len());
+
     Ok(FeedstockStats {
         total_feedstocks,
         recipe_v1_count,
@@ -272,6 +291,7 @@ fn collect_stats_from_node_attrs(force_reload: bool, verbose: bool) -> Result<Fe
         unknown_count,
         last_updated: Utc::now().to_rfc3339(),
         feedstock_states,
+        top_unconverted_by_downloads: top_unconverted,
     })
 }
 
@@ -417,4 +437,64 @@ fn determine_recipe_type_from_node(node_data: &NodeAttrsJson) -> RecipeType {
 
     // If no rattler-build conda_build_tool found, it's using conda-build (legacy)
     RecipeType::MetaYaml
+}
+
+async fn fetch_download_counts() -> Result<HashMap<String, u64>> {
+    let url = "https://storage.googleapis.com/download-count-cache/top_downloads_conda-forge.json";
+    let client = reqwest::Client::new();
+    
+    let response = client.get(url).send().await
+        .context("Failed to fetch download counts")?;
+    
+    let download_data: Vec<[serde_json::Value; 2]> = response.json().await
+        .context("Failed to parse download counts JSON")?;
+    
+    let mut download_counts = HashMap::new();
+    
+    for entry in download_data {
+        if let (Some(package_name), Some(count)) = (entry[0].as_str(), entry[1].as_u64()) {
+            // Convert package name to feedstock name format with special mappings
+            let feedstock_name = match package_name {
+                "libzlib" => "zlib-feedstock".to_string(),
+                "libblas" => "blas-feedstock".to_string(), 
+                _ => format!("{}-feedstock", package_name)
+            };
+            
+            // Only insert if this is a higher count or the feedstock doesn't exist yet
+            // This prioritizes libzlib over zlib if both map to zlib-feedstock
+            if let Some(&existing_count) = download_counts.get(&feedstock_name) {
+                if count > existing_count {
+                    download_counts.insert(feedstock_name, count);
+                }
+            } else {
+                download_counts.insert(feedstock_name, count);
+            }
+        }
+    }
+    
+    Ok(download_counts)
+}
+
+fn calculate_top_unconverted_feedstocks(
+    feedstock_states: &BTreeMap<String, FeedstockEntry>,
+    download_counts: &HashMap<String, u64>,
+    limit: usize,
+) -> Vec<TopFeedstock> {
+    let mut unconverted_with_downloads: Vec<TopFeedstock> = feedstock_states
+        .iter()
+        .filter(|(_, entry)| entry.recipe_type != RecipeType::RecipeV1)
+        .filter_map(|(name, entry)| {
+            download_counts.get(name).map(|&downloads| TopFeedstock {
+                name: name.clone(),
+                downloads,
+                recipe_type: entry.recipe_type.clone(),
+            })
+        })
+        .collect();
+    
+    // Sort by downloads in descending order
+    unconverted_with_downloads.sort_by(|a, b| b.downloads.cmp(&a.downloads));
+    
+    // Take top N
+    unconverted_with_downloads.into_iter().take(limit).collect()
 }
