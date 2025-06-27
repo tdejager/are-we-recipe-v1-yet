@@ -1,8 +1,8 @@
-total_feedstocks = 26435
-recipe_v1_count = 1675
+total_feedstocks = 26438
+recipe_v1_count = 1678
 meta_yaml_count = 24760
 unknown_count = 0
-last_updated = "2025-06-26T02:35:53.047195788+00:00"
+last_updated = "2025-06-27T02:36:12.729254213+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -5919,6 +5919,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.bagit-profile-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.bagofholding-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-06-27T02:36:08.425041050+00:00"
 
 [feedstock_states.baikal-feedstock]
 recipe_type = "meta_yaml"
@@ -50188,6 +50192,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.nrss-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-06-27T02:36:08.425041050+00:00"
+
 [feedstock_states.nrtk-explorer-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -57849,8 +57857,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.powershell-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-06-27T02:36:08.425041050+00:00"
 
 [feedstock_states.pox-feedstock]
 recipe_type = "meta_yaml"
@@ -60557,8 +60565,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.pydifact-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-06-27T02:36:08.425041050+00:00"
 
 [feedstock_states.pydirectinput-feedstock]
 recipe_type = "meta_yaml"
@@ -83428,6 +83436,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.r-xportr-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-06-27T02:36:08.425041050+00:00"
+
 [feedstock_states.r-xptr-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -105661,8 +105673,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states."zope.event-feedstock"]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-06-27T02:36:08.425041050+00:00"
 
 [feedstock_states."zope.hookable-feedstock"]
 recipe_type = "meta_yaml"
