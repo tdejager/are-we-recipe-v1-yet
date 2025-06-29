@@ -1,8 +1,8 @@
-total_feedstocks = 26453
-recipe_v1_count = 1683
-meta_yaml_count = 24770
+total_feedstocks = 26454
+recipe_v1_count = 1686
+meta_yaml_count = 24768
 unknown_count = 0
-last_updated = "2025-06-28T02:34:17.781711646+00:00"
+last_updated = "2025-06-29T02:43:29.515481359+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -25405,8 +25405,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.freesasa-c-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-28T02:34:13.552791295+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-06-29T02:43:25.266252757+00:00"
 
 [feedstock_states.freesasa-feedstock]
 recipe_type = "meta_yaml"
@@ -41429,8 +41429,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.lnav-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-28T02:34:13.552791295+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-06-29T02:43:25.266252757+00:00"
 
 [feedstock_states.lndoctor-feedstock]
 recipe_type = "meta_yaml"
@@ -66073,8 +66073,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.python-dateutil-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-06-29T02:43:25.266252757+00:00"
 
 [feedstock_states.python-dateutils-feedstock]
 recipe_type = "meta_yaml"
@@ -71423,6 +71423,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.r-didimputation-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.r-diffdf-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-06-29T02:43:25.266252757+00:00"
 
 [feedstock_states.r-diffobj-feedstock]
 recipe_type = "meta_yaml"
@@ -105849,11 +105853,6 @@ recipe_type = "meta_yaml"
 [[top_unconverted_by_downloads]]
 name = "ncurses-feedstock"
 downloads = 2568008
-recipe_type = "meta_yaml"
-
-[[top_unconverted_by_downloads]]
-name = "python-dateutil-feedstock"
-downloads = 2408454
 recipe_type = "meta_yaml"
 
 [[top_unconverted_by_downloads]]
