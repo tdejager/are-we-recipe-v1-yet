@@ -60,23 +60,54 @@ fn App() -> impl IntoView {
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
                     "Tracking the progress of migrating conda-forge recipes from the legacy meta.yaml format to the new recipe.yaml format"
                 </p>
-                <div class="max-w-4xl mx-auto text-left bg-white rounded-lg p-8 shadow-sm">
-                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">"What is Recipe v1?"</h2>
-                    <p class="text-gray-700 mb-4">
-                        "Recipe v1 is the new standardized format for conda package recipes, replacing the legacy meta.yaml format. "
-                        "This new format provides better structure, validation, and tooling support for creating conda packages."
-                    </p>
-                    <p class="text-gray-700">
-                        "Learn more about the specification in "
-                        <a href="https://github.com/conda/ceps/blob/main/cep-0013.md" class="text-blue-600 hover:text-blue-800 underline">"CEP-0013"</a>
-                        " and the migration process in "
-                        <a href="https://github.com/conda/ceps/blob/main/cep-0014.md" class="text-blue-600 hover:text-blue-800 underline">"CEP-0014"</a>
-                        "."
-                    </p>
-                    <p class="text-gray-700">
-                      "You can use "<a href="rattler.build" class="hover:underline text-blue-800">"rattler-build"</a>
-                      " to build recipes in the new format."
-                    </p>
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">"What is " <strong>"conda-forge"</strong> "?"</h3>
+                            <p class="text-gray-700 mb-4">
+                                <strong>"conda-forge"</strong> " is a community-driven collection of " <strong>"conda packages"</strong> ". It's an open-source project that provides high-quality, "
+                                "up-to-date conda packages for scientific computing and data science ecosystems."
+                            </p>
+                            <p class="text-gray-700 mb-4">
+                                "With over " <strong>"26,000 feedstocks"</strong> ", conda-forge makes it easy to install software packages using " <strong>"conda"</strong> "."
+                            </p>
+                            <p class="text-gray-700">
+                                "Visit "
+                                <a href="https://conda-forge.org" class="text-blue-600 hover:text-blue-800 underline">"conda-forge.org"</a>
+                                " or explore the "
+                                <a href="https://github.com/conda-forge" class="text-blue-600 hover:text-blue-800 underline">"GitHub organization"</a>
+                                "."
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">"What is " <strong>"Recipe v1"</strong> "?"</h3>
+                            <p class="text-gray-700 mb-4">
+                                <strong>"Recipe v1"</strong> " is the new standardized format for " <strong>"conda package recipes"</strong> ", replacing the legacy " <strong>"meta.yaml"</strong> " format. "
+                                "It provides better structure, validation, and tooling support."
+                            </p>
+                            <p class="text-gray-700">
+                                "Learn more in "
+                                <a href="https://github.com/conda/ceps/blob/main/cep-0013.md" class="text-blue-600 hover:text-blue-800 underline">"CEP-0013"</a>
+                                " and "
+                                <a href="https://github.com/conda/ceps/blob/main/cep-0014.md" class="text-blue-600 hover:text-blue-800 underline">"CEP-0014"</a>
+                                "."
+                            </p>
+                        </div>
+                        
+                        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-4">"What is " <strong>"rattler-build"</strong> "?"</h3>
+                            <p class="text-gray-700 mb-4">
+                                <strong>"rattler-build"</strong> " is a fast, modern build tool for " <strong>"conda packages"</strong> " written in " <strong>"Rust"</strong> ". It's designed to work with the new " <strong>"Recipe v1"</strong> " format "
+                                "and provides significant performance improvements over " <strong>"conda-build"</strong> "."
+                            </p>
+                            <p class="text-gray-700">
+                                "Visit "
+                                <a href="https://rattler.build" class="text-blue-600 hover:text-blue-800 underline">"rattler.build"</a>
+                                " to learn more."
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </header>
             <div class="max-w-6xl mx-auto px-4 pb-8">
@@ -93,12 +124,12 @@ fn App() -> impl IntoView {
                     <TopUnconvertedRanking feedstocks=top_unconverted />
                 </div>
             </div>
-            <div class="mx-4 mt-8 mb-6">
+            <div class="max-w-6xl mx-auto px-4 mt-8 mb-6">
             <a class="" href="https://rattler.build" target="_blank">
                 <img
                     src="./banner.png"
                     alt="rattler-build: A fast package build tool for Conda packages written in Rust"
-                    class="w-full max-w-4xl mx-auto rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
+                    class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
                 />
             </a>
             </div>
