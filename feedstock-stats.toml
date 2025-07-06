@@ -1,8 +1,8 @@
-total_feedstocks = 26491
-recipe_v1_count = 1723
-meta_yaml_count = 24768
+total_feedstocks = 26493
+recipe_v1_count = 1727
+meta_yaml_count = 24766
 unknown_count = 0
-last_updated = "2025-07-05T02:34:11.355543984+00:00"
+last_updated = "2025-07-06T02:42:00.860274435+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -2937,8 +2937,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.apptools-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-07-06T02:41:56.617405248+00:00"
 
 [feedstock_states.apr-feedstock]
 recipe_type = "meta_yaml"
@@ -21193,8 +21193,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.envisage-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-07-06T02:41:56.617405248+00:00"
 
 [feedstock_states.envkernel-feedstock]
 recipe_type = "meta_yaml"
@@ -22479,6 +22479,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.fann2-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.fans-dashboard-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-07-06T02:41:56.617405248+00:00"
 
 [feedstock_states.fans-feedstock]
 recipe_type = "recipe_v1"
@@ -35648,6 +35652,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.jupyter-secrets-manager-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-06T02:41:56.617405248+00:00"
+
 [feedstock_states.jupyter-server-mathjax-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -38025,8 +38033,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.latexmk-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-07-06T02:41:56.617405248+00:00"
 
 [feedstock_states.latlon23-feedstock]
 recipe_type = "meta_yaml"
