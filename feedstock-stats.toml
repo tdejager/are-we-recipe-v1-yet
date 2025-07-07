@@ -1,8 +1,8 @@
 total_feedstocks = 26493
-recipe_v1_count = 1727
-meta_yaml_count = 24766
+recipe_v1_count = 1728
+meta_yaml_count = 24765
 unknown_count = 0
-last_updated = "2025-07-06T02:42:00.860274435+00:00"
+last_updated = "2025-07-07T02:40:23.684742308+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -17937,8 +17937,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.django-plotly-dash-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-07-07T02:40:19.493652848+00:00"
 
 [feedstock_states.django-plotly-wagtail-feedstock]
 recipe_type = "meta_yaml"
