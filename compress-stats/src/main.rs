@@ -2,12 +2,11 @@ use std::fs;
 use std::path::Path;
 
 fn main() {
-    let input_path = Path::new(env!("CARGO_MANIFEST_DIR"))
-        .parent()
-        .unwrap()
-        .join("feedstock-stats.toml");
-
-    let output_path = "src/stats.toml";
+    let manifest_dir = Path::new(env!("CARGO_MANIFEST_DIR"));
+    let workspace_root = manifest_dir.parent().unwrap();
+    
+    let input_path = workspace_root.join("feedstock-stats.toml");
+    let output_path = workspace_root.join("web/src/stats.toml");
 
     if let Ok(content) = fs::read_to_string(&input_path) {
         if let Ok(toml_data) = toml::from_str::<toml::Table>(&content) {
@@ -80,8 +79,8 @@ fn main() {
 
             // Write the complete summary with recently_updated data
             let summary_toml = toml::to_string(&summary).unwrap();
-            fs::write(output_path, summary_toml).expect("Failed to write summary");
-            println!("cargo:rerun-if-changed={}", input_path.display());
+            fs::write(&output_path, summary_toml).expect("Failed to write summary");
+            println!("Compressed feedstock stats written to {}", output_path.display());
         }
     }
 }

@@ -13,8 +13,20 @@ pnpm = "10.12.*"
 rust-std-wasm32-unknown-unknown = ">=1.87.0,<2"
 
 [tasks]
-dev = { cmd = "trunk serve --open", cwd = "web" }
-build = { cmd = "trunk build", cwd = "web" }
+compress-stats = { cmd = "cargo run --bin compress-stats", inputs = [
+    "feedstock-stats.toml",
+], outputs = [
+    "web/src/stats.toml",
+] }
+dev = { cmd = "trunk serve --open", cwd = "web", depends-on = [
+    "compress-stats",
+] }
+build = { cmd = "trunk build {% if mode == 'release' %}--release{% endif %}{%if website != ''%} --public-url {{website}}{%endif%}", cwd = "web", depends-on = [
+    "compress-stats",
+], args = [
+    { arg = "mode", default = "development" },
+    { arg = "website", default = "" },
+] }
 clean = { cmd = "trunk clean", cwd = "web" }
 post-install = { cmd = "pnpm install", cwd = "web" }
 setup = { depends-on = ["install-deps"] }

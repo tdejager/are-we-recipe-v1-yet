@@ -1,5 +1,5 @@
 [workspace]
-members = ["web", "data-collector"]
+members = ["web", "data-collector", "compress-stats"]
 resolver = "2"
 
 [workspace.dependencies]

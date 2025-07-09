@@ -39,12 +39,11 @@ jobs:
         with:
           workspaces: |
             web
+            compress-stats
           cache-on-failure: true
 
       - name: Build application
-        run: |
-          cd web
-          pixi run trunk build --release --public-url "/${GITHUB_REPOSITORY#*/}/"
+        run: pixi run build release "/${GITHUB_REPOSITORY#*/}/"
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
