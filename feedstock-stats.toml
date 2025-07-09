@@ -1,8 +1,8 @@
-total_feedstocks = 26504
-recipe_v1_count = 1737
-meta_yaml_count = 24767
+total_feedstocks = 26524
+recipe_v1_count = 1746
+meta_yaml_count = 24778
 unknown_count = 0
-last_updated = "2025-07-08T02:37:13.493610324+00:00"
+last_updated = "2025-07-09T02:37:14.995047901+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -7304,6 +7304,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.bluemath-tk-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
+
 [feedstock_states.blueqat-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -8349,8 +8353,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.byobu-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.bytecode-feedstock]
 recipe_type = "meta_yaml"
@@ -8477,8 +8481,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.cachier-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.cachy-feedstock]
 recipe_type = "meta_yaml"
@@ -12300,6 +12304,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.conda_curation-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
+
 [feedstock_states.conda_deps-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -15005,8 +15013,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.dask-core-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.dask-ctl-feedstock]
 recipe_type = "meta_yaml"
@@ -15041,8 +15049,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.dask-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.dask-funk-feedstock]
 recipe_type = "meta_yaml"
@@ -16944,6 +16952,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states."diffpy.morph-feedstock"]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
+
 [feedstock_states."diffpy.pdffit2-feedstock"]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -17273,8 +17285,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.distributed-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.distro-feedstock]
 recipe_type = "meta_yaml"
@@ -23393,8 +23405,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.fickling-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.fides-feedstock]
 recipe_type = "meta_yaml"
@@ -35572,6 +35584,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.jupyter-fsspec-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
+
 [feedstock_states.jupyter-hdfscm-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -38477,8 +38493,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.lefthook-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.leg2cheb-feedstock]
 recipe_type = "meta_yaml"
@@ -38543,6 +38559,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.lemon-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.lenapy-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.lens-vpr-feedstock]
 recipe_type = "meta_yaml"
@@ -39791,6 +39811,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.libmetatensor-torch-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.libmetatomic-torch-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.libmetgem-feedstock]
 recipe_type = "meta_yaml"
@@ -46860,6 +46884,14 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.multiformats-config-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
+
+[feedstock_states.multiformats-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
+
 [feedstock_states.multifutures-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -53788,6 +53820,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.pado-optics-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
+
 [feedstock_states.paegan-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -59004,6 +59040,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.ptm_pose-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
+
 [feedstock_states.ptmcmcsampler-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -62403,6 +62443,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.pylibjpeg-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.pylibjpeg-libjpeg-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.pylibmc-feedstock]
 recipe_type = "meta_yaml"
@@ -66748,6 +66792,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.python-metatomic-torch-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
+
 [feedstock_states.python-mimeparse-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -67835,6 +67883,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.pywis-topics-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.pywlgk-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.pyworkdir-feedstock]
 recipe_type = "meta_yaml"
@@ -74460,6 +74512,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.r-horseshoe-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
+
 [feedstock_states.r-hostswitch-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -74643,6 +74699,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.r-idefix-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.r-idm-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.r-idpmisc-feedstock]
 recipe_type = "meta_yaml"
@@ -76016,9 +76076,17 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.r-mblm-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
+
 [feedstock_states.r-mboost-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.r-mbsp-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.r-mbsts-feedstock]
 recipe_type = "meta_yaml"
@@ -76199,6 +76267,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.r-metaplus-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.r-metarep-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.r-metarnaseq-feedstock]
 recipe_type = "meta_yaml"
@@ -78183,6 +78255,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.r-plumber-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.r-plutor-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.r-plyr-feedstock]
 recipe_type = "meta_yaml"
@@ -101775,6 +101851,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.voila_topbar-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.vois-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-07-09T02:37:10.656635172+00:00"
 
 [feedstock_states.volatile-feedstock]
 recipe_type = "meta_yaml"
