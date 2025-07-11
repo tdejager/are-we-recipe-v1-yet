@@ -82,8 +82,142 @@ enum RecipeType {
     Unknown, // Neither or both
 }
 
+<<<<<<< Updated upstream
+||||||| Stash base
+#[derive(Debug, Serialize, Deserialize, Clone)]
+#[serde(untagged)]
+enum ConversionCredit {
+    Single(String),
+    Multiple(Vec<String>),
+}
+
+impl ConversionCredit {
+    fn from_single(email: String) -> Self {
+        ConversionCredit::Single(email)
+    }
+
+    fn get_emails(&self) -> Vec<&String> {
+        match self {
+            ConversionCredit::Single(email) => vec![email],
+            ConversionCredit::Multiple(emails) => emails.iter().collect(),
+        }
+    }
+}
+
+
+#[derive(Debug, Serialize)]
+struct GraphQLQuery {
+    query: String,
+    variables: GraphQLVariables,
+}
+
+#[derive(Debug, Serialize)]
+struct GraphQLVariables {
+    owner: String,
+    name: String,
+    oid: String,
+}
+
+#[derive(Debug, Deserialize)]
+struct GraphQLResponse {
+    data: Option<GraphQLData>,
+}
+
+#[derive(Debug, Deserialize)]
+struct GraphQLData {
+    repository: Option<GraphQLRepository>,
+}
+
+#[derive(Debug, Deserialize)]
+struct GraphQLRepository {
+    object: Option<GraphQLCommit>,
+}
+
+#[derive(Debug, Deserialize)]
+struct GraphQLCommit {
+    author: GraphQLAuthor,
+}
+
+#[derive(Debug, Deserialize)]
+struct GraphQLAuthor {
+    user: Option<GraphQLUser>,
+}
+
+#[derive(Debug, Deserialize)]
+struct GraphQLUser {
+    login: String,
+}
+
+=======
+#[derive(Debug, Serialize, Deserialize, Clone)]
+#[serde(untagged)]
+enum ConversionCredit {
+    Single(String),
+    Multiple(Vec<String>),
+}
+
+impl ConversionCredit {
+    fn from_single(email: String) -> Self {
+        ConversionCredit::Single(email)
+    }
+
+    fn get_emails(&self) -> Vec<&String> {
+        match self {
+            ConversionCredit::Single(email) => vec![email],
+            ConversionCredit::Multiple(emails) => emails.iter().collect(),
+        }
+    }
+}
+
+#[derive(Debug, Serialize)]
+struct GraphQLQuery {
+    query: String,
+    variables: GraphQLVariables,
+}
+
+#[derive(Debug, Serialize)]
+struct GraphQLVariables {
+    owner: String,
+    name: String,
+    oid: String,
+}
+
+#[derive(Debug, Deserialize)]
+struct GraphQLResponse {
+    data: Option<GraphQLData>,
+}
+
+#[derive(Debug, Deserialize)]
+struct GraphQLData {
+    repository: Option<GraphQLRepository>,
+}
+
+#[derive(Debug, Deserialize)]
+struct GraphQLRepository {
+    object: Option<GraphQLCommit>,
+}
+
+#[derive(Debug, Deserialize)]
+struct GraphQLCommit {
+    author: GraphQLAuthor,
+}
+
+#[derive(Debug, Deserialize)]
+struct GraphQLAuthor {
+    user: Option<GraphQLUser>,
+}
+
+#[derive(Debug, Deserialize)]
+struct GraphQLUser {
+    login: String,
+}
+
+>>>>>>> Stashed changes
 #[tokio::main]
 async fn main() -> Result<()> {
+    // Load environment variables from .env file
+    dotenvy::dotenv().ok();
+    
     let cli = Cli::parse();
 
     println!("🚀 Starting conda-forge feedstock analysis...");
@@ -404,9 +538,18 @@ fn ensure_sparse_checkout_repo(force_reload: bool, verbose: bool) -> Result<()> 
             }
         }
     } else {
-        println!("📂 Existing sparse checkout found, removing for fresh clone...");
-        fs::remove_dir_all(repo_path).context("Failed to remove existing repository")?;
-        return ensure_sparse_checkout_repo(false, verbose); // Recursive call to re-create fresh
+        // Check if existing sparse checkout is valid
+        let node_attrs_path = repo_path.join("node_attrs");
+        if node_attrs_path.exists() {
+            if verbose {
+                println!("📂 Using existing sparse checkout");
+            }
+            return Ok(());
+        } else {
+            println!("📂 Existing sparse checkout incomplete, recreating...");
+            fs::remove_dir_all(repo_path).context("Failed to remove existing repository")?;
+            return ensure_sparse_checkout_repo(false, verbose); // Recursive call to re-create fresh
+        }
     }
 
     Ok(())
@@ -488,6 +631,661 @@ async fn fetch_download_counts() -> Result<HashMap<String, u64>> {
     Ok(download_counts)
 }
 
+<<<<<<< Updated upstream
+||||||| Stash base
+async fn generate_leaderboard(
+    limit: usize,
+    test_limit: Option<usize>,
+    verbose: bool,
+) -> Result<()> {
+    println!("🏆 Generating contributor leaderboard for Recipe v1 conversions...");
+    println!("📊 Showing top {} contributors", limit);
+
+    // Load existing stats
+    let mut stats = load_existing_stats_if_exists()
+        .ok_or_else(|| anyhow::anyhow!("No existing stats found. Run 'stats' command first."))?;
+
+    // Find Recipe v1 feedstocks that need conversion credit analysis
+    let mut unanalyzed_feedstocks: Vec<String> = stats
+        .feedstock_states
+        .iter()
+        .filter(|(_, entry)| {
+            entry.recipe_type == RecipeType::RecipeV1 && entry.conversion_credit.is_none()
+        })
+        .map(|(name, _)| name.clone())
+        .collect();
+
+    // Apply test limit if specified
+    if let Some(limit) = test_limit {
+        unanalyzed_feedstocks.truncate(limit);
+        println!("🧪 Test mode: limiting analysis to {} feedstocks", limit);
+    }
+
+    if unanalyzed_feedstocks.is_empty() {
+        println!("✅ All Recipe v1 feedstocks already have conversion credits");
+    } else {
+        println!(
+            "🔍 Found {} Recipe v1 feedstocks to analyze for conversion credits",
+            unanalyzed_feedstocks.len()
+        );
+
+        // Create HTTP client for GitHub API calls
+        let client = reqwest::Client::new();
+
+        // Add progress bar for large numbers of feedstocks
+        let pb = if unanalyzed_feedstocks.len() > 10 {
+            let pb = ProgressBar::new(unanalyzed_feedstocks.len() as u64);
+            pb.set_style(
+                ProgressStyle::with_template(
+                    "{spinner:.green} [{elapsed_precise}] [{bar:40.cyan/blue}] {pos}/{len} ({eta}) {msg}",
+                ).unwrap(),
+            );
+            Some(pb)
+        } else {
+            None
+        };
+
+        // Process each unanalyzed feedstock
+        for (index, feedstock_name) in unanalyzed_feedstocks.iter().enumerate() {
+            if let Some(ref pb) = pb {
+                pb.set_message(feedstock_name.clone());
+            }
+
+            if verbose || index % 50 == 0 {
+                println!(
+                    "📦 [{}/{}] Analyzing {}",
+                    index + 1,
+                    unanalyzed_feedstocks.len(),
+                    feedstock_name
+                );
+            }
+
+            match analyze_feedstock_conversion_credit(feedstock_name, verbose).await {
+                Ok(Some((commit_sha, author_email))) => {
+                    // Try to resolve GitHub username from commit
+                    let github_username =
+                        resolve_github_username_from_commit(feedstock_name, &commit_sha, &client)
+                            .await
+                            .unwrap_or(None);
+
+                    // Fallback to noreply email parsing if GraphQL fails
+                    let final_username =
+                        github_username.or_else(|| resolve_github_username_fallback(&author_email));
+
+                    let display_name = final_username
+                        .map(|username| format!("@{}", username))
+                        .unwrap_or(author_email);
+
+                    // Update the feedstock entry with conversion credit
+                    if let Some(entry) = stats.feedstock_states.get_mut(feedstock_name) {
+                        entry.conversion_credit =
+                            Some(ConversionCredit::from_single(display_name.clone()));
+                        if verbose {
+                            println!("✅ Credited to: {}", display_name);
+                        }
+                    }
+                }
+                Ok(None) => {
+                    if verbose {
+                        println!(
+                            "⚠️  No recipe.yaml found in git history for {}",
+                            feedstock_name
+                        );
+                    }
+                }
+                Err(e) => {
+                    if verbose {
+                        println!("❌ Failed to analyze {}: {}", feedstock_name, e);
+                    }
+                }
+            }
+
+            if let Some(ref pb) = pb {
+                pb.inc(1);
+            }
+        }
+
+        if let Some(pb) = pb {
+            pb.finish_with_message("✅ Conversion credit analysis complete!");
+        }
+
+        // Save updated stats
+        let toml_content = toml::to_string_pretty(&stats)?;
+        let path = std::env::var("CARGO_MANIFEST_DIR")?;
+        fs::write(format!("{}/../feedstock-stats.toml", path), toml_content)?;
+        println!("💾 Updated conversion credits saved to feedstock-stats.toml");
+    }
+
+    // Generate leaderboard from all credited conversions
+    let mut conversion_counts: HashMap<String, u32> = HashMap::new();
+    for (_, entry) in &stats.feedstock_states {
+        if entry.recipe_type == RecipeType::RecipeV1 {
+            if let Some(ref conversion_credit) = entry.conversion_credit {
+                for email in conversion_credit.get_emails() {
+                    *conversion_counts.entry(email.clone()).or_insert(0) += 1;
+                }
+            }
+        }
+    }
+
+    if conversion_counts.is_empty() {
+        println!("📊 No conversion credits found yet");
+        return Ok(());
+    }
+
+    // Sort by conversion count
+    let mut leaderboard: Vec<(String, u32)> = conversion_counts.into_iter().collect();
+    leaderboard.sort_by(|a, b| b.1.cmp(&a.1));
+
+    // Display leaderboard (usernames are already resolved during collection)
+    println!("\n🏆 Recipe v1 Conversion Leaderboard:");
+    println!("=====================================");
+    for (index, (contributor, count)) in leaderboard.iter().take(limit).enumerate() {
+        println!("{}. {} - {} conversions", index + 1, contributor, count);
+    }
+
+    let total_credited = stats
+        .feedstock_states
+        .values()
+        .filter(|entry| {
+            entry.recipe_type == RecipeType::RecipeV1 && entry.conversion_credit.is_some()
+        })
+        .count();
+    let total_recipe_v1 = stats
+        .feedstock_states
+        .values()
+        .filter(|entry| entry.recipe_type == RecipeType::RecipeV1)
+        .count();
+
+    println!("\n📈 Statistics:");
+    println!("Total Recipe v1 feedstocks: {}", total_recipe_v1);
+    println!("Credited conversions: {}", total_credited);
+    println!(
+        "Uncredited conversions: {}",
+        total_recipe_v1 - total_credited
+    );
+
+    // Save updated stats
+    let toml_content = toml::to_string_pretty(&stats)?;
+    let path = std::env::var("CARGO_MANIFEST_DIR")?;
+    fs::write(format!("{}/../feedstock-stats.toml", path), toml_content)?;
+
+    Ok(())
+}
+
+async fn analyze_feedstock_conversion_credit(
+    feedstock_name: &str,
+    _verbose: bool,
+) -> Result<Option<(String, String)>> {
+    let repo_url = format!("https://github.com/conda-forge/{}.git", feedstock_name);
+    let temp_dir = std::env::temp_dir().join(format!("feedstock_analysis_{}", feedstock_name));
+
+    // Clean up any existing temp directory
+    if temp_dir.exists() {
+        fs::remove_dir_all(&temp_dir)?;
+    }
+
+    // Clone repository with shallow history
+    let clone_result = Command::new("git")
+        .args(&[
+            "clone",
+            "--depth=50", // Usually enough to find recipe.yaml addition
+            &repo_url,
+            temp_dir.to_str().unwrap(),
+        ])
+        .output()?;
+
+    if !clone_result.status.success() {
+        fs::remove_dir_all(&temp_dir).ok(); // Clean up on failure
+        return Err(anyhow::anyhow!(
+            "Failed to clone {}: {}",
+            repo_url,
+            String::from_utf8_lossy(&clone_result.stderr)
+        ));
+    }
+
+    // Extract commit SHA and author email of commit that added recipe.yaml
+    let git_log_result = Command::new("git")
+        .current_dir(&temp_dir)
+        .args(&[
+            "log",
+            "--follow",
+            "--diff-filter=A",
+            "--format=%H %ae",
+            "-1",
+            "--",
+            "recipe/recipe.yaml",
+        ])
+        .output()?;
+
+    // Clean up temp directory
+    fs::remove_dir_all(&temp_dir).ok();
+
+    if !git_log_result.status.success() {
+        return Ok(None); // No recipe.yaml found in history
+    }
+
+    let output = String::from_utf8_lossy(&git_log_result.stdout);
+    let trimmed_output = output.trim();
+    if trimmed_output.is_empty() {
+        return Ok(None);
+    }
+
+    // Parse "commit_sha author_email" format
+    let parts: Vec<&str> = trimmed_output.split_whitespace().collect();
+    if parts.len() < 2 {
+        return Ok(None);
+    }
+
+    let commit_sha = parts[0].to_string();
+    let author_email = parts[1].to_string();
+
+    Ok(Some((commit_sha, author_email)))
+}
+
+async fn resolve_github_username_from_commit(
+    feedstock_name: &str,
+    commit_sha: &str,
+    client: &reqwest::Client,
+) -> Result<Option<String>> {
+    let query = r#"
+        query($owner: String!, $name: String!, $oid: GitObjectID!) {
+            repository(owner: $owner, name: $name) {
+                object(oid: $oid) {
+                    ... on Commit {
+                        author {
+                            user {
+                                login
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    "#;
+
+    let graphql_query = GraphQLQuery {
+        query: query.to_string(),
+        variables: GraphQLVariables {
+            owner: "conda-forge".to_string(),
+            name: feedstock_name.to_string(),
+            oid: commit_sha.to_string(),
+        },
+    };
+
+    let response = client
+        .post("https://api.github.com/graphql")
+        .header("User-Agent", "conda-forge-leaderboard-tool")
+        .header(
+            "Authorization",
+            &format!(
+                "Bearer {}",
+                std::env::var("GITHUB_TOKEN").unwrap_or_default()
+            ),
+        )
+        .json(&graphql_query)
+        .send()
+        .await?;
+
+    if !response.status().is_success() {
+        return Ok(None);
+    }
+
+    let graphql_response: GraphQLResponse = response.json().await?;
+
+    Ok(graphql_response
+        .data
+        .and_then(|data| data.repository)
+        .and_then(|repo| repo.object)
+        .and_then(|commit| commit.author.user)
+        .map(|user| user.login))
+}
+
+fn resolve_github_username_fallback(email: &str) -> Option<String> {
+    // Handle special GitHub email formats
+    if email.contains("@users.noreply.github.com") {
+        // Extract username from noreply email format: "123456+username@users.noreply.github.com"
+        if let Some(at_pos) = email.find('@') {
+            let local_part = &email[..at_pos];
+            if let Some(plus_pos) = local_part.find('+') {
+                let username = &local_part[plus_pos + 1..];
+                return Some(username.to_string());
+            }
+        }
+    }
+    None
+}
+
+=======
+async fn generate_leaderboard(
+    limit: usize,
+    test_limit: Option<usize>,
+    verbose: bool,
+) -> Result<()> {
+    println!("🏆 Generating contributor leaderboard for Recipe v1 conversions...");
+    println!("📊 Showing top {} contributors", limit);
+
+    // Load existing stats
+    let mut stats = load_existing_stats_if_exists()
+        .ok_or_else(|| anyhow::anyhow!("No existing stats found. Run 'stats' command first."))?;
+
+    // Find Recipe v1 feedstocks that need conversion credit analysis
+    let mut unanalyzed_feedstocks: Vec<String> = stats
+        .feedstock_states
+        .iter()
+        .filter(|(_, entry)| {
+            entry.recipe_type == RecipeType::RecipeV1 && entry.conversion_credit.is_none()
+        })
+        .map(|(name, _)| name.clone())
+        .collect();
+
+    // Apply test limit if specified
+    if let Some(limit) = test_limit {
+        unanalyzed_feedstocks.truncate(limit);
+        println!("🧪 Test mode: limiting analysis to {} feedstocks", limit);
+    }
+
+    if unanalyzed_feedstocks.is_empty() {
+        println!("✅ All Recipe v1 feedstocks already have conversion credits");
+    } else {
+        println!(
+            "🔍 Found {} Recipe v1 feedstocks to analyze for conversion credits",
+            unanalyzed_feedstocks.len()
+        );
+
+        // Create HTTP client for GitHub API calls
+        let client = reqwest::Client::new();
+
+        // Add progress bar for large numbers of feedstocks
+        let pb = if unanalyzed_feedstocks.len() > 10 {
+            let pb = ProgressBar::new(unanalyzed_feedstocks.len() as u64);
+            pb.set_style(
+                ProgressStyle::with_template(
+                    "{spinner:.green} [{elapsed_precise}] [{bar:40.cyan/blue}] {pos}/{len} ({eta}) {msg}",
+                ).unwrap(),
+            );
+            Some(pb)
+        } else {
+            None
+        };
+
+        // Process each unanalyzed feedstock
+        for (index, feedstock_name) in unanalyzed_feedstocks.iter().enumerate() {
+            if let Some(ref pb) = pb {
+                pb.set_message(feedstock_name.clone());
+            }
+
+            if verbose || index % 50 == 0 {
+                println!(
+                    "📦 [{}/{}] Analyzing {}",
+                    index + 1,
+                    unanalyzed_feedstocks.len(),
+                    feedstock_name
+                );
+            }
+
+            match analyze_feedstock_conversion_credit(feedstock_name, verbose).await {
+                Ok(Some((commit_sha, author_email))) => {
+                    // Try to resolve GitHub username from commit
+                    let github_username =
+                        resolve_github_username_from_commit(feedstock_name, &commit_sha, &client)
+                            .await
+                            .unwrap_or(None);
+
+                    // Fallback to noreply email parsing if GraphQL fails
+                    let final_username =
+                        github_username.or_else(|| resolve_github_username_fallback(&author_email));
+
+                    let display_name = final_username
+                        .map(|username| format!("@{}", username))
+                        .unwrap_or(author_email);
+
+                    // Update the feedstock entry with conversion credit
+                    if let Some(entry) = stats.feedstock_states.get_mut(feedstock_name) {
+                        entry.conversion_credit =
+                            Some(ConversionCredit::from_single(display_name.clone()));
+                        if verbose {
+                            println!("✅ Credited to: {}", display_name);
+                        }
+                    }
+                }
+                Ok(None) => {
+                    if verbose {
+                        println!(
+                            "⚠️  No recipe.yaml found in git history for {}",
+                            feedstock_name
+                        );
+                    }
+                }
+                Err(e) => {
+                    if verbose {
+                        println!("❌ Failed to analyze {}: {}", feedstock_name, e);
+                    }
+                }
+            }
+
+            if let Some(ref pb) = pb {
+                pb.inc(1);
+            }
+        }
+
+        if let Some(pb) = pb {
+            pb.finish_with_message("✅ Conversion credit analysis complete!");
+        }
+
+        // Save updated stats
+        let toml_content = toml::to_string_pretty(&stats)?;
+        let path = std::env::var("CARGO_MANIFEST_DIR")?;
+        fs::write(format!("{}/../feedstock-stats.toml", path), toml_content)?;
+        println!("💾 Updated conversion credits saved to feedstock-stats.toml");
+    }
+
+    // Generate leaderboard from all credited conversions
+    let mut conversion_counts: HashMap<String, u32> = HashMap::new();
+    for (_, entry) in &stats.feedstock_states {
+        if entry.recipe_type == RecipeType::RecipeV1 {
+            if let Some(ref conversion_credit) = entry.conversion_credit {
+                for email in conversion_credit.get_emails() {
+                    *conversion_counts.entry(email.clone()).or_insert(0) += 1;
+                }
+            }
+        }
+    }
+
+    if conversion_counts.is_empty() {
+        println!("📊 No conversion credits found yet");
+        return Ok(());
+    }
+
+    // Sort by conversion count
+    let mut leaderboard: Vec<(String, u32)> = conversion_counts.into_iter().collect();
+    leaderboard.sort_by(|a, b| b.1.cmp(&a.1));
+
+    // Display leaderboard (usernames are already resolved during collection)
+    println!("\n🏆 Recipe v1 Conversion Leaderboard:");
+    println!("=====================================");
+    for (index, (contributor, count)) in leaderboard.iter().take(limit).enumerate() {
+        println!("{}. {} - {} conversions", index + 1, contributor, count);
+    }
+
+    let total_credited = stats
+        .feedstock_states
+        .values()
+        .filter(|entry| {
+            entry.recipe_type == RecipeType::RecipeV1 && entry.conversion_credit.is_some()
+        })
+        .count();
+    let total_recipe_v1 = stats
+        .feedstock_states
+        .values()
+        .filter(|entry| entry.recipe_type == RecipeType::RecipeV1)
+        .count();
+
+    println!("\n📈 Statistics:");
+    println!("Total Recipe v1 feedstocks: {}", total_recipe_v1);
+    println!("Credited conversions: {}", total_credited);
+    println!(
+        "Uncredited conversions: {}",
+        total_recipe_v1 - total_credited
+    );
+
+    // Save updated stats
+    let toml_content = toml::to_string_pretty(&stats)?;
+    let path = std::env::var("CARGO_MANIFEST_DIR")?;
+    fs::write(format!("{}/../feedstock-stats.toml", path), toml_content)?;
+
+    Ok(())
+}
+
+async fn analyze_feedstock_conversion_credit(
+    feedstock_name: &str,
+    _verbose: bool,
+) -> Result<Option<(String, String)>> {
+    let repo_url = format!("https://github.com/conda-forge/{}.git", feedstock_name);
+    let temp_dir = std::env::temp_dir().join(format!("feedstock_analysis_{}", feedstock_name));
+
+    // Clean up any existing temp directory
+    if temp_dir.exists() {
+        fs::remove_dir_all(&temp_dir)?;
+    }
+
+    // Clone repository with shallow history
+    let clone_result = Command::new("git")
+        .args(&[
+            "clone",
+            "--depth=50", // Usually enough to find recipe.yaml addition
+            &repo_url,
+            temp_dir.to_str().unwrap(),
+        ])
+        .output()?;
+
+    if !clone_result.status.success() {
+        fs::remove_dir_all(&temp_dir).ok(); // Clean up on failure
+        return Err(anyhow::anyhow!(
+            "Failed to clone {}: {}",
+            repo_url,
+            String::from_utf8_lossy(&clone_result.stderr)
+        ));
+    }
+
+    // Extract commit SHA and author email of commit that added recipe.yaml
+    let git_log_result = Command::new("git")
+        .current_dir(&temp_dir)
+        .args(&[
+            "log",
+            "--follow",
+            "--diff-filter=A",
+            "--format=%H %ae",
+            "-1",
+            "--",
+            "recipe/recipe.yaml",
+        ])
+        .output()?;
+
+    // Clean up temp directory
+    fs::remove_dir_all(&temp_dir).ok();
+
+    if !git_log_result.status.success() {
+        return Ok(None); // No recipe.yaml found in history
+    }
+
+    let output = String::from_utf8_lossy(&git_log_result.stdout);
+    let trimmed_output = output.trim();
+    if trimmed_output.is_empty() {
+        return Ok(None);
+    }
+
+    // Parse "commit_sha author_email" format
+    let parts: Vec<&str> = trimmed_output.split_whitespace().collect();
+    if parts.len() < 2 {
+        return Ok(None);
+    }
+
+    let commit_sha = parts[0].to_string();
+    let author_email = parts[1].to_string();
+
+    Ok(Some((commit_sha, author_email)))
+}
+
+async fn resolve_github_username_from_commit(
+    feedstock_name: &str,
+    commit_sha: &str,
+    client: &reqwest::Client,
+) -> Result<Option<String>> {
+    // Check if GitHub token is available
+    let github_token = std::env::var("GITHUB_TOKEN").unwrap_or_default();
+    if github_token.is_empty() {
+        // Skip GraphQL query if no token is available
+        return Ok(None);
+    }
+    let query = r#"
+        query($owner: String!, $name: String!, $oid: GitObjectID!) {
+            repository(owner: $owner, name: $name) {
+                object(oid: $oid) {
+                    ... on Commit {
+                        author {
+                            user {
+                                login
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    "#;
+
+    let graphql_query = GraphQLQuery {
+        query: query.to_string(),
+        variables: GraphQLVariables {
+            owner: "conda-forge".to_string(),
+            name: feedstock_name.to_string(),
+            oid: commit_sha.to_string(),
+        },
+    };
+
+    let response = client
+        .post("https://api.github.com/graphql")
+        .header("User-Agent", "conda-forge-leaderboard-tool")
+        .header("Authorization", &format!("Bearer {}", github_token))
+        .json(&graphql_query)
+        .send()
+        .await?;
+
+    if !response.status().is_success() {
+        let status = response.status();
+        let text = response.text().await.unwrap_or_default();
+        println!("🔍 GraphQL request failed: {} - {}", status, text);
+        return Ok(None);
+    }
+
+    let graphql_response: GraphQLResponse = response.json().await.map_err(|e| {
+        anyhow::anyhow!("Failed to parse GraphQL response: {}", e)
+    })?;
+
+    Ok(graphql_response
+        .data
+        .and_then(|data| data.repository)
+        .and_then(|repo| repo.object)
+        .and_then(|commit| commit.author.user)
+        .map(|user| user.login))
+}
+
+fn resolve_github_username_fallback(email: &str) -> Option<String> {
+    // Handle special GitHub email formats
+    if email.contains("@users.noreply.github.com") {
+        // Extract username from noreply email format: "123456+username@users.noreply.github.com"
+        if let Some(at_pos) = email.find('@') {
+            let local_part = &email[..at_pos];
+            if let Some(plus_pos) = local_part.find('+') {
+                let username = &local_part[plus_pos + 1..];
+                return Some(username.to_string());
+            }
+        }
+    }
+    None
+}
+
+>>>>>>> Stashed changes
 fn calculate_top_unconverted_feedstocks(
     feedstock_states: &BTreeMap<String, FeedstockEntry>,
     download_counts: &HashMap<String, u64>,

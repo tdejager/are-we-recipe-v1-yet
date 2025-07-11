@@ -4,3 +4,4 @@ CLAUDE.md
 dist/
 web/src/stats.toml
 cf-graph-countyfair
+.env
