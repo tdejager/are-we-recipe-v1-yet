@@ -1,8 +1,8 @@
-total_feedstocks = 26687
-recipe_v1_count = 1987
-meta_yaml_count = 24700
+total_feedstocks = 26689
+recipe_v1_count = 1988
+meta_yaml_count = 24701
 unknown_count = 0
-last_updated = "2025-07-31T02:43:02.557852388+00:00"
+last_updated = "2025-08-01T02:50:21.697092512+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -32557,8 +32557,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-07-31T02:42:58.152092822+00:00"
 
 [feedstock_states.icepaposc-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-01T02:50:17.092995104+00:00"
 
 [feedstock_states.icepyx-feedstock]
 recipe_type = "recipe_v1"
@@ -65316,6 +65316,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.pysonar-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-08-01T02:50:17.092995104+00:00"
+
 [feedstock_states.pysot-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -97451,6 +97455,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.tfv-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.tfv_get_tools-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-08-01T02:50:17.092995104+00:00"
 
 [feedstock_states.thalassa-feedstock]
 recipe_type = "meta_yaml"
