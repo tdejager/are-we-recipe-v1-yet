@@ -1,8 +1,8 @@
 total_feedstocks = 26689
-recipe_v1_count = 1989
-meta_yaml_count = 24700
+recipe_v1_count = 1991
+meta_yaml_count = 24698
 unknown_count = 0
-last_updated = "2025-08-02T02:38:45.559083499+00:00"
+last_updated = "2025-08-03T02:49:01.352152819+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -17513,8 +17513,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.django-bootstrap5-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-03T02:48:56.828654913+00:00"
 
 [feedstock_states.django-braces-feedstock]
 recipe_type = "meta_yaml"
@@ -55581,8 +55581,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.peft-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-03T02:48:56.828654913+00:00"
 
 [feedstock_states.pegasus-wms-feedstock]
 recipe_type = "meta_yaml"
