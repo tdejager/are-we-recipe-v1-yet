@@ -1,8 +1,8 @@
-total_feedstocks = 26740
-recipe_v1_count = 2047
-meta_yaml_count = 24693
+total_feedstocks = 26744
+recipe_v1_count = 2050
+meta_yaml_count = 24694
 unknown_count = 0
-last_updated = "2025-08-10T02:46:20.031578128+00:00"
+last_updated = "2025-08-11T02:44:18.109039355+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -1700,6 +1700,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.am3-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-08-11T02:44:13.606642729+00:00"
+
 [feedstock_states."amara3.iri-feedstock"]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -1988,6 +1992,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.anesthetic-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-08-11T02:44:13.606642729+00:00"
+
 [feedstock_states.angelcommunity-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -2081,8 +2089,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.ansible-vault-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-11T02:44:13.606642729+00:00"
 
 [feedstock_states.ansicolor-feedstock]
 recipe_type = "meta_yaml"
@@ -7813,8 +7821,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.bottle-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-11T02:44:13.606642729+00:00"
 
 [feedstock_states.bottleneck-feedstock]
 recipe_type = "meta_yaml"
@@ -37433,8 +37441,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.kiwisolver-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-11T02:44:13.606642729+00:00"
 
 [feedstock_states.kjobwidgets-feedstock]
 recipe_type = "meta_yaml"
@@ -63267,6 +63275,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.pymaxflow-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.pymaxspots-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-08-11T02:44:13.606642729+00:00"
 
 [feedstock_states.pymbar-feedstock]
 recipe_type = "meta_yaml"
@@ -96492,6 +96504,10 @@ last_changed = "2025-07-11T02:40:07.753211967+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.tardigrade_error_tools-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-08-11T02:44:13.606642729+00:00"
+
 [feedstock_states.tardis-sn-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -107057,11 +107073,6 @@ recipe_type = "meta_yaml"
 [[top_unconverted_by_downloads]]
 name = "brotli-feedstock"
 downloads = 1689381
-recipe_type = "meta_yaml"
-
-[[top_unconverted_by_downloads]]
-name = "kiwisolver-feedstock"
-downloads = 1600599
 recipe_type = "meta_yaml"
 
 [[top_unconverted_by_downloads]]
