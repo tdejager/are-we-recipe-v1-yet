@@ -1,8 +1,8 @@
 total_feedstocks = 26765
-recipe_v1_count = 2079
-meta_yaml_count = 24686
+recipe_v1_count = 2084
+meta_yaml_count = 24681
 unknown_count = 0
-last_updated = "2025-08-13T02:35:48.717770330+00:00"
+last_updated = "2025-08-14T02:36:15.971035268+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -30453,8 +30453,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.h5io_browser-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-14T02:36:11.329687409+00:00"
 
 [feedstock_states.h5netcdf-feedstock]
 recipe_type = "meta_yaml"
@@ -89069,8 +89069,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-07-22T02:41:26.552687474+00:00"
 
 [feedstock_states.sardana-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-14T02:36:11.329687409+00:00"
 
 [feedstock_states.sardana-icepap-feedstock]
 recipe_type = "recipe_v1"
@@ -93613,8 +93613,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.sphinx_parser-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-14T02:36:11.329687409+00:00"
 
 [feedstock_states.sphinx_rtd_theme-feedstock]
 recipe_type = "meta_yaml"
@@ -96633,12 +96633,12 @@ recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.taurus-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-14T02:36:11.329687409+00:00"
 
 [feedstock_states.taurus_pyqtgraph-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-14T02:36:11.329687409+00:00"
 
 [feedstock_states.taxbrain-feedstock]
 recipe_type = "meta_yaml"
