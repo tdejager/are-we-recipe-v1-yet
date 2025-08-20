@@ -1,8 +1,8 @@
-total_feedstocks = 26788
-recipe_v1_count = 2108
-meta_yaml_count = 24680
+total_feedstocks = 26797
+recipe_v1_count = 2114
+meta_yaml_count = 24683
 unknown_count = 0
-last_updated = "2025-08-19T02:33:01.756385502+00:00"
+last_updated = "2025-08-20T02:32:26.552001025+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -131,6 +131,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.aalto-boss-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.aardvark-dns-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-08-20T02:32:21.970270318+00:00"
 
 [feedstock_states.abacus-feedstock]
 recipe_type = "meta_yaml"
@@ -2316,6 +2320,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.aocl-blas-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-08-20T02:32:21.970270318+00:00"
+
 [feedstock_states.aodhclient-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -3351,6 +3359,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.array-api-strict-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.array-record-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-08-20T02:32:21.970270318+00:00"
 
 [feedstock_states.array-to-latex-feedstock]
 recipe_type = "meta_yaml"
@@ -30672,6 +30684,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.harbor-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-08-20T02:32:21.970270318+00:00"
+
 [feedstock_states.harfbuzz-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -35828,6 +35844,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.junifer-data-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-08-20T02:32:21.970270318+00:00"
+
 [feedstock_states.junifer-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -40217,8 +40237,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.libmemcached-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-20T02:32:21.970270318+00:00"
 
 [feedstock_states.libmetatensor-feedstock]
 recipe_type = "meta_yaml"
@@ -60907,6 +60927,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.pycirclize-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.pycirclizely-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-08-20T02:32:21.970270318+00:00"
 
 [feedstock_states.pycircos-feedstock]
 recipe_type = "meta_yaml"
@@ -89072,6 +89096,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.samply-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-08-20T02:32:21.970270318+00:00"
+
 [feedstock_states.samsam-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -101456,6 +101484,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.universal-mcp-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-08-20T02:32:21.970270318+00:00"
+
 [feedstock_states.universal_pathlib-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -104887,6 +104919,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.xcube-multistore-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.xcube-resampling-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-08-20T02:32:21.970270318+00:00"
 
 [feedstock_states.xcube-sh-feedstock]
 recipe_type = "meta_yaml"
