@@ -1,8 +1,8 @@
-total_feedstocks = 26797
-recipe_v1_count = 2114
-meta_yaml_count = 24683
+total_feedstocks = 26799
+recipe_v1_count = 2117
+meta_yaml_count = 24682
 unknown_count = 0
-last_updated = "2025-08-20T02:32:26.552001025+00:00"
+last_updated = "2025-08-21T02:32:30.392665552+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -8368,6 +8368,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.bvalcalc-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-08-21T02:32:25.784549802+00:00"
+
 [feedstock_states.bvpy-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -10393,8 +10397,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.ciso8601-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-21T02:32:25.784549802+00:00"
 
 [feedstock_states.cistern-feedstock]
 recipe_type = "meta_yaml"
@@ -52008,6 +52012,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.omnicloudmask-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-08-21T02:32:25.784549802+00:00"
+
 [feedstock_states.omnifit-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -88121,8 +88129,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.rotary-embedding-torch-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-21T02:32:25.784549802+00:00"
 
 [feedstock_states.rouge-feedstock]
 recipe_type = "meta_yaml"
@@ -101181,8 +101189,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.ujson-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-21T02:32:25.784549802+00:00"
 
 [feedstock_states.ukb-atlas-feedstock]
 recipe_type = "meta_yaml"
