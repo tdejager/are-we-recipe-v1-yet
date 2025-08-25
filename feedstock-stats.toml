@@ -1,8 +1,8 @@
-total_feedstocks = 26814
-recipe_v1_count = 2137
-meta_yaml_count = 24677
+total_feedstocks = 26815
+recipe_v1_count = 2143
+meta_yaml_count = 24672
 unknown_count = 0
-last_updated = "2025-08-24T02:36:08.567722033+00:00"
+last_updated = "2025-08-25T02:34:07.119500405+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -30385,8 +30385,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.gymnasium-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-25T02:34:02.568306431+00:00"
 
 [feedstock_states.gymnasium-notices-feedstock]
 recipe_type = "meta_yaml"
@@ -45417,8 +45417,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.minijinja-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-25T02:34:02.568306431+00:00"
 
 [feedstock_states.minikanren-feedstock]
 recipe_type = "meta_yaml"
@@ -61065,8 +61065,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.pycobertura-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-25T02:34:02.568306431+00:00"
 
 [feedstock_states.pycocoevalcap-feedstock]
 recipe_type = "meta_yaml"
@@ -63937,8 +63937,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.pymysql-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-25T02:34:02.568306431+00:00"
 
 [feedstock_states."pymysql~-feedstock"]
 recipe_type = "meta_yaml"
@@ -68897,8 +68897,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.pyzmq-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-08-25T02:34:02.568306431+00:00"
 
 [feedstock_states.pyzotero-feedstock]
 recipe_type = "meta_yaml"
@@ -87435,6 +87435,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.robin_hood-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.robo-gym-server-modules-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-08-25T02:34:02.568306431+00:00"
 
 [feedstock_states.robobrowser-feedstock]
 recipe_type = "meta_yaml"
