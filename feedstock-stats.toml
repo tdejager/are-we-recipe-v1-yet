@@ -1,8 +1,8 @@
-total_feedstocks = 26881
-recipe_v1_count = 2214
-meta_yaml_count = 24667
+total_feedstocks = 26887
+recipe_v1_count = 2224
+meta_yaml_count = 24663
 unknown_count = 0
-last_updated = "2025-09-02T02:31:56.411721725+00:00"
+last_updated = "2025-09-03T02:27:47.450578265+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -5097,8 +5097,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.aws-lambda-powertools-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-03T02:27:42.922314689+00:00"
 
 [feedstock_states.aws-okta-keyman-feedstock]
 recipe_type = "meta_yaml"
@@ -5201,8 +5201,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.awslambdaric-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-03T02:27:42.922314689+00:00"
 
 [feedstock_states.awslimitchecker-feedstock]
 recipe_type = "meta_yaml"
@@ -7945,8 +7945,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.bqplot-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-03T02:27:42.922314689+00:00"
 
 [feedstock_states.bqplot-gl-feedstock]
 recipe_type = "meta_yaml"
@@ -22960,6 +22960,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.fasta2a-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-03T02:27:42.922314689+00:00"
+
 [feedstock_states.fastai-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -26968,6 +26972,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.genai-prices-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-03T02:27:42.922314689+00:00"
+
 [feedstock_states.genanki-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -28617,8 +28625,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.go-licenses-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-03T02:27:42.922314689+00:00"
 
 [feedstock_states.go-md2man-feedstock]
 recipe_type = "meta_yaml"
@@ -30944,6 +30952,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.hatch-mkdocs-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-03T02:27:42.922314689+00:00"
+
 [feedstock_states.hatch-multi-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-07-18T12:05:03.047293662+00:00"
@@ -33179,6 +33191,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.imaris-ims-file-reader-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.imas-data-dictionaries-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-03T02:27:42.922314689+00:00"
 
 [feedstock_states.imath-feedstock]
 recipe_type = "meta_yaml"
@@ -38391,6 +38407,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.langchain-robocorp-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.langchain-tavily-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-03T02:27:42.922314689+00:00"
 
 [feedstock_states.langchain-text-splitters-feedstock]
 recipe_type = "meta_yaml"
@@ -52827,6 +52847,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.openinference-instrumentation-mistralai-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.openinference-instrumentation-openai-agents-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-03T02:27:42.922314689+00:00"
 
 [feedstock_states.openinference-instrumentation-openai-feedstock]
 recipe_type = "meta_yaml"
@@ -86305,8 +86329,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.readlif-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-03T02:27:42.922314689+00:00"
 
 [feedstock_states.readline-feedstock]
 recipe_type = "meta_yaml"
@@ -87397,8 +87421,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.ridgeplot-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-03T02:27:42.922314689+00:00"
 
 [feedstock_states.ridgeplot-py-feedstock]
 recipe_type = "meta_yaml"
@@ -99997,8 +100021,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.trio-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-03T02:27:42.922314689+00:00"
 
 [feedstock_states.trio-parallel-feedstock]
 recipe_type = "meta_yaml"
