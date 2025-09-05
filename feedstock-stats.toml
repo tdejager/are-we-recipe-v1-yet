@@ -1,8 +1,8 @@
-total_feedstocks = 26891
-recipe_v1_count = 2231
+total_feedstocks = 26897
+recipe_v1_count = 2237
 meta_yaml_count = 24660
 unknown_count = 0
-last_updated = "2025-09-04T02:28:03.569000537+00:00"
+last_updated = "2025-09-05T02:29:40.035158223+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -9383,6 +9383,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.cdislogging-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.cditools-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-05T02:29:35.364879002+00:00"
 
 [feedstock_states.cdk-feedstock]
 recipe_type = "meta_yaml"
@@ -20208,6 +20212,10 @@ last_changed = "2025-07-31T02:42:58.152092822+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.dynamixel-sdk-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-05T02:29:35.364879002+00:00"
+
 [feedstock_states.dynamo-pandas-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -26195,6 +26203,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.fts-rest-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.ftservo-python-sdk-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-05T02:29:35.364879002+00:00"
 
 [feedstock_states.fugue-feedstock]
 recipe_type = "meta_yaml"
@@ -40463,6 +40475,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.libmo_unpack-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.libmobility-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-05T02:29:35.364879002+00:00"
 
 [feedstock_states.libmodplug-feedstock]
 recipe_type = "recipe_v1"
@@ -55825,8 +55841,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.pdal-c-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-05T02:29:35.364879002+00:00"
 
 [feedstock_states.pdal-feedstock]
 recipe_type = "meta_yaml"
@@ -63324,6 +63340,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.pylabdd-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-05T02:29:35.364879002+00:00"
+
 [feedstock_states.pylabeladjust-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -63609,8 +63629,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.pymablock-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-05T02:29:35.364879002+00:00"
 
 [feedstock_states.pymace-feedstock]
 recipe_type = "meta_yaml"
@@ -67901,8 +67921,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.python-mumps-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-05T02:29:35.364879002+00:00"
 
 [feedstock_states.python-neo-feedstock]
 recipe_type = "meta_yaml"
@@ -93084,6 +93104,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.solarwindpy-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-05T02:29:35.364879002+00:00"
+
 [feedstock_states.solders-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -98673,8 +98697,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.tinyarray-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-05T02:29:35.364879002+00:00"
 
 [feedstock_states.tinycbor-feedstock]
 recipe_type = "meta_yaml"
