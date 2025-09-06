@@ -1,8 +1,8 @@
-total_feedstocks = 26897
-recipe_v1_count = 2237
-meta_yaml_count = 24660
+total_feedstocks = 26906
+recipe_v1_count = 2251
+meta_yaml_count = 24655
 unknown_count = 0
-last_updated = "2025-09-05T02:29:40.035158223+00:00"
+last_updated = "2025-09-06T02:27:22.278377164+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -11952,6 +11952,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.commitlint-rs-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
+
 [feedstock_states.commlib-py-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -16068,6 +16072,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.dccp-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
+
 [feedstock_states.dcgp-python-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -17625,8 +17633,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.django-appointment-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
 
 [feedstock_states.django-approval-feedstock]
 recipe_type = "meta_yaml"
@@ -18915,6 +18923,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.dnest4-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.dns-lexicon-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
 
 [feedstock_states.dnslib-feedstock]
 recipe_type = "meta_yaml"
@@ -21477,8 +21489,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.entwine-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
 
 [feedstock_states.enum-compat-feedstock]
 recipe_type = "meta_yaml"
@@ -23297,8 +23309,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.fastui-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
 
 [feedstock_states.fastuuid-feedstock]
 recipe_type = "meta_yaml"
@@ -25949,8 +25961,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.fresnel-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
 
 [feedstock_states.fretbursts-feedstock]
 recipe_type = "meta_yaml"
@@ -33215,6 +33227,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.imas-data-dictionaries-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-09-03T02:27:42.922314689+00:00"
+
+[feedstock_states.imas-python-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
 
 [feedstock_states.imath-feedstock]
 recipe_type = "meta_yaml"
@@ -46572,6 +46588,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.mohtml-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
+
 [feedstock_states.moka-py-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -47007,6 +47027,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.mostlyai-qa-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.moterm-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
 
 [feedstock_states.motifcluster-feedstock]
 recipe_type = "meta_yaml"
@@ -67384,6 +67408,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.python-digitalocean-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
+
 [feedstock_states.python-docker-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -83432,6 +83460,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.r-tailor-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
+
 [feedstock_states.r-tangles-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -96800,6 +96832,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.tabpfn-extensions-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
+
 [feedstock_states.tabpfn-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -105725,8 +105761,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.xmltodict-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
 
 [feedstock_states.xmlvalidator-feedstock]
 recipe_type = "meta_yaml"
@@ -107281,8 +107317,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.zeromq-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-06T02:27:17.572241465+00:00"
 
 [feedstock_states.zerorpc-python-feedstock]
 recipe_type = "recipe_v1"
