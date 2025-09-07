@@ -1,8 +1,8 @@
-total_feedstocks = 26906
-recipe_v1_count = 2251
-meta_yaml_count = 24655
+total_feedstocks = 26909
+recipe_v1_count = 2255
+meta_yaml_count = 24654
 unknown_count = 0
-last_updated = "2025-09-06T02:27:22.278377164+00:00"
+last_updated = "2025-09-07T02:31:49.810274149+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -35376,6 +35376,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.jira-cli-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-07T02:31:45.145274803+00:00"
+
 [feedstock_states.jira-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-07-29T02:48:19.753719813+00:00"
@@ -36439,6 +36443,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.jupyter_server-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.jupyter_server_documents-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-07T02:31:45.145274803+00:00"
 
 [feedstock_states.jupyter_server_fileid-feedstock]
 recipe_type = "meta_yaml"
@@ -39327,6 +39335,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.lfzip-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.lgatr-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-07T02:31:45.145274803+00:00"
 
 [feedstock_states.lhapdf-feedstock]
 recipe_type = "meta_yaml"
@@ -52245,8 +52257,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.ome-types-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-07T02:31:45.145274803+00:00"
 
 [feedstock_states.ome-zarr-feedstock]
 recipe_type = "meta_yaml"
@@ -61221,8 +61233,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.pychrono-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-07T02:31:45.145274803+00:00"
 
 [feedstock_states.pychx-feedstock]
 recipe_type = "meta_yaml"
