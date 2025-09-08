@@ -1,8 +1,8 @@
-total_feedstocks = 26909
-recipe_v1_count = 2255
-meta_yaml_count = 24654
+total_feedstocks = 26914
+recipe_v1_count = 2257
+meta_yaml_count = 24657
 unknown_count = 0
-last_updated = "2025-09-07T02:31:49.810274149+00:00"
+last_updated = "2025-09-08T02:32:44.931651713+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -1164,6 +1164,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.aioresult-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-08T02:32:40.260601883+00:00"
+
 [feedstock_states.aioretry-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -1375,6 +1379,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.alamode-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.alang-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-08T02:32:40.260601883+00:00"
 
 [feedstock_states.albucore-feedstock]
 recipe_type = "meta_yaml"
@@ -2311,6 +2319,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.anyscale-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.anysqlite-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-08T02:32:40.260601883+00:00"
 
 [feedstock_states.anytree-feedstock]
 recipe_type = "meta_yaml"
@@ -18933,8 +18945,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.dnspython-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-08T02:32:40.260601883+00:00"
 
 [feedstock_states.do-mpc-feedstock]
 recipe_type = "recipe_v1"
@@ -29375,6 +29387,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.gpi_core-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.gpjax-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-08T02:32:40.260601883+00:00"
 
 [feedstock_states.gpkgstatus-feedstock]
 recipe_type = "meta_yaml"
@@ -103407,6 +103423,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.vp4jl-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.vpl-gpu-rt-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-08T02:32:40.260601883+00:00"
 
 [feedstock_states.vprtempo-feedstock]
 recipe_type = "meta_yaml"
