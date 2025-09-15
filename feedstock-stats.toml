@@ -1,8 +1,8 @@
 total_feedstocks = 26954
-recipe_v1_count = 2302
-meta_yaml_count = 24652
+recipe_v1_count = 2304
+meta_yaml_count = 24650
 unknown_count = 0
-last_updated = "2025-09-14T02:31:19.740273524+00:00"
+last_updated = "2025-09-15T02:32:30.921420626+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -45493,8 +45493,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.micro-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-15T02:32:26.264577487+00:00"
 
 [feedstock_states.micro-liquid-feedstock]
 recipe_type = "meta_yaml"
@@ -54781,8 +54781,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.oxrdflib-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-15T02:32:26.264577487+00:00"
 
 [feedstock_states.oyaml-feedstock]
 recipe_type = "meta_yaml"
