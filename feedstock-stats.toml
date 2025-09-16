@@ -1,8 +1,8 @@
-total_feedstocks = 26954
-recipe_v1_count = 2304
-meta_yaml_count = 24650
+total_feedstocks = 26957
+recipe_v1_count = 2315
+meta_yaml_count = 24642
 unknown_count = 0
-last_updated = "2025-09-15T02:32:30.921420626+00:00"
+last_updated = "2025-09-16T02:28:28.334369537+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -18220,6 +18220,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.django-online-issues-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-16T02:28:23.799307111+00:00"
+
 [feedstock_states.django-organizations-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -21737,8 +21741,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.epics-base-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-16T02:28:23.799307111+00:00"
 
 [feedstock_states.epics-extensions-feedstock]
 recipe_type = "meta_yaml"
@@ -27517,8 +27521,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.geotiff-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-16T02:28:23.799307111+00:00"
 
 [feedstock_states.geotile-feedstock]
 recipe_type = "meta_yaml"
@@ -27559,6 +27563,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.geoxarray-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.gepa-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-16T02:28:23.799307111+00:00"
 
 [feedstock_states.gepetto-viewer-corba-feedstock]
 recipe_type = "meta_yaml"
@@ -34593,8 +34601,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.iregi-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-16T02:28:23.799307111+00:00"
 
 [feedstock_states.iris-esmf-regrid-feedstock]
 recipe_type = "meta_yaml"
@@ -43681,8 +43689,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.makeself-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-16T02:28:23.799307111+00:00"
 
 [feedstock_states.makim-feedstock]
 recipe_type = "meta_yaml"
@@ -69393,8 +69401,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.qcdloop-fortran-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-16T02:28:23.799307111+00:00"
 
 [feedstock_states.qcelemental-feedstock]
 recipe_type = "meta_yaml"
@@ -89008,6 +89016,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.rudof-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-16T02:28:23.799307111+00:00"
+
 [feedstock_states.ruff-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-07-03T02:36:54.912118957+00:00"
@@ -94853,8 +94865,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.spz-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-07-23T02:41:50.274385099+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-16T02:28:23.799307111+00:00"
 
 [feedstock_states.sqcircuit-feedstock]
 recipe_type = "meta_yaml"
@@ -99001,8 +99013,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.tippecanoe-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-16T02:28:23.799307111+00:00"
 
 [feedstock_states.tiptop-feedstock]
 recipe_type = "meta_yaml"
@@ -107789,8 +107801,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.zstandard-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-16T02:28:23.799307111+00:00"
 
 [feedstock_states.zstash-feedstock]
 recipe_type = "meta_yaml"
