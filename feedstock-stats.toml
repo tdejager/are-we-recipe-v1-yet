@@ -1,8 +1,8 @@
-total_feedstocks = 26960
-recipe_v1_count = 2319
+total_feedstocks = 26962
+recipe_v1_count = 2321
 meta_yaml_count = 24641
 unknown_count = 0
-last_updated = "2025-09-17T02:28:40.909763013+00:00"
+last_updated = "2025-09-18T02:28:47.500631525+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -23412,6 +23412,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.fbdfile-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-18T02:28:42.815462452+00:00"
+
 [feedstock_states.fblog-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -27367,6 +27371,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.geolinks-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.geomad-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-18T02:28:42.815462452+00:00"
 
 [feedstock_states.geomag-feedstock]
 recipe_type = "meta_yaml"
@@ -50761,8 +50769,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.ninja-hep-ph-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-18T02:28:42.815462452+00:00"
 
 [feedstock_states.ninja_syntax-feedstock]
 recipe_type = "meta_yaml"
@@ -87337,8 +87345,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.resdk-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-18T02:28:42.815462452+00:00"
 
 [feedstock_states.researchpy-feedstock]
 recipe_type = "meta_yaml"
