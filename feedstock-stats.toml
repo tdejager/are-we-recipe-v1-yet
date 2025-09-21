@@ -1,8 +1,8 @@
-total_feedstocks = 26970
-recipe_v1_count = 2341
+total_feedstocks = 26972
+recipe_v1_count = 2343
 meta_yaml_count = 24629
 unknown_count = 0
-last_updated = "2025-09-20T02:27:20.102919932+00:00"
+last_updated = "2025-09-21T02:32:44.028759766+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -11595,6 +11595,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.cogwheel-pe-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.cohere-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-21T02:32:39.465799656+00:00"
 
 [feedstock_states.cohesion-feedstock]
 recipe_type = "meta_yaml"
@@ -67579,6 +67583,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.python-dashing-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.python-datauri-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-21T02:32:39.465799656+00:00"
 
 [feedstock_states.python-dateutil-feedstock]
 recipe_type = "recipe_v1"
