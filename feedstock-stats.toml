@@ -1,8 +1,8 @@
-total_feedstocks = 26978
-recipe_v1_count = 2345
-meta_yaml_count = 24633
+total_feedstocks = 26996
+recipe_v1_count = 2365
+meta_yaml_count = 24631
 unknown_count = 0
-last_updated = "2025-09-22T02:32:47.697849909+00:00"
+last_updated = "2025-09-23T02:28:46.042391763+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -9636,9 +9636,61 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.certbot-dns-cloudflare-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
+
+[feedstock_states.certbot-dns-digitalocean-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
+
+[feedstock_states.certbot-dns-dnsimple-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
+
+[feedstock_states.certbot-dns-dnsmadeeasy-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
+
+[feedstock_states.certbot-dns-gehirn-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
+
+[feedstock_states.certbot-dns-google-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
+
+[feedstock_states.certbot-dns-linode-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
+
+[feedstock_states.certbot-dns-luadns-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
+
+[feedstock_states.certbot-dns-nsone-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
+
+[feedstock_states.certbot-dns-ovh-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
+
+[feedstock_states.certbot-dns-rfc2136-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
+
+[feedstock_states.certbot-dns-route53-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
+
+[feedstock_states.certbot-dns-sakuracloud-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
+
 [feedstock_states.certbot-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
 
 [feedstock_states.certbot-nginx-feedstock]
 recipe_type = "meta_yaml"
@@ -15271,6 +15323,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.dashlab-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-08-27T02:30:55.793910375+00:00"
+
+[feedstock_states.dashscope-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
 
 [feedstock_states.dask-awkward-feedstock]
 recipe_type = "recipe_v1"
@@ -31497,8 +31553,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.hepdata-lib-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
 
 [feedstock_states.hepdata-validator-feedstock]
 recipe_type = "recipe_v1"
@@ -36895,6 +36951,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.jupyterlab-search-replace-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.jupyterlab-slideshow-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
 
 [feedstock_states.jupyterlab-snippets-feedstock]
 recipe_type = "meta_yaml"
@@ -43571,6 +43631,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.madminer-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.madoka-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
 
 [feedstock_states.maeparser-feedstock]
 recipe_type = "meta_yaml"
@@ -59047,6 +59111,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.pomsky-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.pondpond-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
 
 [feedstock_states.ponio-feedstock]
 recipe_type = "meta_yaml"
@@ -100417,8 +100485,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.tritonclient-split-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
 
 [feedstock_states.trivy-feedstock]
 recipe_type = "meta_yaml"
@@ -102359,6 +102427,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.upsonic-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.upstage-des-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
 
 [feedstock_states.upstash-ratelimit-feedstock]
 recipe_type = "meta_yaml"
@@ -106557,8 +106629,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.xproperty-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
 
 [feedstock_states.xpublish-edr-feedstock]
 recipe_type = "meta_yaml"
@@ -106825,8 +106897,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.xvega-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-23T02:28:41.273280366+00:00"
 
 [feedstock_states.xvfbwrapper-feedstock]
 recipe_type = "meta_yaml"
