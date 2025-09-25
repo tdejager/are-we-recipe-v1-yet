@@ -1,8 +1,8 @@
-total_feedstocks = 27004
-recipe_v1_count = 2375
-meta_yaml_count = 24629
+total_feedstocks = 27008
+recipe_v1_count = 2381
+meta_yaml_count = 24627
 unknown_count = 0
-last_updated = "2025-09-24T02:29:31.396267513+00:00"
+last_updated = "2025-09-25T02:30:25.802361468+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -35429,8 +35429,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.jfrog-cli-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-25T02:30:21.119898932+00:00"
 
 [feedstock_states.jftools-feedstock]
 recipe_type = "meta_yaml"
@@ -41345,8 +41345,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.libtirpc-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-25T02:30:21.119898932+00:00"
 
 [feedstock_states.libtlx-feedstock]
 recipe_type = "meta_yaml"
@@ -45336,6 +45336,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.metadata-crawler-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-09-25T02:30:21.119898932+00:00"
+
 [feedstock_states.metadata-inspector-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -45565,8 +45569,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-08-30T02:27:56.866406054+00:00"
 
 [feedstock_states.mg5amcnlo-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-25T02:30:21.119898932+00:00"
 
 [feedstock_states.mget3-feedstock]
 recipe_type = "meta_yaml"
@@ -50519,6 +50523,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.netavark-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.netbird-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-25T02:30:21.119898932+00:00"
 
 [feedstock_states.netcdf-cxx-legacy-feedstock]
 recipe_type = "meta_yaml"
@@ -97200,6 +97208,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.tabpfn-common-utils-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-25T02:30:21.119898932+00:00"
+
 [feedstock_states.tabpfn-extensions-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-09-06T02:27:17.572241465+00:00"
@@ -101895,6 +101907,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.ufish-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.ufit-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-25T02:30:21.119898932+00:00"
 
 [feedstock_states.ufmt-feedstock]
 recipe_type = "meta_yaml"
