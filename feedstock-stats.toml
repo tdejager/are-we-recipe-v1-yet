@@ -1,8 +1,8 @@
-total_feedstocks = 27008
-recipe_v1_count = 2381
-meta_yaml_count = 24627
+total_feedstocks = 27009
+recipe_v1_count = 2383
+meta_yaml_count = 24626
 unknown_count = 0
-last_updated = "2025-09-25T02:30:25.802361468+00:00"
+last_updated = "2025-09-26T02:29:45.154800846+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -38627,6 +38627,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.langchain-nomic-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.langchain-ollama-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-09-26T02:29:40.468176125+00:00"
 
 [feedstock_states.langchain-openai-feedstock]
 recipe_type = "meta_yaml"
@@ -100953,8 +100957,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.txaio-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-09-26T02:29:40.468176125+00:00"
 
 [feedstock_states.txl-cell-feedstock]
 recipe_type = "meta_yaml"
