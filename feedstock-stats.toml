@@ -1,8 +1,8 @@
 total_feedstocks = 27089
-recipe_v1_count = 2579
-meta_yaml_count = 24510
+recipe_v1_count = 2590
+meta_yaml_count = 24499
 unknown_count = 0
-last_updated = "2025-10-11T02:26:48.575804927+00:00"
+last_updated = "2025-10-12T02:31:02.822004998+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -1153,8 +1153,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.aioquic-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-12T02:30:58.197384940+00:00"
 
 [feedstock_states.aioredis-feedstock]
 recipe_type = "meta_yaml"
@@ -18345,8 +18345,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.django-phonenumber-field-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-12T02:30:58.197384940+00:00"
 
 [feedstock_states.django-picklefield-feedstock]
 recipe_type = "meta_yaml"
@@ -24125,8 +24125,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.find-libpython-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-12T02:30:58.197384940+00:00"
 
 [feedstock_states.findblas-feedstock]
 recipe_type = "meta_yaml"
@@ -29665,8 +29665,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.gpytorch-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-12T02:30:58.197384940+00:00"
 
 [feedstock_states.gql-feedstock]
 recipe_type = "meta_yaml"
@@ -29957,8 +29957,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.grayskull-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-12T02:30:58.197384940+00:00"
 
 [feedstock_states.grblas-feedstock]
 recipe_type = "meta_yaml"
@@ -32377,8 +32377,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.html-text-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-12T02:30:58.197384940+00:00"
 
 [feedstock_states.html-to-markdown-feedstock]
 recipe_type = "recipe_v1"
@@ -32677,8 +32677,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.hussh-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-12T02:30:58.197384940+00:00"
 
 [feedstock_states.hvac-feedstock]
 recipe_type = "meta_yaml"
@@ -56565,8 +56565,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.pdm-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-12T02:30:58.197384940+00:00"
 
 [feedstock_states.pdm-pep517-feedstock]
 recipe_type = "recipe_v1"
@@ -59921,8 +59921,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.printo-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-12T02:30:58.197384940+00:00"
 
 [feedstock_states.priori-feedstock]
 recipe_type = "meta_yaml"
@@ -69977,8 +69977,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.qh3-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-12T02:30:58.197384940+00:00"
 
 [feedstock_states.qhub-dask-feedstock]
 recipe_type = "meta_yaml"
@@ -98261,8 +98261,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.terminaltexteffects-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-12T02:30:58.197384940+00:00"
 
 [feedstock_states.termtosvg-feedstock]
 recipe_type = "recipe_v1"
