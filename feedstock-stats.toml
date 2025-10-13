@@ -1,8 +1,8 @@
-total_feedstocks = 27089
+total_feedstocks = 27090
 recipe_v1_count = 2590
-meta_yaml_count = 24499
+meta_yaml_count = 24500
 unknown_count = 0
-last_updated = "2025-10-12T02:31:02.822004998+00:00"
+last_updated = "2025-10-13T02:32:43.752608249+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -14159,6 +14159,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.cuda-compiler-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.cuda-core-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-10-13T02:32:39.143857324+00:00"
 
 [feedstock_states.cuda-crt-dev_linux-ppc64le-feedstock]
 recipe_type = "meta_yaml"
