@@ -1,8 +1,8 @@
-total_feedstocks = 27114
-recipe_v1_count = 2607
-meta_yaml_count = 24507
+total_feedstocks = 27115
+recipe_v1_count = 2612
+meta_yaml_count = 24503
 unknown_count = 0
-last_updated = "2025-10-16T02:31:13.967331466+00:00"
+last_updated = "2025-10-17T02:30:39.547030079+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -31161,8 +31161,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.harlequin-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-17T02:30:34.917353642+00:00"
 
 [feedstock_states.harlequin-mysql-feedstock]
 recipe_type = "meta_yaml"
@@ -35325,8 +35325,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states."jaraco.text-feedstock"]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-17T02:30:34.917353642+00:00"
 
 [feedstock_states.jaro-winkler-feedstock]
 recipe_type = "meta_yaml"
@@ -36689,8 +36689,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.jupyter_core-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-17T02:30:34.917353642+00:00"
 
 [feedstock_states.jupyter_dashboards-feedstock]
 recipe_type = "meta_yaml"
@@ -54953,8 +54953,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.osqp-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-17T02:30:34.917353642+00:00"
 
 [feedstock_states.osrf_pycommon-feedstock]
 recipe_type = "meta_yaml"
@@ -58967,6 +58967,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.pls-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.pluck-graphql-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-10-17T02:30:34.917353642+00:00"
 
 [feedstock_states.plucky-feedstock]
 recipe_type = "meta_yaml"
