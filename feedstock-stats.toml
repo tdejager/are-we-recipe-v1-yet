@@ -1,8 +1,8 @@
-total_feedstocks = 27126
-recipe_v1_count = 2636
-meta_yaml_count = 24490
+total_feedstocks = 27127
+recipe_v1_count = 2640
+meta_yaml_count = 24487
 unknown_count = 0
-last_updated = "2025-10-21T02:31:57.129608135+00:00"
+last_updated = "2025-10-22T02:33:27.931292060+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -44860,6 +44860,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.mcp-powerpoint-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-10-22T02:33:23.356185905+00:00"
+
 [feedstock_states.mcp-server-fetch-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -64321,8 +64325,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.pylsqpack-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-22T02:33:23.356185905+00:00"
 
 [feedstock_states.pylstraight-feedstock]
 recipe_type = "meta_yaml"
@@ -98229,8 +98233,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.temporalio-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-08-23T02:30:46.130135652+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-22T02:33:23.356185905+00:00"
 
 [feedstock_states.tenacity-feedstock]
 recipe_type = "meta_yaml"
@@ -103241,8 +103245,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.uwsgi-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-22T02:33:23.356185905+00:00"
 
 [feedstock_states.uwsift-feedstock]
 recipe_type = "meta_yaml"
