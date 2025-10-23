@@ -1,8 +1,8 @@
-total_feedstocks = 27127
-recipe_v1_count = 2640
-meta_yaml_count = 24487
+total_feedstocks = 27136
+recipe_v1_count = 2643
+meta_yaml_count = 24493
 unknown_count = 0
-last_updated = "2025-10-22T02:33:27.931292060+00:00"
+last_updated = "2025-10-23T02:31:37.542563548+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -5972,6 +5972,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states."backports.zstd-feedstock"]
+recipe_type = "recipe_v1"
+last_changed = "2025-10-23T02:31:32.842016848+00:00"
+
 [feedstock_states.backports_abc-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -8601,8 +8605,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.cached_path-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-23T02:31:32.842016848+00:00"
 
 [feedstock_states.cachelib-feedstock]
 recipe_type = "meta_yaml"
@@ -37269,8 +37273,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.jupyterlab_server-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-23T02:31:32.842016848+00:00"
 
 [feedstock_states.jupyterlab_templates-feedstock]
 recipe_type = "meta_yaml"
@@ -51539,6 +51543,30 @@ last_changed = "2025-07-14T07:14:52.496885+00:00"
 [feedstock_states.nomad-lab-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.nomad-parser-plugins-atomistic-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-10-23T02:31:32.842016848+00:00"
+
+[feedstock_states.nomad-parser-plugins-electronic-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-10-23T02:31:32.842016848+00:00"
+
+[feedstock_states.nomad-parser-plugins-simulation-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-10-23T02:31:32.842016848+00:00"
+
+[feedstock_states.nomad-parser-plugins-workflow-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-10-23T02:31:32.842016848+00:00"
+
+[feedstock_states.nomad-schema-plugin-run-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-10-23T02:31:32.842016848+00:00"
+
+[feedstock_states.nomad-schema-plugin-simulation-workflow-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-10-23T02:31:32.842016848+00:00"
 
 [feedstock_states.nomic-feedstock]
 recipe_type = "meta_yaml"
@@ -79503,6 +79531,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.r-osqp-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.r-otel-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-10-23T02:31:32.842016848+00:00"
 
 [feedstock_states.r-ottr-feedstock]
 recipe_type = "meta_yaml"
@@ -108139,6 +108171,10 @@ last_changed = "2025-10-01T02:33:41.499635141+00:00"
 [feedstock_states.zen3geo-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.zencfg-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-10-23T02:31:32.842016848+00:00"
 
 [feedstock_states.zenith-feedstock]
 recipe_type = "recipe_v1"
