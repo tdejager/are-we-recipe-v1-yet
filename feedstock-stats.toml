@@ -1,8 +1,8 @@
-total_feedstocks = 27150
-recipe_v1_count = 2656
+total_feedstocks = 27151
+recipe_v1_count = 2657
 meta_yaml_count = 24494
 unknown_count = 0
-last_updated = "2025-10-25T02:30:51.660961445+00:00"
+last_updated = "2025-10-26T02:33:31.136221218+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -31084,6 +31084,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.hallelujah-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-10-26T02:33:26.385449673+00:00"
+
 [feedstock_states.halo-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -52329,8 +52333,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.nwchem-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-26T02:33:26.385449673+00:00"
 
 [feedstock_states.nwchemcmlutils-feedstock]
 recipe_type = "meta_yaml"
