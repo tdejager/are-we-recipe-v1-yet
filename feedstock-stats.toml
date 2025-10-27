@@ -1,8 +1,8 @@
-total_feedstocks = 27151
-recipe_v1_count = 2657
-meta_yaml_count = 24494
+total_feedstocks = 27153
+recipe_v1_count = 2661
+meta_yaml_count = 24492
 unknown_count = 0
-last_updated = "2025-10-26T02:33:31.136221218+00:00"
+last_updated = "2025-10-27T02:35:55.648433516+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -363,6 +363,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.activitysim-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.acts-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-10-27T02:35:50.632414484+00:00"
 
 [feedstock_states.acwater-feedstock]
 recipe_type = "meta_yaml"
@@ -35649,8 +35653,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.jieba3k-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-27T02:35:50.632414484+00:00"
 
 [feedstock_states.jigsaw-feedstock]
 recipe_type = "meta_yaml"
@@ -48091,6 +48095,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.msgraph-sdk-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.msgraphfs-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-10-27T02:35:50.632414484+00:00"
 
 [feedstock_states.msgspec-feedstock]
 recipe_type = "meta_yaml"
@@ -99117,8 +99125,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.textual-textarea-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-10-27T02:35:50.632414484+00:00"
 
 [feedstock_states.textwrap3-feedstock]
 recipe_type = "meta_yaml"
