@@ -1,8 +1,8 @@
-total_feedstocks = 27236
-recipe_v1_count = 2762
-meta_yaml_count = 24474
+total_feedstocks = 27238
+recipe_v1_count = 2765
+meta_yaml_count = 24473
 unknown_count = 0
-last_updated = "2025-11-09T02:33:52.929493114+00:00"
+last_updated = "2025-11-10T02:35:34.132605094+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -12461,8 +12461,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.conda-forge-metadata-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-10T02:35:29.335564498+00:00"
 
 [feedstock_states.conda-forge-pinning-feedstock]
 recipe_type = "meta_yaml"
@@ -17419,6 +17419,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states."diffpy.cmi-feedstock"]
 recipe_type = "meta_yaml"
 last_changed = "2025-08-19T02:32:57.054079600+00:00"
+
+[feedstock_states."diffpy.distanceprinter-feedstock"]
+recipe_type = "meta_yaml"
+last_changed = "2025-11-10T02:35:29.335564498+00:00"
 
 [feedstock_states."diffpy.fourigui-feedstock"]
 recipe_type = "meta_yaml"
@@ -28356,6 +28360,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.gitflow-analytics-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-11-10T02:35:29.335564498+00:00"
+
 [feedstock_states.gitflow-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -38393,8 +38401,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.kokkos-kernels-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-10T02:35:29.335564498+00:00"
 
 [feedstock_states.kombine-feedstock]
 recipe_type = "meta_yaml"
