@@ -1,8 +1,8 @@
-total_feedstocks = 27352
-recipe_v1_count = 2866
-meta_yaml_count = 24486
+total_feedstocks = 27355
+recipe_v1_count = 2871
+meta_yaml_count = 24484
 unknown_count = 0
-last_updated = "2025-11-23T02:41:00.896604030+00:00"
+last_updated = "2025-11-24T02:36:48.784147817+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -37833,8 +37833,8 @@ recipe_type = "recipe_v1"
 last_changed = "2025-08-12T02:34:54.420898896+00:00"
 
 [feedstock_states.kagglehub-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-24T02:36:44.515324338+00:00"
 
 [feedstock_states.kagglesdk-feedstock]
 recipe_type = "recipe_v1"
@@ -41739,6 +41739,10 @@ last_changed = "2025-09-04T02:27:59.002434234+00:00"
 [feedstock_states.libsbml-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.libsc-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-11-24T02:36:44.515324338+00:00"
 
 [feedstock_states.libscrypt-feedstock]
 recipe_type = "recipe_v1"
@@ -55832,6 +55836,10 @@ last_changed = "2025-11-13T02:34:34.054792983+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.p4est-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2025-11-24T02:36:44.515324338+00:00"
+
 [feedstock_states.p4p-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-10-08T02:28:22.063793302+00:00"
@@ -65237,8 +65245,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.pymilvus-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-24T02:36:44.515324338+00:00"
 
 [feedstock_states.pyminhash-feedstock]
 recipe_type = "meta_yaml"
@@ -67981,8 +67989,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.pytest-golden-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-24T02:36:44.515324338+00:00"
 
 [feedstock_states.pytest-grpc-feedstock]
 recipe_type = "meta_yaml"
@@ -104699,6 +104707,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.vhs-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
+
+[feedstock_states.vibehdf5-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-11-24T02:36:44.515324338+00:00"
 
 [feedstock_states.vic-feedstock]
 recipe_type = "meta_yaml"
