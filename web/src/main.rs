@@ -15,7 +15,6 @@ fn App() -> impl IntoView {
         .unwrap()
         .as_integer()
         .unwrap() as u32;
-    let percentage = (converted_recipes as f64 / total_recipes as f64 * 100.0) as u32;
 
     let mut recently_updated = toml_data
         .get("recently_updated")
@@ -53,68 +52,20 @@ fn App() -> impl IntoView {
 
     view! {
         <div class="min-h-screen bg-gray-50">
-            <header class="text-center py-16 px-4">
-                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+            <header class="text-center py-10 px-4">
+                <h1 class="text-5xl md:text-6xl font-bold text-gray-900 mb-4 tracking-tight">
                     "Are we recipe v1 yet?"
                 </h1>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                    "Tracking the progress of migrating conda-forge recipes from the legacy meta.yaml format to the new recipe.yaml format"
+                <p class="text-base text-gray-500 max-w-2xl mx-auto mb-6">
+                    "Tracking conda-forge's migration from meta.yaml to recipe.yaml"
                 </p>
-                <div class="max-w-6xl mx-auto">
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">"What is " <strong>"conda-forge"</strong> "?"</h3>
-                            <p class="text-gray-700 mb-4">
-                                <strong>"conda-forge"</strong> " is a community-driven collection of " <strong>"conda packages"</strong> ". It's an open-source project that provides high-quality, "
-                                "up-to-date conda packages for scientific computing and data science ecosystems."
-                            </p>
-                            <p class="text-gray-700 mb-4">
-                                "With over " <strong>"26,000 feedstocks"</strong> ", conda-forge makes it easy to install software packages using " <strong>"conda"</strong> "."
-                            </p>
-                            <p class="text-gray-700">
-                                "Visit "
-                                <a href="https://conda-forge.org" class="text-blue-600 hover:text-blue-800 underline">"conda-forge.org"</a>
-                                " or explore the "
-                                <a href="https://github.com/conda-forge" class="text-blue-600 hover:text-blue-800 underline">"GitHub organization"</a>
-                                "."
-                            </p>
-                        </div>
-                        
-                        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">"What is " <strong>"Recipe v1"</strong> "?"</h3>
-                            <p class="text-gray-700 mb-4">
-                                <strong>"Recipe v1"</strong> " is the new standardized format for " <strong>"conda package recipes"</strong> ", replacing the legacy " <strong>"meta.yaml"</strong> " format. "
-                                "It provides better structure, validation, and tooling support."
-                            </p>
-                            <p class="text-gray-700">
-                                "Learn more in "
-                                <a href="https://github.com/conda/ceps/blob/main/cep-0013.md" class="text-blue-600 hover:text-blue-800 underline">"CEP-0013"</a>
-                                " and "
-                                <a href="https://github.com/conda/ceps/blob/main/cep-0014.md" class="text-blue-600 hover:text-blue-800 underline">"CEP-0014"</a>
-                                "."
-                            </p>
-                        </div>
-                        
-                        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-                            <h3 class="text-xl font-semibold text-gray-900 mb-4">"What is " <strong>"rattler-build"</strong> "?"</h3>
-                            <p class="text-gray-700 mb-4">
-                                <strong>"rattler-build"</strong> " is a fast, modern build tool for " <strong>"conda packages"</strong> " written in " <strong>"Rust"</strong> ". It's designed to work with the new " <strong>"Recipe v1"</strong> " format "
-                                "and provides significant performance improvements over " <strong>"conda-build"</strong> "."
-                            </p>
-                            <p class="text-gray-700">
-                                "Visit "
-                                <a href="https://rattler.build" class="text-blue-600 hover:text-blue-800 underline">"rattler.build"</a>
-                                " to learn more."
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <InfoAccordion />
             </header>
             <div class="max-w-6xl mx-auto px-4 pb-8">
-                <main class="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+                <main class="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
                     <div class="grid md:grid-cols-2 gap-12 items-center">
                         <MigrationChart converted=converted_recipes total=total_recipes />
-                        <MigrationStats converted=converted_recipes total=total_recipes percentage=percentage />
+                        <MigrationStats converted=converted_recipes total=total_recipes />
                     </div>
                 </main>
                 <div class="mt-8">
@@ -124,14 +75,95 @@ fn App() -> impl IntoView {
                     <TopUnconvertedRanking feedstocks=top_unconverted />
                 </div>
             </div>
-            <div class="max-w-6xl mx-auto px-4 mt-8 mb-6">
-            <a class="" href="https://rattler.build" target="_blank">
-                <img
-                    src="./banner.png"
-                    alt="rattler-build: A fast package build tool for Conda packages written in Rust"
-                    class="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300"
-                />
-            </a>
+            <div class="max-w-6xl mx-auto px-4 mt-8 mb-8">
+                <a href="https://rattler.build" target="_blank" class="block rounded-lg ring-0 ring-gray-900 hover:ring-2 transition-all duration-150">
+                    <img
+                        src="./banner.png"
+                        alt="rattler-build: A fast package build tool for Conda packages written in Rust"
+                        class="w-full rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-150"
+                    />
+                </a>
+            </div>
+        </div>
+    }
+}
+
+#[component]
+fn InfoAccordion() -> impl IntoView {
+    let (expanded, set_expanded) = signal(false);
+
+    view! {
+        <div class="max-w-6xl mx-auto">
+            <button
+                on:click=move |_| set_expanded.update(|v| *v = !*v)
+                class="inline-flex items-center gap-2 py-2 px-4 text-gray-500 hover:text-gray-700 border border-gray-300 hover:border-gray-400 rounded-full transition-all duration-150 text-sm font-medium"
+            >
+                <span>"Learn more"</span>
+                <svg
+                    class=move || format!(
+                        "w-4 h-4 transition-transform duration-200 {}",
+                        if expanded.get() { "rotate-180" } else { "" }
+                    )
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                >
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+            </button>
+            <div class=move || format!(
+                "accordion-content {}",
+                if expanded.get() { "expanded" } else { "" }
+            )>
+                <div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 pb-2">
+                        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3 tracking-tight">"What is " <strong>"conda-forge"</strong> "?"</h3>
+                            <p class="text-gray-600 mb-3 leading-relaxed text-sm">
+                                <strong class="text-gray-700">"conda-forge"</strong> " is a community-driven collection of " <strong class="text-gray-700">"conda packages"</strong> ". It's an open-source project that provides high-quality, "
+                                "up-to-date conda packages for scientific computing and data science ecosystems."
+                            </p>
+                            <p class="text-gray-600 mb-3 leading-relaxed text-sm">
+                                "With over " <strong class="text-gray-700">"26,000 feedstocks"</strong> ", conda-forge makes it easy to install software packages using " <strong class="text-gray-700">"conda"</strong> "."
+                            </p>
+                            <p class="text-gray-600 text-sm">
+                                "Visit "
+                                <a href="https://conda-forge.org" class="text-blue-600 hover:text-blue-800 underline transition-colors duration-150">"conda-forge.org"</a>
+                                " or explore the "
+                                <a href="https://github.com/conda-forge" class="text-blue-600 hover:text-blue-800 underline transition-colors duration-150">"GitHub organization"</a>
+                                "."
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3 tracking-tight">"What is " <strong>"Recipe v1"</strong> "?"</h3>
+                            <p class="text-gray-600 mb-3 leading-relaxed text-sm">
+                                <strong class="text-gray-700">"Recipe v1"</strong> " is the new standardized format for " <strong class="text-gray-700">"conda package recipes"</strong> ", replacing the legacy " <strong class="text-gray-700">"meta.yaml"</strong> " format. "
+                                "It provides better structure, validation, and tooling support."
+                            </p>
+                            <p class="text-gray-600 text-sm">
+                                "Learn more in "
+                                <a href="https://github.com/conda/ceps/blob/main/cep-0013.md" class="text-blue-600 hover:text-blue-800 underline transition-colors duration-150">"CEP-0013"</a>
+                                " and "
+                                <a href="https://github.com/conda/ceps/blob/main/cep-0014.md" class="text-blue-600 hover:text-blue-800 underline transition-colors duration-150">"CEP-0014"</a>
+                                "."
+                            </p>
+                        </div>
+
+                        <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200 hover:shadow-md hover:border-gray-300 transition-all duration-200">
+                            <h3 class="text-lg font-semibold text-gray-900 mb-3 tracking-tight">"What is " <strong>"rattler-build"</strong> "?"</h3>
+                            <p class="text-gray-600 mb-3 leading-relaxed text-sm">
+                                <strong class="text-gray-700">"rattler-build"</strong> " is a fast, modern build tool for " <strong class="text-gray-700">"conda packages"</strong> " written in " <strong class="text-gray-700">"Rust"</strong> ". It's designed to work with the new " <strong class="text-gray-700">"Recipe v1"</strong> " format "
+                                "and provides significant performance improvements over " <strong class="text-gray-700">"conda-build"</strong> "."
+                            </p>
+                            <p class="text-gray-600 text-sm">
+                                "Visit "
+                                <a href="https://rattler.build" class="text-blue-600 hover:text-blue-800 underline transition-colors duration-150">"rattler.build"</a>
+                                " to learn more."
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     }
@@ -153,9 +185,15 @@ fn MigrationChart(converted: u32, total: u32) -> impl IntoView {
     let arc_length = (converted_angle / 360.0) * circumference;
     let remaining_length = circumference - arc_length;
 
+    // CSS variables for the animation
+    let style_vars = format!(
+        "--progress-arc: {:.2}; --progress-remaining: {:.2};",
+        arc_length, remaining_length
+    );
+
     view! {
         <div class="flex flex-col items-center">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-8">Migration Progress</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-8 tracking-tight">"Migration Progress"</h2>
             <div class="relative w-64 h-64">
                 <svg class="w-full h-full transform -rotate-90" viewBox="0 0 200 200">
                     // Background circle (full circumference)
@@ -175,15 +213,15 @@ fn MigrationChart(converted: u32, total: u32) -> impl IntoView {
                         fill="none"
                         stroke="#F9C500"
                         stroke-width="20"
-                        stroke-dasharray=format!("{:.2} {:.2}", arc_length, remaining_length)
                         stroke-linecap="round"
-                        class="transition-all duration-1000 ease-out"
+                        class="progress-circle"
+                        style=style_vars
                     />
                 </svg>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-gray-900">{format!("{:.1}%", percentage)}</div>
-                        <div class="text-sm text-gray-600">Complete</div>
+                        <div class="text-3xl font-bold text-gray-900 tabular-nums">{format!("{:.1}%", percentage)}</div>
+                        <div class="text-sm text-gray-500">"Complete"</div>
                     </div>
                 </div>
             </div>
@@ -192,34 +230,25 @@ fn MigrationChart(converted: u32, total: u32) -> impl IntoView {
 }
 
 #[component]
-fn MigrationStats(converted: u32, total: u32, percentage: u32) -> impl IntoView {
+fn MigrationStats(converted: u32, total: u32) -> impl IntoView {
     view! {
-        <div class="space-y-8">
-            <div class="text-center">
-                <h2 class="text-2xl font-semibold text-gray-900 mb-4">Migration Statistics</h2>
-                <div class="text-5xl font-bold text-emerald-600 mb-2">
-                    {converted.to_string()}
+        <div class="space-y-6">
+            <h2 class="text-2xl font-semibold text-gray-900 tracking-tight text-center">"Migration Statistics"</h2>
+
+            <div class="flex items-end justify-center gap-3">
+                <div class="text-center">
+                    <div class="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-1">"Converted"</div>
+                    <div class="text-4xl font-bold text-emerald-600 tabular-nums">{converted.to_string()}</div>
                 </div>
-                <div class="text-lg text-gray-600 mb-4">
-                    "out of " {total.to_string()} " recipes converted"
-                </div>
-                <div class="w-full bg-gray-200 rounded-full h-4 mb-6">
-                    <div
-                        class="bg-[#F9C500] h-4 rounded-full transition-all duration-1000 ease-out"
-                        style=format!("width: {}%", percentage)
-                    ></div>
+                <div class="text-4xl font-light text-gray-300 pb-1">"/"</div>
+                <div class="text-center">
+                    <div class="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1">"Remaining"</div>
+                    <div class="text-4xl font-bold text-gray-700 tabular-nums">{(total - converted).to_string()}</div>
                 </div>
             </div>
 
-            <div class="grid grid-cols-2 gap-4">
-                <div class="bg-emerald-50 rounded-lg p-4 text-center border border-emerald-200">
-                    <div class="text-2xl font-bold text-emerald-700">{converted.to_string()}</div>
-                    <div class="text-sm text-emerald-600">Converted</div>
-                </div>
-                <div class="bg-gray-50 rounded-lg p-4 text-center border border-gray-200">
-                    <div class="text-2xl font-bold text-gray-700">{(total - converted).to_string()}</div>
-                    <div class="text-sm text-gray-600">Remaining</div>
-                </div>
+            <div class="text-center text-sm text-gray-500">
+                "out of " <span class="tabular-nums font-medium">{total.to_string()}</span> " total feedstocks"
             </div>
         </div>
     }
@@ -244,32 +273,33 @@ fn RecentlyUpdated(feedstocks: Vec<(String, String)>, last_updated: String) -> i
     let formatted_date = format_date(&last_updated);
 
     view! {
-        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
             <div class="flex items-center justify-between mb-4">
-                <h2 class="text-lg font-medium text-gray-800">Recently Updated to Recipe v1</h2>
+                <h2 class="text-lg font-semibold text-gray-900 tracking-tight">"Recently Updated to Recipe v1"</h2>
                 <span class="text-xs text-gray-400">"Updated " {formatted_date}</span>
             </div>
-            <div class="flex items-center text-xs font-bold text-gray-500 uppercase tracking-wide mb-3">
-                <span>Recipe Name</span>
+            <div class="flex items-center text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
+                <span>"Recipe Name"</span>
                 <span class="flex-1"></span>
-                <span>Change Detected</span>
+                <span>"Change Detected"</span>
             </div>
-            <ul class="space-y-2">
+            <ul class="space-y-1">
                 {feedstocks.into_iter().map(|(name, date)| {
                     let formatted_date = format_date(&date);
                     let github_url = format!("https://github.com/conda-forge/{}", name);
+                    let display_name = name.replace("-feedstock", "");
                     view! {
-                        <li class="flex items-center text-gray-700">
+                        <li>
                             <a
                                 href=github_url
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                class="font-medium text-blue-600 hover:text-blue-800 hover:underline"
+                                class="flex items-center text-gray-700 py-2 -mx-2 px-2 rounded hover:bg-gray-50 transition-colors duration-150 cursor-pointer"
                             >
-                                {name.replace("-feedstock", "")}
+                                <span class="font-medium text-blue-600">{display_name}</span>
+                                <span class="flex-1 border-b border-dotted border-gray-300 mx-3"></span>
+                                <span class="text-sm text-gray-500 tabular-nums">{formatted_date}</span>
                             </a>
-                            <span class="flex-1 border-b border-dotted border-gray-300 mx-3"></span>
-                            <span class="text-sm text-gray-600">{formatted_date}</span>
                         </li>
                     }
                 }).collect::<Vec<_>>()}
@@ -299,19 +329,19 @@ fn TopUnconvertedRanking(feedstocks: Vec<(String, u64, String)>) -> impl IntoVie
     let top_feedstocks: Vec<_> = feedstocks.into_iter().take(20).collect();
 
     view! {
-        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-200">
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
             <div class="mb-6">
-                <h2 class="text-2xl font-semibold text-gray-900 mb-2">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-2 tracking-tight">
                     "Ranking: Unconverted Feedstocks by Downloads"
                 </h2>
-                <p class="text-gray-600">
+                <p class="text-gray-500 leading-relaxed">
                     "Most downloaded feedstocks that haven't been converted to Recipe v1 yet. Migrate these to make a big impact :)"
                 </p>
             </div>
-            <div class="flex items-center text-xs font-bold text-gray-500 uppercase tracking-wide mb-3">
+            <div class="flex items-center text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
                 <span class="w-8">"#"</span>
                 <span class="flex-1">"Feedstock Name"</span>
-                <span class="w-20 text-right">"Downloads"</span>
+                <span class="w-24 text-right">"Downloads"</span>
             </div>
             <ul class="space-y-0">
                 {top_feedstocks.into_iter().enumerate().map(|(index, (name, downloads, _recipe_type))| {
@@ -320,29 +350,29 @@ fn TopUnconvertedRanking(feedstocks: Vec<(String, u64, String)>) -> impl IntoVie
                     let formatted_downloads = format_downloads(downloads);
 
                     view! {
-                        <li class="flex items-center py-2 border-b border-dashed border-gray-200 transition-colors {}">
-                            <span class="w-8 text-sm font-medium text-gray-500">
-                                {format!("#{}", index + 1)}
-                            </span>
-                            <div class="flex-1">
-                                <a
-                                    href=github_url
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="font-medium text-blue-600 hover:text-blue-800 hover:underline"
-                                >
+                        <li>
+                            <a
+                                href=github_url
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center py-2 -mx-2 px-2 rounded border-b border-dashed border-gray-200 hover:bg-gray-50 transition-colors duration-150 cursor-pointer"
+                            >
+                                <span class="w-8 text-sm font-medium text-gray-400 tabular-nums">
+                                    {format!("#{}", index + 1)}
+                                </span>
+                                <span class="flex-1 font-medium text-blue-600">
                                     {display_name}
-                                </a>
-                            </div>
-                            <span class="w-20 text-right text-sm font-medium text-gray-900">
-                                ~{formatted_downloads}
-                            </span>
+                                </span>
+                                <span class="w-24 text-right text-sm font-medium text-gray-700 tabular-nums">
+                                    {"~"}{formatted_downloads}
+                                </span>
+                            </a>
                         </li>
                     }
                 }).collect::<Vec<_>>()}
             </ul>
             <div class="mt-4 text-center">
-                <p class="text-sm text-gray-500">
+                <p class="text-sm text-gray-400">
                     "Showing top 20 feedstocks. Data refreshed daily."
                 </p>
             </div>

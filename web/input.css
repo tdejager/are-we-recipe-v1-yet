@@ -3,3 +3,45 @@
 body {
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
+
+/* Accordion transition */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease-out;
+}
+
+.accordion-content.expanded {
+  grid-template-rows: 1fr;
+}
+
+.accordion-content > div {
+  overflow: hidden;
+}
+
+/* Progress circle animation */
+.progress-circle {
+  stroke-dasharray: 0.01 502.65;
+  animation: progress-fill 0.8s ease-out 0.2s forwards;
+}
+
+@keyframes progress-fill {
+  from {
+    stroke-dasharray: 0.01 502.65;
+  }
+  to {
+    stroke-dasharray: var(--progress-arc) var(--progress-remaining);
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .accordion-content {
+    transition: none;
+  }
+
+  .progress-circle {
+    animation: none;
+    stroke-dasharray: var(--progress-arc) var(--progress-remaining);
+  }
+}
