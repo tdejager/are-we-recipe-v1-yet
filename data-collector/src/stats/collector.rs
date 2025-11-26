@@ -60,8 +60,7 @@ pub async fn collect_stats_from_node_attrs(
         .into_iter()
         .filter_map(|e| e.ok())
         .filter(|entry| {
-            entry.file_type().is_file()
-                && entry.path().extension().map_or(false, |ext| ext == "json")
+            entry.file_type().is_file() && entry.path().extension().is_some_and(|ext| ext == "json")
         })
         .collect();
 
@@ -127,11 +126,22 @@ pub async fn collect_stats_from_node_attrs(
                     current_time.clone() // First run, use current timestamp
                 };
 
+                // Preserve existing attribution if present
+                let attribution = if let Some(ref existing) = existing_stats {
+                    existing
+                        .feedstock_states
+                        .get(&feedstock_name)
+                        .and_then(|e| e.attribution.clone())
+                } else {
+                    None
+                };
+
                 feedstock_states.insert(
                     feedstock_name,
                     FeedstockEntry {
                         recipe_type,
                         last_changed,
+                        attribution,
                     },
                 );
                 processed += 1;
@@ -182,9 +192,7 @@ pub async fn collect_stats_from_node_attrs(
                     && existing
                         .feedstock_states
                         .get(*name)
-                        .map_or(true, |old_entry| {
-                            old_entry.recipe_type != RecipeType::RecipeV1
-                        })
+                        .is_none_or(|old_entry| old_entry.recipe_type != RecipeType::RecipeV1)
             })
             .map(|(name, _)| name.clone())
             .collect::<Vec<_>>()

@@ -3,7 +3,7 @@ use std::fs;
 use std::path::Path;
 use std::process::Command;
 
-use crate::config::{CF_GRAPH_REPO_URL, CF_GRAPH_LOCAL_PATH};
+use crate::config::{CF_GRAPH_LOCAL_PATH, CF_GRAPH_REPO_URL};
 
 pub fn ensure_sparse_checkout_repo(force_reload: bool, verbose: bool) -> Result<()> {
     let repo_path = Path::new(CF_GRAPH_LOCAL_PATH);
@@ -40,7 +40,7 @@ pub fn ensure_sparse_checkout_repo(force_reload: bool, verbose: bool) -> Result<
         // Add remote
         let remote_result = Command::new("git")
             .current_dir(repo_path)
-            .args(&["remote", "add", "origin", CF_GRAPH_REPO_URL])
+            .args(["remote", "add", "origin", CF_GRAPH_REPO_URL])
             .output()
             .context("Failed to add remote")?;
 
@@ -58,7 +58,7 @@ pub fn ensure_sparse_checkout_repo(force_reload: bool, verbose: bool) -> Result<
         // Enable sparse checkout
         let sparse_config_result = Command::new("git")
             .current_dir(repo_path)
-            .args(&["config", "core.sparseCheckout", "true"])
+            .args(["config", "core.sparseCheckout", "true"])
             .output()
             .context("Failed to enable sparse checkout")?;
 
@@ -85,7 +85,7 @@ pub fn ensure_sparse_checkout_repo(force_reload: bool, verbose: bool) -> Result<
         // Pull with depth=1
         let pull_result = Command::new("git")
             .current_dir(repo_path)
-            .args(&["pull", "origin", "master", "--depth=1"])
+            .args(["pull", "origin", "master", "--depth=1"])
             .output()
             .context("Failed to pull repository")?;
 
@@ -102,7 +102,7 @@ pub fn ensure_sparse_checkout_repo(force_reload: bool, verbose: bool) -> Result<
             println!("📁 Repository structure:");
             let ls_result = Command::new("ls")
                 .current_dir(repo_path)
-                .args(&["-la"])
+                .args(["-la"])
                 .output()
                 .context("Failed to list directory contents")?;
 
@@ -130,7 +130,7 @@ pub fn ensure_sparse_checkout_repo(force_reload: bool, verbose: bool) -> Result<
 
 pub fn cleanup_sparse_checkout_repo(verbose: bool) -> Result<()> {
     let repo_path = Path::new(CF_GRAPH_LOCAL_PATH);
-    
+
     if repo_path.exists() {
         if verbose {
             println!("🗑️  Cleaning up sparse checkout repository...");
@@ -140,6 +140,6 @@ pub fn cleanup_sparse_checkout_repo(verbose: bool) -> Result<()> {
             println!("✅ Sparse checkout repository cleaned up");
         }
     }
-    
+
     Ok(())
 }

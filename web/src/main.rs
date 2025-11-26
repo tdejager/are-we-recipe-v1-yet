@@ -1,3 +1,8 @@
+// Allow clippy warnings for Leptos empty view patterns (view! {}.into_any())
+// These are standard Leptos idioms for returning nothing from a component
+#![allow(clippy::unit_arg)]
+#![allow(clippy::unused_unit)]
+
 use leptos::prelude::*;
 
 #[component]
@@ -50,6 +55,23 @@ fn App() -> impl IntoView {
         })
         .unwrap_or_default();
 
+    // Extract top contributors for leaderboard
+    let top_contributors: Vec<(String, u32, u32)> = toml_data
+        .get("top_contributors")
+        .and_then(|v| v.as_array())
+        .map(|arr| {
+            arr.iter()
+                .filter_map(|item| {
+                    let table = item.as_table()?;
+                    let name = table.get("name")?.as_str()?.to_string();
+                    let conversions = table.get("conversions")?.as_integer()? as u32;
+                    let new_feedstocks = table.get("new_feedstocks")?.as_integer()? as u32;
+                    Some((name, conversions, new_feedstocks))
+                })
+                .collect::<Vec<_>>()
+        })
+        .unwrap_or_default();
+
     view! {
         <div class="min-h-screen bg-gray-50">
             <header class="text-center py-10 px-4">
@@ -70,6 +92,9 @@ fn App() -> impl IntoView {
                 </main>
                 <div class="mt-8">
                     <RecentlyUpdated feedstocks=recently_updated last_updated=last_updated.to_string() />
+                </div>
+                <div class="mt-8">
+                    <Leaderboard contributors=top_contributors />
                 </div>
                 <div class="mt-8">
                     <TopUnconvertedRanking feedstocks=top_unconverted />
@@ -304,6 +329,320 @@ fn RecentlyUpdated(feedstocks: Vec<(String, String)>, last_updated: String) -> i
                     }
                 }).collect::<Vec<_>>()}
             </ul>
+        </div>
+    }.into_any()
+}
+
+/// Achievement definition with emoji, name, and threshold
+struct Achievement {
+    emoji: &'static str,
+    name: &'static str,
+    threshold: u32,
+}
+
+/// All achievement definitions - single source of truth
+mod achievements {
+    use super::Achievement;
+
+    // Total contribution achievements
+    pub const TOTAL: &[Achievement] = &[
+        Achievement {
+            emoji: "🦄",
+            name: "Conda Mythic",
+            threshold: 500,
+        },
+        Achievement {
+            emoji: "👑",
+            name: "Forge Legend",
+            threshold: 200,
+        },
+        Achievement {
+            emoji: "🚀",
+            name: "Master Smith",
+            threshold: 100,
+        },
+        Achievement {
+            emoji: "💫",
+            name: "Forge Smith",
+            threshold: 50,
+        },
+        Achievement {
+            emoji: "🌟",
+            name: "Recipe Crafter",
+            threshold: 25,
+        },
+        Achievement {
+            emoji: "⭐",
+            name: "Forge Apprentice",
+            threshold: 10,
+        },
+    ];
+
+    // Conversion-specific achievements
+    pub const CONVERSIONS: &[Achievement] = &[
+        Achievement {
+            emoji: "💎",
+            name: "Transmutation Master",
+            threshold: 250,
+        },
+        Achievement {
+            emoji: "🔥",
+            name: "Migration Furnace",
+            threshold: 100,
+        },
+        Achievement {
+            emoji: "⚡",
+            name: "YAML Wizard",
+            threshold: 50,
+        },
+        Achievement {
+            emoji: "🔄",
+            name: "Recipe Translator",
+            threshold: 10,
+        },
+    ];
+
+    // New feedstock achievements
+    pub const NEW_FEEDSTOCKS: &[Achievement] = &[
+        Achievement {
+            emoji: "🏞️",
+            name: "Conda Terraformer",
+            threshold: 250,
+        },
+        Achievement {
+            emoji: "🌲",
+            name: "Ecosystem Grower",
+            threshold: 100,
+        },
+        Achievement {
+            emoji: "🌳",
+            name: "Package Cultivator",
+            threshold: 50,
+        },
+        Achievement {
+            emoji: "🌱",
+            name: "Feedstock Farmer",
+            threshold: 10,
+        },
+    ];
+}
+
+/// Get the highest achievement earned for a given value from a list of achievements
+fn get_achievement(
+    value: u32,
+    achievements: &[Achievement],
+) -> Option<(&'static str, &'static str)> {
+    achievements
+        .iter()
+        .find(|a| value >= a.threshold)
+        .map(|a| (a.emoji, a.name))
+}
+
+/// Compute achievement badges for a contributor based on their stats
+/// Returns vec of (emoji, name) tuples
+fn compute_achievements(
+    conversions: u32,
+    new_feedstocks: u32,
+) -> Vec<(&'static str, &'static str)> {
+    let mut result = Vec::new();
+    let total = conversions + new_feedstocks;
+
+    if let Some(achievement) = get_achievement(total, achievements::TOTAL) {
+        result.push(achievement);
+    }
+    if let Some(achievement) = get_achievement(conversions, achievements::CONVERSIONS) {
+        result.push(achievement);
+    }
+    if let Some(achievement) = get_achievement(new_feedstocks, achievements::NEW_FEEDSTOCKS) {
+        result.push(achievement);
+    }
+
+    result
+}
+
+#[component]
+fn Leaderboard(contributors: Vec<(String, u32, u32)>) -> impl IntoView {
+    if contributors.is_empty() {
+        return view! {}.into_any();
+    }
+
+    // Calculate totals for summary
+    let total_conversions: u32 = contributors.iter().map(|(_, c, _)| c).sum();
+    let total_new_feedstocks: u32 = contributors.iter().map(|(_, _, n)| n).sum();
+
+    view! {
+        <div class="bg-white rounded-lg p-8 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200">
+            <div class="mb-6">
+                <h2 class="text-2xl font-semibold text-gray-900 mb-2 tracking-tight">
+                    "Recipe v1 Contributors"
+                </h2>
+                <p class="text-gray-500 leading-relaxed mb-3">
+                    "A huge thank you to everyone helping migrate conda-forge to Recipe v1! "
+                    "Your contributions make the ecosystem better for everyone."
+                </p>
+                <div class="flex gap-6 mt-4 mb-4">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-emerald-600 tabular-nums">{total_conversions}</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wide">"Conversions"</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-blue-600 tabular-nums">{total_new_feedstocks}</div>
+                        <div class="text-xs text-gray-500 uppercase tracking-wide">"New Feedstocks"</div>
+                    </div>
+                </div>
+                <div class="text-xs text-gray-400 pt-3 space-y-2">
+                    <details class="cursor-pointer">
+                        <summary class="hover:text-gray-600 transition-colors">"How do we track contributions?"</summary>
+                        <div class="mt-2 space-y-1 text-gray-500">
+                            <p>
+                                <strong class="text-emerald-600">"Conversions"</strong>
+                                " are detected when a human contributor adds a recipe.yaml to an existing feedstock. "
+                                "We find the first commit that introduced recipe.yaml and credit the commit author."
+                            </p>
+                            <p>
+                                <strong class="text-blue-600">"New Feedstocks"</strong>
+                                " are detected when the recipe.yaml was added by a bot (automated staging). "
+                                "In this case, we credit the recipe maintainers listed in the recipe.yaml file."
+                            </p>
+                        </div>
+                    </details>
+                    <details class="cursor-pointer">
+                        <summary class="hover:text-gray-600 transition-colors">"Achievement Legend"</summary>
+                        <div class="mt-3 overflow-x-auto">
+                            <table class="w-full text-left text-gray-500 text-base">
+                                <thead>
+                                    <tr class="border-b border-gray-200">
+                                        <th class="pb-2 font-medium text-gray-600">"Category"</th>
+                                        <th class="pb-2 font-medium text-gray-600">"10+"</th>
+                                        <th class="pb-2 font-medium text-gray-600">"25+"</th>
+                                        <th class="pb-2 font-medium text-gray-600">"50+"</th>
+                                        <th class="pb-2 font-medium text-gray-600">"100+"</th>
+                                        <th class="pb-2 font-medium text-gray-600">"200+"</th>
+                                        <th class="pb-2 font-medium text-gray-600">"250+"</th>
+                                        <th class="pb-2 font-medium text-gray-600">"500+"</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-2 text-gray-600">"Total"</td>
+                                        <td class="py-2 text-lg" title={achievements::TOTAL[5].name}>{achievements::TOTAL[5].emoji}</td>
+                                        <td class="py-2 text-lg" title={achievements::TOTAL[4].name}>{achievements::TOTAL[4].emoji}</td>
+                                        <td class="py-2 text-lg" title={achievements::TOTAL[3].name}>{achievements::TOTAL[3].emoji}</td>
+                                        <td class="py-2 text-lg" title={achievements::TOTAL[2].name}>{achievements::TOTAL[2].emoji}</td>
+                                        <td class="py-2 text-lg" title={achievements::TOTAL[1].name}>{achievements::TOTAL[1].emoji}</td>
+                                        <td class="py-2"></td>
+                                        <td class="py-2 text-lg" title={achievements::TOTAL[0].name}>{achievements::TOTAL[0].emoji}</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-2 text-emerald-600">"Conversions"</td>
+                                        <td class="py-2 text-lg" title={achievements::CONVERSIONS[3].name}>{achievements::CONVERSIONS[3].emoji}</td>
+                                        <td class="py-2"></td>
+                                        <td class="py-2 text-lg" title={achievements::CONVERSIONS[2].name}>{achievements::CONVERSIONS[2].emoji}</td>
+                                        <td class="py-2 text-lg" title={achievements::CONVERSIONS[1].name}>{achievements::CONVERSIONS[1].emoji}</td>
+                                        <td class="py-2"></td>
+                                        <td class="py-2 text-lg" title={achievements::CONVERSIONS[0].name}>{achievements::CONVERSIONS[0].emoji}</td>
+                                        <td class="py-2"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 text-blue-600">"New Feedstocks"</td>
+                                        <td class="py-2 text-lg" title={achievements::NEW_FEEDSTOCKS[3].name}>{achievements::NEW_FEEDSTOCKS[3].emoji}</td>
+                                        <td class="py-2"></td>
+                                        <td class="py-2 text-lg" title={achievements::NEW_FEEDSTOCKS[2].name}>{achievements::NEW_FEEDSTOCKS[2].emoji}</td>
+                                        <td class="py-2 text-lg" title={achievements::NEW_FEEDSTOCKS[1].name}>{achievements::NEW_FEEDSTOCKS[1].emoji}</td>
+                                        <td class="py-2"></td>
+                                        <td class="py-2 text-lg" title={achievements::NEW_FEEDSTOCKS[0].name}>{achievements::NEW_FEEDSTOCKS[0].emoji}</td>
+                                        <td class="py-2"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="flex items-center text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
+                <span class="w-10">"#"</span>
+                <span class="flex-1">"Contributor"</span>
+                <span class="w-24 text-center">"Conversions"</span>
+                <span class="w-24 text-center">"New"</span>
+                <span class="w-16 text-right">"Total"</span>
+            </div>
+
+            <ul class="space-y-0">
+                {contributors.into_iter().enumerate().map(|(index, (name, conversions, new_feedstocks))| {
+                    let total = conversions + new_feedstocks;
+                    let github_url = format!("https://github.com/{}", name);
+
+                    // Medal emoji for top 3
+                    let medal = match index {
+                        0 => Some("🥇"),
+                        1 => Some("🥈"),
+                        2 => Some("🥉"),
+                        _ => None,
+                    };
+
+                    // Compute achievements for this contributor
+                    let achievements = compute_achievements(conversions, new_feedstocks);
+
+                    view! {
+                        <li>
+                            <a
+                                href=github_url
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="flex items-center py-2 -mx-2 px-2 rounded border-b border-dashed border-gray-200 hover:bg-gray-50 transition-colors duration-150 cursor-pointer"
+                            >
+                                {if let Some(emoji) = medal {
+                                    view! {
+                                        <span class="w-8 h-8 flex items-center justify-center text-xl">
+                                            {emoji}
+                                        </span>
+                                        <span class="w-2"></span>
+                                    }.into_any()
+                                } else {
+                                    view! {
+                                        <span class="w-8 h-8 flex items-center justify-center text-xs tabular-nums text-gray-400">
+                                            {format!("{}", index + 1)}
+                                        </span>
+                                        <span class="w-2"></span>
+                                    }.into_any()
+                                }}
+                                <span class="flex-1 font-medium text-blue-600">
+                                    {name.clone()}
+                                    {if !achievements.is_empty() {
+                                        view! {
+                                            <span class="ml-2 text-base">
+                                                {achievements.iter().map(|(emoji, name)| {
+                                                    view! {
+                                                        <span title=*name>{*emoji}</span>
+                                                    }
+                                                }).collect::<Vec<_>>()}
+                                            </span>
+                                        }.into_any()
+                                    } else {
+                                        view! {}.into_any()
+                                    }}
+                                </span>
+                                <span class="w-24 text-center text-sm text-emerald-600 tabular-nums">
+                                    {conversions}
+                                </span>
+                                <span class="w-24 text-center text-sm text-blue-600 tabular-nums">
+                                    {new_feedstocks}
+                                </span>
+                                <span class="w-16 text-right text-sm font-medium text-gray-700 tabular-nums">
+                                    {total}
+                                </span>
+                            </a>
+                        </li>
+                    }
+                }).collect::<Vec<_>>()}
+            </ul>
+
+            <div class="mt-4 text-center">
+                <p class="text-sm text-gray-400">
+                    "Showing top 50 contributors. Data refreshed daily."
+                </p>
+            </div>
         </div>
     }.into_any()
 }

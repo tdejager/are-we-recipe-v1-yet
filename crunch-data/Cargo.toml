@@ -1,5 +1,5 @@
 [package]
-name = "compress-stats"
+name = "crunch-data"
 version = "0.1.0"
 edition = "2021"
 
