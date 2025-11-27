@@ -1,8 +1,8 @@
-total_feedstocks = 27401
-recipe_v1_count = 2934
-meta_yaml_count = 24467
+total_feedstocks = 27402
+recipe_v1_count = 2960
+meta_yaml_count = 24442
 unknown_count = 0
-last_updated = "2025-11-26T19:54:14.745209+00:00"
+last_updated = "2025-11-27T02:33:45.996234196+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -35283,8 +35283,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.ghorg-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states."ghost.py-feedstock"]
 recipe_type = "meta_yaml"
@@ -35563,8 +35563,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.git-town-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.git-url-parse-feedstock]
 recipe_type = "meta_yaml"
@@ -35691,8 +35691,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.gitql-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.gitsummary-feedstock]
 recipe_type = "meta_yaml"
@@ -35998,8 +35998,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.glow-md-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.glpk-feedstock]
 recipe_type = "meta_yaml"
@@ -36323,8 +36323,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.go-ccat-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.go-cgo-feedstock]
 recipe_type = "meta_yaml"
@@ -36343,8 +36343,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.go-eclint-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.go-feedstock]
 recipe_type = "meta_yaml"
@@ -36355,8 +36355,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.go-git-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.go-glide-feedstock]
 recipe_type = "meta_yaml"
@@ -36367,8 +36367,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.go-gum-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.go-gvisor-feedstock]
 recipe_type = "meta_yaml"
@@ -36379,8 +36379,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.go-jsonnet-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.go-lab-feedstock]
 recipe_type = "meta_yaml"
@@ -36412,6 +36412,10 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
+[feedstock_states.go-nocgo_linux-64-feedstock]
+recipe_type = "meta_yaml"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
+
 [feedstock_states.go-shfmt-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -36434,8 +36438,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.go-spr-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.go-sqlcmd-feedstock]
 recipe_type = "meta_yaml"
@@ -36456,8 +36460,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.go-tools-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.go-waitforit-feedstock]
 recipe_type = "meta_yaml"
@@ -36497,8 +36501,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.goawk-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.gobject-introspection-feedstock]
 recipe_type = "meta_yaml"
@@ -36521,12 +36525,12 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.godoctor-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.godu-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.goes2go-feedstock]
 recipe_type = "meta_yaml"
@@ -36541,16 +36545,16 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.gofumpt-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.goimports-reviser-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.gojq-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.golangci-lint-feedstock]
 recipe_type = "recipe_v1"
@@ -36563,8 +36567,8 @@ date = "2025-11-14T13:44:09Z"
 commit_sha = "e80339e1d416079f3bd60eccb22c27c4fd62b7fa"
 
 [feedstock_states.golangci-lint-langserver-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.golines-feedstock]
 recipe_type = "meta_yaml"
@@ -36575,8 +36579,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.gomodifytags-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.goodtables-feedstock]
 recipe_type = "meta_yaml"
@@ -37101,8 +37105,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.gopls-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.gordias-feedstock]
 recipe_type = "meta_yaml"
@@ -37916,8 +37920,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.gron-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.groovy-feedstock]
 recipe_type = "recipe_v1"
@@ -39501,8 +39505,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.hck-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.hcl2json-feedstock]
 recipe_type = "recipe_v1"
@@ -39523,8 +39527,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.hcp-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.hcrystalball-feedstock]
 recipe_type = "meta_yaml"
@@ -39731,8 +39735,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.heksa-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.helanal-feedstock]
 recipe_type = "meta_yaml"
@@ -39974,8 +39978,8 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.hexyl-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.heyoka-feedstock]
 recipe_type = "meta_yaml"
@@ -57688,8 +57692,8 @@ date = "2025-08-29T18:26:11Z"
 commit_sha = "5b622094794e1a655fab56a0e24d0f6add261238"
 
 [feedstock_states.mitmproxy-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2025-11-27T02:33:41.091406856+00:00"
 
 [feedstock_states.mitmproxy-rs-feedstock]
 recipe_type = "recipe_v1"
