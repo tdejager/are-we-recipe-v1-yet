@@ -337,6 +337,7 @@ fn RecentlyUpdated(feedstocks: Vec<(String, String)>, last_updated: String) -> i
 struct Achievement {
     emoji: &'static str,
     name: &'static str,
+    tooltip: &'static str,
     threshold: u32,
 }
 
@@ -349,31 +350,37 @@ mod achievements {
         Achievement {
             emoji: "🦄",
             name: "Conda Mythic",
+            tooltip: "Conda Mythic (500+ total v1 contributions)",
             threshold: 500,
         },
         Achievement {
             emoji: "👑",
             name: "Forge Legend",
+            tooltip: "Forge Legend (200+ v1 contributions)",
             threshold: 200,
         },
         Achievement {
             emoji: "🚀",
             name: "Master Smith",
+            tooltip: "Master Smith (100+ v1 contributions)",
             threshold: 100,
         },
         Achievement {
             emoji: "💫",
             name: "Forge Smith",
+            tooltip: "Forge Smith (50+ v1 contributions)",
             threshold: 50,
         },
         Achievement {
             emoji: "🌟",
             name: "Recipe Crafter",
+            tooltip: "Recipe Crafter (25+ v1 contributions)",
             threshold: 25,
         },
         Achievement {
             emoji: "⭐",
             name: "Forge Apprentice",
+            tooltip: "Forge Apprentice (10+ v1 contributions)",
             threshold: 10,
         },
     ];
@@ -383,21 +390,25 @@ mod achievements {
         Achievement {
             emoji: "💎",
             name: "Transmutation Master",
+            tooltip: "Transmutation Master (250+ v1 conversions)",
             threshold: 250,
         },
         Achievement {
             emoji: "🔥",
             name: "Migration Furnace",
+            tooltip: "Migration Furnace (100+ v1 conversions)",
             threshold: 100,
         },
         Achievement {
             emoji: "⚡",
             name: "YAML Wizard",
+            tooltip: "YAML Wizard (50+ v1 conversions)",
             threshold: 50,
         },
         Achievement {
             emoji: "🔄",
             name: "Recipe Translator",
+            tooltip: "Recipe Translator (10+ v1 conversions)",
             threshold: 10,
         },
     ];
@@ -407,21 +418,25 @@ mod achievements {
         Achievement {
             emoji: "🏞️",
             name: "Conda Terraformer",
+            tooltip: "Conda Terraformer (250+ new v1 feedstocks)",
             threshold: 250,
         },
         Achievement {
             emoji: "🌲",
             name: "Ecosystem Grower",
+            tooltip: "Ecosystem Grower (100+ new v1 feedstocks)",
             threshold: 100,
         },
         Achievement {
             emoji: "🌳",
             name: "Package Cultivator",
+            tooltip: "Package Cultivator (50+ new v1 feedstocks)",
             threshold: 50,
         },
         Achievement {
             emoji: "🌱",
             name: "Feedstock Farmer",
+            tooltip: "Feedstock Farmer (10+ new v1 feedstocks)",
             threshold: 10,
         },
     ];
@@ -435,7 +450,7 @@ fn get_achievement(
     achievements
         .iter()
         .find(|a| value >= a.threshold)
-        .map(|a| (a.emoji, a.name))
+        .map(|a| (a.emoji, a.tooltip))
 }
 
 /// Compute achievement badges for a contributor based on their stats
