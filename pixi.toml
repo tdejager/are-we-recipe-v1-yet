@@ -1,6 +1,5 @@
-[project]
+[workspace]
 name = "are-we-recipe-v1-yet"
-version = "0.1.0"
 description = "A Leptos website showing conda-forge meta.yaml to recipe.yaml transition"
 channels = ["conda-forge"]
 platforms = ["osx-64", "osx-arm64", "linux-64", "win-64"]
