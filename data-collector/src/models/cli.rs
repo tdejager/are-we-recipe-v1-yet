@@ -9,6 +9,14 @@ pub struct Cli {
     /// Show detailed progress information
     #[arg(short, long)]
     pub verbose: bool,
+
+    /// Re-calculate attribution for all Recipe v1 feedstocks (clears existing attributions)
+    #[arg(long)]
+    pub reattribute: bool,
+
+    /// Only run attribution (skip analysis and download fetching), implies --reattribute
+    #[arg(long)]
+    pub reattribute_only: bool,
 }
 
 #[derive(Subcommand)]

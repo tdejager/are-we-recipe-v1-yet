@@ -36,10 +36,23 @@ pub fn is_bot_author(author: &CommitAuthor) -> bool {
 }
 
 /// Collect attribution data for Recipe v1 feedstocks that don't have it yet
+///
+/// If `reattribute` is true, clears existing attributions and re-calculates all.
 pub async fn collect_attributions(
     feedstock_states: &mut BTreeMap<String, FeedstockEntry>,
     verbose: bool,
+    reattribute: bool,
 ) -> Result<u32> {
+    // If reattribute flag is set, clear all existing attributions first
+    if reattribute {
+        println!("🔄 Re-calculating all attributions (--reattribute flag set)");
+        for entry in feedstock_states.values_mut() {
+            if entry.recipe_type == RecipeType::RecipeV1 {
+                entry.attribution = None;
+            }
+        }
+    }
+
     // Find feedstocks that need attribution
     let needs_attribution: Vec<String> = feedstock_states
         .iter()
@@ -104,7 +117,9 @@ pub async fn collect_attributions(
     for result in batch_results {
         pb.inc(1);
 
-        if let Some(attribution) = process_history_result(&result, verbose).await {
+        if let Some(attribution) =
+            process_history_result(&result, &github_client, verbose).await
+        {
             if let Some(entry) = feedstock_states.get_mut(&result.feedstock) {
                 entry.attribution = Some(attribution);
                 attributed_count += 1;
@@ -120,17 +135,27 @@ pub async fn collect_attributions(
 }
 
 /// Process a single history result and determine attribution
+///
+/// New attribution rules:
+/// 1. New Feedstock: recipe.yaml exists in the very first commit of the repo
+///    -> Credit goes to maintainers from recipe.yaml
+/// 2. Conversion: recipe.yaml was added in a later commit
+///    -> Look up the PR, credit the PR author (or commit author who added recipe.yaml if bot PR)
 async fn process_history_result(
     result: &RecipeHistoryResult,
+    github_client: &GitHubClient,
     verbose: bool,
 ) -> Option<Attribution> {
     let commit = result.first_recipe_commit.as_ref()?;
 
-    let is_bot = is_bot_author(&commit.author);
+    // Rule 1: Check if this is a new feedstock (recipe.yaml in first commit)
+    let is_new_feedstock = github_client
+        .has_recipe_yaml_in_first_commit(&result.feedstock)
+        .await
+        .unwrap_or(false);
 
-    if is_bot {
-        // Bot created the commit -> New feedstock (staged-recipes merge)
-        // Credit goes to maintainers from recipe.yaml
+    if is_new_feedstock {
+        // New feedstock - credit the maintainers from recipe.yaml
         let maintainers = fetch_recipe_maintainers(&result.feedstock)
             .await
             .unwrap_or_default();
@@ -154,32 +179,116 @@ async fn process_history_result(
             );
         }
 
-        Some(Attribution {
+        return Some(Attribution {
             contribution_type: ContributionType::NewFeedstock,
             contributors,
             date: commit.date.clone(),
             commit_sha: Some(commit.sha.clone()),
-        })
-    } else {
-        // Human created the commit -> Conversion
-        // Credit goes to commit author
-        let contributor = commit
-            .author
-            .login
-            .clone()
-            .unwrap_or_else(|| commit.author.name.clone());
-
-        if verbose {
-            println!("  🔄 {}: Conversion by {}", result.feedstock, contributor);
-        }
-
-        Some(Attribution {
-            contribution_type: ContributionType::Conversion,
-            contributors: vec![contributor],
-            date: commit.date.clone(),
-            commit_sha: Some(commit.sha.clone()),
-        })
+        });
     }
+
+    // Rule 2: This is a conversion - find who did it
+    let contributor = find_conversion_contributor(result, github_client, commit, verbose).await;
+
+    if verbose {
+        println!("  🔄 {}: Conversion by {}", result.feedstock, contributor);
+    }
+
+    Some(Attribution {
+        contribution_type: ContributionType::Conversion,
+        contributors: vec![contributor],
+        date: commit.date.clone(),
+        commit_sha: Some(commit.sha.clone()),
+    })
+}
+
+/// Find who actually did the conversion by looking at PRs and commits
+async fn find_conversion_contributor(
+    result: &RecipeHistoryResult,
+    github_client: &GitHubClient,
+    commit: &crate::external::FirstRecipeCommit,
+    verbose: bool,
+) -> String {
+    // Try to find the PR for this commit
+    let pr_info = github_client
+        .get_pr_for_commit(&result.feedstock, &commit.sha)
+        .await
+        .ok()
+        .flatten();
+
+    match pr_info {
+        Some(pr) => {
+            // Check if PR author is a bot
+            if is_bot_username(&pr.author) {
+                // Bot opened PR - find who actually added recipe.yaml
+                if verbose {
+                    println!(
+                        "    PR #{} opened by bot {}, looking for human contributor...",
+                        pr.number, pr.author
+                    );
+                }
+
+                // Get PR commits and find who added recipe.yaml
+                if let Ok(commits) = github_client
+                    .get_pr_commits(&result.feedstock, pr.number)
+                    .await
+                {
+                    for pr_commit in &commits {
+                        // Check if this commit added recipe.yaml
+                        if let Ok(true) = github_client
+                            .commit_has_recipe_yaml(&result.feedstock, &pr_commit.sha)
+                            .await
+                        {
+                            // Found the commit that added recipe.yaml
+                            if !is_bot_username(&pr_commit.author) {
+                                if verbose {
+                                    println!(
+                                        "    Found human contributor: {} (commit {})",
+                                        pr_commit.author,
+                                        &pr_commit.sha[..7]
+                                    );
+                                }
+                                return pr_commit.author.clone();
+                            }
+                        }
+                    }
+                }
+
+                // Fallback: couldn't find human contributor in PR commits
+                // Use commit author as fallback
+                if verbose {
+                    println!("    Could not find human contributor in PR, using commit author");
+                }
+                commit
+                    .author
+                    .login
+                    .clone()
+                    .unwrap_or_else(|| commit.author.name.clone())
+            } else {
+                // Human opened PR - credit them
+                pr.author
+            }
+        }
+        None => {
+            // No PR found - direct push, credit commit author
+            if verbose {
+                println!("    No PR found, using commit author");
+            }
+            commit
+                .author
+                .login
+                .clone()
+                .unwrap_or_else(|| commit.author.name.clone())
+        }
+    }
+}
+
+/// Check if a username looks like a bot
+fn is_bot_username(username: &str) -> bool {
+    let username_lower = username.to_lowercase();
+    BOT_PATTERNS
+        .iter()
+        .any(|pattern| username_lower.contains(pattern))
 }
 
 #[cfg(test)]

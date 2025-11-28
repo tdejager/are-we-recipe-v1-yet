@@ -17,15 +17,20 @@ use crate::stats::{
 pub fn load_existing_stats_if_exists() -> Option<FeedstockStats> {
     let path = std::env::var("CARGO_MANIFEST_DIR").ok()?;
     let stats_file = format!("{}/../feedstock-stats.toml", path);
-    println!("🔍 Looking for existing stats at: {}", stats_file);
-    let content = fs::read_to_string(&stats_file).ok()?;
-    let stats: FeedstockStats = toml::from_str(&content).ok()?;
+    load_existing_stats(&stats_file).ok()
+}
+
+/// Load existing stats from a specific path
+pub fn load_existing_stats(stats_path: &str) -> Result<FeedstockStats> {
+    println!("🔍 Loading stats from: {}", stats_path);
+    let content = fs::read_to_string(stats_path)?;
+    let stats: FeedstockStats = toml::from_str(&content)?;
     println!(
         "📂 Loaded existing stats: {} total feedstocks, {} feedstock_states entries",
         stats.total_feedstocks,
         stats.feedstock_states.len()
     );
-    Some(stats)
+    Ok(stats)
 }
 
 /// Collect feesdstock statistics from node attributes files.

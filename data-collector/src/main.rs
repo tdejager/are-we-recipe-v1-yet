@@ -4,7 +4,7 @@ use std::fs;
 
 use data_collector::git::cleanup_sparse_checkout_repo;
 use data_collector::models::*;
-use data_collector::stats::{collect_attributions, collect_stats_from_node_attrs};
+use data_collector::stats::{collect_attributions, collect_stats_from_node_attrs, load_existing_stats};
 
 #[tokio::main]
 async fn main() -> Result<()> {
@@ -13,20 +13,30 @@ async fn main() -> Result<()> {
 
     let cli = Cli::parse();
 
-    println!("🚀 Starting conda-forge feedstock analysis...");
+    // --reattribute-only mode: skip analysis/downloads, just reload and re-attribute
+    let mut stats = if cli.reattribute_only {
+        println!("🔄 Running attribution-only mode...");
+        let path = std::env::var("CARGO_MANIFEST_DIR").context("CARGO_MANIFEST_DIR not set")?;
+        let stats_path = format!("{}/../feedstock-stats.toml", path);
+        load_existing_stats(&stats_path).context("Failed to load existing stats - run full analysis first")?
+    } else {
+        println!("🚀 Starting conda-forge feedstock analysis...");
 
-    let mut stats = match cli.command {
-        Some(Commands::Analyze { force_clone }) => {
-            collect_stats_from_node_attrs(force_clone, cli.verbose).await?
+        match cli.command {
+            Some(Commands::Analyze { force_clone }) => {
+                collect_stats_from_node_attrs(force_clone, cli.verbose).await?
+            }
+            None => collect_stats_from_node_attrs(false, cli.verbose).await?,
         }
-        None => collect_stats_from_node_attrs(false, cli.verbose).await?,
     };
 
     // Collect attribution data for Recipe v1 feedstocks
     println!("\n🏆 Collecting contributor attribution...");
-    let attributed = collect_attributions(&mut stats.feedstock_states, cli.verbose).await?;
+    let reattribute = cli.reattribute || cli.reattribute_only;
+    let attributed =
+        collect_attributions(&mut stats.feedstock_states, cli.verbose, reattribute).await?;
     if attributed > 0 {
-        println!("📝 Attributed {} new feedstocks", attributed);
+        println!("📝 Attributed {} feedstocks", attributed);
     }
 
     // Write to TOML file
@@ -37,8 +47,10 @@ async fn main() -> Result<()> {
     fs::write(format!("{}/../feedstock-stats.toml", path), toml_content)
         .context("Failed to write feedstock-stats.toml")?;
 
-    // Clean up sparse checkout repository
-    cleanup_sparse_checkout_repo(cli.verbose)?;
+    // Clean up sparse checkout repository (only if we did full analysis)
+    if !cli.reattribute_only {
+        cleanup_sparse_checkout_repo(cli.verbose)?;
+    }
 
     println!("\n✅ Analysis complete!");
     println!("📊 Total feedstocks: {}", stats.total_feedstocks);
