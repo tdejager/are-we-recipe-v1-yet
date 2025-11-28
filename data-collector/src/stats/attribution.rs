@@ -1,8 +1,7 @@
 use anyhow::Result;
-use indicatif::{ProgressBar, ProgressStyle};
 use std::collections::BTreeMap;
 
-use crate::external::{fetch_recipe_maintainers, CommitAuthor, FirstRecipeCommit, GitHubClient, RecipeHistoryResult};
+use crate::external::{CommitAuthor, FirstRecipeCommit, GitHubClient, RecipeHistoryResult};
 use crate::models::{Attribution, ContributionType, FeedstockEntry, RecipeCommitCache, RecipeType};
 
 /// Known bot patterns for detecting automated commits
@@ -206,28 +205,70 @@ where
         .map(|r| r.feedstock.clone())
         .collect();
 
+    let conversion_count = needs_attribution.len() - new_feedstock_set.len();
     println!(
         "🔍 Found {} new feedstocks, {} conversions",
         new_feedstock_set.len(),
-        needs_attribution.len() - new_feedstock_set.len()
+        conversion_count
     );
 
-    // Set up progress bar for attribution processing
-    let pb = ProgressBar::new(batch_results.len() as u64);
-    pb.set_style(
-        ProgressStyle::with_template(
-            "{spinner:.green} [{elapsed_precise}] [{bar:40.cyan/blue}] {pos}/{len} ({eta})",
-        )
-        .unwrap(),
-    );
+    // Batch fetch maintainers for new feedstocks
+    let maintainers_map = if !new_feedstock_set.is_empty() {
+        let new_feedstocks: Vec<String> = new_feedstock_set.iter().cloned().collect();
+        println!("👥 Batch fetching maintainers for {} new feedstocks...", new_feedstocks.len());
+        github_client
+            .batch_fetch_maintainers(&new_feedstocks)
+            .await?
+    } else {
+        std::collections::HashMap::new()
+    };
 
+    // Batch fetch PRs for all conversions
+    let pr_map = if conversion_count > 0 {
+        let conversion_commits: Vec<(&str, &str)> = batch_results
+            .iter()
+            .filter(|r| !new_feedstock_set.contains(&r.feedstock))
+            .filter_map(|r| {
+                r.first_recipe_commit
+                    .as_ref()
+                    .map(|c| (r.feedstock.as_str(), c.sha.as_str()))
+            })
+            .collect();
+
+        println!("🔗 Batch fetching PR info for {} conversions...", conversion_commits.len());
+        github_client
+            .batch_query_prs_for_commits(&conversion_commits)
+            .await?
+    } else {
+        std::collections::HashMap::new()
+    };
+
+    // For bot-authored PRs, batch fetch the human contributors from PR commits
+    let bot_prs: Vec<(&str, u32)> = pr_map
+        .iter()
+        .filter(|(_, pr)| is_bot_username(&pr.author))
+        .map(|(feedstock, pr)| (feedstock.as_str(), pr.number))
+        .collect();
+
+    let bot_pr_contributors = if !bot_prs.is_empty() {
+        println!("🤖 Found {} bot-authored PRs, fetching human contributors...", bot_prs.len());
+        github_client
+            .batch_fetch_pr_human_contributors(&bot_prs)
+            .await?
+    } else {
+        std::collections::HashMap::new()
+    };
+
+    // Process all results (now fast since everything is pre-fetched)
+    println!("📝 Processing {} attributions...", batch_results.len());
     for result in batch_results {
-        pb.inc(1);
-
         let is_new_feedstock = new_feedstock_set.contains(&result.feedstock);
+        let pr_info = pr_map.get(&result.feedstock);
+        let maintainers = maintainers_map.get(&result.feedstock);
+        let bot_pr_contributor = bot_pr_contributors.get(&result.feedstock);
 
         if let Some(attribution) =
-            process_history_result(&result, &github_client, verbose, is_new_feedstock).await
+            process_history_result(&result, verbose, is_new_feedstock, pr_info, maintainers, bot_pr_contributor)
         {
             if let Some(entry) = feedstock_states.get_mut(&result.feedstock) {
                 entry.attribution = Some(attribution);
@@ -235,8 +276,6 @@ where
             }
         }
     }
-
-    pb.finish_with_message("Attribution collection complete!");
 
     println!("✅ Attributed {} feedstocks", attributed_count);
 
@@ -250,30 +289,29 @@ where
 ///    -> Credit goes to maintainers from recipe.yaml
 /// 2. Conversion: recipe.yaml was added in a later commit
 ///    -> Look up the PR, credit the PR author (or commit author who added recipe.yaml if bot PR)
-async fn process_history_result(
+fn process_history_result(
     result: &RecipeHistoryResult,
-    github_client: &GitHubClient,
     verbose: bool,
     is_new_feedstock: bool,
+    pr_info: Option<&crate::external::PullRequestInfo>,
+    maintainers: Option<&Vec<String>>,
+    bot_pr_contributor: Option<&String>,
 ) -> Option<Attribution> {
     let commit = result.first_recipe_commit.as_ref()?;
 
     if is_new_feedstock {
         // New feedstock - credit the maintainers from recipe.yaml
-        let maintainers = fetch_recipe_maintainers(&result.feedstock)
-            .await
-            .unwrap_or_default();
-
-        let contributors = if maintainers.is_empty() {
-            if verbose {
-                println!(
-                    "  ⚠️  {}: No maintainers found, using 'unknown'",
-                    result.feedstock
-                );
+        let contributors = match maintainers {
+            Some(m) if !m.is_empty() => m.clone(),
+            _ => {
+                if verbose {
+                    println!(
+                        "  ⚠️  {}: No maintainers found, using 'unknown'",
+                        result.feedstock
+                    );
+                }
+                vec!["unknown".to_string()]
             }
-            vec!["unknown".to_string()]
-        } else {
-            maintainers
         };
 
         if verbose {
@@ -292,7 +330,7 @@ async fn process_history_result(
     }
 
     // Rule 2: This is a conversion - find who did it
-    let contributor = find_conversion_contributor(result, github_client, commit, verbose).await;
+    let contributor = find_conversion_contributor(commit, verbose, pr_info, bot_pr_contributor);
 
     if verbose {
         println!("  🔄 {}: Conversion by {}", result.feedstock, contributor);
@@ -307,61 +345,34 @@ async fn process_history_result(
 }
 
 /// Find who actually did the conversion by looking at PRs and commits
-async fn find_conversion_contributor(
-    result: &RecipeHistoryResult,
-    github_client: &GitHubClient,
+fn find_conversion_contributor(
     commit: &crate::external::FirstRecipeCommit,
     verbose: bool,
+    pr_info: Option<&crate::external::PullRequestInfo>,
+    bot_pr_contributor: Option<&String>,
 ) -> String {
-    // Try to find the PR for this commit
-    let pr_info = github_client
-        .get_pr_for_commit(&result.feedstock, &commit.sha)
-        .await
-        .ok()
-        .flatten();
-
     match pr_info {
         Some(pr) => {
             // Check if PR author is a bot
             if is_bot_username(&pr.author) {
-                // Bot opened PR - find who actually added recipe.yaml
-                if verbose {
-                    println!(
-                        "    PR #{} opened by bot {}, looking for human contributor...",
-                        pr.number, pr.author
-                    );
-                }
-
-                // Get PR commits and find who added recipe.yaml
-                if let Ok(commits) = github_client
-                    .get_pr_commits(&result.feedstock, pr.number)
-                    .await
-                {
-                    for pr_commit in &commits {
-                        // Check if this commit added recipe.yaml
-                        if let Ok(true) = github_client
-                            .commit_has_recipe_yaml(&result.feedstock, &pr_commit.sha)
-                            .await
-                        {
-                            // Found the commit that added recipe.yaml
-                            if !is_bot_username(&pr_commit.author) {
-                                if verbose {
-                                    println!(
-                                        "    Found human contributor: {} (commit {})",
-                                        pr_commit.author,
-                                        &pr_commit.sha[..7]
-                                    );
-                                }
-                                return pr_commit.author.clone();
-                            }
-                        }
+                // Bot opened PR - use pre-fetched human contributor if available
+                if let Some(contributor) = bot_pr_contributor {
+                    if verbose {
+                        println!(
+                            "    PR #{} opened by bot {}, human contributor: {}",
+                            pr.number, pr.author, contributor
+                        );
                     }
+                    return contributor.clone();
                 }
 
                 // Fallback: couldn't find human contributor in PR commits
                 // Use commit author as fallback
                 if verbose {
-                    println!("    Could not find human contributor in PR, using commit author");
+                    println!(
+                        "    PR #{} opened by bot {}, no human found, using commit author",
+                        pr.number, pr.author
+                    );
                 }
                 commit
                     .author
@@ -370,7 +381,7 @@ async fn find_conversion_contributor(
                     .unwrap_or_else(|| commit.author.name.clone())
             } else {
                 // Human opened PR - credit them
-                pr.author
+                pr.author.clone()
             }
         }
         None => {

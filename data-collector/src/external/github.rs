@@ -5,6 +5,27 @@ use std::process::Command;
 const GITHUB_GRAPHQL_URL: &str = "https://api.github.com/graphql";
 const BATCH_SIZE: usize = 50;
 
+/// Known bot patterns for detecting automated commits
+const BOT_PATTERNS: &[&str] = &[
+    "conda-forge-admin",
+    "regro-cf-autotick-bot",
+    "conda-forge-linter",
+    "[bot]",
+    "github-actions",
+    "conda-forge-daemon",
+    "conda-forge-coordinator",
+    "conda-forge-webservices",
+    "conda-forge-status",
+];
+
+/// Check if a username looks like a bot
+fn is_bot_username(username: &str) -> bool {
+    let username_lower = username.to_lowercase();
+    BOT_PATTERNS
+        .iter()
+        .any(|pattern| username_lower.contains(pattern))
+}
+
 /// GitHub GraphQL client for querying repository information
 pub struct GitHubClient {
     client: reqwest::Client,
@@ -371,6 +392,254 @@ impl GitHubClient {
         }
 
         Ok(None)
+    }
+
+    /// Batch query PRs for multiple commits using GraphQL
+    /// Returns a map of feedstock name -> PullRequestInfo
+    pub async fn batch_query_prs_for_commits(
+        &self,
+        commits: &[(&str, &str)], // Vec of (feedstock, commit_sha)
+    ) -> Result<std::collections::HashMap<String, PullRequestInfo>> {
+        use std::collections::HashMap;
+
+        if commits.is_empty() {
+            return Ok(HashMap::new());
+        }
+
+        let mut results = HashMap::new();
+        let total_batches = (commits.len() + BATCH_SIZE - 1) / BATCH_SIZE;
+
+        for (batch_idx, chunk) in commits.chunks(BATCH_SIZE).enumerate() {
+            eprint!(
+                "\r   Fetching PRs: batch {}/{} ({} done)...",
+                batch_idx + 1,
+                total_batches,
+                results.len()
+            );
+
+            // Build GraphQL query
+            let mut query = String::from("query {\n");
+            for (i, (feedstock, sha)) in chunk.iter().enumerate() {
+                query.push_str(&format!(
+                    r#"  repo{}: repository(owner: "conda-forge", name: "{}") {{
+    object(oid: "{}") {{
+      ... on Commit {{
+        associatedPullRequests(first: 1) {{
+          nodes {{
+            number
+            author {{ login }}
+          }}
+        }}
+      }}
+    }}
+  }}
+"#,
+                    i, feedstock, sha
+                ));
+            }
+            query.push_str("}\n");
+
+            let response = self.execute_query(&query).await?;
+
+            // Parse results
+            for (i, (feedstock, _)) in chunk.iter().enumerate() {
+                let repo_key = format!("repo{}", i);
+                if let Some(pr_info) = response
+                    .get(&repo_key)
+                    .and_then(|r| r.get("object"))
+                    .and_then(|o| o.get("associatedPullRequests"))
+                    .and_then(|prs| prs.get("nodes"))
+                    .and_then(|nodes| nodes.as_array())
+                    .and_then(|arr| arr.first())
+                {
+                    let number = pr_info
+                        .get("number")
+                        .and_then(|n| n.as_u64())
+                        .unwrap_or(0) as u32;
+                    let author = pr_info
+                        .get("author")
+                        .and_then(|a| a.get("login"))
+                        .and_then(|l| l.as_str())
+                        .unwrap_or("unknown")
+                        .to_string();
+
+                    if number > 0 {
+                        results.insert(
+                            feedstock.to_string(),
+                            PullRequestInfo { number, author },
+                        );
+                    }
+                }
+            }
+        }
+        eprintln!(); // Newline after progress
+
+        Ok(results)
+    }
+
+    /// Batch fetch maintainers from recipe.yaml for multiple feedstocks using GraphQL
+    /// Returns a map of feedstock name -> Vec<maintainer>
+    pub async fn batch_fetch_maintainers(
+        &self,
+        feedstocks: &[String],
+    ) -> Result<std::collections::HashMap<String, Vec<String>>> {
+        use std::collections::HashMap;
+
+        if feedstocks.is_empty() {
+            return Ok(HashMap::new());
+        }
+
+        let mut results = HashMap::new();
+        let total_batches = (feedstocks.len() + BATCH_SIZE - 1) / BATCH_SIZE;
+
+        for (batch_idx, chunk) in feedstocks.chunks(BATCH_SIZE).enumerate() {
+            eprint!(
+                "\r   Fetching maintainers: batch {}/{} ({} done)...",
+                batch_idx + 1,
+                total_batches,
+                results.len()
+            );
+
+            // Build GraphQL query - try recipe.yaml first, then recipe/recipe.yaml
+            let mut query = String::from("query {\n");
+            for (i, feedstock) in chunk.iter().enumerate() {
+                query.push_str(&format!(
+                    r#"  repo{}: repository(owner: "conda-forge", name: "{}") {{
+    recipeYaml: object(expression: "main:recipe.yaml") {{
+      ... on Blob {{ text }}
+    }}
+    recipeSubdir: object(expression: "main:recipe/recipe.yaml") {{
+      ... on Blob {{ text }}
+    }}
+  }}
+"#,
+                    i, feedstock
+                ));
+            }
+            query.push_str("}\n");
+
+            let response = self.execute_query(&query).await?;
+
+            // Parse results
+            for (i, feedstock) in chunk.iter().enumerate() {
+                let repo_key = format!("repo{}", i);
+
+                // Try recipe.yaml first, then recipe/recipe.yaml
+                let content = response
+                    .get(&repo_key)
+                    .and_then(|r| {
+                        r.get("recipeYaml")
+                            .and_then(|o| o.get("text"))
+                            .and_then(|t| t.as_str())
+                            .or_else(|| {
+                                r.get("recipeSubdir")
+                                    .and_then(|o| o.get("text"))
+                                    .and_then(|t| t.as_str())
+                            })
+                    });
+
+                if let Some(yaml_content) = content {
+                    if let Some(maintainers) = extract_maintainers_from_yaml(yaml_content) {
+                        if !maintainers.is_empty() {
+                            results.insert(feedstock.clone(), maintainers);
+                        }
+                    }
+                }
+            }
+        }
+        eprintln!(); // Newline after progress
+
+        Ok(results)
+    }
+
+    /// Batch fetch the first non-bot commit author from PRs
+    /// For bot-authored PRs, we need to find who actually made the conversion
+    /// Returns a map of feedstock name -> human contributor username
+    pub async fn batch_fetch_pr_human_contributors(
+        &self,
+        bot_prs: &[(&str, u32)], // Vec of (feedstock, pr_number)
+    ) -> Result<std::collections::HashMap<String, String>> {
+        use std::collections::HashMap;
+
+        if bot_prs.is_empty() {
+            return Ok(HashMap::new());
+        }
+
+        let mut results = HashMap::new();
+        let total_batches = (bot_prs.len() + BATCH_SIZE - 1) / BATCH_SIZE;
+
+        for (batch_idx, chunk) in bot_prs.chunks(BATCH_SIZE).enumerate() {
+            eprint!(
+                "\r   Fetching PR contributors: batch {}/{} ({} done)...",
+                batch_idx + 1,
+                total_batches,
+                results.len()
+            );
+
+            // Build GraphQL query to get PR commits
+            let mut query = String::from("query {\n");
+            for (i, (feedstock, pr_number)) in chunk.iter().enumerate() {
+                query.push_str(&format!(
+                    r#"  repo{}: repository(owner: "conda-forge", name: "{}") {{
+    pullRequest(number: {}) {{
+      commits(first: 50) {{
+        nodes {{
+          commit {{
+            author {{
+              user {{ login }}
+              name
+            }}
+          }}
+        }}
+      }}
+    }}
+  }}
+"#,
+                    i, feedstock, pr_number
+                ));
+            }
+            query.push_str("}\n");
+
+            let response = self.execute_query(&query).await?;
+
+            // Parse results - find first non-bot author in each PR
+            for (i, (feedstock, _)) in chunk.iter().enumerate() {
+                let repo_key = format!("repo{}", i);
+
+                if let Some(commits) = response
+                    .get(&repo_key)
+                    .and_then(|r| r.get("pullRequest"))
+                    .and_then(|pr| pr.get("commits"))
+                    .and_then(|c| c.get("nodes"))
+                    .and_then(|n| n.as_array())
+                {
+                    for commit_node in commits {
+                        let author = commit_node
+                            .get("commit")
+                            .and_then(|c| c.get("author"));
+
+                        if let Some(author) = author {
+                            // Try to get login first, fall back to name
+                            let username = author
+                                .get("user")
+                                .and_then(|u| u.get("login"))
+                                .and_then(|l| l.as_str())
+                                .or_else(|| author.get("name").and_then(|n| n.as_str()))
+                                .unwrap_or("unknown");
+
+                            // Check if this is not a bot
+                            if !is_bot_username(username) {
+                                results.insert(feedstock.to_string(), username.to_string());
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        eprintln!(); // Newline after progress
+
+        Ok(results)
     }
 
     /// Get commits in a PR with file change info
