@@ -165,8 +165,14 @@ impl GitHubClient {
                 all_pagination_needed.len()
             );
 
-            for pag in &all_pagination_needed {
-                eprintln!("  Paginating: {} (path: {})...", pag.feedstock, pag.path);
+            for (idx, pag) in all_pagination_needed.iter().enumerate() {
+                eprint!(
+                    "\r  [{}/{}] Paginating: {} (path: {})...          ",
+                    idx + 1,
+                    all_pagination_needed.len(),
+                    pag.feedstock,
+                    pag.path
+                );
                 if let Some(commit) = self.paginate_to_oldest_commit(pag).await? {
                     // Update the result for this feedstock
                     if let Some(result) = all_results
@@ -176,6 +182,7 @@ impl GitHubClient {
                         result.first_recipe_commit = Some(commit);
                     }
                 }
+                eprintln!(); // Newline after each feedstock pagination completes
             }
         }
 
@@ -195,9 +202,16 @@ impl GitHubClient {
         loop {
             page_count += 1;
             if page_count > MAX_PAGES {
-                eprintln!("    Warning: Hit max page limit ({}) for {}", MAX_PAGES, pag.feedstock);
+                eprintln!(
+                    "\n    Warning: Hit max page limit ({}) for {}",
+                    MAX_PAGES, pag.feedstock
+                );
                 break;
             }
+            eprint!(
+                "\r    {} - page {}/{}...",
+                pag.feedstock, page_count, MAX_PAGES
+            );
             let query = format!(
                 r#"query {{
                     repository(owner: "conda-forge", name: "{feedstock}") {{
@@ -451,8 +465,22 @@ impl GitHubClient {
     /// Find the SHA of the very first commit in the repository using GraphQL
     async fn find_first_commit_sha(&self, feedstock: &str) -> Result<Option<String>> {
         let mut cursor: Option<String> = None;
+        let mut page_count = 0;
+        const MAX_PAGES: usize = 50; // Safety limit
 
         loop {
+            page_count += 1;
+            if page_count > MAX_PAGES {
+                eprintln!(
+                    "\n      Warning: Hit max page limit ({}) finding first commit for {}",
+                    MAX_PAGES, feedstock
+                );
+                return Ok(None);
+            }
+            if page_count > 1 {
+                eprint!("\r      Finding first commit: page {}...", page_count);
+            }
+
             let after_clause = cursor
                 .as_ref()
                 .map(|c| format!(r#", after: "{}""#, c))
