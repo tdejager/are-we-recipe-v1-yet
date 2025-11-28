@@ -166,14 +166,13 @@ impl GitHubClient {
             );
 
             for (idx, pag) in all_pagination_needed.iter().enumerate() {
-                eprint!(
-                    "\r  [{}/{}] Paginating: {} (path: {})...          ",
+                eprintln!(
+                    "  [{}/{}] {} - cloning to find oldest commit...",
                     idx + 1,
                     all_pagination_needed.len(),
                     pag.feedstock,
-                    pag.path
                 );
-                if let Some(commit) = self.paginate_to_oldest_commit(pag).await? {
+                if let Some(commit) = self.find_oldest_commit_via_clone(pag).await? {
                     // Update the result for this feedstock
                     if let Some(result) = all_results
                         .iter_mut()
@@ -182,148 +181,155 @@ impl GitHubClient {
                         result.first_recipe_commit = Some(commit);
                     }
                 }
-                eprintln!(); // Newline after each feedstock pagination completes
             }
         }
 
         Ok(all_results)
     }
 
-    /// Paginate through commit history to find the oldest commit
-    async fn paginate_to_oldest_commit(
+    /// Batch check which feedstocks are "new" (recipe.yaml exists in first commit)
+    /// Returns a HashSet of feedstock names that are new feedstocks
+    pub async fn batch_check_new_feedstocks(
+        &self,
+        feedstocks: &[String],
+    ) -> Result<std::collections::HashSet<String>> {
+        use std::collections::HashSet;
+
+        let mut new_feedstocks = HashSet::new();
+        let total = feedstocks.len();
+
+        // Process in parallel using multiple concurrent clones
+        const CONCURRENT_CLONES: usize = 10;
+
+        for (chunk_idx, chunk) in feedstocks.chunks(CONCURRENT_CLONES).enumerate() {
+            let start = chunk_idx * CONCURRENT_CLONES;
+            eprint!(
+                "\r   Checking {}-{}/{}...",
+                start + 1,
+                (start + chunk.len()).min(total),
+                total
+            );
+
+            let futures: Vec<_> = chunk
+                .iter()
+                .map(|feedstock| self.has_recipe_yaml_in_first_commit(feedstock))
+                .collect();
+
+            let results = futures::future::join_all(futures).await;
+
+            for (feedstock, result) in chunk.iter().zip(results) {
+                if result.unwrap_or(false) {
+                    new_feedstocks.insert(feedstock.clone());
+                }
+            }
+        }
+        eprintln!(); // Newline after progress
+
+        Ok(new_feedstocks)
+    }
+
+    /// Clone the repository and use git log to find the oldest commit that touched recipe.yaml
+    /// This is faster than paginating through the GitHub API for repos with many commits
+    async fn find_oldest_commit_via_clone(
         &self,
         pag: &PaginationNeeded,
     ) -> Result<Option<FirstRecipeCommit>> {
-        let mut cursor = pag.cursor.clone();
-        let mut oldest_commit = pag.oldest_commit_so_far.clone();
-        let mut page_count = 0;
-        const MAX_PAGES: usize = 50; // Safety limit: 50 pages * 100 = 5000 commits max
+        use tempfile::tempdir;
 
-        loop {
-            page_count += 1;
-            if page_count > MAX_PAGES {
-                eprintln!(
-                    "\n    Warning: Hit max page limit ({}) for {}",
-                    MAX_PAGES, pag.feedstock
-                );
-                break;
-            }
-            eprint!(
-                "\r    {} - page {}/{}...",
-                pag.feedstock, page_count, MAX_PAGES
-            );
-            let query = format!(
-                r#"query {{
-                    repository(owner: "conda-forge", name: "{feedstock}") {{
-                        defaultBranchRef {{
-                            target {{
-                                ... on Commit {{
-                                    history(first: 100, path: "{path}", after: "{cursor}") {{
-                                        pageInfo {{
-                                            hasNextPage
-                                            endCursor
-                                        }}
-                                        nodes {{
-                                            oid
-                                            message
-                                            committedDate
-                                            author {{
-                                                user {{ login }}
-                                                name
-                                                email
-                                            }}
-                                        }}
-                                    }}
-                                }}
-                            }}
-                        }}
-                    }}
-                }}"#,
-                feedstock = pag.feedstock,
-                path = pag.path,
-                cursor = cursor
-            );
+        let temp_dir = tempdir().context("Failed to create temp directory")?;
+        let repo_path = temp_dir.path();
 
-            let response = self.execute_query(&query).await?;
+        // Clone the repository (shallow clone with just the main branch)
+        let clone_url = format!("https://github.com/conda-forge/{}.git", pag.feedstock);
+        let clone_output = Command::new("git")
+            .args([
+                "clone",
+                "--filter=blob:none", // Partial clone - don't download blobs
+                "--single-branch",
+                &clone_url,
+                repo_path.to_str().unwrap(),
+            ])
+            .output()
+            .context("Failed to run git clone")?;
 
-            let history = response
-                .get("repository")
-                .and_then(|r| r.get("defaultBranchRef"))
-                .and_then(|b| b.get("target"))
-                .and_then(|t| t.get("history"));
-
-            let Some(history) = history else {
-                break;
-            };
-
-            let nodes = history.get("nodes").and_then(|n| n.as_array());
-            let Some(nodes) = nodes else {
-                break;
-            };
-
-            // Update oldest commit if we have nodes
-            if let Some(commit) = nodes.last() {
-                if let Some(author) = commit.get("author") {
-                    oldest_commit = FirstRecipeCommit {
-                        sha: commit
-                            .get("oid")
-                            .and_then(|v| v.as_str())
-                            .unwrap_or("")
-                            .to_string(),
-                        message: commit
-                            .get("message")
-                            .and_then(|v| v.as_str())
-                            .unwrap_or("")
-                            .to_string(),
-                        date: commit
-                            .get("committedDate")
-                            .and_then(|v| v.as_str())
-                            .unwrap_or("")
-                            .to_string(),
-                        author: CommitAuthor {
-                            login: author
-                                .get("user")
-                                .and_then(|u| u.get("login"))
-                                .and_then(|l| l.as_str())
-                                .map(String::from),
-                            name: author
-                                .get("name")
-                                .and_then(|v| v.as_str())
-                                .unwrap_or("")
-                                .to_string(),
-                            email: author
-                                .get("email")
-                                .and_then(|v| v.as_str())
-                                .unwrap_or("")
-                                .to_string(),
-                        },
-                    };
-                }
-            }
-
-            // Check if there are more pages
-            let page_info = history.get("pageInfo");
-            let has_next = page_info
-                .and_then(|p| p.get("hasNextPage"))
-                .and_then(|v| v.as_bool())
-                .unwrap_or(false);
-
-            if !has_next {
-                break;
-            }
-
-            cursor = page_info
-                .and_then(|p| p.get("endCursor"))
-                .and_then(|v| v.as_str())
-                .unwrap_or("")
-                .to_string();
-
-            if cursor.is_empty() {
-                break;
-            }
+        if !clone_output.status.success() {
+            let stderr = String::from_utf8_lossy(&clone_output.stderr);
+            anyhow::bail!("git clone failed: {}", stderr);
         }
 
-        Ok(Some(oldest_commit))
+        // Use git log to find the first commit that added recipe.yaml
+        // --follow tracks renames, --diff-filter=A shows only commits that added the file
+        // We try both paths since recipe.yaml can be in root or recipe/ directory
+        let git_log_output = Command::new("git")
+            .args([
+                "-C",
+                repo_path.to_str().unwrap(),
+                "log",
+                "--follow",
+                "--diff-filter=A",
+                "--format=%H|%an|%ae|%aI|%s",
+                "--",
+                pag.path,
+            ])
+            .output()
+            .context("Failed to run git log")?;
+
+        if !git_log_output.status.success() {
+            // Clean up temp dir is automatic via Drop
+            return Ok(None);
+        }
+
+        let output = String::from_utf8_lossy(&git_log_output.stdout);
+        let lines: Vec<&str> = output.lines().collect();
+
+        // The last line is the oldest commit (first commit that added the file)
+        let Some(oldest_line) = lines.last() else {
+            return Ok(None);
+        };
+
+        let parts: Vec<&str> = oldest_line.splitn(5, '|').collect();
+        if parts.len() < 5 {
+            return Ok(None);
+        }
+
+        let sha = parts[0].to_string();
+        let name = parts[1].to_string();
+        let email = parts[2].to_string();
+        let date = parts[3].to_string();
+        let message = parts[4].to_string();
+
+        // Try to resolve GitHub username from email
+        let login = self.resolve_github_login(&email).await.ok().flatten();
+
+        // Temp dir cleanup is automatic
+        drop(temp_dir);
+
+        Ok(Some(FirstRecipeCommit {
+            sha,
+            message,
+            date,
+            author: CommitAuthor { login, name, email },
+        }))
+    }
+
+    /// Try to resolve a GitHub username from an email address
+    async fn resolve_github_login(&self, email: &str) -> Result<Option<String>> {
+        // GitHub noreply emails have the format: username@users.noreply.github.com
+        // or: 12345678+username@users.noreply.github.com
+        if email.ends_with("@users.noreply.github.com") {
+            let local_part = email.split('@').next().unwrap_or("");
+            // Handle both "username" and "12345678+username" formats
+            let username = if local_part.contains('+') {
+                local_part.split('+').nth(1).unwrap_or(local_part)
+            } else {
+                local_part
+            };
+            return Ok(Some(username.to_string()));
+        }
+
+        // For other emails, we could query GitHub's user search API, but that's
+        // expensive and may not work for private emails. Just return None.
+        Ok(None)
     }
 
     /// Get the PR that introduced a specific commit (if any)
@@ -450,130 +456,77 @@ impl GitHubClient {
     }
 
     /// Check if recipe.yaml exists in the very first commit of the repo
+    /// Uses git clone for efficiency instead of API pagination
     pub async fn has_recipe_yaml_in_first_commit(&self, feedstock: &str) -> Result<bool> {
-        // Find the first commit by paginating through REST API until we find one with no parents
-        let first_commit_sha = self.find_first_commit_sha(feedstock).await?;
+        use tempfile::tempdir;
 
-        let Some(sha) = first_commit_sha else {
+        let temp_dir = tempdir().context("Failed to create temp directory")?;
+        let repo_path = temp_dir.path();
+
+        // Clone the repository (partial clone - no blobs, single branch)
+        let clone_url = format!("https://github.com/conda-forge/{}.git", feedstock);
+        let clone_output = Command::new("git")
+            .args([
+                "clone",
+                "--filter=blob:none",
+                "--single-branch",
+                &clone_url,
+                repo_path.to_str().unwrap(),
+            ])
+            .output()
+            .context("Failed to run git clone")?;
+
+        if !clone_output.status.success() {
             return Ok(false);
-        };
-
-        // Check if recipe.yaml exists in this commit
-        self.check_recipe_yaml_in_recipe_dir(feedstock, &sha).await
-    }
-
-    /// Find the SHA of the very first commit in the repository using GraphQL
-    async fn find_first_commit_sha(&self, feedstock: &str) -> Result<Option<String>> {
-        let mut cursor: Option<String> = None;
-        let mut page_count = 0;
-        const MAX_PAGES: usize = 50; // Safety limit
-
-        loop {
-            page_count += 1;
-            if page_count > MAX_PAGES {
-                eprintln!(
-                    "\n      Warning: Hit max page limit ({}) finding first commit for {}",
-                    MAX_PAGES, feedstock
-                );
-                return Ok(None);
-            }
-            if page_count > 1 {
-                eprint!("\r      Finding first commit: page {}...", page_count);
-            }
-
-            let after_clause = cursor
-                .as_ref()
-                .map(|c| format!(r#", after: "{}""#, c))
-                .unwrap_or_default();
-
-            let query = format!(
-                r#"query {{
-                    repository(owner: "conda-forge", name: "{}") {{
-                        defaultBranchRef {{
-                            target {{
-                                ... on Commit {{
-                                    history(first: 100{}) {{
-                                        pageInfo {{
-                                            hasNextPage
-                                            endCursor
-                                        }}
-                                        nodes {{
-                                            oid
-                                            parents {{
-                                                totalCount
-                                            }}
-                                        }}
-                                    }}
-                                }}
-                            }}
-                        }}
-                    }}
-                }}"#,
-                feedstock, after_clause
-            );
-
-            let response = self.execute_query(&query).await?;
-
-            let history = response
-                .get("repository")
-                .and_then(|r| r.get("defaultBranchRef"))
-                .and_then(|b| b.get("target"))
-                .and_then(|t| t.get("history"));
-
-            let Some(history) = history else {
-                return Ok(None);
-            };
-
-            let nodes = history.get("nodes").and_then(|n| n.as_array());
-            let Some(nodes) = nodes else {
-                return Ok(None);
-            };
-
-            // Find commit with no parents (the first commit)
-            for node in nodes {
-                let parent_count = node
-                    .get("parents")
-                    .and_then(|p| p.get("totalCount"))
-                    .and_then(|c| c.as_u64())
-                    .unwrap_or(1);
-
-                if parent_count == 0 {
-                    return Ok(node.get("oid").and_then(|o| o.as_str()).map(String::from));
-                }
-            }
-
-            // Check if there are more pages
-            let has_next = history
-                .get("pageInfo")
-                .and_then(|p| p.get("hasNextPage"))
-                .and_then(|h| h.as_bool())
-                .unwrap_or(false);
-
-            if !has_next {
-                return Ok(None);
-            }
-
-            cursor = history
-                .get("pageInfo")
-                .and_then(|p| p.get("endCursor"))
-                .and_then(|c| c.as_str())
-                .map(String::from);
         }
-    }
 
-    /// Helper to check if recipe/recipe.yaml exists in a specific commit
-    async fn check_recipe_yaml_in_recipe_dir(
-        &self,
-        feedstock: &str,
-        commit_sha: &str,
-    ) -> Result<bool> {
-        let url = format!(
-            "https://raw.githubusercontent.com/conda-forge/{}/{}/recipe/recipe.yaml",
-            feedstock, commit_sha
-        );
+        // Get the first commit SHA using git rev-list
+        let rev_list_output = Command::new("git")
+            .args([
+                "-C",
+                repo_path.to_str().unwrap(),
+                "rev-list",
+                "--max-parents=0",
+                "HEAD",
+            ])
+            .output()
+            .context("Failed to run git rev-list")?;
 
-        let response = self.client.head(&url).send().await?;
-        Ok(response.status().is_success())
+        if !rev_list_output.status.success() {
+            return Ok(false);
+        }
+
+        let first_commit_sha = String::from_utf8_lossy(&rev_list_output.stdout)
+            .trim()
+            .to_string();
+
+        if first_commit_sha.is_empty() {
+            return Ok(false);
+        }
+
+        // Check if recipe.yaml or recipe/recipe.yaml exists in that commit
+        let ls_tree_output = Command::new("git")
+            .args([
+                "-C",
+                repo_path.to_str().unwrap(),
+                "ls-tree",
+                "-r",
+                "--name-only",
+                &first_commit_sha,
+            ])
+            .output()
+            .context("Failed to run git ls-tree")?;
+
+        if !ls_tree_output.status.success() {
+            return Ok(false);
+        }
+
+        let files = String::from_utf8_lossy(&ls_tree_output.stdout);
+        let has_recipe_yaml = files
+            .lines()
+            .any(|f| f == "recipe.yaml" || f == "recipe/recipe.yaml");
+
+        Ok(has_recipe_yaml)
     }
 
     async fn execute_query(&self, query: &str) -> Result<serde_json::Value> {
@@ -722,13 +675,12 @@ fn build_batch_query(feedstocks: &[String]) -> String {
     query
 }
 
-/// Info about a feedstock that needs pagination to get all commits
+/// Info about a feedstock that needs git clone to find oldest commit
+/// (used when batch query returns >100 commits and needs pagination)
 #[derive(Debug)]
 struct PaginationNeeded {
     feedstock: String,
     path: &'static str,
-    cursor: String,
-    oldest_commit_so_far: FirstRecipeCommit,
 }
 
 /// Parse the batched response and extract commit information
@@ -813,12 +765,9 @@ fn extract_first_commit_with_pagination(
     };
 
     let pagination = if has_next_page {
-        let cursor = page_info.get("endCursor")?.as_str()?.to_string();
         Some(PaginationNeeded {
             feedstock: feedstock.to_string(),
             path,
-            cursor,
-            oldest_commit_so_far: oldest_commit.clone(),
         })
     } else {
         None

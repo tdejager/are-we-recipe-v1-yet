@@ -17,6 +17,10 @@ pub struct Cli {
     /// Only run attribution (skip analysis and download fetching), implies --reattribute
     #[arg(long)]
     pub reattribute_only: bool,
+
+    /// Re-fetch recipe commit info from GitHub API (clears cached commit hashes)
+    #[arg(long)]
+    pub refetch_recipe_commits: bool,
 }
 
 #[derive(Subcommand)]

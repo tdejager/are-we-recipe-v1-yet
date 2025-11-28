@@ -151,6 +151,7 @@ pub async fn collect_stats_from_node_attrs(
                         last_changed,
                         attribution,
                         downloads,
+                        recipe_commit_cache: None,
                     },
                 );
                 processed += 1;

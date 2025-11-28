@@ -48,6 +48,20 @@ pub struct FeedstockEntry {
     /// Download count for this feedstock
     #[serde(skip_serializing_if = "Option::is_none")]
     pub downloads: Option<u64>,
+    /// Cached data from batch query (step 1-2) for resuming attribution
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub recipe_commit_cache: Option<RecipeCommitCache>,
+}
+
+/// Cached commit info from batch query, saved to allow resuming attribution
+#[derive(Debug, Serialize, Deserialize, Clone)]
+pub struct RecipeCommitCache {
+    pub sha: String,
+    pub message: String,
+    pub date: String,
+    pub author_login: Option<String>,
+    pub author_name: String,
+    pub author_email: String,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]

@@ -33,19 +33,44 @@ async fn main() -> Result<()> {
     // Collect attribution data for Recipe v1 feedstocks
     println!("\n🏆 Collecting contributor attribution...");
     let reattribute = cli.reattribute || cli.reattribute_only;
-    let attributed =
-        collect_attributions(&mut stats.feedstock_states, cli.verbose, reattribute).await?;
+
+    // Create save function for checkpointing
+    let stats_path = {
+        let path = std::env::var("CARGO_MANIFEST_DIR").context("CARGO_MANIFEST_DIR not set")?;
+        format!("{}/../feedstock-stats.toml", path)
+    };
+    let save_checkpoint = |feedstock_states: &std::collections::BTreeMap<String, FeedstockEntry>| {
+        let checkpoint_stats = FeedstockStats {
+            total_feedstocks: stats.total_feedstocks,
+            recipe_v1_count: stats.recipe_v1_count,
+            meta_yaml_count: stats.meta_yaml_count,
+            unknown_count: stats.unknown_count,
+            last_updated: stats.last_updated.clone(),
+            feedstock_states: feedstock_states.clone(),
+            top_unconverted_by_downloads: stats.top_unconverted_by_downloads.clone(),
+        };
+        let toml_content = toml::to_string_pretty(&checkpoint_stats)
+            .context("Failed to serialize stats to TOML")?;
+        fs::write(&stats_path, toml_content).context("Failed to write checkpoint")?;
+        Ok(())
+    };
+
+    let attributed = collect_attributions(
+        &mut stats.feedstock_states,
+        cli.verbose,
+        reattribute,
+        cli.refetch_recipe_commits,
+        save_checkpoint,
+    )
+    .await?;
     if attributed > 0 {
         println!("📝 Attributed {} feedstocks", attributed);
     }
 
-    // Write to TOML file
+    // Write final stats to TOML file
     let toml_content =
         toml::to_string_pretty(&stats).context("Failed to serialize stats to TOML")?;
-
-    let path = std::env::var("CARGO_MANIFEST_DIR").context("CARGO_MANIFEST_DIR not set")?;
-    fs::write(format!("{}/../feedstock-stats.toml", path), toml_content)
-        .context("Failed to write feedstock-stats.toml")?;
+    fs::write(&stats_path, toml_content).context("Failed to write feedstock-stats.toml")?;
 
     // Clean up sparse checkout repository (only if we did full analysis)
     if !cli.reattribute_only {

@@ -2,8 +2,8 @@ use anyhow::Result;
 use indicatif::{ProgressBar, ProgressStyle};
 use std::collections::BTreeMap;
 
-use crate::external::{fetch_recipe_maintainers, CommitAuthor, GitHubClient, RecipeHistoryResult};
-use crate::models::{Attribution, ContributionType, FeedstockEntry, RecipeType};
+use crate::external::{fetch_recipe_maintainers, CommitAuthor, FirstRecipeCommit, GitHubClient, RecipeHistoryResult};
+use crate::models::{Attribution, ContributionType, FeedstockEntry, RecipeCommitCache, RecipeType};
 
 /// Known bot patterns for detecting automated commits
 const BOT_PATTERNS: &[&str] = &[
@@ -38,11 +38,26 @@ pub fn is_bot_author(author: &CommitAuthor) -> bool {
 /// Collect attribution data for Recipe v1 feedstocks that don't have it yet
 ///
 /// If `reattribute` is true, clears existing attributions and re-calculates all.
-pub async fn collect_attributions(
+/// If `refetch_recipe_commits` is true, also clears the commit cache (forces re-fetch from API).
+/// The `save_fn` callback is called after the batch query to save intermediate progress.
+pub async fn collect_attributions<F>(
     feedstock_states: &mut BTreeMap<String, FeedstockEntry>,
     verbose: bool,
     reattribute: bool,
-) -> Result<u32> {
+    refetch_recipe_commits: bool,
+    save_fn: F,
+) -> Result<u32>
+where
+    F: Fn(&BTreeMap<String, FeedstockEntry>) -> Result<()>,
+{
+    // If refetch flag is set, clear the commit cache
+    if refetch_recipe_commits {
+        println!("🗑️  Clearing recipe commit cache (--refetch-recipe-commits flag set)");
+        for entry in feedstock_states.values_mut() {
+            entry.recipe_commit_cache = None;
+        }
+    }
+
     // If reattribute flag is set, clear all existing attributions first
     if reattribute {
         println!("🔄 Re-calculating all attributions (--reattribute flag set)");
@@ -98,8 +113,107 @@ pub async fn collect_attributions(
         }
     }
 
-    // Set up progress bar
-    let pb = ProgressBar::new(needs_attribution.len() as u64);
+    let mut attributed_count = 0u32;
+
+    // Check which feedstocks have cached commit info (from previous interrupted run)
+    let (cached, needs_fetch): (Vec<_>, Vec<_>) = needs_attribution
+        .iter()
+        .partition(|name| {
+            feedstock_states
+                .get(*name)
+                .and_then(|e| e.recipe_commit_cache.as_ref())
+                .is_some()
+        });
+
+    // Build results from cache + fresh fetch
+    let batch_results: Vec<RecipeHistoryResult> = if !cached.is_empty() {
+        println!(
+            "📦 Found {} feedstocks with cached commit info, {} need fetching",
+            cached.len(),
+            needs_fetch.len()
+        );
+
+        // Convert cached entries to RecipeHistoryResult
+        let mut results: Vec<RecipeHistoryResult> = cached
+            .iter()
+            .filter_map(|name| {
+                let entry = feedstock_states.get(*name)?;
+                let cache = entry.recipe_commit_cache.as_ref()?;
+                Some(RecipeHistoryResult {
+                    feedstock: (*name).clone(),
+                    first_recipe_commit: Some(FirstRecipeCommit {
+                        sha: cache.sha.clone(),
+                        message: cache.message.clone(),
+                        date: cache.date.clone(),
+                        author: CommitAuthor {
+                            login: cache.author_login.clone(),
+                            name: cache.author_name.clone(),
+                            email: cache.author_email.clone(),
+                        },
+                    }),
+                    error: None,
+                })
+            })
+            .collect();
+
+        // Fetch remaining
+        if !needs_fetch.is_empty() {
+            let fetch_names: Vec<String> = needs_fetch.into_iter().cloned().collect();
+            let fetched = github_client
+                .batch_query_recipe_history(&fetch_names)
+                .await?;
+            results.extend(fetched);
+        }
+
+        results
+    } else {
+        // No cache, fetch all
+        github_client
+            .batch_query_recipe_history(&needs_attribution)
+            .await?
+    };
+
+    // Save commit info to cache for resume capability
+    for result in &batch_results {
+        if let Some(commit) = &result.first_recipe_commit {
+            if let Some(entry) = feedstock_states.get_mut(&result.feedstock) {
+                entry.recipe_commit_cache = Some(RecipeCommitCache {
+                    sha: commit.sha.clone(),
+                    message: commit.message.clone(),
+                    date: commit.date.clone(),
+                    author_login: commit.author.login.clone(),
+                    author_name: commit.author.name.clone(),
+                    author_email: commit.author.email.clone(),
+                });
+            }
+        }
+    }
+
+    // Save checkpoint after batch query completes (step 1-2 done)
+    println!("💾 Saving checkpoint (batch query complete)...");
+    save_fn(feedstock_states)?;
+
+    // Determine new feedstocks by checking if the first recipe.yaml commit
+    // is an "Initial feedstock commit" - no cloning needed!
+    let new_feedstock_set: std::collections::HashSet<String> = batch_results
+        .iter()
+        .filter(|r| {
+            r.first_recipe_commit
+                .as_ref()
+                .map(|c| is_initial_feedstock_commit(&c.message))
+                .unwrap_or(false)
+        })
+        .map(|r| r.feedstock.clone())
+        .collect();
+
+    println!(
+        "🔍 Found {} new feedstocks, {} conversions",
+        new_feedstock_set.len(),
+        needs_attribution.len() - new_feedstock_set.len()
+    );
+
+    // Set up progress bar for attribution processing
+    let pb = ProgressBar::new(batch_results.len() as u64);
     pb.set_style(
         ProgressStyle::with_template(
             "{spinner:.green} [{elapsed_precise}] [{bar:40.cyan/blue}] {pos}/{len} ({eta})",
@@ -107,18 +221,13 @@ pub async fn collect_attributions(
         .unwrap(),
     );
 
-    let mut attributed_count = 0u32;
-
-    // Process in batches
-    let batch_results = github_client
-        .batch_query_recipe_history(&needs_attribution)
-        .await?;
-
     for result in batch_results {
         pb.inc(1);
 
+        let is_new_feedstock = new_feedstock_set.contains(&result.feedstock);
+
         if let Some(attribution) =
-            process_history_result(&result, &github_client, verbose).await
+            process_history_result(&result, &github_client, verbose, is_new_feedstock).await
         {
             if let Some(entry) = feedstock_states.get_mut(&result.feedstock) {
                 entry.attribution = Some(attribution);
@@ -145,14 +254,9 @@ async fn process_history_result(
     result: &RecipeHistoryResult,
     github_client: &GitHubClient,
     verbose: bool,
+    is_new_feedstock: bool,
 ) -> Option<Attribution> {
     let commit = result.first_recipe_commit.as_ref()?;
-
-    // Rule 1: Check if this is a new feedstock (recipe.yaml in first commit)
-    let is_new_feedstock = github_client
-        .has_recipe_yaml_in_first_commit(&result.feedstock)
-        .await
-        .unwrap_or(false);
 
     if is_new_feedstock {
         // New feedstock - credit the maintainers from recipe.yaml
@@ -289,6 +393,14 @@ fn is_bot_username(username: &str) -> bool {
     BOT_PATTERNS
         .iter()
         .any(|pattern| username_lower.contains(pattern))
+}
+
+/// Check if a commit message indicates an initial feedstock commit
+/// This is used to identify new feedstocks vs conversions without cloning
+fn is_initial_feedstock_commit(message: &str) -> bool {
+    let msg_lower = message.to_lowercase();
+    msg_lower.contains("initial feedstock commit")
+        || msg_lower.starts_with("initial commit")
 }
 
 #[cfg(test)]
