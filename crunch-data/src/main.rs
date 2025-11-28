@@ -1,3 +1,4 @@
+use chrono::{DateTime, Utc};
 use std::collections::HashMap;
 use std::fs;
 use std::path::Path;
@@ -104,17 +105,79 @@ fn extract_recently_updated(feedstocks_table: &toml::Table) -> toml::Table {
     recent_table
 }
 
-/// Extract top contributors from attribution data
+/// A single feedstock contribution by a contributor
+#[derive(Clone)]
+struct FeedstockContribution {
+    name: String,
+    contribution_type: String,
+    downloads: u64,
+    date: String,
+}
+
+/// Aggregated stats for a single contributor
+struct ContributorData {
+    conversions: u32,
+    new_feedstocks: u32,
+    total_downloads: u64,
+    feedstocks: Vec<FeedstockContribution>,
+}
+
+/// Weekly activity buckets: (conversions, new_feedstocks) for each of the last 20 weeks
+/// Index 0 = most recent week, index 19 = oldest week
+fn compute_weekly_activity(feedstocks: &[FeedstockContribution]) -> Vec<(u32, u32)> {
+    let now = Utc::now();
+    let mut weekly: Vec<(u32, u32)> = vec![(0, 0); 20];
+
+    for f in feedstocks {
+        if f.date.is_empty() {
+            continue;
+        }
+
+        // Parse the ISO date
+        if let Ok(date) = DateTime::parse_from_rfc3339(&f.date) {
+            let date_utc = date.with_timezone(&Utc);
+            let days_ago = (now - date_utc).num_days();
+
+            if days_ago >= 0 {
+                let weeks_ago = (days_ago / 7) as usize;
+                if weeks_ago < 20 {
+                    match f.contribution_type.as_str() {
+                        "conversion" => weekly[weeks_ago].0 += 1,
+                        "new_feedstock" => weekly[weeks_ago].1 += 1,
+                        _ => {}
+                    }
+                }
+            }
+        }
+    }
+
+    weekly
+}
+
+/// Extract top contributors from attribution data with enriched statistics
 fn extract_top_contributors(feedstocks_table: &toml::Table) -> Vec<toml::Value> {
     // Aggregate contributions by contributor
-    let mut contributor_stats: HashMap<String, (u32, u32)> = HashMap::new(); // (conversions, new_feedstocks)
+    let mut contributor_stats: HashMap<String, ContributorData> = HashMap::new();
 
-    for (_name, state) in feedstocks_table.iter() {
+    for (name, state) in feedstocks_table.iter() {
         if let Some(attribution) = state.get("attribution").and_then(|a| a.as_table()) {
             let contribution_type = attribution
                 .get("contribution_type")
                 .and_then(|t| t.as_str())
-                .unwrap_or("");
+                .unwrap_or("")
+                .to_string();
+
+            let date = attribution
+                .get("date")
+                .and_then(|d| d.as_str())
+                .unwrap_or("")
+                .to_string();
+
+            let downloads = state
+                .get("downloads")
+                .and_then(|d| d.as_integer())
+                .map(|d| d as u64)
+                .unwrap_or(0);
 
             let contributors = attribution
                 .get("contributors")
@@ -127,43 +190,130 @@ fn extract_top_contributors(feedstocks_table: &toml::Table) -> Vec<toml::Value> 
                 .unwrap_or_default();
 
             for contributor in contributors {
-                let entry = contributor_stats.entry(contributor).or_insert((0, 0));
-                match contribution_type {
-                    "conversion" => entry.0 += 1,
-                    "new_feedstock" => entry.1 += 1,
+                let entry = contributor_stats.entry(contributor).or_insert(ContributorData {
+                    conversions: 0,
+                    new_feedstocks: 0,
+                    total_downloads: 0,
+                    feedstocks: Vec::new(),
+                });
+
+                match contribution_type.as_str() {
+                    "conversion" => entry.conversions += 1,
+                    "new_feedstock" => entry.new_feedstocks += 1,
                     _ => {}
                 }
+
+                entry.total_downloads += downloads;
+                entry.feedstocks.push(FeedstockContribution {
+                    name: name.clone(),
+                    contribution_type: contribution_type.clone(),
+                    downloads,
+                    date: date.clone(),
+                });
             }
         }
     }
 
     // Sort by total contributions (descending)
-    let mut sorted: Vec<_> = contributor_stats
-        .into_iter()
-        .map(|(name, (conversions, new_feedstocks))| (name, conversions, new_feedstocks))
-        .collect();
+    let mut sorted: Vec<_> = contributor_stats.into_iter().collect();
 
-    sorted.sort_by(|a, b| {
-        let total_a = a.1 + a.2;
-        let total_b = b.1 + b.2;
+    sorted.sort_by(|(_, a), (_, b)| {
+        let total_a = a.conversions + a.new_feedstocks;
+        let total_b = b.conversions + b.new_feedstocks;
         total_b.cmp(&total_a)
     });
 
-    // Take top 50 and convert to TOML
+    // Take top 50 and convert to TOML with enriched data
     sorted
         .into_iter()
         .take(50)
-        .map(|(name, conversions, new_feedstocks)| {
+        .map(|(name, data)| {
             let mut entry = toml::Table::new();
             entry.insert("name".to_string(), toml::Value::String(name));
             entry.insert(
                 "conversions".to_string(),
-                toml::Value::Integer(conversions as i64),
+                toml::Value::Integer(data.conversions as i64),
             );
             entry.insert(
                 "new_feedstocks".to_string(),
-                toml::Value::Integer(new_feedstocks as i64),
+                toml::Value::Integer(data.new_feedstocks as i64),
             );
+            entry.insert(
+                "total_downloads".to_string(),
+                toml::Value::Integer(data.total_downloads as i64),
+            );
+
+            // Find first and last contribution dates
+            let mut dates: Vec<&str> = data
+                .feedstocks
+                .iter()
+                .filter(|f| !f.date.is_empty())
+                .map(|f| f.date.as_str())
+                .collect();
+            dates.sort();
+
+            if let Some(first) = dates.first() {
+                entry.insert(
+                    "first_contribution".to_string(),
+                    toml::Value::String(first.to_string()),
+                );
+            }
+            if let Some(last) = dates.last() {
+                entry.insert(
+                    "last_contribution".to_string(),
+                    toml::Value::String(last.to_string()),
+                );
+            }
+
+            // Compute weekly activity from ALL feedstocks (before truncating)
+            let weekly_activity = compute_weekly_activity(&data.feedstocks);
+            let weekly_array: Vec<toml::Value> = weekly_activity
+                .into_iter()
+                .map(|(conv, new)| {
+                    toml::Value::Array(vec![
+                        toml::Value::Integer(conv as i64),
+                        toml::Value::Integer(new as i64),
+                    ])
+                })
+                .collect();
+            entry.insert("weekly_activity".to_string(), toml::Value::Array(weekly_array));
+
+            // Sort feedstocks by downloads (descending) and take top 10
+            let mut sorted_feedstocks = data.feedstocks;
+            sorted_feedstocks.sort_by(|a, b| b.downloads.cmp(&a.downloads));
+            sorted_feedstocks.truncate(10);
+
+            // Find top package
+            if let Some(top) = sorted_feedstocks.first() {
+                let mut top_pkg = toml::Table::new();
+                top_pkg.insert("name".to_string(), toml::Value::String(top.name.clone()));
+                top_pkg.insert(
+                    "downloads".to_string(),
+                    toml::Value::Integer(top.downloads as i64),
+                );
+                entry.insert("top_package".to_string(), toml::Value::Table(top_pkg));
+            }
+
+            // Add feedstocks list (top 10 by downloads)
+            let feedstocks_array: Vec<toml::Value> = sorted_feedstocks
+                .into_iter()
+                .map(|f| {
+                    let mut fs = toml::Table::new();
+                    fs.insert("name".to_string(), toml::Value::String(f.name));
+                    fs.insert(
+                        "contribution_type".to_string(),
+                        toml::Value::String(f.contribution_type),
+                    );
+                    fs.insert(
+                        "downloads".to_string(),
+                        toml::Value::Integer(f.downloads as i64),
+                    );
+                    fs.insert("date".to_string(), toml::Value::String(f.date));
+                    toml::Value::Table(fs)
+                })
+                .collect();
+            entry.insert("feedstocks".to_string(), toml::Value::Array(feedstocks_array));
+
             toml::Value::Table(entry)
         })
         .collect()

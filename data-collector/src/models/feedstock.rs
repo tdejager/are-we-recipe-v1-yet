@@ -45,6 +45,9 @@ pub struct FeedstockEntry {
     /// Attribution for Recipe v1 feedstocks (who converted/created it)
     #[serde(skip_serializing_if = "Option::is_none")]
     pub attribution: Option<Attribution>,
+    /// Download count for this feedstock
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub downloads: Option<u64>,
 }
 
 #[derive(Debug, Serialize, Deserialize, Clone)]

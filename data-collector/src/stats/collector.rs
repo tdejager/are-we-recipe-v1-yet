@@ -38,7 +38,7 @@ pub async fn collect_stats_from_node_attrs(
     let existing_stats = load_existing_stats_if_exists();
 
     // Fetch download counts
-    println!("📥 Fetching download counts from Google Cloud Storage...");
+    println!("📥 Fetching download counts from prefix.dev...");
     let download_counts = fetch_download_counts().await?;
     println!("📊 Fetched {} download counts", download_counts.len());
 
@@ -136,12 +136,16 @@ pub async fn collect_stats_from_node_attrs(
                     None
                 };
 
+                // Look up download count for this feedstock
+                let downloads = download_counts.get(&feedstock_name).copied();
+
                 feedstock_states.insert(
                     feedstock_name,
                     FeedstockEntry {
                         recipe_type,
                         last_changed,
                         attribution,
+                        downloads,
                     },
                 );
                 processed += 1;

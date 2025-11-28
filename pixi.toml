@@ -5,11 +5,11 @@ channels = ["conda-forge"]
 platforms = ["osx-64", "osx-arm64", "linux-64", "win-64"]
 
 [dependencies]
-rust = "1.87.*"
+rust = "1.88.*"
 trunk = "0.21.*"
 nodejs = "22.*"
 pnpm = "10.12.*"
-rust-std-wasm32-unknown-unknown = ">=1.87.0,<2"
+rust-std-wasm32-unknown-unknown = ">=1.88.0,<2"
 
 [tasks]
 crunch-data = { cmd = "cargo run --bin crunch-data", inputs = [

@@ -19,6 +19,19 @@ body {
   overflow: hidden;
 }
 
+/* Card reveal animation inside accordion */
+.accordion-content .stats-card {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease-out, transform 0.25s ease-out;
+  transition-delay: 0.05s;
+}
+
+.accordion-content.expanded .stats-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Progress circle animation */
 .progress-circle {
   stroke-dasharray: 0.01 502.65;
@@ -38,6 +51,12 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .accordion-content {
     transition: none;
+  }
+
+  .accordion-content .stats-card {
+    transition: none;
+    opacity: 1;
+    transform: none;
   }
 
   .progress-circle {
