@@ -279,7 +279,20 @@ fn App() -> impl IntoView {
         .map(|table| {
             table
                 .iter()
-                .map(|(name, date)| (name.clone(), date.as_str().unwrap_or("").to_string()))
+                .filter_map(|(name, value)| {
+                    let entry = value.as_table()?;
+                    let date = entry.get("date")?.as_str()?.to_string();
+                    let contributors: Vec<String> = entry
+                        .get("contributors")
+                        .and_then(|c| c.as_array())
+                        .map(|arr| {
+                            arr.iter()
+                                .filter_map(|v| v.as_str().map(String::from))
+                                .collect()
+                        })
+                        .unwrap_or_default();
+                    Some((name.clone(), date, contributors))
+                })
                 .collect::<Vec<_>>()
         })
         .unwrap_or_default();
@@ -526,7 +539,10 @@ fn MigrationStats(converted: u32, total: u32) -> impl IntoView {
 }
 
 #[component]
-fn RecentlyUpdated(feedstocks: Vec<(String, String)>, last_updated: String) -> impl IntoView {
+fn RecentlyUpdated(
+    feedstocks: Vec<(String, String, Vec<String>)>,
+    last_updated: String,
+) -> impl IntoView {
     if feedstocks.is_empty() {
         return view! {}.into_any();
     }
@@ -545,7 +561,7 @@ fn RecentlyUpdated(feedstocks: Vec<(String, String)>, last_updated: String) -> i
                 <span>"Change Detected"</span>
             </div>
             <ul class="space-y-1">
-                {feedstocks.into_iter().map(|(name, date)| {
+                {feedstocks.into_iter().map(|(name, date, contributors)| {
                     let formatted_date = format_date(&date);
                     let github_url = format!("https://github.com/conda-forge/{}", name);
                     let display_name = name.replace("-feedstock", "");
@@ -558,6 +574,17 @@ fn RecentlyUpdated(feedstocks: Vec<(String, String)>, last_updated: String) -> i
                                 class="flex items-center text-gray-700 py-2 -mx-2 px-2 rounded hover:bg-gray-50 transition-colors duration-150 cursor-pointer"
                             >
                                 <span class="font-medium text-blue-600">{display_name}</span>
+                                {if !contributors.is_empty() {
+                                    let contributor_text = contributors.into_iter()
+                                        .map(|c| format!("@{}", c))
+                                        .collect::<Vec<_>>()
+                                        .join(", ");
+                                    view! {
+                                        <span class="text-sm text-gray-400 ml-2">"(by: " {contributor_text} ")"</span>
+                                    }.into_any()
+                                } else {
+                                    view! {}.into_any()
+                                }}
                                 <span class="flex-1 border-b border-dotted border-gray-300 mx-3"></span>
                                 <span class="text-sm text-gray-500 tabular-nums">{formatted_date}</span>
                             </a>

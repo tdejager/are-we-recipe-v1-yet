@@ -69,7 +69,7 @@ fn main() {
     }
 }
 
-/// Extract the 10 most recently updated Recipe v1 feedstocks
+/// Extract the 10 most recently updated Recipe v1 feedstocks with attribution
 fn extract_recently_updated(feedstocks_table: &toml::Table) -> toml::Table {
     let mut recent_feedstocks: Vec<_> = feedstocks_table
         .iter()
@@ -81,8 +81,19 @@ fn extract_recently_updated(feedstocks_table: &toml::Table) -> toml::Table {
                 .unwrap_or(false)
             {
                 state.get("last_changed").and_then(|date| {
-                    date.as_str()
-                        .map(|date_str| (name.clone(), date_str.to_string()))
+                    let date_str = date.as_str()?.to_string();
+                    // Extract contributors from attribution if available
+                    let contributors: Vec<String> = state
+                        .get("attribution")
+                        .and_then(|attr| attr.get("contributors"))
+                        .and_then(|c| c.as_array())
+                        .map(|arr| {
+                            arr.iter()
+                                .filter_map(|v| v.as_str().map(String::from))
+                                .collect()
+                        })
+                        .unwrap_or_default();
+                    Some((name.clone(), date_str, contributors))
                 })
             } else {
                 None
@@ -91,15 +102,21 @@ fn extract_recently_updated(feedstocks_table: &toml::Table) -> toml::Table {
         .collect();
 
     // Sort by last updated date (most recent first)
-    recent_feedstocks.sort_by(|(_, a), (_, b)| b.cmp(a));
+    recent_feedstocks.sort_by(|(_, a, _), (_, b, _)| b.cmp(a));
 
     // Take the 10 most recent
     recent_feedstocks.truncate(10);
 
     // Create a new table for the recent feedstocks
     let mut recent_table = toml::Table::new();
-    for (name, date) in recent_feedstocks {
-        recent_table.insert(name, toml::Value::String(date));
+    for (name, date, contributors) in recent_feedstocks {
+        let mut entry = toml::Table::new();
+        entry.insert("date".to_string(), toml::Value::String(date));
+        entry.insert(
+            "contributors".to_string(),
+            toml::Value::Array(contributors.into_iter().map(toml::Value::String).collect()),
+        );
+        recent_table.insert(name, toml::Value::Table(entry));
     }
 
     recent_table
