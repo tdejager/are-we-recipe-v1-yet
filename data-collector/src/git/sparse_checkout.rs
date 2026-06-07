@@ -85,7 +85,7 @@ pub fn ensure_sparse_checkout_repo(force_reload: bool, verbose: bool) -> Result<
         // Pull with depth=1
         let pull_result = Command::new("git")
             .current_dir(repo_path)
-            .args(["pull", "origin", "master", "--depth=1"])
+            .args(["pull", "origin", "main", "--depth=1"])
             .output()
             .context("Failed to pull repository")?;
 
