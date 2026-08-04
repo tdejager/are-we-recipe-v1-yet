@@ -1,8 +1,8 @@
-total_feedstocks = 29516
-recipe_v1_count = 6444
-meta_yaml_count = 23072
+total_feedstocks = 29521
+recipe_v1_count = 6454
+meta_yaml_count = 23067
 unknown_count = 0
-last_updated = "2026-08-03T05:43:16.746521259+00:00"
+last_updated = "2026-08-04T05:05:37.219357862+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -171,7 +171,6 @@ commit_sha = "9214f06a30dfd0d8211661008d17154e81d58c1a"
 [feedstock_states.aadict-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 185816
 
 [feedstock_states.aalto-boss-feedstock]
 recipe_type = "meta_yaml"
@@ -321,7 +320,6 @@ downloads = 10888932
 [feedstock_states.absl-py-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 6006600
 
 [feedstock_states.absolufy-imports-feedstock]
 recipe_type = "meta_yaml"
@@ -531,7 +529,6 @@ downloads = 1145
 [feedstock_states.acrv_datasets-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 4570
 
 [feedstock_states.acryl-datahub-feedstock]
 recipe_type = "meta_yaml"
@@ -1226,7 +1223,6 @@ downloads = 136184
 [feedstock_states.agate-lookup-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 13039
 
 [feedstock_states.agate-remote-feedstock]
 recipe_type = "meta_yaml"
@@ -1748,7 +1744,6 @@ downloads = 35653
 [feedstock_states.aiida-cusp-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1930
 
 [feedstock_states.aiida-dataframe-feedstock]
 recipe_type = "meta_yaml"
@@ -2020,9 +2015,26 @@ date = "2025-10-24T06:43:53Z"
 commit_sha = "b382d17c29c8174717f388a645c86a583c638800"
 
 [feedstock_states.aiodns-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-08-04T05:05:31.309720557+00:00"
 downloads = 872151
+
+[feedstock_states.aiodns-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["mgorny"]
+date = "2026-07-29T18:44:22Z"
+commit_sha = "f77f828a572e3eaed44037c5856736cfb5d45f9e"
+
+[feedstock_states.aiodns-feedstock.recipe_commit_cache]
+sha = "f77f828a572e3eaed44037c5856736cfb5d45f9e"
+message = """
+Convert to v1 recipe format
+
+Signed-off-by: Michał Górny <mgorny@gentoo.org>"""
+date = "2026-07-29T18:44:22Z"
+author_login = "mgorny"
+author_name = "Michał Górny"
+author_email = "mgorny@gentoo.org"
 
 [feedstock_states.aioeasywebdav-feedstock]
 recipe_type = "meta_yaml"
@@ -2079,7 +2091,6 @@ downloads = 12915
 [feedstock_states.aiohttp-cors-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-01-07T02:57:07.562011947+00:00"
-downloads = 967820
 
 [feedstock_states.aiohttp-cors-feedstock.attribution]
 contribution_type = "conversion"
@@ -2142,14 +2153,6 @@ contribution_type = "conversion"
 contributors = ["xylar"]
 date = "2026-08-02T08:19:08Z"
 commit_sha = "4e7cd6af1e5854418e35803297537fada301dce9"
-
-[feedstock_states.aiohttp-session-feedstock.recipe_commit_cache]
-sha = "4e7cd6af1e5854418e35803297537fada301dce9"
-message = "Convert to v1 feedstock and use pixi as conda install tool"
-date = "2026-08-02T08:19:08Z"
-author_login = "xylar"
-author_name = "Xylar Asay-Davis"
-author_email = "xylarstorm@gmail.com"
 
 [feedstock_states.aiohttp-socks-feedstock]
 recipe_type = "meta_yaml"
@@ -2414,7 +2417,6 @@ downloads = 48540
 [feedstock_states.aiotube-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 7293
 
 [feedstock_states.aiounittest-feedstock]
 recipe_type = "recipe_v1"
@@ -2520,7 +2522,6 @@ downloads = 489
 [feedstock_states.airflow-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-01-15T02:57:10.708459720+00:00"
-downloads = 14556
 
 [feedstock_states.airflow-feedstock.attribution]
 contribution_type = "conversion"
@@ -6466,7 +6467,6 @@ downloads = 1953
 [feedstock_states.argon2-cffi-bindings-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 23517351
 
 [feedstock_states.argon2-cffi-feedstock]
 recipe_type = "meta_yaml"
@@ -6726,9 +6726,26 @@ date = "2025-09-19T20:31:11Z"
 commit_sha = "c86b46193bf88bc8998e4125e4fa13bb37df0e9d"
 
 [feedstock_states.arq-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-08-04T05:05:31.309720557+00:00"
 downloads = 8962
+
+[feedstock_states.arq-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["mgorny"]
+date = "2026-07-28T18:17:23Z"
+commit_sha = "b5b314ad04ece8367e434d200a6bd811a5d26cb0"
+
+[feedstock_states.arq-feedstock.recipe_commit_cache]
+sha = "b5b314ad04ece8367e434d200a6bd811a5d26cb0"
+message = """
+Convert recipe to v1 format
+
+Signed-off-by: Michał Górny <mgorny@gentoo.org>"""
+date = "2026-07-28T18:17:23Z"
+author_login = "mgorny"
+author_name = "Michał Górny"
+author_email = "mgorny@gentoo.org"
 
 [feedstock_states.arrakis-python-feedstock]
 recipe_type = "meta_yaml"
@@ -6860,7 +6877,6 @@ downloads = 10561527
 [feedstock_states.arrow-cpp-proc-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 354368
 
 [feedstock_states.arrow-feedstock]
 recipe_type = "recipe_v1"
@@ -7258,7 +7274,6 @@ downloads = 980
 [feedstock_states.asf_search-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 20639
 
 [feedstock_states.asf_tools-feedstock]
 recipe_type = "meta_yaml"
@@ -7584,7 +7599,6 @@ downloads = 41967
 [feedstock_states.astcheck-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 12862
 
 [feedstock_states.asteval-feedstock]
 recipe_type = "meta_yaml"
@@ -8196,7 +8210,6 @@ downloads = 33027
 [feedstock_states.atlite-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 129556
 
 [feedstock_states.atmosphere-virtual-lab-feedstock]
 recipe_type = "meta_yaml"
@@ -9719,7 +9732,6 @@ downloads = 339634
 [feedstock_states.aws-parallelcluster-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1879
 
 [feedstock_states.aws-request-signer-feedstock]
 recipe_type = "meta_yaml"
@@ -9754,7 +9766,6 @@ downloads = 60996
 [feedstock_states.aws-sdk-cpp-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 19089138
 
 [feedstock_states.aws-sdk-cpp-feedstock.attribution]
 contribution_type = "conversion"
@@ -9925,7 +9936,6 @@ commit_sha = "1bc6a358caa928f75a1a93e27814c36ab0c79f43"
 [feedstock_states.axe-selenium-python-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-04-30T03:09:19.485447611+00:00"
-downloads = 1650
 
 [feedstock_states.axe-selenium-python-feedstock.attribution]
 contribution_type = "conversion"
@@ -11122,7 +11132,6 @@ downloads = 875
 [feedstock_states.azure-umqtt-c-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 878
 
 [feedstock_states.azureml-feedstock]
 recipe_type = "meta_yaml"
@@ -11646,7 +11655,6 @@ downloads = 1604
 [feedstock_states.base58-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 246659
 
 [feedstock_states.base58check-feedstock]
 recipe_type = "meta_yaml"
@@ -12719,7 +12727,6 @@ downloads = 43552
 [feedstock_states.bg-atlasapi-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2817
 
 [feedstock_states.bg-mpl-stylesheets-feedstock]
 recipe_type = "meta_yaml"
@@ -13554,7 +13561,6 @@ downloads = 4477
 [feedstock_states.birdy-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 9746
 
 [feedstock_states.birka-feedstock]
 recipe_type = "meta_yaml"
@@ -13583,9 +13589,26 @@ date = "2025-11-26T02:20:47Z"
 commit_sha = "76080bd11f84b6cccd2835fef7fa442f8d2e3ecb"
 
 [feedstock_states.bitarray-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-08-04T05:05:31.309720557+00:00"
 downloads = 228280
+
+[feedstock_states.bitarray-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["mgorny"]
+date = "2026-07-28T15:19:34Z"
+commit_sha = "2b576b7b05dc67e37b2461723df933ba931a4415"
+
+[feedstock_states.bitarray-feedstock.recipe_commit_cache]
+sha = "2b576b7b05dc67e37b2461723df933ba931a4415"
+message = """
+Convert to v1 recipe
+
+Signed-off-by: Michał Górny <mgorny@quansight.com>"""
+date = "2026-07-28T15:19:34Z"
+author_login = "mgorny"
+author_name = "Michał Górny"
+author_email = "mgorny@quansight.com"
 
 [feedstock_states.bitmagic-feedstock]
 recipe_type = "meta_yaml"
@@ -13684,7 +13707,6 @@ downloads = 8023162
 [feedstock_states.blackbook-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 6063
 
 [feedstock_states.blackboxauditing-feedstock]
 recipe_type = "meta_yaml"
@@ -13795,7 +13817,6 @@ downloads = 699
 [feedstock_states.blaupause-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 4237
 
 [feedstock_states.blaze-feedstock]
 recipe_type = "meta_yaml"
@@ -13911,7 +13932,6 @@ downloads = 19041737
 [feedstock_states.blis-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-11-21T02:32:56.820646680+00:00"
-downloads = 652729
 
 [feedstock_states.blis-feedstock.attribution]
 contribution_type = "conversion"
@@ -13922,7 +13942,6 @@ commit_sha = "185b3c463691dd838f3ecec9a397f5c6310868cc"
 [feedstock_states.bliss-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 91052
 
 [feedstock_states.blissdata-feedstock]
 recipe_type = "recipe_v1"
@@ -14022,7 +14041,6 @@ downloads = 1219
 [feedstock_states.bloxs-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 914
 
 [feedstock_states.blp-feedstock]
 recipe_type = "meta_yaml"
@@ -14450,7 +14468,6 @@ downloads = 5162
 [feedstock_states.boltons-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 18251964
 
 [feedstock_states.boltzmannclean-feedstock]
 recipe_type = "meta_yaml"
@@ -14506,7 +14523,6 @@ downloads = 1553
 [feedstock_states.boolparser-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1531
 
 [feedstock_states.boost-cpp-feedstock]
 recipe_type = "meta_yaml"
@@ -14658,7 +14674,6 @@ downloads = 140631
 [feedstock_states.boto3-stubs-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2950
 
 [feedstock_states.boto3-stubs-lite-feedstock]
 recipe_type = "meta_yaml"
@@ -15222,7 +15237,6 @@ downloads = 42666332
 [feedstock_states.browndye-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1264
 
 [feedstock_states.browserforge-feedstock]
 recipe_type = "recipe_v1"
@@ -16030,7 +16044,6 @@ downloads = 1698
 [feedstock_states.cadabra2-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 62077
 
 [feedstock_states.cadcad-feedstock]
 recipe_type = "meta_yaml"
@@ -16506,7 +16519,6 @@ commit_sha = "e7c591ca03e79d07bac744efbbae684ce37a8ddb"
 [feedstock_states.capnproto-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-03-14T03:00:55.559494239+00:00"
-downloads = 1498633
 
 [feedstock_states.capnproto-feedstock.attribution]
 contribution_type = "conversion"
@@ -18112,7 +18124,6 @@ downloads = 13784
 [feedstock_states.cement-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 48158
 
 [feedstock_states.cenpy-feedstock]
 recipe_type = "meta_yaml"
@@ -18455,7 +18466,6 @@ downloads = 4036
 [feedstock_states.cf-python-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 16245
 
 [feedstock_states.cf_pandas-feedstock]
 recipe_type = "meta_yaml"
@@ -18567,7 +18577,6 @@ commit_sha = "2e7725f2d10a2829e33cb53640e5dff76defcc15"
 [feedstock_states.cfn-flip-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 43042
 
 [feedstock_states.cfn-lint-feedstock]
 recipe_type = "meta_yaml"
@@ -18823,7 +18832,6 @@ commit_sha = "4998d95ab001ea5991f1ed03f5dbef5ef4ec0055"
 [feedstock_states.chardet-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-03-19T03:06:41.513174077+00:00"
-downloads = 1762581
 
 [feedstock_states.chardet-feedstock.attribution]
 contribution_type = "conversion"
@@ -19069,7 +19077,6 @@ commit_sha = "bcc5be1ceb60d83db67e863b0b55693685fadb5a"
 [feedstock_states.checksumdir-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 6406
 
 [feedstock_states.cheetah3-feedstock]
 recipe_type = "meta_yaml"
@@ -19233,7 +19240,6 @@ downloads = 3913
 [feedstock_states.chemprop-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 10915
 
 [feedstock_states.chempy-feedstock]
 recipe_type = "recipe_v1"
@@ -20677,7 +20683,6 @@ downloads = 1459
 [feedstock_states.clingo-lpx-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 40473
 
 [feedstock_states.clint-feedstock]
 recipe_type = "meta_yaml"
@@ -20779,7 +20784,6 @@ downloads = 67282
 [feedstock_states.cloudant-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-04-30T03:09:19.485447611+00:00"
-downloads = 36258
 
 [feedstock_states.cloudant-feedstock.attribution]
 contribution_type = "conversion"
@@ -20800,7 +20804,6 @@ downloads = 1587
 [feedstock_states.cloudflare-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1226
 
 [feedstock_states.cloudml-hypertune-feedstock]
 recipe_type = "meta_yaml"
@@ -20910,7 +20913,6 @@ downloads = 510
 [feedstock_states.clustergram-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 31442
 
 [feedstock_states.clusterpilot-feedstock]
 recipe_type = "meta_yaml"
@@ -21276,7 +21278,6 @@ downloads = 7220
 [feedstock_states.cmt-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 15316
 
 [feedstock_states.cmudict-feedstock]
 recipe_type = "recipe_v1"
@@ -23223,6 +23224,27 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 678475
 
+[feedstock_states.conda-launchers-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2026-08-04T05:05:31.309720557+00:00"
+
+[feedstock_states.conda-launchers-feedstock.attribution]
+contribution_type = "new_feedstock"
+contributors = [
+    "jaimergp",
+    "jezdez",
+]
+date = "2026-08-03T18:16:25Z"
+commit_sha = "8fa40ca45fc1d1c4ed0dbb09fcd72680c0693baf"
+
+[feedstock_states.conda-launchers-feedstock.recipe_commit_cache]
+sha = "8fa40ca45fc1d1c4ed0dbb09fcd72680c0693baf"
+message = "Initial feedstock commit with conda-smithy 2026.6.14."
+date = "2026-08-03T18:16:25Z"
+author_login = "conda-forge-admin"
+author_name = "conda-forge-admin"
+author_email = "chrisburr73+conda-forge-admin@gmail.com"
+
 [feedstock_states.conda-libmamba-solver-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-07-02T03:10:57.988248820+00:00"
@@ -24529,7 +24551,6 @@ downloads = 19432
 [feedstock_states.cotire-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 9551
 
 [feedstock_states.couchdb-feedstock]
 recipe_type = "meta_yaml"
@@ -24986,7 +25007,6 @@ downloads = 66666
 [feedstock_states.cppyy-backend-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-12-09T02:50:01.710599862+00:00"
-downloads = 135348
 
 [feedstock_states.cppyy-backend-feedstock.attribution]
 contribution_type = "conversion"
@@ -25195,7 +25215,6 @@ downloads = 741
 [feedstock_states.crc32c-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-08-31T02:32:17.459891541+00:00"
-downloads = 737818
 
 [feedstock_states.crc32c-feedstock.attribution]
 contribution_type = "conversion"
@@ -25442,7 +25461,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.croniter-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-03-16T03:07:43.456034146+00:00"
-downloads = 413762
 
 [feedstock_states.croniter-feedstock.attribution]
 contribution_type = "conversion"
@@ -25463,7 +25481,6 @@ downloads = 17400
 [feedstock_states.crontab-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 24510
 
 [feedstock_states.croppy-feedstock]
 recipe_type = "recipe_v1"
@@ -26654,7 +26671,6 @@ commit_sha = "6163d43214f0e0b142e8ab4705bb9ded9e8f4a73"
 [feedstock_states.cudadecon-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 50647
 
 [feedstock_states.cudasirecon-feedstock]
 recipe_type = "meta_yaml"
@@ -26980,7 +26996,6 @@ downloads = 1755
 [feedstock_states.cutde-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 68524
 
 [feedstock_states.cutensor-feedstock]
 recipe_type = "meta_yaml"
@@ -27551,7 +27566,6 @@ downloads = 2597227
 [feedstock_states.cython-fortran-file-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 80669
 
 [feedstock_states.cython-lint-feedstock]
 recipe_type = "recipe_v1"
@@ -28247,7 +28261,6 @@ downloads = 1312
 [feedstock_states.dash-bootstrap-components-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-07-14T07:14:52.496885+00:00"
-downloads = 348813
 
 [feedstock_states.dash-bootstrap-components-feedstock.attribution]
 contribution_type = "conversion"
@@ -28395,7 +28408,6 @@ commit_sha = "828dc980d5c50bd6c32671aa0696a10b108bbf3a"
 [feedstock_states.dask-bigquery-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 168792
 
 [feedstock_states.dask-cloudprovider-feedstock]
 recipe_type = "meta_yaml"
@@ -29673,7 +29685,6 @@ commit_sha = "bdfb824e78477a48fa30a90c1ae336a3be61afaa"
 [feedstock_states.dbf-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-09-04T02:27:59.002434234+00:00"
-downloads = 13476
 
 [feedstock_states.dbf-feedstock.attribution]
 contribution_type = "conversion"
@@ -29689,7 +29700,6 @@ downloads = 167956
 [feedstock_states.dbgpy-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 34528
 
 [feedstock_states.dbnomics-feedstock]
 recipe_type = "meta_yaml"
@@ -29836,7 +29846,6 @@ commit_sha = "cb8a65fb6d31917a3e1b916bad9b2be26875fe73"
 [feedstock_states.dbt-redshift-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2308
 
 [feedstock_states.dbt-semantic-interfaces-feedstock]
 recipe_type = "meta_yaml"
@@ -30034,7 +30043,6 @@ downloads = 10975
 [feedstock_states.ddt-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 39175
 
 [feedstock_states.ddtrace-feedstock]
 recipe_type = "meta_yaml"
@@ -30490,7 +30498,6 @@ downloads = 78082
 [feedstock_states.dedupe-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 34708
 
 [feedstock_states.dedupe-hcluster-feedstock]
 recipe_type = "meta_yaml"
@@ -30710,7 +30717,6 @@ commit_sha = "794fb07aba9770cd67df6c29318daa8241627cdf"
 [feedstock_states.deeptime-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 133751
 
 [feedstock_states.deepxde-feedstock]
 recipe_type = "meta_yaml"
@@ -30944,7 +30950,6 @@ commit_sha = "566353dfdb33dc2d8ed484ab775e3e8bab31ffe4"
 [feedstock_states.delvewheel-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 16340
 
 [feedstock_states.dem_stitcher-feedstock]
 recipe_type = "meta_yaml"
@@ -31574,7 +31579,6 @@ downloads = 8292
 [feedstock_states.dftbplus-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 114412
 
 [feedstock_states.dftbplus-python-feedstock]
 recipe_type = "meta_yaml"
@@ -31920,7 +31924,6 @@ downloads = 4211
 [feedstock_states.diffprivlib-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 9882
 
 [feedstock_states."diffpy.apps-feedstock"]
 recipe_type = "meta_yaml"
@@ -31965,7 +31968,6 @@ downloads = 22716
 [feedstock_states."diffpy.pdfmorph-feedstock"]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 3167
 
 [feedstock_states."diffpy.snmf-feedstock"]
 recipe_type = "meta_yaml"
@@ -33324,7 +33326,6 @@ downloads = 24578
 [feedstock_states.django-environ-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 63497
 
 [feedstock_states.django-etc-feedstock]
 recipe_type = "recipe_v1"
@@ -33631,7 +33632,6 @@ downloads = 3027
 [feedstock_states.django-jquery-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 15894
 
 [feedstock_states.django-js-asset-feedstock]
 recipe_type = "recipe_v1"
@@ -34309,7 +34309,6 @@ downloads = 5960
 [feedstock_states.django-rq-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 11728
 
 [feedstock_states.django-safedelete-feedstock]
 recipe_type = "meta_yaml"
@@ -34825,7 +34824,6 @@ downloads = 14909
 [feedstock_states.django_param-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 6000
 
 [feedstock_states.django_polymorphic-feedstock]
 recipe_type = "meta_yaml"
@@ -36470,7 +36468,6 @@ downloads = 7140
 [feedstock_states.dpdispatcher-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 3778
 
 [feedstock_states.dpgen-feedstock]
 recipe_type = "meta_yaml"
@@ -36901,7 +36898,6 @@ downloads = 1592
 [feedstock_states.ds_store-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-12-09T02:50:01.710599862+00:00"
-downloads = 33887
 
 [feedstock_states.ds_store-feedstock.attribution]
 contribution_type = "conversion"
@@ -38646,7 +38642,6 @@ downloads = 6210
 [feedstock_states.edgetest-pip-tools-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 6913
 
 [feedstock_states.ediblepickle-feedstock]
 recipe_type = "meta_yaml"
@@ -39716,7 +39711,6 @@ downloads = 53750
 [feedstock_states.enblend-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 87981
 
 [feedstock_states.encexp-feedstock]
 recipe_type = "meta_yaml"
@@ -40017,7 +40011,6 @@ commit_sha = "991dcd87bd715f3205e6e21ad97d4ed7777da29a"
 [feedstock_states.enumlib-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 98574
 
 [feedstock_states.envelope-feedstock]
 recipe_type = "recipe_v1"
@@ -40176,7 +40169,6 @@ downloads = 6222
 [feedstock_states.eo-learn-visualization-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 9124
 
 [feedstock_states.eo-tides-feedstock]
 recipe_type = "recipe_v1"
@@ -40662,7 +40654,6 @@ commit_sha = "9b8e74e525ee39c02da1b90f6cfdc86714d409f0"
 [feedstock_states.eslint-config-prettier-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 15820
 
 [feedstock_states.eslint-config-standard-feedstock]
 recipe_type = "meta_yaml"
@@ -41005,7 +40996,6 @@ downloads = 42216
 [feedstock_states.etelemetry-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 67965
 
 [feedstock_states.eth-abi-feedstock]
 recipe_type = "meta_yaml"
@@ -41979,7 +41969,6 @@ commit_sha = "b6662d604b6bceafeaa6a02f2e663b40fed92a6e"
 [feedstock_states.fabba-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 9751
 
 [feedstock_states.fabdem-feedstock]
 recipe_type = "meta_yaml"
@@ -43179,14 +43168,6 @@ contributors = ["ainaadekunle"]
 date = "2026-08-02T19:32:16Z"
 commit_sha = "466142756dda521873a11a0b3b699fd5cb749849"
 
-[feedstock_states.fastmdxplora-feedstock.recipe_commit_cache]
-sha = "466142756dda521873a11a0b3b699fd5cb749849"
-message = "Initial feedstock commit with conda-smithy 2026.6.14."
-date = "2026-08-02T19:32:16Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.fastmod-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -43347,7 +43328,6 @@ commit_sha = "aad64ffb58715afc66c0f7d194a1e942ff222d48"
 [feedstock_states.fasttext-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 114302
 
 [feedstock_states.fasttext-for-deepsearch-glm-feedstock]
 recipe_type = "recipe_v1"
@@ -43699,7 +43679,6 @@ downloads = 26777
 [feedstock_states.feedgen-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 27388
 
 [feedstock_states.feedgenerator-feedstock]
 recipe_type = "meta_yaml"
@@ -43817,7 +43796,6 @@ commit_sha = "7a1fe6393890c84ef7b82b9699162f5d886b6030"
 [feedstock_states.fenics-basix-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-07-23T02:41:50.274385099+00:00"
-downloads = 301265
 
 [feedstock_states.fenics-basix-feedstock.attribution]
 contribution_type = "conversion"
@@ -44920,7 +44898,6 @@ downloads = 6497
 [feedstock_states.flake8-black-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 52940
 
 [feedstock_states.flake8-blind-except-feedstock]
 recipe_type = "meta_yaml"
@@ -44930,7 +44907,6 @@ downloads = 86307
 [feedstock_states.flake8-broken-line-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 7179
 
 [feedstock_states.flake8-bugbear-feedstock]
 recipe_type = "meta_yaml"
@@ -45279,7 +45255,6 @@ commit_sha = "834798e5d909f381fead4c78eeab23ff47780d22"
 [feedstock_states.flammkuchen-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 9214
 
 [feedstock_states.flammkuchen-feedstock.attribution]
 contribution_type = "conversion"
@@ -45584,7 +45559,6 @@ downloads = 1380
 [feedstock_states.flask-flatpages-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 18283
 
 [feedstock_states.flask-genshi-feedstock]
 recipe_type = "meta_yaml"
@@ -47750,7 +47724,6 @@ downloads = 2566
 [feedstock_states.fps-yjs-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-02-17T03:03:25.108320013+00:00"
-downloads = 1591
 
 [feedstock_states.fps-yjs-feedstock.attribution]
 contribution_type = "conversion"
@@ -47975,7 +47948,6 @@ downloads = 126712
 [feedstock_states.freetds-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 70222
 
 [feedstock_states.freetds-feedstock.attribution]
 contribution_type = "conversion"
@@ -48491,7 +48463,6 @@ commit_sha = "45fbb7469ba8ffd07b052b9e57b2afcbf5d0a8e2"
 [feedstock_states.fswatch-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 30848
 
 [feedstock_states.ftd2xx-feedstock]
 recipe_type = "meta_yaml"
@@ -49705,7 +49676,6 @@ downloads = 40210
 [feedstock_states.geant4-data-radioactivedecay-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 45338
 
 [feedstock_states.geant4-data-realsurface-feedstock]
 recipe_type = "meta_yaml"
@@ -49887,7 +49857,6 @@ commit_sha = "1254c824d6121e4286f36085bbcdcaa6fb4f45d8"
 [feedstock_states.gempy-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-11-11T02:34:09.776213371+00:00"
-downloads = 13535
 
 [feedstock_states.gempy-feedstock.attribution]
 contribution_type = "conversion"
@@ -50249,7 +50218,6 @@ downloads = 1944
 [feedstock_states.geocoder-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 238011
 
 [feedstock_states.geocube-feedstock]
 recipe_type = "meta_yaml"
@@ -50854,7 +50822,6 @@ downloads = 110359
 [feedstock_states.get-docker-secret-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 3771
 
 [feedstock_states.get_version-feedstock]
 recipe_type = "meta_yaml"
@@ -50880,7 +50847,6 @@ commit_sha = "f8b09f5cae6a5758fff19ddb75d920de31362693"
 [feedstock_states.getdist-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 60506
 
 [feedstock_states.getent-feedstock]
 recipe_type = "recipe_v1"
@@ -52859,7 +52825,6 @@ commit_sha = "8c434c6be1d8f0ec9677010531f978bc88ba1a2b"
 [feedstock_states.go-glide-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 7463
 
 [feedstock_states.go-gox-feedstock]
 recipe_type = "meta_yaml"
@@ -53495,7 +53460,6 @@ downloads = 10264
 [feedstock_states.google-cloud-container-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-01-17T02:50:09.826475179+00:00"
-downloads = 22909
 
 [feedstock_states.google-cloud-container-feedstock.attribution]
 contribution_type = "conversion"
@@ -55408,7 +55372,6 @@ commit_sha = "3c58e36290a551bb172778fd674f91631b61b508"
 [feedstock_states.grid-strategy-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 3926
 
 [feedstock_states.griddataformats-feedstock]
 recipe_type = "meta_yaml"
@@ -55789,7 +55752,6 @@ commit_sha = "510b945fc3cf71dd39fda9f7bd45d64d6b1117a0"
 [feedstock_states.gruut-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 8657
 
 [feedstock_states.gruut-ipa-feedstock]
 recipe_type = "meta_yaml"
@@ -55872,7 +55834,6 @@ downloads = 2408
 [feedstock_states.gshhg-gmt-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 294260
 
 [feedstock_states.gsl-feedstock]
 recipe_type = "meta_yaml"
@@ -56424,7 +56385,6 @@ downloads = 1416
 [feedstock_states.gwcelery-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 13130
 
 [feedstock_states.gwcosmo-feedstock]
 recipe_type = "meta_yaml"
@@ -57218,7 +57178,6 @@ downloads = 36213
 [feedstock_states.halideir-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 3848
 
 [feedstock_states.hallelujah-feedstock]
 recipe_type = "meta_yaml"
@@ -57460,7 +57419,6 @@ downloads = 184119
 [feedstock_states.harmonica-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 17050
 
 [feedstock_states.harmony-py-feedstock]
 recipe_type = "meta_yaml"
@@ -59354,7 +59312,6 @@ downloads = 19048
 [feedstock_states.hpgeom-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 94294
 
 [feedstock_states.hpp-constraints-feedstock]
 recipe_type = "meta_yaml"
@@ -59495,7 +59452,6 @@ downloads = 2013
 [feedstock_states.hsluv-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 242337
 
 [feedstock_states.hsmfile-feedstock]
 recipe_type = "meta_yaml"
@@ -59581,7 +59537,6 @@ downloads = 15159
 [feedstock_states.htgettoken-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 94981
 
 [feedstock_states.htm-pytorch-feedstock]
 recipe_type = "meta_yaml"
@@ -60019,7 +59974,6 @@ downloads = 856
 [feedstock_states.hub-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 63240
 
 [feedstock_states.hubspot-api-client-feedstock]
 recipe_type = "meta_yaml"
@@ -60645,14 +60599,6 @@ contribution_type = "new_feedstock"
 contributors = ["jeremymanning"]
 date = "2026-08-02T19:01:37Z"
 commit_sha = "d53151b02ca3b7646887b85b51a6f6c61fc58ed0"
-
-[feedstock_states.hypertools-feedstock.recipe_commit_cache]
-sha = "d53151b02ca3b7646887b85b51a6f6c61fc58ed0"
-message = "Initial feedstock commit with conda-smithy 2026.6.14."
-date = "2026-08-02T19:01:37Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.hypertransform-feedstock]
 recipe_type = "meta_yaml"
@@ -61925,7 +61871,6 @@ downloads = 2182380
 [feedstock_states.imod-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 7767
 
 [feedstock_states.imodels-feedstock]
 recipe_type = "meta_yaml"
@@ -62090,7 +62035,6 @@ downloads = 116561
 [feedstock_states.imreg_dft-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 73792
 
 [feedstock_states.imutils-feedstock]
 recipe_type = "meta_yaml"
@@ -62709,7 +62653,6 @@ downloads = 1651
 [feedstock_states.intake-parquet-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 197679
 
 [feedstock_states.intake-salesforce-feedstock]
 recipe_type = "meta_yaml"
@@ -62830,7 +62773,6 @@ downloads = 151410
 [feedstock_states.intel-vaapi-driver-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 5981
 
 [feedstock_states.intel_repack-feedstock]
 recipe_type = "meta_yaml"
@@ -64770,7 +64712,6 @@ downloads = 11835
 [feedstock_states."java-1.7.0-openjdk-headless-cos7-aarch64-feedstock"]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 12963
 
 [feedstock_states.java-access-bridge-wrapper-feedstock]
 recipe_type = "meta_yaml"
@@ -67004,7 +66945,6 @@ downloads = 4640
 [feedstock_states.jupyter-launcher-shortcuts-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2647
 
 [feedstock_states.jupyter-loopback-feedstock]
 recipe_type = "meta_yaml"
@@ -67097,7 +67037,6 @@ downloads = 9811
 [feedstock_states.jupyter-resource-usage-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 586345
 
 [feedstock_states.jupyter-rfb-feedstock]
 recipe_type = "meta_yaml"
@@ -67284,7 +67223,6 @@ commit_sha = "8f2f3f0c672ac4466ab861c51deb21375b9e107b"
 [feedstock_states.jupyter_client-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-12-11T02:51:13.800919724+00:00"
-downloads = 20174194
 
 [feedstock_states.jupyter_client-feedstock.attribution]
 contribution_type = "conversion"
@@ -67341,7 +67279,6 @@ downloads = 16734
 [feedstock_states.jupyter_enterprise_gateway-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 12187
 
 [feedstock_states.jupyter_events-feedstock]
 recipe_type = "recipe_v1"
@@ -68715,7 +68652,6 @@ downloads = 766
 [feedstock_states.jwt-cpp-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 18028
 
 [feedstock_states.jxlpy-feedstock]
 recipe_type = "recipe_v1"
@@ -69436,7 +69372,6 @@ downloads = 21735
 [feedstock_states.keras-cv-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 3920
 
 [feedstock_states.keras-feedstock]
 recipe_type = "meta_yaml"
@@ -70381,7 +70316,6 @@ commit_sha = "4fe3b9c6495f108d333f05c7d36ade6c07041d78"
 [feedstock_states.kronprod-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1648
 
 [feedstock_states.krtc-feedstock]
 recipe_type = "meta_yaml"
@@ -70560,7 +70494,6 @@ downloads = 370
 [feedstock_states.kurl-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1374
 
 [feedstock_states.kustomize-feedstock]
 recipe_type = "meta_yaml"
@@ -71632,7 +71565,6 @@ commit_sha = "ae3ae677c7ea5e489ac5ec1585c6dc13f52dc300"
 [feedstock_states.lastools-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 69958
 
 [feedstock_states.lastpass-cli-feedstock]
 recipe_type = "meta_yaml"
@@ -72079,7 +72011,6 @@ downloads = 17044
 [feedstock_states.lbl-repack-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 24087
 
 [feedstock_states.lbmessaging-feedstock]
 recipe_type = "meta_yaml"
@@ -72335,7 +72266,6 @@ commit_sha = "df72c99286d5e932537bc46256e27efafd18ad75"
 [feedstock_states.ldas-tools-framecpp-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-06-27T03:09:47.661027022+00:00"
-downloads = 165453
 
 [feedstock_states.ldas-tools-framecpp-feedstock.attribution]
 contribution_type = "conversion"
@@ -72431,6 +72361,24 @@ contribution_type = "new_feedstock"
 contributors = ["danielnachun"]
 date = "2024-12-13T08:17:20Z"
 commit_sha = "f6c6df03eca63b1ec4e272c0e25c1e2c0fb54b2d"
+
+[feedstock_states.lean4-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2026-08-04T05:05:31.309720557+00:00"
+
+[feedstock_states.lean4-feedstock.attribution]
+contribution_type = "new_feedstock"
+contributors = ["wolfv"]
+date = "2026-08-03T12:06:04Z"
+commit_sha = "6cce27e31644d167671f91eeea4b25aea5fb27d1"
+
+[feedstock_states.lean4-feedstock.recipe_commit_cache]
+sha = "6cce27e31644d167671f91eeea4b25aea5fb27d1"
+message = "Initial feedstock commit with conda-smithy 2026.6.14."
+date = "2026-08-03T12:06:04Z"
+author_login = "conda-forge-admin"
+author_name = "conda-forge-admin"
+author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.leapct-feedstock]
 recipe_type = "recipe_v1"
@@ -73076,7 +73024,6 @@ downloads = 61893
 [feedstock_states.libadjoint-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 110324
 
 [feedstock_states.libadwaita-feedstock]
 recipe_type = "recipe_v1"
@@ -73276,6 +73223,24 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 12618
 
+[feedstock_states.libcgif-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2026-08-04T05:05:31.309720557+00:00"
+
+[feedstock_states.libcgif-feedstock.attribution]
+contribution_type = "new_feedstock"
+contributors = ["eunos-1128"]
+date = "2026-08-03T08:31:10Z"
+commit_sha = "ccb392a0731373cb0f8719bd184a9a1110c81670"
+
+[feedstock_states.libcgif-feedstock.recipe_commit_cache]
+sha = "ccb392a0731373cb0f8719bd184a9a1110c81670"
+message = "Initial feedstock commit with conda-smithy 2026.6.14."
+date = "2026-08-03T08:31:10Z"
+author_login = "conda-forge-admin"
+author_name = "conda-forge-admin"
+author_email = "chrisburr73+conda-forge-admin@gmail.com"
+
 [feedstock_states.libcholmod-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -73358,7 +73323,6 @@ downloads = 1875
 [feedstock_states.libcrc32c-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 43529999
 
 [feedstock_states.libcroco-feedstock]
 recipe_type = "meta_yaml"
@@ -73877,7 +73841,6 @@ downloads = 10002959
 [feedstock_states.libglvnd-cos7-aarch64-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 66019
 
 [feedstock_states.libglvnd-cos7-ppc64le-feedstock]
 recipe_type = "meta_yaml"
@@ -73919,14 +73882,6 @@ contribution_type = "new_feedstock"
 contributors = ["baradejoo"]
 date = "2026-08-02T20:03:25Z"
 commit_sha = "6a6dc3bf2d5782b7d33ecd59be0b8442c09dc6fe"
-
-[feedstock_states.libgphoto2-feedstock.recipe_commit_cache]
-sha = "6a6dc3bf2d5782b7d33ecd59be0b8442c09dc6fe"
-message = "Initial feedstock commit with conda-smithy 2026.6.14."
-date = "2026-08-02T20:03:25Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.libgpiod-split-feedstock]
 recipe_type = "meta_yaml"
@@ -74489,7 +74444,6 @@ downloads = 137846
 [feedstock_states.libignition-transport9-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 26632
 
 [feedstock_states.libignition-utils-feedstock]
 recipe_type = "meta_yaml"
@@ -74763,7 +74717,6 @@ commit_sha = "30e11debba0abc6823cf4cf03963215e6f483481"
 [feedstock_states.libmediainfo-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 9204
 
 [feedstock_states.libmemcached-feedstock]
 recipe_type = "recipe_v1"
@@ -75432,9 +75385,29 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 14855
 
 [feedstock_states.librealsense-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-08-04T05:05:31.309720557+00:00"
 downloads = 135177
+
+[feedstock_states.librealsense-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["wolfv"]
+date = "2026-08-03T18:24:21Z"
+commit_sha = "aa7c04d29c4abea2330b561806810a255e4fd54d"
+
+[feedstock_states.librealsense-feedstock.recipe_commit_cache]
+sha = "aa7c04d29c4abea2330b561806810a255e4fd54d"
+message = """
+MNT: Re-rendered with conda-smithy 2026.6.14 and conda-forge-pinning 2026.08.01.09.47.35
+
+Other tools:
+- conda-build 26.5.0
+- rattler-build 0.72.2
+- rattler-build-conda-compat 1.4.18"""
+date = "2026-08-03T18:24:21Z"
+author_login = "wolfv"
+author_name = "Wolf Vollprecht"
+author_email = "w.vollprecht@gmail.com"
 
 [feedstock_states.libredwg-feedstock]
 recipe_type = "meta_yaml"
@@ -75691,7 +75664,6 @@ commit_sha = "3452683616be6ec2570a44cec9e9bfb494458aed"
 [feedstock_states.libsharp-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 152388
 
 [feedstock_states.libshumate-feedstock]
 recipe_type = "recipe_v1"
@@ -75946,7 +75918,6 @@ downloads = 3972
 [feedstock_states.libta-lib-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 662825
 
 [feedstock_states.libtar-feedstock]
 recipe_type = "meta_yaml"
@@ -76249,7 +76220,6 @@ commit_sha = "b7e40d4672d239e459aaf4c3b0b8130fb2ab358d"
 [feedstock_states.libuvc-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1737
 
 [feedstock_states.libuvw-feedstock]
 recipe_type = "meta_yaml"
@@ -76399,7 +76369,6 @@ downloads = 33499
 [feedstock_states.libx11-devel-cos7-aarch64-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 26916
 
 [feedstock_states.libx86emu-feedstock]
 recipe_type = "meta_yaml"
@@ -78515,7 +78484,6 @@ downloads = 15108
 [feedstock_states.lodepng-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 153057
 
 [feedstock_states.lofo-importance-feedstock]
 recipe_type = "meta_yaml"
@@ -78623,7 +78591,6 @@ downloads = 2010
 [feedstock_states.logging_exceptions-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 6529
 
 [feedstock_states.logging_tree-feedstock]
 recipe_type = "meta_yaml"
@@ -78769,7 +78736,6 @@ commit_sha = "a945c71e8278b1dcc3e7217b2cf2da4d0ab17f7c"
 [feedstock_states.lolviz-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1529
 
 [feedstock_states.lomap2-feedstock]
 recipe_type = "recipe_v1"
@@ -79844,7 +79810,6 @@ downloads = 99217123
 [feedstock_states.lz4-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-11-06T02:34:03.648301702+00:00"
-downloads = 11665077
 
 [feedstock_states.lz4-feedstock.attribution]
 contribution_type = "conversion"
@@ -80304,7 +80269,6 @@ last_changed = "2025-12-27T02:49:44.260255460+00:00"
 [feedstock_states.macports-legacy-support-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 9996
 
 [feedstock_states.macpow-feedstock]
 recipe_type = "meta_yaml"
@@ -81743,7 +81707,6 @@ downloads = 48719762
 [feedstock_states.matplotlib-label-lines-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 40931
 
 [feedstock_states.matplotlib-scalebar-feedstock]
 recipe_type = "meta_yaml"
@@ -82278,7 +82241,6 @@ downloads = 16713
 [feedstock_states.mdal-python-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 43698
 
 [feedstock_states.mdanalysis-feedstock]
 recipe_type = "meta_yaml"
@@ -83420,7 +83382,6 @@ commit_sha = "be59d7bfe25986a9921edd2b54904f39975b4e52"
 [feedstock_states.mesonpep517-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1213
 
 [feedstock_states.message-ix-feedstock]
 recipe_type = "meta_yaml"
@@ -83612,7 +83573,6 @@ downloads = 95789
 [feedstock_states.metis-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 7116254
 
 [feedstock_states.metis-python-feedstock]
 recipe_type = "meta_yaml"
@@ -83712,7 +83672,6 @@ downloads = 354
 [feedstock_states.metview-batch-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 8124
 
 [feedstock_states.metview-feedstock]
 recipe_type = "meta_yaml"
@@ -85117,7 +85076,6 @@ commit_sha = "046e2bb2edb3dd8912c645f0e94fd217f22ac06e"
 [feedstock_states.mkdocs-literate-nav-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 89455
 
 [feedstock_states.mkdocs-llmstxt-feedstock]
 recipe_type = "recipe_v1"
@@ -85368,7 +85326,6 @@ downloads = 1791
 [feedstock_states.mleap-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2139
 
 [feedstock_states.mlens-feedstock]
 recipe_type = "recipe_v1"
@@ -86362,7 +86319,6 @@ downloads = 931
 [feedstock_states.molecule-docker-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 35633
 
 [feedstock_states.molecule-feedstock]
 recipe_type = "meta_yaml"
@@ -87327,7 +87283,6 @@ downloads = 1196
 [feedstock_states.mpfi-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 398608
 
 [feedstock_states.mpfr-feedstock]
 recipe_type = "meta_yaml"
@@ -87920,7 +87875,6 @@ commit_sha = "2515f60b2c631f988627d7c2634fcaa632e6a6d3"
 [feedstock_states.msgpack-c-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-02-10T03:20:31.064101900+00:00"
-downloads = 276103
 
 [feedstock_states.msgpack-c-feedstock.attribution]
 contribution_type = "conversion"
@@ -88012,7 +87966,6 @@ commit_sha = "83a32b3b71b0d7dee7f128b6faac23d40e5bd15b"
 [feedstock_states.mshr-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 130457
 
 [feedstock_states.msibi-feedstock]
 recipe_type = "meta_yaml"
@@ -88125,7 +88078,6 @@ downloads = 7553
 [feedstock_states.msumastro-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 6290
 
 [feedstock_states.msutils-feedstock]
 recipe_type = "recipe_v1"
@@ -88403,7 +88355,6 @@ commit_sha = "c31ac63ea0784b121ea81359f7fa298d04b6a744"
 [feedstock_states.multimethod-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 790040
 
 [feedstock_states.multineat-feedstock]
 recipe_type = "meta_yaml"
@@ -89212,7 +89163,6 @@ downloads = 77118
 [feedstock_states.mysql-python-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 12829
 
 [feedstock_states.mysqlclient-feedstock]
 recipe_type = "recipe_v1"
@@ -90794,7 +90744,6 @@ downloads = 660
 [feedstock_states.napari-tracks-reader-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 997
 
 [feedstock_states.napari-trait2d-feedstock]
 recipe_type = "meta_yaml"
@@ -91335,7 +91284,6 @@ downloads = 69822
 [feedstock_states.nbsmoke-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 19886
 
 [feedstock_states.nbsphinx-feedstock]
 recipe_type = "meta_yaml"
@@ -91927,7 +91875,6 @@ downloads = 1573
 [feedstock_states.nengo-spa-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1798
 
 [feedstock_states.neo-jax-feedstock]
 recipe_type = "recipe_v1"
@@ -91969,7 +91916,6 @@ downloads = 1780
 [feedstock_states.neobolt-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 136865
 
 [feedstock_states.neocmakelsp-feedstock]
 recipe_type = "recipe_v1"
@@ -92932,6 +92878,24 @@ contributors = ["carlodri"]
 date = "2026-01-01T18:44:11Z"
 commit_sha = "66fe307777b24f6f0723bf73da201ea4f157b095"
 
+[feedstock_states.nifti-clib-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2026-08-04T05:05:31.309720557+00:00"
+
+[feedstock_states.nifti-clib-feedstock.attribution]
+contribution_type = "new_feedstock"
+contributors = ["eunos-1128"]
+date = "2026-08-03T08:30:29Z"
+commit_sha = "151c0829093c546949dc0a98cae166c30f665e71"
+
+[feedstock_states.nifti-clib-feedstock.recipe_commit_cache]
+sha = "151c0829093c546949dc0a98cae166c30f665e71"
+message = "Initial feedstock commit with conda-smithy 2026.6.14."
+date = "2026-08-03T08:30:29Z"
+author_login = "conda-forge-admin"
+author_name = "conda-forge-admin"
+author_email = "chrisburr73+conda-forge-admin@gmail.com"
+
 [feedstock_states.nifti-mrs-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -92970,7 +92934,6 @@ downloads = 9676
 [feedstock_states.nimfa-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 3100
 
 [feedstock_states.nine-feedstock]
 recipe_type = "meta_yaml"
@@ -93890,7 +93853,6 @@ downloads = 1163
 [feedstock_states.notebook-shim-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 17403837
 
 [feedstock_states.notebook_intelligence-feedstock]
 recipe_type = "recipe_v1"
@@ -94290,7 +94252,6 @@ downloads = 13194
 [feedstock_states.nss_wrapper-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 11832
 
 [feedstock_states.nsync-feedstock]
 recipe_type = "meta_yaml"
@@ -94300,7 +94261,6 @@ downloads = 34326
 [feedstock_states.ntbtls-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 259392
 
 [feedstock_states.nteract-scrapbook-feedstock]
 recipe_type = "meta_yaml"
@@ -94559,7 +94519,6 @@ downloads = 215290
 [feedstock_states.numbalsoda-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 15217
 
 [feedstock_states.numbasom-feedstock]
 recipe_type = "meta_yaml"
@@ -95221,7 +95180,6 @@ downloads = 19677
 [feedstock_states.obsplus-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 10997
 
 [feedstock_states.obspy-feedstock]
 recipe_type = "meta_yaml"
@@ -95918,7 +95876,6 @@ downloads = 22773
 [feedstock_states.offset-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1545
 
 [feedstock_states.offset-subtraction-feedstock]
 recipe_type = "meta_yaml"
@@ -95953,7 +95910,6 @@ downloads = 64172
 [feedstock_states.ogh-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 8674
 
 [feedstock_states.ogre-feedstock]
 recipe_type = "recipe_v1"
@@ -96598,7 +96554,6 @@ downloads = 14595
 [feedstock_states.oommfodt-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 64642
 
 [feedstock_states.ooouno-feedstock]
 recipe_type = "meta_yaml"
@@ -96863,7 +96818,6 @@ downloads = 53158
 [feedstock_states.openapi-schema-validator-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-02-24T03:04:23.299102269+00:00"
-downloads = 1245054
 
 [feedstock_states.openapi-schema-validator-feedstock.attribution]
 contribution_type = "conversion"
@@ -98198,7 +98152,6 @@ downloads = 12232
 [feedstock_states.opentelemetry-exporter-jaeger-thrift-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 12623
 
 [feedstock_states.opentelemetry-exporter-opencensus-feedstock]
 recipe_type = "meta_yaml"
@@ -99031,7 +98984,6 @@ downloads = 27086
 [feedstock_states.optionsfactory-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 6972
 
 [feedstock_states.optiprofiler-feedstock]
 recipe_type = "recipe_v1"
@@ -100768,14 +100720,6 @@ contributors = ["hmaarrfk"]
 date = "2026-08-03T02:16:33Z"
 commit_sha = "db0b20a3c52c6ba73d9cfc7ac1f17424d9cfef73"
 
-[feedstock_states.pam-stubs-feedstock.recipe_commit_cache]
-sha = "db0b20a3c52c6ba73d9cfc7ac1f17424d9cfef73"
-message = "Initial feedstock commit with conda-smithy 2026.6.14."
-date = "2026-08-03T02:16:33Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.pamela-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -100868,7 +100812,6 @@ downloads = 196615
 [feedstock_states.pandapower-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 9727
 
 [feedstock_states.pandarallel-feedstock]
 recipe_type = "meta_yaml"
@@ -102120,7 +102063,6 @@ downloads = 4483
 [feedstock_states.path-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 215196
 
 [feedstock_states.path-imports-feedstock]
 recipe_type = "meta_yaml"
@@ -102673,7 +102615,6 @@ downloads = 320371
 [feedstock_states.pdfminer3k-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 160275
 
 [feedstock_states.pdfmm-feedstock]
 recipe_type = "meta_yaml"
@@ -103106,7 +103047,6 @@ downloads = 1322
 [feedstock_states.pendulum-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-01-31T03:09:40.219481423+00:00"
-downloads = 1328685
 
 [feedstock_states.pendulum-feedstock.attribution]
 contribution_type = "conversion"
@@ -103427,7 +103367,6 @@ downloads = 524
 [feedstock_states.perl-clone-choose-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 9463
 
 [feedstock_states.perl-clone-feedstock]
 recipe_type = "meta_yaml"
@@ -103642,7 +103581,6 @@ downloads = 29845195
 [feedstock_states.perl-file-chdir-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 388055
 
 [feedstock_states.perl-file-homedir-feedstock]
 recipe_type = "meta_yaml"
@@ -103696,7 +103634,6 @@ downloads = 716
 [feedstock_states.perl-importer-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 395344
 
 [feedstock_states.perl-inc-latest-feedstock]
 recipe_type = "meta_yaml"
@@ -103904,7 +103841,6 @@ downloads = 41649
 [feedstock_states.perl-proc-fork-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1555
 
 [feedstock_states.perl-readonly-feedstock]
 recipe_type = "meta_yaml"
@@ -103944,7 +103880,6 @@ downloads = 576
 [feedstock_states.perl-sort-key-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1337
 
 [feedstock_states.perl-spiffy-feedstock]
 recipe_type = "meta_yaml"
@@ -106846,7 +106781,6 @@ downloads = 2315
 [feedstock_states.plusplus-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1222
 
 [feedstock_states.plutosvg-feedstock]
 recipe_type = "meta_yaml"
@@ -106914,7 +106848,6 @@ commit_sha = "6405f94a293229c698ffa630a74a95ba599b998c"
 [feedstock_states.pmda-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 10831
 
 [feedstock_states.pmdarima-feedstock]
 recipe_type = "meta_yaml"
@@ -107522,7 +107455,6 @@ downloads = 411
 [feedstock_states.polycap-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 76420
 
 [feedstock_states.polycircles-feedstock]
 recipe_type = "meta_yaml"
@@ -109587,7 +109519,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.psycopg2-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 7949707
 
 [feedstock_states.psycopg2-yugabytedb-feedstock]
 recipe_type = "meta_yaml"
@@ -109597,7 +109528,6 @@ downloads = 16191
 [feedstock_states.psygnal-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 873777
 
 [feedstock_states.psyplot-feedstock]
 recipe_type = "meta_yaml"
@@ -110627,7 +110557,6 @@ downloads = 21029
 [feedstock_states.py2dm-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 8124
 
 [feedstock_states.py2exe-feedstock]
 recipe_type = "meta_yaml"
@@ -111378,7 +111307,6 @@ downloads = 228297
 [feedstock_states.pyblake2-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 67261
 
 [feedstock_states.pybliometrics-feedstock]
 recipe_type = "recipe_v1"
@@ -112680,7 +112608,6 @@ commit_sha = "5c0b063a4c7c22877a555e2c6f02a6042f3466a1"
 [feedstock_states.pydatamail_google-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 10941
 
 [feedstock_states.pydatamail_ml-feedstock]
 recipe_type = "meta_yaml"
@@ -112875,9 +112802,26 @@ date = "2025-10-15T18:03:42Z"
 commit_sha = "ea9b217af435b1aad8d7a20bbc40bb165fc0b49b"
 
 [feedstock_states.pydispatcher-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-08-04T05:05:31.309720557+00:00"
 downloads = 573191
+
+[feedstock_states.pydispatcher-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["mgorny"]
+date = "2026-07-28T18:10:26Z"
+commit_sha = "6e8e5e117203a33a1d087097ab1e6a0e3e5bad47"
+
+[feedstock_states.pydispatcher-feedstock.recipe_commit_cache]
+sha = "6e8e5e117203a33a1d087097ab1e6a0e3e5bad47"
+message = """
+Convert recipe to v1 format
+
+Signed-off-by: Michał Górny <mgorny@gentoo.org>"""
+date = "2026-07-28T18:10:26Z"
+author_login = "mgorny"
+author_name = "Michał Górny"
+author_email = "mgorny@gentoo.org"
 
 [feedstock_states.pydistcheck-feedstock]
 recipe_type = "recipe_v1"
@@ -114145,7 +114089,6 @@ downloads = 913907
 [feedstock_states.pygeoutils-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 13821
 
 [feedstock_states.pygetimportables-feedstock]
 recipe_type = "recipe_v1"
@@ -114270,7 +114213,6 @@ commit_sha = "9d1e0b1a982940b34f0224a108221a36a6186644"
 [feedstock_states.pyglmnet-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2185
 
 [feedstock_states.pyglotaran-alias-feedstock]
 recipe_type = "meta_yaml"
@@ -114500,7 +114442,6 @@ downloads = 9015
 [feedstock_states.pygraphml-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 11128
 
 [feedstock_states.pygraphml-feedstock.attribution]
 contribution_type = "conversion"
@@ -115286,7 +115227,6 @@ downloads = 63938
 [feedstock_states.pyjuliaup-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1111
 
 [feedstock_states.pyjwkest-feedstock]
 recipe_type = "meta_yaml"
@@ -115867,7 +115807,6 @@ downloads = 437471
 [feedstock_states.pyls-flake8-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 67150
 
 [feedstock_states.pyls-isort-feedstock]
 recipe_type = "meta_yaml"
@@ -116257,7 +116196,7 @@ downloads = 11207
 [feedstock_states.pymeasure-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 8952
+downloads = 16359
 
 [feedstock_states.pymeasure-feedstock.attribution]
 contribution_type = "conversion"
@@ -116365,7 +116304,6 @@ downloads = 9239
 [feedstock_states.pymetis-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 294037
 
 [feedstock_states.pymicro-feedstock]
 recipe_type = "recipe_v1"
@@ -116530,7 +116468,6 @@ downloads = 2135
 [feedstock_states.pymongo-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 5740117
 
 [feedstock_states.pymongo-search-utils-feedstock]
 recipe_type = "recipe_v1"
@@ -117475,7 +117412,6 @@ downloads = 17704
 [feedstock_states.pyopengl-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1626051
 
 [feedstock_states.pyopenms-viz-feedstock]
 recipe_type = "meta_yaml"
@@ -118284,7 +118220,6 @@ commit_sha = "1e1ea2b9df9c1d482698e261cc771f72432154b6"
 [feedstock_states.pypyr-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 17790
 
 [feedstock_states.pypythia-feedstock]
 recipe_type = "meta_yaml"
@@ -118396,7 +118331,6 @@ commit_sha = "5fdb2d8f6e94fd6591644ef305ed8fb92e53ef80"
 [feedstock_states.pyqt5-sip-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2026-02-27T03:03:51.391193898+00:00"
-downloads = 23246688
 
 [feedstock_states.pyqt6-feedstock]
 recipe_type = "meta_yaml"
@@ -118588,7 +118522,6 @@ downloads = 1103
 [feedstock_states.pyrams-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 7934
 
 [feedstock_states.pyranha-feedstock]
 recipe_type = "meta_yaml"
@@ -119891,7 +119824,6 @@ downloads = 8985
 [feedstock_states.pyspeckit-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2670
 
 [feedstock_states.pyspeckle-feedstock]
 recipe_type = "meta_yaml"
@@ -120015,7 +119947,6 @@ downloads = 3781869
 [feedstock_states.pystardb-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 744
 
 [feedstock_states.pystem-feedstock]
 recipe_type = "meta_yaml"
@@ -122366,7 +122297,6 @@ downloads = 3439
 [feedstock_states.python-frictionqpotfem-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 36314
 
 [feedstock_states.python-frictionqpotspringblock-feedstock]
 recipe_type = "meta_yaml"
@@ -122937,7 +122867,6 @@ commit_sha = "191316a7ef151dadd4d12ea8838d27143b539f16"
 [feedstock_states.python-magnumclient-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2709
 
 [feedstock_states.python-manilaclient-feedstock]
 recipe_type = "meta_yaml"
@@ -123090,7 +123019,6 @@ downloads = 8415
 [feedstock_states.python-nvd3-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 327400
 
 [feedstock_states.python-oauth2-feedstock]
 recipe_type = "meta_yaml"
@@ -123265,7 +123193,6 @@ downloads = 34821
 [feedstock_states.python-rake-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1578
 
 [feedstock_states.python-rapidjson-feedstock]
 recipe_type = "meta_yaml"
@@ -123371,7 +123298,6 @@ downloads = 4826
 [feedstock_states.python-sounddevice-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1111184
 
 [feedstock_states.python-spake2-feedstock]
 recipe_type = "meta_yaml"
@@ -123975,7 +123901,6 @@ commit_sha = "0923b0dfcf36b26695eb47a965a6487f7c77905e"
 [feedstock_states.pytng-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 605543
 
 [feedstock_states.pytokens-feedstock]
 recipe_type = "recipe_v1"
@@ -124499,7 +124424,6 @@ downloads = 76991
 [feedstock_states.pyutilib-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 271546
 
 [feedstock_states.pyutilsnrw-feedstock]
 recipe_type = "meta_yaml"
@@ -125014,7 +124938,6 @@ downloads = 21013
 [feedstock_states.pyzbar-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 74693
 
 [feedstock_states.pyzenhub-feedstock]
 recipe_type = "meta_yaml"
@@ -126097,7 +126020,6 @@ downloads = 185434
 [feedstock_states.qtlocation-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 62466
 
 [feedstock_states.qtmodern-feedstock]
 recipe_type = "meta_yaml"
@@ -126309,7 +126231,6 @@ downloads = 1150
 [feedstock_states.quantities-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 94869
 
 [feedstock_states.quantity-array-feedstock]
 recipe_type = "recipe_v1"
@@ -126410,7 +126331,6 @@ downloads = 1799
 [feedstock_states.quarticrootsflocke-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2577
 
 [feedstock_states.quarto-feedstock]
 recipe_type = "meta_yaml"
@@ -126764,7 +126684,6 @@ commit_sha = "082f4b584339ef67d07214764af1b74b9b2d364e"
 [feedstock_states.qwtpolar-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 64268
 
 [feedstock_states.r-abcanalysis-feedstock]
 recipe_type = "meta_yaml"
@@ -127249,7 +127168,6 @@ downloads = 31050
 [feedstock_states."r-assertive.base-feedstock"]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 35322
 
 [feedstock_states."r-assertive.code-feedstock"]
 recipe_type = "meta_yaml"
@@ -127424,7 +127342,6 @@ downloads = 41793
 [feedstock_states."r-aws.ec2metadata-feedstock"]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 33730
 
 [feedstock_states."r-aws.s3-feedstock"]
 recipe_type = "meta_yaml"
@@ -127544,7 +127461,6 @@ downloads = 14121
 [feedstock_states.r-base-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 4381879
 
 [feedstock_states.r-base64-feedstock]
 recipe_type = "meta_yaml"
@@ -127834,7 +127750,6 @@ downloads = 278801
 [feedstock_states.r-biclust-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 29622
 
 [feedstock_states.r-bien-feedstock]
 recipe_type = "meta_yaml"
@@ -128010,7 +127925,6 @@ downloads = 15903
 [feedstock_states.r-bipartite-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 25632
 
 [feedstock_states.r-bipartitemodularitymaximization-feedstock]
 recipe_type = "meta_yaml"
@@ -128105,7 +128019,6 @@ downloads = 6312
 [feedstock_states.r-bnlearn-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 15759
 
 [feedstock_states.r-bnstruct-feedstock]
 recipe_type = "meta_yaml"
@@ -128960,7 +128873,6 @@ downloads = 50931
 [feedstock_states.r-clinfun-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 20669
 
 [feedstock_states.r-clinify-feedstock]
 recipe_type = "meta_yaml"
@@ -129100,7 +129012,6 @@ downloads = 18628
 [feedstock_states.r-cmdfun-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 5762
 
 [feedstock_states.r-cmdstanr-feedstock]
 recipe_type = "meta_yaml"
@@ -129190,7 +129101,6 @@ downloads = 10929
 [feedstock_states.r-coin-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 126615
 
 [feedstock_states.r-collapse-feedstock]
 recipe_type = "meta_yaml"
@@ -129479,7 +129389,6 @@ downloads = 13990
 [feedstock_states.r-corrplot-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 266976
 
 [feedstock_states.r-corrr-feedstock]
 recipe_type = "meta_yaml"
@@ -129864,7 +129773,6 @@ downloads = 7261
 [feedstock_states.r-dbarts-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 21482
 
 [feedstock_states.r-dbi-feedstock]
 recipe_type = "meta_yaml"
@@ -129939,7 +129847,6 @@ downloads = 1198
 [feedstock_states.r-decido-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 6818
 
 [feedstock_states.r-declaredesign-feedstock]
 recipe_type = "meta_yaml"
@@ -130214,7 +130121,6 @@ downloads = 21333
 [feedstock_states.r-diffusr-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 17114
 
 [feedstock_states.r-digest-feedstock]
 recipe_type = "meta_yaml"
@@ -130344,7 +130250,6 @@ downloads = 16102
 [feedstock_states.r-distill-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 19730
 
 [feedstock_states.r-distillery-feedstock]
 recipe_type = "meta_yaml"
@@ -130549,7 +130454,6 @@ downloads = 794564
 [feedstock_states.r-downloader-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 142512
 
 [feedstock_states.r-downloadthis-feedstock]
 recipe_type = "meta_yaml"
@@ -130859,7 +130763,6 @@ downloads = 2160
 [feedstock_states.r-edina-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 11013
 
 [feedstock_states.r-editdata-feedstock]
 recipe_type = "meta_yaml"
@@ -131193,7 +131096,6 @@ downloads = 33753
 [feedstock_states.r-etrunct-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 421916
 
 [feedstock_states.r-eulerr-feedstock]
 recipe_type = "meta_yaml"
@@ -131283,7 +131185,6 @@ downloads = 11542
 [feedstock_states.r-expsmooth-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 12509
 
 [feedstock_states.r-expss-feedstock]
 recipe_type = "meta_yaml"
@@ -131403,7 +131304,6 @@ downloads = 8220
 [feedstock_states.r-farver-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 5199888
 
 [feedstock_states.r-fassets-feedstock]
 recipe_type = "meta_yaml"
@@ -131843,7 +131743,6 @@ downloads = 3557
 [feedstock_states.r-fontawesome-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2101130
 
 [feedstock_states.r-fontbitstreamvera-feedstock]
 recipe_type = "meta_yaml"
@@ -132128,7 +132027,6 @@ downloads = 5768
 [feedstock_states.r-fuzzyjoin-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 36022
 
 [feedstock_states.r-fwdselect-feedstock]
 recipe_type = "meta_yaml"
@@ -132733,7 +132631,6 @@ downloads = 18192
 [feedstock_states.r-gghalves-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 18827
 
 [feedstock_states.r-gghighlight-feedstock]
 recipe_type = "meta_yaml"
@@ -132948,7 +132845,6 @@ downloads = 5034
 [feedstock_states.r-ggrasp-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 10491
 
 [feedstock_states.r-ggrastr-feedstock]
 recipe_type = "meta_yaml"
@@ -133193,7 +133089,6 @@ downloads = 33215
 [feedstock_states.r-glmnet-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 662865
 
 [feedstock_states.r-glmnetutils-feedstock]
 recipe_type = "meta_yaml"
@@ -133423,7 +133318,6 @@ downloads = 8170
 [feedstock_states.r-graphicalvar-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 10461
 
 [feedstock_states.r-graphlayouts-feedstock]
 recipe_type = "meta_yaml"
@@ -133724,7 +133618,6 @@ downloads = 31015
 [feedstock_states.r-harrypotter-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 28612
 
 [feedstock_states.r-hash-feedstock]
 recipe_type = "meta_yaml"
@@ -134004,7 +133897,6 @@ downloads = 660459
 [feedstock_states.r-htmltools-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2664579
 
 [feedstock_states.r-htmlutils-feedstock]
 recipe_type = "meta_yaml"
@@ -134174,7 +134066,6 @@ downloads = 20257
 [feedstock_states.r-ics-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 23045
 
 [feedstock_states.r-icsnp-feedstock]
 recipe_type = "meta_yaml"
@@ -135524,7 +135415,6 @@ downloads = 12604
 [feedstock_states.r-lobstr-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 431323
 
 [feedstock_states.r-locfdr-feedstock]
 recipe_type = "meta_yaml"
@@ -135739,7 +135629,6 @@ downloads = 50835
 [feedstock_states.r-magrittr-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 6622788
 
 [feedstock_states.r-mailr-feedstock]
 recipe_type = "meta_yaml"
@@ -135764,7 +135653,6 @@ downloads = 14536
 [feedstock_states.r-maldirppa-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 22196
 
 [feedstock_states.r-manhattanly-feedstock]
 recipe_type = "meta_yaml"
@@ -135839,7 +135727,6 @@ downloads = 182403
 [feedstock_states.r-maptpx-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 31829
 
 [feedstock_states.r-maptree-feedstock]
 recipe_type = "meta_yaml"
@@ -135979,7 +135866,6 @@ downloads = 23572
 [feedstock_states.r-maxlik-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 57427
 
 [feedstock_states.r-maxnet-feedstock]
 recipe_type = "meta_yaml"
@@ -136409,7 +136295,6 @@ downloads = 13942
 [feedstock_states.r-mime-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 4506113
 
 [feedstock_states."r-mimic.demo-feedstock"]
 recipe_type = "meta_yaml"
@@ -136424,7 +136309,6 @@ downloads = 19096
 [feedstock_states.r-minicran-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 28377
 
 [feedstock_states.r-miniui-feedstock]
 recipe_type = "meta_yaml"
@@ -136534,7 +136418,6 @@ downloads = 21887
 [feedstock_states.r-mixsqp-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 880961
 
 [feedstock_states.r-mixtools-feedstock]
 recipe_type = "meta_yaml"
@@ -136594,7 +136477,6 @@ downloads = 5515
 [feedstock_states.r-mlr-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 64569
 
 [feedstock_states.r-mlr3-feedstock]
 recipe_type = "meta_yaml"
@@ -137024,7 +136906,6 @@ downloads = 105325
 [feedstock_states.r-multiapply-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 60043
 
 [feedstock_states.r-multiblock-feedstock]
 recipe_type = "meta_yaml"
@@ -137184,7 +137065,6 @@ downloads = 17092
 [feedstock_states.r-nada-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 24511
 
 [feedstock_states.r-naepirtparams-feedstock]
 recipe_type = "meta_yaml"
@@ -138553,7 +138433,6 @@ downloads = 971
 [feedstock_states.r-phater-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 13039
 
 [feedstock_states.r-pheatmap-feedstock]
 recipe_type = "meta_yaml"
@@ -139227,7 +139106,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.r-primme-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 21600
 
 [feedstock_states.r-princurve-feedstock]
 recipe_type = "meta_yaml"
@@ -139820,7 +139698,6 @@ downloads = 27741
 [feedstock_states.r-r2jags-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 18742
 
 [feedstock_states.r-r2r-feedstock]
 recipe_type = "meta_yaml"
@@ -139890,7 +139767,6 @@ downloads = 1937
 [feedstock_states.r-rainbow-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 27778
 
 [feedstock_states.r-ramcharts-feedstock]
 recipe_type = "meta_yaml"
@@ -140400,7 +140276,6 @@ downloads = 7970
 [feedstock_states.r-rcsdp-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 42203
 
 [feedstock_states.r-rcsf-feedstock]
 recipe_type = "meta_yaml"
@@ -140620,7 +140495,6 @@ downloads = 15322
 [feedstock_states.r-refmanager-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 29320
 
 [feedstock_states.r-reformulas-feedstock]
 recipe_type = "meta_yaml"
@@ -141159,7 +141033,6 @@ downloads = 19564
 [feedstock_states.r-rmisc-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 14275
 
 [feedstock_states.r-rmixmod-feedstock]
 recipe_type = "meta_yaml"
@@ -141987,7 +141860,6 @@ downloads = 2273618
 [feedstock_states.r-satellite-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 50923
 
 [feedstock_states.r-saver-feedstock]
 recipe_type = "meta_yaml"
@@ -142326,7 +142198,6 @@ downloads = 45471
 [feedstock_states.r-session-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 3489
 
 [feedstock_states.r-sessioninfo-feedstock]
 recipe_type = "meta_yaml"
@@ -143084,7 +142955,6 @@ downloads = 14511
 [feedstock_states.r-soupx-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 31677
 
 [feedstock_states.r-sourcetools-feedstock]
 recipe_type = "meta_yaml"
@@ -143289,7 +143159,6 @@ downloads = 146509
 [feedstock_states."r-spatstat.linnet-feedstock"]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 19938
 
 [feedstock_states."r-spatstat.model-feedstock"]
 recipe_type = "meta_yaml"
@@ -143359,7 +143228,6 @@ downloads = 43167
 [feedstock_states.r-spei-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 52475
 
 [feedstock_states.r-spelling-feedstock]
 recipe_type = "meta_yaml"
@@ -143679,7 +143547,6 @@ downloads = 1145
 [feedstock_states.r-storr-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 32790
 
 [feedstock_states.r-stpphawkes-feedstock]
 recipe_type = "meta_yaml"
@@ -143864,7 +143731,6 @@ downloads = 4987
 [feedstock_states.r-survivalanalysis-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 17883
 
 [feedstock_states.r-survivalmodels-feedstock]
 recipe_type = "meta_yaml"
@@ -144094,7 +143960,6 @@ downloads = 10451
 [feedstock_states.r-tagcloud-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 17881
 
 [feedstock_states.r-tailor-feedstock]
 recipe_type = "meta_yaml"
@@ -144578,7 +144443,6 @@ downloads = 24910
 [feedstock_states.r-tidyquant-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 20840
 
 [feedstock_states.r-tidyr-feedstock]
 recipe_type = "meta_yaml"
@@ -144603,7 +144467,6 @@ downloads = 7067
 [feedstock_states.r-tidytable-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 11332
 
 [feedstock_states.r-tidytext-feedstock]
 recipe_type = "meta_yaml"
@@ -144958,7 +144821,6 @@ downloads = 9747
 [feedstock_states.r-triangle-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 5022
 
 [feedstock_states.r-triebeard-feedstock]
 recipe_type = "meta_yaml"
@@ -144978,7 +144840,6 @@ downloads = 10291
 [feedstock_states.r-truncdist-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 13188
 
 [feedstock_states.r-truncexpfam-feedstock]
 recipe_type = "meta_yaml"
@@ -145153,7 +145014,6 @@ downloads = 21143
 [feedstock_states.r-tzdb-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2216392
 
 [feedstock_states.r-uchardet-feedstock]
 recipe_type = "meta_yaml"
@@ -145463,7 +145323,6 @@ downloads = 2030
 [feedstock_states.r-velox-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 5994
 
 [feedstock_states.r-venn-feedstock]
 recipe_type = "meta_yaml"
@@ -145473,7 +145332,6 @@ downloads = 35466
 [feedstock_states.r-venndiagram-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 62952
 
 [feedstock_states.r-venneuler-feedstock]
 recipe_type = "meta_yaml"
@@ -145568,7 +145426,6 @@ downloads = 2213
 [feedstock_states.r-visualize-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 5544
 
 [feedstock_states.r-visualizer-feedstock]
 recipe_type = "meta_yaml"
@@ -145597,7 +145454,6 @@ downloads = 1935019
 [feedstock_states.r-vsurf-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 9434
 
 [feedstock_states.r-vtree-feedstock]
 recipe_type = "meta_yaml"
@@ -146072,7 +145928,6 @@ downloads = 25552
 [feedstock_states.r-xts-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 786039
 
 [feedstock_states.r-yaimpute-feedstock]
 recipe_type = "meta_yaml"
@@ -146277,7 +146132,6 @@ downloads = 13490
 [feedstock_states."radical.analytics-feedstock"]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 15585
 
 [feedstock_states."radical.entk-feedstock"]
 recipe_type = "meta_yaml"
@@ -147462,7 +147316,6 @@ downloads = 3316
 [feedstock_states.rb-html-pipeline-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 7061
 
 [feedstock_states.rb-html-proofer-feedstock]
 recipe_type = "meta_yaml"
@@ -147612,7 +147465,6 @@ downloads = 4574
 [feedstock_states.rb-jekyll-theme-hacker-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 5014
 
 [feedstock_states.rb-jekyll-theme-leap-day-feedstock]
 recipe_type = "meta_yaml"
@@ -148031,7 +147883,6 @@ downloads = 4819
 [feedstock_states.rb-tty-reader-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2942
 
 [feedstock_states.rb-tty-screen-feedstock]
 recipe_type = "meta_yaml"
@@ -148839,7 +148690,6 @@ downloads = 47636
 [feedstock_states.rednose-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 14015
 
 [feedstock_states.redo-feedstock]
 recipe_type = "meta_yaml"
@@ -150129,7 +149979,6 @@ commit_sha = "984f848935b680142ad188ffbc6212490235f6bb"
 [feedstock_states.retriever-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 27846
 
 [feedstock_states.retrolab-feedstock]
 recipe_type = "meta_yaml"
@@ -150539,7 +150388,6 @@ commit_sha = "6c29523b06a94fe700d0663c426feade37aeef7f"
 [feedstock_states.rickshaw-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1786
 
 [feedstock_states.ridgeplot-feedstock]
 recipe_type = "recipe_v1"
@@ -151028,7 +150876,6 @@ downloads = 7091
 [feedstock_states.robocrys-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 5177
 
 [feedstock_states.robodk-feedstock]
 recipe_type = "recipe_v1"
@@ -151262,7 +151109,6 @@ downloads = 1435
 [feedstock_states.robotframework-seleniumtestability-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 13667
 
 [feedstock_states.robotframework-seriallibrary-feedstock]
 recipe_type = "meta_yaml"
@@ -151397,7 +151243,6 @@ downloads = 3459
 [feedstock_states.rockpool-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1324
 
 [feedstock_states.rocksdb-feedstock]
 recipe_type = "meta_yaml"
@@ -151807,7 +151652,6 @@ downloads = 27330
 [feedstock_states.ros-gennodejs-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 27371
 
 [feedstock_states.ros-genpy-feedstock]
 recipe_type = "meta_yaml"
@@ -152228,7 +152072,6 @@ commit_sha = "c81c0ace7dfaa6c5353315027d9aa9123159735b"
 [feedstock_states.routes-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 409853
 
 [feedstock_states.routingpy-feedstock]
 recipe_type = "meta_yaml"
@@ -152663,7 +152506,6 @@ downloads = 14419
 [feedstock_states.rtd-poetry-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1257
 
 [feedstock_states.rtdip-sdk-feedstock]
 recipe_type = "meta_yaml"
@@ -153073,7 +152915,6 @@ downloads = 5691
 [feedstock_states.ruptures-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 224799
 
 [feedstock_states.rush-feedstock]
 recipe_type = "meta_yaml"
@@ -155088,7 +154929,6 @@ commit_sha = "09e8ef1097e4ab491d2e67dbaed6aa7b406215ab"
 [feedstock_states.scifireaders-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1580
 
 [feedstock_states.scijava-jupyter-kernel-feedstock]
 recipe_type = "meta_yaml"
@@ -155559,7 +155399,6 @@ downloads = 1194
 [feedstock_states.sciplot-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2897
 
 [feedstock_states.scipoptsuite-feedstock]
 recipe_type = "recipe_v1"
@@ -156678,7 +156517,6 @@ downloads = 357
 [feedstock_states.selfies-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 81711
 
 [feedstock_states.selfies-feedstock.attribution]
 contribution_type = "conversion"
@@ -156824,7 +156662,6 @@ downloads = 6891
 [feedstock_states.semi-ate-test-app-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 3594
 
 [feedstock_states.semi-ate-testers-feedstock]
 recipe_type = "meta_yaml"
@@ -157005,7 +156842,6 @@ downloads = 271953
 [feedstock_states.sep-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 174021
 
 [feedstock_states.sepal-ui-feedstock]
 recipe_type = "meta_yaml"
@@ -158926,7 +158762,6 @@ downloads = 5476
 [feedstock_states.sirius-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-07-09T06:06:22.976323816+00:00"
-downloads = 92017
 
 [feedstock_states.sirius-feedstock.attribution]
 contribution_type = "conversion"
@@ -160072,7 +159907,6 @@ downloads = 1559
 [feedstock_states.smo-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1697
 
 [feedstock_states.smodels-feedstock]
 recipe_type = "recipe_v1"
@@ -161081,7 +160915,6 @@ commit_sha = "70a8179cc00a03cd860920c5bfb7ad425bee83a3"
 [feedstock_states.sos-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-12-10T02:49:44.832831398+00:00"
-downloads = 8762
 
 [feedstock_states.sos-feedstock.attribution]
 contribution_type = "conversion"
@@ -162062,7 +161895,6 @@ downloads = 77707
 [feedstock_states.sphinx-autoapi-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 136955
 
 [feedstock_states.sphinx-autobuild-feedstock]
 recipe_type = "recipe_v1"
@@ -162135,7 +161967,6 @@ commit_sha = "d9751373d323b6747b6354a323f32e4a6533d94c"
 [feedstock_states.sphinx-codeautolink-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 20637
 
 [feedstock_states.sphinx-comments-feedstock]
 recipe_type = "meta_yaml"
@@ -162257,7 +162088,6 @@ downloads = 85598
 [feedstock_states.sphinx-jinja-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 50936
 
 [feedstock_states.sphinx-jinja2-compat-feedstock]
 recipe_type = "meta_yaml"
@@ -163066,14 +162896,6 @@ contributors = ["wolfv"]
 date = "2026-08-02T20:03:31Z"
 commit_sha = "00181bb9a6b2b41596ac64bb9dcaa570abd5b7ca"
 
-[feedstock_states.spirv-cross-feedstock.recipe_commit_cache]
-sha = "00181bb9a6b2b41596ac64bb9dcaa570abd5b7ca"
-message = "Initial feedstock commit with conda-smithy 2026.6.14."
-date = "2026-08-02T20:03:31Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.spirv-headers-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-07-17T05:05:45.659269254+00:00"
@@ -163094,14 +162916,6 @@ contribution_type = "new_feedstock"
 contributors = ["wolfv"]
 date = "2026-08-02T20:03:07Z"
 commit_sha = "4d92d680b370a72e7b4ab371810492987fb51a80"
-
-[feedstock_states.spirv-reflect-feedstock.recipe_commit_cache]
-sha = "4d92d680b370a72e7b4ab371810492987fb51a80"
-message = "Initial feedstock commit with conda-smithy 2026.6.14."
-date = "2026-08-02T20:03:07Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.spirv-tools-feedstock]
 recipe_type = "meta_yaml"
@@ -163675,7 +163489,6 @@ downloads = 491
 [feedstock_states.sqlalchemy-dremio-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-08-09T02:35:31.837508856+00:00"
-downloads = 1929
 
 [feedstock_states.sqlalchemy-dremio-feedstock.attribution]
 contribution_type = "conversion"
@@ -164221,7 +164034,6 @@ downloads = 5567
 [feedstock_states.squashfs-tools-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-03-04T02:59:50.824228282+00:00"
-downloads = 421035
 
 [feedstock_states.squashfs-tools-feedstock.attribution]
 contribution_type = "conversion"
@@ -164293,7 +164105,6 @@ commit_sha = "01130fdbe2dd9ff1a7d5d72c62e974a54b7ef1c8"
 [feedstock_states.srsly-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1187559
 
 [feedstock_states.srt-feedstock]
 recipe_type = "meta_yaml"
@@ -165037,7 +164848,6 @@ downloads = 1829
 [feedstock_states.statistics-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 19959
 
 [feedstock_states.statix-feedstock]
 recipe_type = "recipe_v1"
@@ -165177,7 +164987,6 @@ downloads = 1404
 [feedstock_states.stem-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 13800
 
 [feedstock_states.stemflow-feedstock]
 recipe_type = "meta_yaml"
@@ -166198,7 +166007,6 @@ downloads = 5469
 [feedstock_states.suggestion-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1203
 
 [feedstock_states.suitcase-csv-feedstock]
 recipe_type = "meta_yaml"
@@ -166730,7 +166538,6 @@ commit_sha = "775866e481b27dfc12ba8741d23401d2b78602e5"
 [feedstock_states.svgutils-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 58208
 
 [feedstock_states.svgwrite-feedstock]
 recipe_type = "meta_yaml"
@@ -167399,7 +167206,6 @@ downloads = 199
 [feedstock_states.tabmat-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 247221
 
 [feedstock_states.tabpfn-common-utils-feedstock]
 recipe_type = "recipe_v1"
@@ -167660,7 +167466,6 @@ downloads = 2271
 [feedstock_states.tangelo-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 3141
 
 [feedstock_states.tangled-up-in-unicode-feedstock]
 recipe_type = "recipe_v1"
@@ -168210,7 +168015,6 @@ downloads = 869
 [feedstock_states.tb3py-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 985
 
 [feedstock_states.tbats-feedstock]
 recipe_type = "meta_yaml"
@@ -168679,7 +168483,6 @@ downloads = 21029
 [feedstock_states.tensorflow-cpu-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 79480
 
 [feedstock_states.tensorflow-datasets-feedstock]
 recipe_type = "meta_yaml"
@@ -168803,7 +168606,6 @@ downloads = 2409
 [feedstock_states.tensorwaves-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 3043
 
 [feedstock_states.teos10-feedstock]
 recipe_type = "meta_yaml"
@@ -169044,7 +168846,6 @@ downloads = 1638
 [feedstock_states.terraform-provider-datadog-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 22472
 
 [feedstock_states.terraform-provider-digitalocean-feedstock]
 recipe_type = "meta_yaml"
@@ -170072,7 +169873,6 @@ downloads = 81370
 [feedstock_states.thermohubclient-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 55306
 
 [feedstock_states.thermostate-feedstock]
 recipe_type = "meta_yaml"
@@ -170732,7 +170532,6 @@ downloads = 2549
 [feedstock_states.tinuous-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 6276
 
 [feedstock_states.tiny-cuda-nn-feedstock]
 recipe_type = "recipe_v1"
@@ -172192,7 +171991,6 @@ downloads = 2676
 [feedstock_states.tornado-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 41126140
 
 [feedstock_states.tornado-proxy-handlers-feedstock]
 recipe_type = "meta_yaml"
@@ -172436,7 +172234,6 @@ downloads = 887
 [feedstock_states.traceml-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 2142
 
 [feedstock_states.tracerite-feedstock]
 recipe_type = "recipe_v1"
@@ -172957,7 +172754,6 @@ downloads = 963
 [feedstock_states.transonic-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 11183
 
 [feedstock_states.transx2gtfs-feedstock]
 recipe_type = "meta_yaml"
@@ -175434,7 +175230,6 @@ commit_sha = "58ceadc348ea3e560642dd0fec5a1100a7c85b78"
 [feedstock_states.types-futures-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-05-21T03:11:32.193516128+00:00"
-downloads = 420554
 
 [feedstock_states.types-futures-feedstock.attribution]
 contribution_type = "conversion"
@@ -176506,7 +176301,6 @@ downloads = 15623
 [feedstock_states.u8darts-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 1726
 
 [feedstock_states.ua-parser-builtins-feedstock]
 recipe_type = "meta_yaml"
@@ -177842,7 +177636,6 @@ downloads = 4159
 [feedstock_states.urbansim_templates-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 5394
 
 [feedstock_states.urchin-feedstock]
 recipe_type = "meta_yaml"
@@ -178522,6 +178315,24 @@ downloads = 120350
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 17622
+
+[feedstock_states.valijson-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2026-08-04T05:05:31.309720557+00:00"
+
+[feedstock_states.valijson-feedstock.attribution]
+contribution_type = "new_feedstock"
+contributors = ["wolfv"]
+date = "2026-08-03T16:58:55Z"
+commit_sha = "366d156e03b8f01e550930d58ef905803bf76ead"
+
+[feedstock_states.valijson-feedstock.recipe_commit_cache]
+sha = "366d156e03b8f01e550930d58ef905803bf76ead"
+message = "Initial feedstock commit with conda-smithy 2026.6.14."
+date = "2026-08-03T16:58:55Z"
+author_login = "conda-forge-admin"
+author_name = "conda-forge-admin"
+author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.valkey-py-feedstock]
 recipe_type = "recipe_v1"
@@ -179644,7 +179455,6 @@ commit_sha = "9894c04a997a1433cb2fd4e9d7169e60bd867da4"
 [feedstock_states.vispy-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 178029
 
 [feedstock_states.visualpic-feedstock]
 recipe_type = "meta_yaml"
@@ -180020,7 +179830,6 @@ commit_sha = "4a9b82069a7c6fd1e02c2b3e276ca47ae556bc7d"
 [feedstock_states.voro-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 232744
 
 [feedstock_states.vose-alias-method-feedstock]
 recipe_type = "meta_yaml"
@@ -180405,14 +180214,6 @@ contributors = ["wolfv"]
 date = "2026-08-02T20:03:18Z"
 commit_sha = "8cbee74d78406cf06b3635941c6cfbdfc5e76cd5"
 
-[feedstock_states.vulkan-utility-libraries-feedstock.recipe_commit_cache]
-sha = "8cbee74d78406cf06b3635941c6cfbdfc5e76cd5"
-message = "Initial feedstock commit with conda-smithy 2026.6.14."
-date = "2026-08-02T20:03:18Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.vulkan-validation-layers-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-07-25T05:05:01.116075966+00:00"
@@ -180434,19 +180235,6 @@ contribution_type = "conversion"
 contributors = ["wolfv"]
 date = "2026-08-02T08:51:58Z"
 commit_sha = "aff23258fc29d9ac9d5826f7d9963a7e9f7bf405"
-
-[feedstock_states.vulkan-volk-feedstock.recipe_commit_cache]
-sha = "aff23258fc29d9ac9d5826f7d9963a7e9f7bf405"
-message = """
-vulkan-volk v1.4.357.0 (#6)
-
-* Update vulkan-volk to 1.4.357.0
-
-* Convert recipe to v1 format"""
-date = "2026-08-02T08:51:58Z"
-author_login = "wolfv"
-author_name = "Wolf Vollprecht"
-author_email = "w.vollprecht@gmail.com"
 
 [feedstock_states.vulkanscenegraph-feedstock]
 recipe_type = "recipe_v1"
@@ -181805,7 +181593,6 @@ downloads = 4975
 [feedstock_states.wget-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 8722205
 
 [feedstock_states.wgetter-feedstock]
 recipe_type = "meta_yaml"
@@ -182377,7 +182164,6 @@ commit_sha = "484ef18a39772fc420ea31b18188db4b602f20b1"
 [feedstock_states.wisdem-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-04-12T03:07:54.274164037+00:00"
-downloads = 49447
 
 [feedstock_states.wisdem-feedstock.attribution]
 contribution_type = "conversion"
@@ -183776,7 +183562,6 @@ downloads = 19949
 [feedstock_states.xfig-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 4664
 
 [feedstock_states.xformers-feedstock]
 recipe_type = "recipe_v1"
@@ -184635,7 +184420,6 @@ downloads = 5517
 [feedstock_states.xorg-x11-proto-devel-cos7-aarch64-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 25428
 
 [feedstock_states.xorg-x11-server-xvfb-conda-x86_64-feedstock]
 recipe_type = "meta_yaml"
@@ -184858,7 +184642,6 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 [feedstock_states.xpra-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 17879
 
 [feedstock_states.xproj-feedstock]
 recipe_type = "meta_yaml"
@@ -187081,7 +186864,6 @@ downloads = 3480
 [feedstock_states.zocalo-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 4115
 
 [feedstock_states.zodb-feedstock]
 recipe_type = "recipe_v1"
@@ -187138,7 +186920,6 @@ downloads = 1386
 [feedstock_states.zookeeper-c-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 11898
 
 [feedstock_states.zope-feedstock]
 recipe_type = "meta_yaml"
