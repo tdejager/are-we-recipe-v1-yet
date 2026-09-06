@@ -1,8 +1,8 @@
-total_feedstocks = 29931
-recipe_v1_count = 7356
-meta_yaml_count = 22575
+total_feedstocks = 29933
+recipe_v1_count = 7546
+meta_yaml_count = 22387
 unknown_count = 0
-last_updated = "2026-09-05T06:42:45.465218635+00:00"
+last_updated = "2026-09-06T06:51:16.871559388+00:00"
 
 [feedstock_states."$c_stdlib_stub-feedstock"]
 recipe_type = "meta_yaml"
@@ -1806,9 +1806,23 @@ date = "2025-07-11T21:28:11Z"
 commit_sha = "d8f1640d5de7bddb7f8fecf9200609fdc2c67293"
 
 [feedstock_states.aider-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1520
+
+[feedstock_states.aider-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:12:59Z"
+commit_sha = "d2f816fc4a4a9bbe7b3a4fc7e4b410122ee2745c"
+
+[feedstock_states.aider-feedstock.recipe_commit_cache]
+sha = "d2f816fc4a4a9bbe7b3a4fc7e4b410122ee2745c"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:12:59Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.aif360-feedstock]
 recipe_type = "meta_yaml"
@@ -8341,9 +8355,23 @@ date = "2025-03-16T19:20:44Z"
 commit_sha = "adb48b21154456a7556492c7bf2e058f54658573"
 
 [feedstock_states.async-property-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 61814
+
+[feedstock_states.async-property-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:11:07Z"
+commit_sha = "43b0d40d7ae8d837a33087ec83ba7b1674e8f875"
+
+[feedstock_states.async-property-feedstock.recipe_commit_cache]
+sha = "43b0d40d7ae8d837a33087ec83ba7b1674e8f875"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:11:07Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.async-tiff-feedstock]
 recipe_type = "recipe_v1"
@@ -11490,9 +11518,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 5206
 
 [feedstock_states.azure-search-documents-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 7292
+
+[feedstock_states.azure-search-documents-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:15:12Z"
+commit_sha = "e6320f19f0577b6499566590a92a5dd7a324a98f"
+
+[feedstock_states.azure-search-documents-feedstock.recipe_commit_cache]
+sha = "e6320f19f0577b6499566590a92a5dd7a324a98f"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:15:12Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.azure-servicebus-feedstock]
 recipe_type = "meta_yaml"
@@ -12304,9 +12346,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 131025
 
 [feedstock_states.basisgen-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1638
+
+[feedstock_states.basisgen-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:36:23Z"
+commit_sha = "f31f9bcaf91e73cee635785428b23c181e2fb94a"
+
+[feedstock_states.basisgen-feedstock.recipe_commit_cache]
+sha = "f31f9bcaf91e73cee635785428b23c181e2fb94a"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:36:23Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.basswood-av-feedstock]
 recipe_type = "meta_yaml"
@@ -13249,9 +13305,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 9956
 
 [feedstock_states.beziers-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2207
+
+[feedstock_states.beziers-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:37:41Z"
+commit_sha = "03c483ca8cfe9e6d2bf965a9f5e3323d94e9ac63"
+
+[feedstock_states.beziers-feedstock.recipe_commit_cache]
+sha = "03c483ca8cfe9e6d2bf965a9f5e3323d94e9ac63"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:37:41Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.bfee2-feedstock]
 recipe_type = "meta_yaml"
@@ -14426,14 +14496,42 @@ date = "2025-01-20T13:18:25Z"
 commit_sha = "2bf2887e9e8d0bb7719fac7a3689822f019f4da2"
 
 [feedstock_states.bleak-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 21225
 
+[feedstock_states.bleak-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:54:43Z"
+commit_sha = "30608cb19be6777c2bbc6bddecb50bef3792d16c"
+
+[feedstock_states.bleak-feedstock.recipe_commit_cache]
+sha = "30608cb19be6777c2bbc6bddecb50bef3792d16c"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:54:43Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.bleak-winrt-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 7282
+
+[feedstock_states.bleak-winrt-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:54:11Z"
+commit_sha = "dc5e88ccb26b50ca4e8fbdcca3f6cc8d76fc8d05"
+
+[feedstock_states.bleak-winrt-feedstock.recipe_commit_cache]
+sha = "dc5e88ccb26b50ca4e8fbdcca3f6cc8d76fc8d05"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:54:11Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.blend2d-feedstock]
 recipe_type = "recipe_v1"
@@ -15155,9 +15253,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 7549832
 
 [feedstock_states.booleanoperations-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1574
+
+[feedstock_states.booleanoperations-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:55:50Z"
+commit_sha = "cd2edd7dbf0626f968a0ac3a7d4538d5428baacd"
+
+[feedstock_states.booleanoperations-feedstock.recipe_commit_cache]
+sha = "cd2edd7dbf0626f968a0ac3a7d4538d5428baacd"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:55:50Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.boolparser-feedstock]
 recipe_type = "meta_yaml"
@@ -15700,14 +15812,6 @@ contributors = ["schloerke"]
 date = "2026-09-04T17:52:45Z"
 commit_sha = "34d12b28770577e3e9926462fdfc8d364a6a5e91"
 
-[feedstock_states.brand-yml-feedstock.recipe_commit_cache]
-sha = "34d12b28770577e3e9926462fdfc8d364a6a5e91"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T17:52:45Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.braq-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -15833,6 +15937,24 @@ downloads = 7465
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 2482
+
+[feedstock_states.brighteyes-mcs-reader-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
+
+[feedstock_states.brighteyes-mcs-reader-feedstock.attribution]
+contribution_type = "new_feedstock"
+contributors = ["mattia-donato"]
+date = "2026-09-05T21:32:50Z"
+commit_sha = "511daec16024653b81c7ce0ffdaf4d10e30d2662"
+
+[feedstock_states.brighteyes-mcs-reader-feedstock.recipe_commit_cache]
+sha = "511daec16024653b81c7ce0ffdaf4d10e30d2662"
+message = "Initial feedstock commit with conda-smithy 2026.9.1."
+date = "2026-09-05T21:32:50Z"
+author_login = "conda-forge-admin"
+author_name = "conda-forge-admin"
+author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.brightway2-feedstock]
 recipe_type = "meta_yaml"
@@ -15997,8 +16119,22 @@ last_changed = "2026-03-12T03:03:43.365052446+00:00"
 downloads = 697
 
 [feedstock_states.bsuite-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
+
+[feedstock_states.bsuite-feedstock.attribution]
+contribution_type = "new_feedstock"
+contributors = ["jeongseok-meta"]
+date = "2026-09-05T12:54:23Z"
+commit_sha = "eaaca9ceb2d47bf460e84f85061106df70a217cc"
+
+[feedstock_states.bsuite-feedstock.recipe_commit_cache]
+sha = "eaaca9ceb2d47bf460e84f85061106df70a217cc"
+message = "Initial feedstock commit with conda-smithy 2026.9.1."
+date = "2026-09-05T12:54:23Z"
+author_login = "conda-forge-admin"
+author_name = "conda-forge-admin"
+author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.bt-feedstock]
 recipe_type = "meta_yaml"
@@ -16742,9 +16878,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 62182
 
 [feedstock_states.cadcad-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 994
+
+[feedstock_states.cadcad-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:51:01Z"
+commit_sha = "3d1274a1525feb52dc4d1d9bab0862f60c5f8e36"
+
+[feedstock_states.cadcad-feedstock.recipe_commit_cache]
+sha = "3d1274a1525feb52dc4d1d9bab0862f60c5f8e36"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:51:01Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.caddy-feedstock]
 recipe_type = "recipe_v1"
@@ -17147,9 +17297,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 26644
 
 [feedstock_states.canopen-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 5124
+
+[feedstock_states.canopen-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:21:49Z"
+commit_sha = "0dfb7697022ca801195af46cbd48a6c2164cc598"
+
+[feedstock_states.canopen-feedstock.recipe_commit_cache]
+sha = "0dfb7697022ca801195af46cbd48a6c2164cc598"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:21:49Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.canopy-tools-feedstock]
 recipe_type = "meta_yaml"
@@ -19770,14 +19934,6 @@ contributors = ["schloerke"]
 date = "2026-09-04T20:22:22Z"
 commit_sha = "bd8a48ea140e9dc3f751ab0e8d31cdc2b8e53a54"
 
-[feedstock_states.chatlas-feedstock.recipe_commit_cache]
-sha = "bd8a48ea140e9dc3f751ab0e8d31cdc2b8e53a54"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T20:22:22Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.chatom-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-02-10T03:20:31.064101900+00:00"
@@ -20072,9 +20228,23 @@ date = "2026-08-31T10:34:21Z"
 commit_sha = "b6cf31102b5e863d5df28354aa1266a788feb934"
 
 [feedstock_states.chemiscope-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2187
+
+[feedstock_states.chemiscope-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:43:23Z"
+commit_sha = "acfe93c1e5b41d98e0f7f5758214bbce4da5cb53"
+
+[feedstock_states.chemiscope-feedstock.recipe_commit_cache]
+sha = "acfe93c1e5b41d98e0f7f5758214bbce4da5cb53"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:43:23Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.chemlite-feedstock]
 recipe_type = "meta_yaml"
@@ -20103,9 +20273,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 620
 
 [feedstock_states.chemparse-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 6762
+
+[feedstock_states.chemparse-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:10:21Z"
+commit_sha = "307b43b28c743fbda6daca63df70792540c198b6"
+
+[feedstock_states.chemparse-feedstock.recipe_commit_cache]
+sha = "307b43b28c743fbda6daca63df70792540c198b6"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:10:21Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.chemparseplot-feedstock]
 recipe_type = "recipe_v1"
@@ -20305,9 +20489,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 13253
 
 [feedstock_states.chgnet-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 22601
+
+[feedstock_states.chgnet-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:29:40Z"
+commit_sha = "d7541aa1ce9d3e3e5d88f8e05ae5fe1cee672612"
+
+[feedstock_states.chgnet-feedstock.recipe_commit_cache]
+sha = "d7541aa1ce9d3e3e5d88f8e05ae5fe1cee672612"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:29:40Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.chi2comb-feedstock]
 recipe_type = "meta_yaml"
@@ -21772,9 +21970,23 @@ last_changed = "2025-07-21T02:45:47.662916734+00:00"
 downloads = 1683
 
 [feedstock_states.cloudflare-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1371
+
+[feedstock_states.cloudflare-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["ocefpaf"]
+date = "2026-09-05T13:21:02Z"
+commit_sha = "ea1555e71dad2f0600cfcf5c5316eaabb2984d32"
+
+[feedstock_states.cloudflare-feedstock.recipe_commit_cache]
+sha = "ea1555e71dad2f0600cfcf5c5316eaabb2984d32"
+message = "convert to v1"
+date = "2026-09-05T13:21:02Z"
+author_login = "ocefpaf"
+author_name = "Filipe Fernandes"
+author_email = "ocefpaf@gmail.com"
 
 [feedstock_states.cloudml-hypertune-feedstock]
 recipe_type = "meta_yaml"
@@ -21951,9 +22163,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 54639
 
 [feedstock_states.clusterx-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2478
+
+[feedstock_states.clusterx-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:23:19Z"
+commit_sha = "0b997c1f33c8ba9fa8337e826dc5c6a714b1a5f4"
+
+[feedstock_states.clusterx-feedstock.recipe_commit_cache]
+sha = "0b997c1f33c8ba9fa8337e826dc5c6a714b1a5f4"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:23:19Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.clyent-feedstock]
 recipe_type = "meta_yaml"
@@ -22399,14 +22625,6 @@ contribution_type = "conversion"
 contributors = ["jorisv"]
 date = "2026-09-03T15:23:03Z"
 commit_sha = "15fe803ca4f83457d8ebbbf6367ab5d42faa0dde"
-
-[feedstock_states.coal-feedstock.recipe_commit_cache]
-sha = "15fe803ca4f83457d8ebbbf6367ab5d42faa0dde"
-message = "Port to v1 recipe"
-date = "2026-09-03T15:23:03Z"
-author_login = "jorisv"
-author_name = "Joris Vaillant"
-author_email = "joris.vaillant@inria.fr"
 
 [feedstock_states.coastal-cascade-feedstock]
 recipe_type = "meta_yaml"
@@ -23363,9 +23581,23 @@ date = "2025-06-09T03:19:13Z"
 commit_sha = "bcd36189af1f1fd618cf21c545897dff465a3cee"
 
 [feedstock_states.colmena-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2680
+
+[feedstock_states.colmena-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:49:36Z"
+commit_sha = "d1e5d0128fb264e5b1b284390b45e6f33497fbcd"
+
+[feedstock_states.colmena-feedstock.recipe_commit_cache]
+sha = "d1e5d0128fb264e5b1b284390b45e6f33497fbcd"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:49:36Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.coloc_sat-feedstock]
 recipe_type = "meta_yaml"
@@ -24299,13 +24531,6 @@ contribution_type = "conversion"
 contributors = ["jezdez"]
 date = "2026-09-02T13:56:55Z"
 commit_sha = "fb75853f618fd0909918bfe682e23cc0878e36c6"
-
-[feedstock_states.conda-index-feedstock.recipe_commit_cache]
-sha = "fb75853f618fd0909918bfe682e23cc0878e36c6"
-message = "chore: convert recipe to v1"
-date = "2026-09-02T13:56:55Z"
-author_name = "conda-forge-webservices[bot]"
-author_email = "91080706+conda-forge-webservices[bot]@users.noreply.github.com"
 
 [feedstock_states.conda-inject-feedstock]
 recipe_type = "meta_yaml"
@@ -26373,14 +26598,6 @@ contribution_type = "conversion"
 contributors = ["xylar"]
 date = "2026-09-05T05:13:31Z"
 commit_sha = "2816ced99d0c5c91358f0d5a10562846d46e6523"
-
-[feedstock_states.crcmod-feedstock.recipe_commit_cache]
-sha = "2816ced99d0c5c91358f0d5a10562846d46e6523"
-message = "Convert to v1 feedstock and use pixi as conda install tool"
-date = "2026-09-05T05:13:31Z"
-author_login = "xylar"
-author_name = "Xylar Asay-Davis"
-author_email = "xylarstorm@gmail.com"
 
 [feedstock_states.crcmod-plus-feedstock]
 recipe_type = "recipe_v1"
@@ -28829,9 +29046,23 @@ date = "2026-02-08T22:20:11Z"
 commit_sha = "6029a692b003e1f24ce3b2d085eec7eda1778a91"
 
 [feedstock_states.cythongsl-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 131045
+
+[feedstock_states.cythongsl-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["ocefpaf"]
+date = "2026-09-05T13:25:32Z"
+commit_sha = "3e3919c6c2b4bd547c9763f71d2aebacac575355"
+
+[feedstock_states.cythongsl-feedstock.recipe_commit_cache]
+sha = "3e3919c6c2b4bd547c9763f71d2aebacac575355"
+message = "convert to v1"
+date = "2026-09-05T13:25:32Z"
+author_login = "ocefpaf"
+author_name = "Filipe Fernandes"
+author_email = "ocefpaf@gmail.com"
 
 [feedstock_states.cytominer_database-feedstock]
 recipe_type = "meta_yaml"
@@ -31428,19 +31659,61 @@ date = "2026-04-27T05:05:32Z"
 commit_sha = "64bc9c3603b1ef46c2cdbb0366ec1070ffc49081"
 
 [feedstock_states.de-ausbildungssuche-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 762
 
+[feedstock_states.de-ausbildungssuche-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:46:08Z"
+commit_sha = "f9bb13bb3d14571262eea6d1a041f1e17ff51eb0"
+
+[feedstock_states.de-ausbildungssuche-feedstock.recipe_commit_cache]
+sha = "f9bb13bb3d14571262eea6d1a041f1e17ff51eb0"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:46:08Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.de-autobahn-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 824
 
+[feedstock_states.de-autobahn-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:45:20Z"
+commit_sha = "195dde3d3a3b74fd92a2562d8461f452091f76fb"
+
+[feedstock_states.de-autobahn-feedstock.recipe_commit_cache]
+sha = "195dde3d3a3b74fd92a2562d8461f452091f76fb"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:45:20Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.de-berufssprachkurssuche-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 777
+
+[feedstock_states.de-berufssprachkurssuche-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:13:04Z"
+commit_sha = "654a6efd71d3e31bb8ad3cc78429095d2c761049"
+
+[feedstock_states.de-berufssprachkurssuche-feedstock.recipe_commit_cache]
+sha = "654a6efd71d3e31bb8ad3cc78429095d2c761049"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:13:04Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.de-bundeshaushalt-feedstock]
 recipe_type = "recipe_v1"
@@ -31531,9 +31804,23 @@ date = "2026-08-31T20:13:21Z"
 commit_sha = "7ef5e397d8a452639bc970da4865aee0ddc667e2"
 
 [feedstock_states.de-ecovisio-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 765
+
+[feedstock_states.de-ecovisio-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:46:32Z"
+commit_sha = "4402e54675675c0e41215fbb1fa32f1bf2baef09"
+
+[feedstock_states.de-ecovisio-feedstock.recipe_commit_cache]
+sha = "4402e54675675c0e41215fbb1fa32f1bf2baef09"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:46:32Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.de-entgeltatlas-feedstock]
 recipe_type = "recipe_v1"
@@ -31574,9 +31861,23 @@ date = "2026-04-27T09:37:16Z"
 commit_sha = "a1b4e64578f22a2d4fde7669db2dad6bcd85fe68"
 
 [feedstock_states.de-interpol-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 864
+
+[feedstock_states.de-interpol-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:43:15Z"
+commit_sha = "896e46e99079f8c6d9231621b8a5657bba453010"
+
+[feedstock_states.de-interpol-feedstock.recipe_commit_cache]
+sha = "896e46e99079f8c6d9231621b8a5657bba453010"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:43:15Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.de-jobsuche-feedstock]
 recipe_type = "recipe_v1"
@@ -31590,9 +31891,23 @@ date = "2026-04-27T11:04:37Z"
 commit_sha = "4c7d141dea9a92dff24533094957d7c12a4c411a"
 
 [feedstock_states.de-ladestationen-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1099
+
+[feedstock_states.de-ladestationen-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:44:54Z"
+commit_sha = "c220fa77b6928c38ae04eeb073573b2e3bbf4a3e"
+
+[feedstock_states.de-ladestationen-feedstock.recipe_commit_cache]
+sha = "c220fa77b6928c38ae04eeb073573b2e3bbf4a3e"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:44:54Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.de-marktstammdaten-feedstock]
 recipe_type = "recipe_v1"
@@ -31606,9 +31921,23 @@ date = "2026-09-01T19:42:35Z"
 commit_sha = "121caea391cdc4a2d1458fe32fba8a5103cb825f"
 
 [feedstock_states.de-mudab-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1255
+
+[feedstock_states.de-mudab-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:43:41Z"
+commit_sha = "23c65d004b247341e031991fd4115cfdebbdae27"
+
+[feedstock_states.de-mudab-feedstock.recipe_commit_cache]
+sha = "23c65d004b247341e031991fd4115cfdebbdae27"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:43:41Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.de-nina-feedstock]
 recipe_type = "recipe_v1"
@@ -31622,14 +31951,42 @@ date = "2026-09-01T20:29:05Z"
 commit_sha = "8e397efe19fc33c4268feaeaea6d9bc4b64df465"
 
 [feedstock_states.de-pegel-online-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 896
 
+[feedstock_states.de-pegel-online-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:13:28Z"
+commit_sha = "1372da5bfdfaa2b6be160fc90d4dfc309cc4d289"
+
+[feedstock_states.de-pegel-online-feedstock.recipe_commit_cache]
+sha = "1372da5bfdfaa2b6be160fc90d4dfc309cc4d289"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:13:28Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.de-pflanzenschutzmittelzulassung-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 810
+
+[feedstock_states.de-pflanzenschutzmittelzulassung-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:46:56Z"
+commit_sha = "36221e561d4aa71cd86ebebeaa05c2b082e2a59f"
+
+[feedstock_states.de-pflanzenschutzmittelzulassung-feedstock.recipe_commit_cache]
+sha = "36221e561d4aa71cd86ebebeaa05c2b082e2a59f"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:46:56Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.de-polizei-brandenburg-feedstock]
 recipe_type = "recipe_v1"
@@ -31676,19 +32033,61 @@ date = "2026-04-27T09:27:48Z"
 commit_sha = "9bb7b67335b30a6ba520bdca6a4e9d9433a44b46"
 
 [feedstock_states.de-studiensuche-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1015
 
+[feedstock_states.de-studiensuche-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:45:44Z"
+commit_sha = "65e8997be3c633a67332a88e57daaa1985937b5b"
+
+[feedstock_states.de-studiensuche-feedstock.recipe_commit_cache]
+sha = "65e8997be3c633a67332a88e57daaa1985937b5b"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:45:44Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.de-tagesschau-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1258
 
+[feedstock_states.de-tagesschau-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:12:39Z"
+commit_sha = "31bf621abda6d940b3093812c76975b9ce40629c"
+
+[feedstock_states.de-tagesschau-feedstock.recipe_commit_cache]
+sha = "31bf621abda6d940b3093812c76975b9ce40629c"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:12:39Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.de-travelwarning-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 837
+
+[feedstock_states.de-travelwarning-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:44:30Z"
+commit_sha = "891e7deb41ef7896dc4348e41aaf97dd467f33d9"
+
+[feedstock_states.de-travelwarning-feedstock.recipe_commit_cache]
+sha = "891e7deb41ef7896dc4348e41aaf97dd467f33d9"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:44:30Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.de-vag-feedstock]
 recipe_type = "recipe_v1"
@@ -32214,9 +32613,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 47785179
 
 [feedstock_states.dehinter-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 819
+
+[feedstock_states.dehinter-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:38:27Z"
+commit_sha = "13f54d4bcabf1d995d35d9c86b50441bf59190e2"
+
+[feedstock_states.dehinter-feedstock.recipe_commit_cache]
+sha = "13f54d4bcabf1d995d35d9c86b50441bf59190e2"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:38:27Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.deicode-feedstock]
 recipe_type = "meta_yaml"
@@ -32789,9 +33202,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 5588
 
 [feedstock_states.descriptastorus-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 30464
+
+[feedstock_states.descriptastorus-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:37:38Z"
+commit_sha = "b5a7a05ad59b28c01297c6d2c8c2272753a7269c"
+
+[feedstock_states.descriptastorus-feedstock.recipe_commit_cache]
+sha = "b5a7a05ad59b28c01297c6d2c8c2272753a7269c"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:37:38Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.desdeo-feedstock]
 recipe_type = "meta_yaml"
@@ -38703,9 +39130,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 8188
 
 [feedstock_states.dtool_ibeis-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2216
+
+[feedstock_states.dtool_ibeis-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:28:51Z"
+commit_sha = "248829a3143510114edf9f4a65b7a8c2d7f2dc87"
+
+[feedstock_states.dtool_ibeis-feedstock.recipe_commit_cache]
+sha = "248829a3143510114edf9f4a65b7a8c2d7f2dc87"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:28:51Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.dtool_info-feedstock]
 recipe_type = "recipe_v1"
@@ -38770,9 +39211,23 @@ date = "2026-09-02T07:53:46Z"
 commit_sha = "dbc5680dbe527a5afd6c18c44f17682134071784"
 
 [feedstock_states.dtool_lookup_server_search_plugin_mongo-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 432
+
+[feedstock_states.dtool_lookup_server_search_plugin_mongo-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:39:51Z"
+commit_sha = "2846e418708992a7c86d5f7435d669e7eae4684a"
+
+[feedstock_states.dtool_lookup_server_search_plugin_mongo-feedstock.recipe_commit_cache]
+sha = "2846e418708992a7c86d5f7435d669e7eae4684a"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:39:51Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.dtool_overlay-feedstock]
 recipe_type = "recipe_v1"
@@ -39569,9 +40024,23 @@ date = "2026-04-29T14:44:03Z"
 commit_sha = "40ae27d264c1f076ffb393bf8317762f9de5ba76"
 
 [feedstock_states.e3nn-jax-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2943
+
+[feedstock_states.e3nn-jax-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:14:21Z"
+commit_sha = "2e6a8898bf14296b1ecc40267d504e8070981bc2"
+
+[feedstock_states.e3nn-jax-feedstock.recipe_commit_cache]
+sha = "2e6a8898bf14296b1ecc40267d504e8070981bc2"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:14:21Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.e3sm-quickview-feedstock]
 recipe_type = "recipe_v1"
@@ -41217,9 +41686,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 3838
 
 [feedstock_states.emdfile-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 8114
+
+[feedstock_states.emdfile-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:36:41Z"
+commit_sha = "67942444279bc0391589f231bc5bacd3d04adefb"
+
+[feedstock_states.emdfile-feedstock.recipe_commit_cache]
+sha = "67942444279bc0391589f231bc5bacd3d04adefb"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:36:41Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.emela-feedstock]
 recipe_type = "recipe_v1"
@@ -41258,19 +41741,61 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 3195
 
 [feedstock_states.emmet-api-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2913
 
+[feedstock_states.emmet-api-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:42:33Z"
+commit_sha = "85b03640cedf05198dfda85ecbdba07c626543f3"
+
+[feedstock_states.emmet-api-feedstock.recipe_commit_cache]
+sha = "85b03640cedf05198dfda85ecbdba07c626543f3"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:42:33Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.emmet-builders-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 865
 
+[feedstock_states.emmet-builders-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:42:54Z"
+commit_sha = "30583a4a1be65241a53ce3e366032f0c17fd9541"
+
+[feedstock_states.emmet-builders-feedstock.recipe_commit_cache]
+sha = "30583a4a1be65241a53ce3e366032f0c17fd9541"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:42:54Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.emmet-core-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 22967
+
+[feedstock_states.emmet-core-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:42:10Z"
+commit_sha = "ca902c2257af188fb46988db90ecee64558a2679"
+
+[feedstock_states.emmet-core-feedstock.recipe_commit_cache]
+sha = "ca902c2257af188fb46988db90ecee64558a2679"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:42:10Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.emmet-language-server-feedstock]
 recipe_type = "recipe_v1"
@@ -42339,14 +42864,6 @@ contributors = ["bouweandela"]
 date = "2026-09-04T10:12:20Z"
 commit_sha = "1d5ca56788daa26b174d4f39867c7f459ef600ec"
 
-[feedstock_states.esgf-pyclient-feedstock.recipe_commit_cache]
-sha = "1d5ca56788daa26b174d4f39867c7f459ef600ec"
-message = "Convert to v1 feedstock and use pixi as conda install tool"
-date = "2026-09-04T10:12:20Z"
-author_login = "bouweandela"
-author_name = "Bouwe Andela"
-author_email = "b.andela@esciencecenter.nl"
-
 [feedstock_states.esi-acme-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -42540,14 +43057,6 @@ contribution_type = "conversion"
 contributors = ["bouweandela"]
 date = "2026-09-04T15:00:48Z"
 commit_sha = "1ccfba4969eec898360f10301b3a6cfec2d8934e"
-
-[feedstock_states.esmvaltool-sample-data-feedstock.recipe_commit_cache]
-sha = "1ccfba4969eec898360f10301b3a6cfec2d8934e"
-message = "Convert to v1 feedstock and use pixi as conda install tool"
-date = "2026-09-04T15:00:48Z"
-author_login = "bouweandela"
-author_name = "Bouwe Andela"
-author_email = "b.andela@esciencecenter.nl"
 
 [feedstock_states.esmvaltool-suite-feedstock]
 recipe_type = "recipe_v1"
@@ -43329,9 +43838,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 40681
 
 [feedstock_states.executorlib-core-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 506
+
+[feedstock_states.executorlib-core-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:23:49Z"
+commit_sha = "22182073385dda5715dd436def813e3a36e29d09"
+
+[feedstock_states.executorlib-core-feedstock.recipe_commit_cache]
+sha = "22182073385dda5715dd436def813e3a36e29d09"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:23:49Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.executorlib-feedstock]
 recipe_type = "recipe_v1"
@@ -45734,9 +46257,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 59417
 
 [feedstock_states.fenics-dijitso-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 413578
+
+[feedstock_states.fenics-dijitso-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:24:54Z"
+commit_sha = "f90fbaad1af7f732d4089132ff3ed43ea5a0ca23"
+
+[feedstock_states.fenics-dijitso-feedstock.recipe_commit_cache]
+sha = "f90fbaad1af7f732d4089132ff3ed43ea5a0ca23"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:24:54Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.fenics-dolfinx-feedstock]
 recipe_type = "recipe_v1"
@@ -45755,9 +46292,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 747278
 
 [feedstock_states.fenics-ffc-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 419491
+
+[feedstock_states.fenics-ffc-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:25:41Z"
+commit_sha = "2fa8b5486fea70a9d401f51e715575399cadf99a"
+
+[feedstock_states.fenics-ffc-feedstock.recipe_commit_cache]
+sha = "2fa8b5486fea70a9d401f51e715575399cadf99a"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:25:41Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.fenics-ffcx-feedstock]
 recipe_type = "recipe_v1"
@@ -45775,9 +46326,23 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.fenics-fiat-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 431985
+
+[feedstock_states.fenics-fiat-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:24:30Z"
+commit_sha = "af7a6cd6acb61b6025779c67f987e1b055bdf0a5"
+
+[feedstock_states.fenics-fiat-feedstock.recipe_commit_cache]
+sha = "af7a6cd6acb61b6025779c67f987e1b055bdf0a5"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:24:30Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.fenics-oasis-feedstock]
 recipe_type = "meta_yaml"
@@ -45796,14 +46361,42 @@ date = "2025-04-29T06:44:08Z"
 commit_sha = "f5c1cc9eb6b8f0b3cb74f90bdc3791a6d3746663"
 
 [feedstock_states.fenics-ufl-legacy-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 3801
 
+[feedstock_states.fenics-ufl-legacy-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:25:17Z"
+commit_sha = "e738f0f6afb477a0ed4005f7ec66252822e76c83"
+
+[feedstock_states.fenics-ufl-legacy-feedstock.recipe_commit_cache]
+sha = "e738f0f6afb477a0ed4005f7ec66252822e76c83"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:25:17Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.fenicsprecice-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 3461
+
+[feedstock_states.fenicsprecice-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:29:38Z"
+commit_sha = "a3966ef178a9ee4570444e976660190dcef3263e"
+
+[feedstock_states.fenicsprecice-feedstock.recipe_commit_cache]
+sha = "a3966ef178a9ee4570444e976660190dcef3263e"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:29:38Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.fenicsx-beat-feedstock]
 recipe_type = "meta_yaml"
@@ -48172,9 +48765,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 489405
 
 [feedstock_states.flexcache-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2920771
+
+[feedstock_states.flexcache-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:12:14Z"
+commit_sha = "31096bafe58b7cbb9f1eb908c0f5891e9811f1db"
+
+[feedstock_states.flexcache-feedstock.recipe_commit_cache]
+sha = "31096bafe58b7cbb9f1eb908c0f5891e9811f1db"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:12:14Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.fleximod-feedstock]
 recipe_type = "meta_yaml"
@@ -48192,9 +48799,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 823
 
 [feedstock_states.flexparser-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2924940
+
+[feedstock_states.flexparser-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:12:37Z"
+commit_sha = "d2d41d4883665018617be00c465629377c039d75"
+
+[feedstock_states.flexparser-feedstock.recipe_commit_cache]
+sha = "d2d41d4883665018617be00c465629377c039d75"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:12:37Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.flexpolyline-feedstock]
 recipe_type = "meta_yaml"
@@ -48551,19 +49172,61 @@ date = "2026-05-26T07:36:37Z"
 commit_sha = "70abb14eff44d1d729492510427adaf093e3f3b9"
 
 [feedstock_states.flux-pmix-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 8029
 
+[feedstock_states.flux-pmix-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:09:57Z"
+commit_sha = "735c808e3a9f8adbcdd46a7c72ea4591aa1a50e9"
+
+[feedstock_states.flux-pmix-feedstock.recipe_commit_cache]
+sha = "735c808e3a9f8adbcdd46a7c72ea4591aa1a50e9"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:09:57Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.flux-restful-client-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 833
 
+[feedstock_states.flux-restful-client-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:34:23Z"
+commit_sha = "142d3a6234a0411a2084edfc47a76d93a1181986"
+
+[feedstock_states.flux-restful-client-feedstock.recipe_commit_cache]
+sha = "142d3a6234a0411a2084edfc47a76d93a1181986"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:34:23Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.flux-sched-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 13269
+
+[feedstock_states.flux-sched-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:23:37Z"
+commit_sha = "f8524cf9a1b52c942a7c815b9f731fd15f89c382"
+
+[feedstock_states.flux-sched-feedstock.recipe_commit_cache]
+sha = "f8524cf9a1b52c942a7c815b9f731fd15f89c382"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:23:37Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.flux-schema-feedstock]
 recipe_type = "recipe_v1"
@@ -49086,9 +49749,23 @@ date = "2026-09-01T10:12:53Z"
 commit_sha = "673e8a06f19642f295ecb9cd55c9af477a7fa57f"
 
 [feedstock_states.fontparts-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1251
+
+[feedstock_states.fontparts-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:56:16Z"
+commit_sha = "52fefc4cdd68cfa9e6ef7ea2e61b5296bed8c954"
+
+[feedstock_states.fontparts-feedstock.recipe_commit_cache]
+sha = "52fefc4cdd68cfa9e6ef7ea2e61b5296bed8c954"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:56:16Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.fontpens-feedstock]
 recipe_type = "recipe_v1"
@@ -49882,9 +50559,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 61251
 
 [feedstock_states.free-proxy-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 11279
+
+[feedstock_states.free-proxy-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:31:26Z"
+commit_sha = "2e3f312a4e0156b0ce36db3d5b464190200df961"
+
+[feedstock_states.free-proxy-feedstock.recipe_commit_cache]
+sha = "2e3f312a4e0156b0ce36db3d5b464190200df961"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:31:26Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.freecad-feedstock]
 recipe_type = "recipe_v1"
@@ -50857,9 +51548,23 @@ date = "2026-02-26T03:38:17Z"
 commit_sha = "e59146232c83ec24a4c363867bf692b7f46d287a"
 
 [feedstock_states.fvgp-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1259
+
+[feedstock_states.fvgp-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:24:08Z"
+commit_sha = "bec1eb4e95b2d68841ea0464df09cb33f72373b8"
+
+[feedstock_states.fvgp-feedstock.recipe_commit_cache]
+sha = "bec1eb4e95b2d68841ea0464df09cb33f72373b8"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:24:08Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.fwlite-feedstock]
 recipe_type = "meta_yaml"
@@ -51169,9 +51874,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 212954
 
 [feedstock_states.gauche-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 552
+
+[feedstock_states.gauche-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:42:56Z"
+commit_sha = "e8314c7d5414b36374ab3d985f62e68a580cea98"
+
+[feedstock_states.gauche-feedstock.recipe_commit_cache]
+sha = "e8314c7d5414b36374ab3d985f62e68a580cea98"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:42:56Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.gaudi-feedstock]
 recipe_type = "recipe_v1"
@@ -51695,17 +52414,6 @@ contribution_type = "conversion"
 contributors = ["wshanks"]
 date = "2026-09-04T14:21:31Z"
 commit_sha = "a0b251e29349eb61b82fae18764ae3a442472c68"
-
-[feedstock_states.gdstk-feedstock.recipe_commit_cache]
-sha = "a0b251e29349eb61b82fae18764ae3a442472c68"
-message = """
-chore: convert recipe to v1 (#73)
-
-* chore: convert recipe to v1 & -rendered with conda-smithy 2026.9.1 and conda-forge-pinning 2026.09.03.21.56.3"""
-date = "2026-09-04T14:21:31Z"
-author_login = "conda-forge-admin"
-author_name = "automatic conda-forge administrator"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.gdtchron-feedstock]
 recipe_type = "meta_yaml"
@@ -53897,14 +54605,6 @@ contributors = ["akrherz"]
 date = "2026-09-05T03:35:47Z"
 commit_sha = "556e630ecb187ee3346f1e3a6b7525f306dd0c08"
 
-[feedstock_states.github-copilot-sdk-feedstock.recipe_commit_cache]
-sha = "556e630ecb187ee3346f1e3a6b7525f306dd0c08"
-message = "chore: convert recipe to v1"
-date = "2026-09-05T03:35:47Z"
-author_login = "akrherz"
-author_name = "akrherz"
-author_email = "akrherz@iastate.edu"
-
 [feedstock_states.github-release-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-11-26T02:34:49.594680154+00:00"
@@ -54451,9 +55151,23 @@ date = "2026-05-02T18:06:17Z"
 commit_sha = "80d6c94b55234b4a5ae8e7e345f85305ac1c13d2"
 
 [feedstock_states.globus-compute-sdk-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2844
+
+[feedstock_states.globus-compute-sdk-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:36:15Z"
+commit_sha = "32554d4aa8f67bf3f5dad91785b96ce3c0da4b4c"
+
+[feedstock_states.globus-compute-sdk-feedstock.recipe_commit_cache]
+sha = "32554d4aa8f67bf3f5dad91785b96ce3c0da4b4c"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:36:15Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.globus-identity-mapping-feedstock]
 recipe_type = "recipe_v1"
@@ -55536,9 +56250,23 @@ date = "2026-02-12T10:08:19Z"
 commit_sha = "82b131b47999e9fc87a06a2ec32c6c87d5e894b4"
 
 [feedstock_states.google-ai-generativelanguage-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 409226
+
+[feedstock_states.google-ai-generativelanguage-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:08:23Z"
+commit_sha = "09ded8cae235da63a389e689d6edd923f38d29a2"
+
+[feedstock_states.google-ai-generativelanguage-feedstock.recipe_commit_cache]
+sha = "09ded8cae235da63a389e689d6edd923f38d29a2"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:08:23Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.google-analytics-admin-feedstock]
 recipe_type = "recipe_v1"
@@ -59445,14 +60173,6 @@ contributors = ["ocefpaf"]
 date = "2026-09-04T12:05:50Z"
 commit_sha = "ea2dd66276595b62ae887eb841f0acbeb98f6511"
 
-[feedstock_states.h5json-feedstock.recipe_commit_cache]
-sha = "ea2dd66276595b62ae887eb841f0acbeb98f6511"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T12:05:50Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.h5netcdf-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -59474,9 +60194,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 14301665
 
 [feedstock_states.h5pyd-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 28361
+
+[feedstock_states.h5pyd-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["ocefpaf"]
+date = "2026-09-05T12:39:46Z"
+commit_sha = "2ada5a10bf81fc3a30252482f600d0399acd76d9"
+
+[feedstock_states.h5pyd-feedstock.recipe_commit_cache]
+sha = "2ada5a10bf81fc3a30252482f600d0399acd76d9"
+message = "convert to v1"
+date = "2026-09-05T12:39:46Z"
+author_login = "ocefpaf"
+author_name = "Filipe Fernandes"
+author_email = "ocefpaf@gmail.com"
 
 [feedstock_states.h5pywrappers-feedstock]
 recipe_type = "meta_yaml"
@@ -61076,9 +61810,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 1450
 
 [feedstock_states.hgdl-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2381
+
+[feedstock_states.hgdl-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:24:36Z"
+commit_sha = "8eb44646b1b8079ab986c09b71f2987c2468544e"
+
+[feedstock_states.hgdl-feedstock.recipe_commit_cache]
+sha = "8eb44646b1b8079ab986c09b71f2987c2468544e"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:24:36Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.hickle-feedstock]
 recipe_type = "meta_yaml"
@@ -61271,9 +62019,23 @@ date = "2025-03-23T21:02:07Z"
 commit_sha = "920177a07a7db9850c8a0c0e3d850f04538119f0"
 
 [feedstock_states.hippynn-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1332
+
+[feedstock_states.hippynn-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:14:48Z"
+commit_sha = "8b3e3e9189b1bdcc37de8b5e47ae7a2561e3b3f5"
+
+[feedstock_states.hippynn-feedstock.recipe_commit_cache]
+sha = "8b3e3e9189b1bdcc37de8b5e47ae7a2561e3b3f5"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:14:48Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.hiproc-feedstock]
 recipe_type = "meta_yaml"
@@ -62102,9 +62864,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 15013
 
 [feedstock_states.html2image-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 5652
+
+[feedstock_states.html2image-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:37:30Z"
+commit_sha = "22487ab7da1cca08117c5856789c4857bb6d5210"
+
+[feedstock_states.html2image-feedstock.recipe_commit_cache]
+sha = "22487ab7da1cca08117c5856789c4857bb6d5210"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:37:30Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.html2text-feedstock]
 recipe_type = "meta_yaml"
@@ -62438,9 +63214,23 @@ date = "2025-07-04T10:15:46Z"
 commit_sha = "90a3995bc87a1c62e96788a7d8eb3759afc48d40"
 
 [feedstock_states.httpx-sse-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 683246
+
+[feedstock_states.httpx-sse-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:14:29Z"
+commit_sha = "1532aa248af6d51d6a845c59bd1c9f50629efcf9"
+
+[feedstock_states.httpx-sse-feedstock.recipe_commit_cache]
+sha = "1532aa248af6d51d6a845c59bd1c9f50629efcf9"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:14:29Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.httpx-ws-feedstock]
 recipe_type = "meta_yaml"
@@ -63208,9 +63998,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 6513
 
 [feedstock_states.hypothesize-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1114
+
+[feedstock_states.hypothesize-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:50:19Z"
+commit_sha = "4be48273bad5c35e852b4b67c3fac9e0c33ddbca"
+
+[feedstock_states.hypothesize-feedstock.recipe_commit_cache]
+sha = "4be48273bad5c35e852b4b67c3fac9e0c33ddbca"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:50:19Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.hypothesmith-feedstock]
 recipe_type = "recipe_v1"
@@ -66488,14 +67292,42 @@ last_changed = "2025-11-25T02:34:25.873781659+00:00"
 downloads = 533
 
 [feedstock_states.ironflow-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2379
 
+[feedstock_states.ironflow-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:13:55Z"
+commit_sha = "1c683f5b02b20a81150d5e84b778e5c38ff83925"
+
+[feedstock_states.ironflow-feedstock.recipe_commit_cache]
+sha = "1c683f5b02b20a81150d5e84b778e5c38ff83925"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:13:55Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.irrep-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1288
+
+[feedstock_states.irrep-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:40:46Z"
+commit_sha = "705034cfb29d89afc33405494977bacf50636774"
+
+[feedstock_states.irrep-feedstock.recipe_commit_cache]
+sha = "705034cfb29d89afc33405494977bacf50636774"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:40:46Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.irreptables-feedstock]
 recipe_type = "recipe_v1"
@@ -67331,9 +68163,23 @@ date = "2026-09-02T06:09:11Z"
 commit_sha = "94fe1c5e7cfeabf4bf369201f5358a0fea8ac415"
 
 [feedstock_states."jaraco.test-feedstock"]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1476
+
+[feedstock_states."jaraco.test-feedstock".attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:11:28Z"
+commit_sha = "e27d575642702a86735075b5bf49402c74afe41b"
+
+[feedstock_states."jaraco.test-feedstock".recipe_commit_cache]
+sha = "e27d575642702a86735075b5bf49402c74afe41b"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:11:28Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states."jaraco.text-feedstock"]
 recipe_type = "recipe_v1"
@@ -68398,9 +69244,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 14037
 
 [feedstock_states.joserfc-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 249966
+
+[feedstock_states.joserfc-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:54:26Z"
+commit_sha = "d7f826f8739f2df9d034e1a6fd773beb34d445ab"
+
+[feedstock_states.joserfc-feedstock.recipe_commit_cache]
+sha = "d7f826f8739f2df9d034e1a6fd773beb34d445ab"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:54:26Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.joshuto-feedstock]
 recipe_type = "recipe_v1"
@@ -68821,9 +69681,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 3193
 
 [feedstock_states.json2table-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1845
+
+[feedstock_states.json2table-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:49:58Z"
+commit_sha = "ea600ce8f7306d39a7c44aa3d4dcea4666e1cf19"
+
+[feedstock_states.json2table-feedstock.recipe_commit_cache]
+sha = "ea600ce8f7306d39a7c44aa3d4dcea4666e1cf19"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:49:58Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.json5-feedstock]
 recipe_type = "meta_yaml"
@@ -72462,9 +73336,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 91123944
 
 [feedstock_states.kfac-jax-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1169
+
+[feedstock_states.kfac-jax-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:39:15Z"
+commit_sha = "c9e6e5892c68aafc7dcfb1ef50c3b02e51ad5f11"
+
+[feedstock_states.kfac-jax-feedstock.recipe_commit_cache]
+sha = "c9e6e5892c68aafc7dcfb1ef50c3b02e51ad5f11"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:39:15Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.kfilemetadata-feedstock]
 recipe_type = "meta_yaml"
@@ -72682,9 +73570,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 685
 
 [feedstock_states.kinisi-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2248
+
+[feedstock_states.kinisi-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:52:11Z"
+commit_sha = "bb312311212812fb534cfdbd1b5f7b81156492be"
+
+[feedstock_states.kinisi-feedstock.recipe_commit_cache]
+sha = "bb312311212812fb534cfdbd1b5f7b81156492be"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:52:11Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.kinparse-feedstock]
 recipe_type = "meta_yaml"
@@ -73920,9 +74822,23 @@ date = "2026-09-02T14:18:03Z"
 commit_sha = "98cc018fbfa941cea56e413405a16ce6dfa3c5a0"
 
 [feedstock_states.langchain-anthropic-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2583
+
+[feedstock_states.langchain-anthropic-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:07:57Z"
+commit_sha = "148d9b6a867a0b9bc79ec490c5e4f42a0cdc48bc"
+
+[feedstock_states.langchain-anthropic-feedstock.recipe_commit_cache]
+sha = "148d9b6a867a0b9bc79ec490c5e4f42a0cdc48bc"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:07:57Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.langchain-aws-feedstock]
 recipe_type = "meta_yaml"
@@ -73973,9 +74889,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 214467
 
 [feedstock_states.langchain-core-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 75623
+
+[feedstock_states.langchain-core-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:50:02Z"
+commit_sha = "c15b769c28def28acab445296ccfaa8a68d5615f"
+
+[feedstock_states.langchain-core-feedstock.recipe_commit_cache]
+sha = "c15b769c28def28acab445296ccfaa8a68d5615f"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:50:02Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.langchain-deepseek-feedstock]
 recipe_type = "recipe_v1"
@@ -74000,9 +74930,23 @@ date = "2026-08-31T04:42:29Z"
 commit_sha = "e00e44d2a8e79bea2a856a14ca4bf5055a1e4baa"
 
 [feedstock_states.langchain-experimental-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 102557
+
+[feedstock_states.langchain-experimental-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:40:35Z"
+commit_sha = "7d430428c294b39e7a1103dccd4430a2d872085e"
+
+[feedstock_states.langchain-experimental-feedstock.recipe_commit_cache]
+sha = "7d430428c294b39e7a1103dccd4430a2d872085e"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:40:35Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.langchain-feedstock]
 recipe_type = "recipe_v1"
@@ -74038,9 +74982,23 @@ date = "2026-08-27T20:16:59Z"
 commit_sha = "787fd2f489e03b7b0be88caa638565c6d8cb184e"
 
 [feedstock_states.langchain-google-genai-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 4924
+
+[feedstock_states.langchain-google-genai-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:08:50Z"
+commit_sha = "901367b9c4ffb4b81f15ece888c3b5b17e37f05d"
+
+[feedstock_states.langchain-google-genai-feedstock.recipe_commit_cache]
+sha = "901367b9c4ffb4b81f15ece888c3b5b17e37f05d"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:08:50Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.langchain-google-vertexai-feedstock]
 recipe_type = "recipe_v1"
@@ -74065,14 +75023,42 @@ date = "2026-08-27T20:16:09Z"
 commit_sha = "a84c60b9a7c1bcc3dff3c2f8541e1f5fd6ded1d9"
 
 [feedstock_states.langchain-groq-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 8401
 
+[feedstock_states.langchain-groq-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:07:32Z"
+commit_sha = "46a5798bbd551fb3aed19c218e1afba9d313a53c"
+
+[feedstock_states.langchain-groq-feedstock.recipe_commit_cache]
+sha = "46a5798bbd551fb3aed19c218e1afba9d313a53c"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:07:32Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.langchain-huggingface-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 111000
+
+[feedstock_states.langchain-huggingface-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:09:14Z"
+commit_sha = "78b24091b845c44dba683bba034eff95abb40483"
+
+[feedstock_states.langchain-huggingface-feedstock.recipe_commit_cache]
+sha = "78b24091b845c44dba683bba034eff95abb40483"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:09:14Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.langchain-ibm-feedstock]
 recipe_type = "recipe_v1"
@@ -74262,23 +75248,29 @@ contributors = ["rxm7706"]
 date = "2026-09-04T09:25:28Z"
 commit_sha = "bfc04a8f0fa35a7e5696fddb52a8004c24f50e54"
 
-[feedstock_states.langchain-sambanova-feedstock.recipe_commit_cache]
-sha = "bfc04a8f0fa35a7e5696fddb52a8004c24f50e54"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T09:25:28Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.langchain-tavily-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-09-03T02:27:42.922314689+00:00"
 downloads = 1161
 
 [feedstock_states.langchain-text-splitters-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 574852
+
+[feedstock_states.langchain-text-splitters-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:53:41Z"
+commit_sha = "96549bf2e528023ba971020aee79fac1b436f641"
+
+[feedstock_states.langchain-text-splitters-feedstock.recipe_commit_cache]
+sha = "96549bf2e528023ba971020aee79fac1b436f641"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:53:41Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.langchain-together-feedstock]
 recipe_type = "recipe_v1"
@@ -74304,14 +75296,6 @@ contributors = [
 date = "2026-09-04T09:04:45Z"
 commit_sha = "d5ff0eabda9047b4a1cef33c85197d9be180da65"
 
-[feedstock_states.langchain-unstructured-feedstock.recipe_commit_cache]
-sha = "d5ff0eabda9047b4a1cef33c85197d9be180da65"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T09:04:45Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.langchain-voyageai-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-05-01T03:09:14.683938640+00:00"
@@ -74335,9 +75319,23 @@ date = "2026-07-13T16:05:13Z"
 commit_sha = "18ddf95d4cefb734050b05c97dc6175cd0535ec6"
 
 [feedstock_states.langchainhub-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 87958
+
+[feedstock_states.langchainhub-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:24:38Z"
+commit_sha = "7dfaf7a4190c0bf57ab815aefc69e99890b452ed"
+
+[feedstock_states.langchainhub-feedstock.recipe_commit_cache]
+sha = "7dfaf7a4190c0bf57ab815aefc69e99890b452ed"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:24:38Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.langcodes-feedstock]
 recipe_type = "recipe_v1"
@@ -74881,14 +75879,6 @@ contribution_type = "new_feedstock"
 contributors = ["jkotan"]
 date = "2026-09-04T07:25:44Z"
 commit_sha = "259cce129228f89d9e4880ec84a9621f43d1235e"
-
-[feedstock_states.lavuefilters-feedstock.recipe_commit_cache]
-sha = "259cce129228f89d9e4880ec84a9621f43d1235e"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T07:25:44Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.law-feedstock]
 recipe_type = "recipe_v1"
@@ -76322,14 +77312,6 @@ contributors = [
 ]
 date = "2026-09-04T19:42:25Z"
 commit_sha = "4d3e5a02ee850baa0991c9584f64bc79f9bfea3b"
-
-[feedstock_states.libasdf-feedstock.recipe_commit_cache]
-sha = "4d3e5a02ee850baa0991c9584f64bc79f9bfea3b"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T19:42:25Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.libass-feedstock]
 recipe_type = "recipe_v1"
@@ -81443,14 +82425,42 @@ date = "2026-04-06T19:22:47Z"
 commit_sha = "4f79b0a5a9fa73b8d80fc93c6b69e01e40b300bf"
 
 [feedstock_states.llama-index-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1859
 
+[feedstock_states.llama-index-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:41:20Z"
+commit_sha = "1edda34a4eb3f416fb003a3c3586daa851f7868e"
+
+[feedstock_states.llama-index-feedstock.recipe_commit_cache]
+sha = "1edda34a4eb3f416fb003a3c3586daa851f7868e"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:41:20Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.llama-index-indices-managed-llama-cloud-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 10801
+
+[feedstock_states.llama-index-indices-managed-llama-cloud-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:41:30Z"
+commit_sha = "a6cf8c29e0836f8fb37fa9d29f1a2023389a1b7b"
+
+[feedstock_states.llama-index-indices-managed-llama-cloud-feedstock.recipe_commit_cache]
+sha = "a6cf8c29e0836f8fb37fa9d29f1a2023389a1b7b"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:41:30Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.llama-index-instrumentation-feedstock]
 recipe_type = "recipe_v1"
@@ -81706,14 +82716,6 @@ contributors = ["rxm7706"]
 date = "2026-09-04T09:04:38Z"
 commit_sha = "6bdba46d739afad0d664fb277e0949c2cd73b1cd"
 
-[feedstock_states.llm-sandbox-feedstock.recipe_commit_cache]
-sha = "6bdba46d739afad0d664fb277e0949c2cd73b1cd"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T09:04:38Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.llmcompressor-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-07-01T02:44:29.898410040+00:00"
@@ -81742,9 +82744,23 @@ date = "2025-11-24T19:42:29Z"
 commit_sha = "28089fd27440da782be8383525a8070864814617"
 
 [feedstock_states.llmtuner-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2854
+
+[feedstock_states.llmtuner-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:41:03Z"
+commit_sha = "025cc6e4b68d0e1b2d6e779a61f91b9f7450cd23"
+
+[feedstock_states.llmtuner-feedstock.recipe_commit_cache]
+sha = "025cc6e4b68d0e1b2d6e779a61f91b9f7450cd23"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:41:03Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.llnl-sina-feedstock]
 recipe_type = "meta_yaml"
@@ -81842,9 +82858,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 1623902
 
 [feedstock_states.lmdbm-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1424
+
+[feedstock_states.lmdbm-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:43:46Z"
+commit_sha = "2bc15d9265787d2eca8e6856af41b2dcf2e98abb"
+
+[feedstock_states.lmdbm-feedstock.recipe_commit_cache]
+sha = "2bc15d9265787d2eca8e6856af41b2dcf2e98abb"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:43:46Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.lmdbxx-feedstock]
 recipe_type = "meta_yaml"
@@ -81908,9 +82938,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 2955
 
 [feedstock_states.lobsterpy-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2570
+
+[feedstock_states.lobsterpy-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:38:59Z"
+commit_sha = "37965b287f032844cf224b80045858aa68817d86"
+
+[feedstock_states.lobsterpy-feedstock.recipe_commit_cache]
+sha = "37965b287f032844cf224b80045858aa68817d86"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:38:59Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.locache-feedstock]
 recipe_type = "meta_yaml"
@@ -84152,9 +85196,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 17430
 
 [feedstock_states.mailbits-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 73109
+
+[feedstock_states.mailbits-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:48:08Z"
+commit_sha = "9a97b57d7b10c73b350ca6ecdad09595ca7ee80c"
+
+[feedstock_states.mailbits-feedstock.recipe_commit_cache]
+sha = "9a97b57d7b10c73b350ca6ecdad09595ca7ee80c"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:48:08Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.mailchecker-feedstock]
 recipe_type = "meta_yaml"
@@ -84422,9 +85480,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 204395
 
 [feedstock_states.mamonca-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 11664
+
+[feedstock_states.mamonca-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:17:32Z"
+commit_sha = "6592d39519c9b95a0f5533a4d917cf704ee40b74"
+
+[feedstock_states.mamonca-feedstock.recipe_commit_cache]
+sha = "6592d39519c9b95a0f5533a4d917cf704ee40b74"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:17:32Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.mando-feedstock]
 recipe_type = "meta_yaml"
@@ -85243,9 +86315,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 1916
 
 [feedstock_states.materials-learning-algorithms-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1569
+
+[feedstock_states.materials-learning-algorithms-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:39:25Z"
+commit_sha = "9c633526648d75f8c7ce270c27b95abc047065a2"
+
+[feedstock_states.materials-learning-algorithms-feedstock.recipe_commit_cache]
+sha = "9c633526648d75f8c7ce270c27b95abc047065a2"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:39:25Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.matgl-feedstock]
 recipe_type = "recipe_v1"
@@ -86815,9 +87901,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 2823
 
 [feedstock_states.merge-args-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1582
+
+[feedstock_states.merge-args-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:34:48Z"
+commit_sha = "c693b35b7bff1c570d306bfe3269fee508fafd68"
+
+[feedstock_states.merge-args-feedstock.recipe_commit_cache]
+sha = "c693b35b7bff1c570d306bfe3269fee508fafd68"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:34:48Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.merge-stardist-masks-feedstock]
 recipe_type = "meta_yaml"
@@ -90199,9 +91299,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 734
 
 [feedstock_states.moleculeace-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 416
+
+[feedstock_states.moleculeace-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:44:17Z"
+commit_sha = "3510e055e9bfbbfe84b7832ddc59b20c35e30831"
+
+[feedstock_states.moleculeace-feedstock.recipe_commit_cache]
+sha = "3510e055e9bfbbfe84b7832ddc59b20c35e30831"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:44:17Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.moleculekit-feedstock]
 recipe_type = "meta_yaml"
@@ -90257,9 +91371,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 19251
 
 [feedstock_states.molml-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 890
+
+[feedstock_states.molml-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:40:59Z"
+commit_sha = "1d3e35bc8c77588a722a5d31e91168aef7d93c8e"
+
+[feedstock_states.molml-feedstock.recipe_commit_cache]
+sha = "1d3e35bc8c77588a722a5d31e91168aef7d93c8e"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:40:59Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.molmod-feedstock]
 recipe_type = "meta_yaml"
@@ -95355,9 +96483,29 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 53651
 
 [feedstock_states.ncdu-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 23237
+
+[feedstock_states.ncdu-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["carlodri"]
+date = "2026-09-04T06:37:04Z"
+commit_sha = "0570bd3a4d04811d32a3b2f87f11b66435d311b6"
+
+[feedstock_states.ncdu-feedstock.recipe_commit_cache]
+sha = "0570bd3a4d04811d32a3b2f87f11b66435d311b6"
+message = """
+MNT: Re-rendered with conda-smithy 2026.9.1 and conda-forge-pinning 2026.09.03.21.56.33
+
+Other tools:
+- conda-build 26.7.1
+- rattler-build 0.75.0
+- rattler-build-conda-compat 1.4.19"""
+date = "2026-09-04T06:37:04Z"
+author_login = "carlodri"
+author_name = "Carlo"
+author_email = "carlo.dri@gmail.com"
 
 [feedstock_states.ncempy-feedstock]
 recipe_type = "meta_yaml"
@@ -96032,9 +97180,23 @@ last_changed = "2026-01-30T03:11:16.753378301+00:00"
 downloads = 642
 
 [feedstock_states.nequip-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1565
+
+[feedstock_states.nequip-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:39:29Z"
+commit_sha = "fb1ad6daa0faac8e7638c3c10f42297656c2f21b"
+
+[feedstock_states.nequip-feedstock.recipe_commit_cache]
+sha = "fb1ad6daa0faac8e7638c3c10f42297656c2f21b"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:39:29Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.nerfacc-feedstock]
 recipe_type = "recipe_v1"
@@ -96912,9 +98074,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 7823
 
 [feedstock_states.nilearn-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 130251
+
+[feedstock_states.nilearn-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["ocefpaf"]
+date = "2026-09-05T17:30:33Z"
+commit_sha = "d24d92df5c7461c6f9c8cc45e61a6d2a5719056f"
+
+[feedstock_states.nilearn-feedstock.recipe_commit_cache]
+sha = "d24d92df5c7461c6f9c8cc45e61a6d2a5719056f"
+message = "convert to v1"
+date = "2026-09-05T17:30:33Z"
+author_login = "ocefpaf"
+author_name = "Filipe Fernandes"
+author_email = "ocefpaf@gmail.com"
 
 [feedstock_states.nim-feedstock]
 recipe_type = "meta_yaml"
@@ -97507,34 +98683,117 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 3630
 
 [feedstock_states.nomad-camels-driver-agilent-34401a-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 746
 
+[feedstock_states.nomad-camels-driver-agilent-34401a-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:45:14Z"
+commit_sha = "5ad0c60536a09a9040939f43030464166bb06353"
+
+[feedstock_states.nomad-camels-driver-agilent-34401a-feedstock.recipe_commit_cache]
+sha = "5ad0c60536a09a9040939f43030464166bb06353"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:45:14Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.nomad-camels-driver-cam-control-pylablib-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 792
 
+[feedstock_states.nomad-camels-driver-cam-control-pylablib-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:26:33Z"
+commit_sha = "0d2ee9e0224f403c9927e37c876970ab42f9df0c"
+
+[feedstock_states.nomad-camels-driver-cam-control-pylablib-feedstock.recipe_commit_cache]
+sha = "0d2ee9e0224f403c9927e37c876970ab42f9df0c"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:26:33Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.nomad-camels-driver-demo-instrument-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 670
 
+[feedstock_states.nomad-camels-driver-demo-instrument-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:43:09Z"
+commit_sha = "71a31693ac006a6217a312acc7cd00d416394cb5"
+
+[feedstock_states.nomad-camels-driver-demo-instrument-feedstock.recipe_commit_cache]
+sha = "71a31693ac006a6217a312acc7cd00d416394cb5"
+message = "chore: convert recipe to v1 & -rendered with conda-smithy 2026.9.1 and conda-forge-pinning 2026.09.03.21.56.3"
+date = "2026-09-05T11:43:09Z"
+author_name = "conda-forge-webservices[bot]"
+author_email = "91080706+conda-forge-webservices[bot]@users.noreply.github.com"
+
 [feedstock_states.nomad-camels-driver-keithley-2000-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1089
 
+[feedstock_states.nomad-camels-driver-keithley-2000-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:45:41Z"
+commit_sha = "da6cd5c349d298e36d7e5173f569a46de9eb0ec0"
+
+[feedstock_states.nomad-camels-driver-keithley-2000-feedstock.recipe_commit_cache]
+sha = "da6cd5c349d298e36d7e5173f569a46de9eb0ec0"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:45:41Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.nomad-camels-driver-keithley-220-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 625
 
+[feedstock_states.nomad-camels-driver-keithley-220-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:21:04Z"
+commit_sha = "a4ce0faa83b94fe7d55c049a18a9dc76d58855b9"
+
+[feedstock_states.nomad-camels-driver-keithley-220-feedstock.recipe_commit_cache]
+sha = "a4ce0faa83b94fe7d55c049a18a9dc76d58855b9"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:21:04Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.nomad-camels-driver-keithley-237-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 649
+
+[feedstock_states.nomad-camels-driver-keithley-237-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:20:20Z"
+commit_sha = "ff40455ab6215cb38b47255fc5eb2dfd62798b16"
+
+[feedstock_states.nomad-camels-driver-keithley-237-feedstock.recipe_commit_cache]
+sha = "ff40455ab6215cb38b47255fc5eb2dfd62798b16"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:20:20Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.nomad-camels-driver-keithley-2400-feedstock]
 recipe_type = "meta_yaml"
@@ -97542,19 +98801,60 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 1518
 
 [feedstock_states.nomad-camels-driver-keysight-b2912a-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1458
 
+[feedstock_states.nomad-camels-driver-keysight-b2912a-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:42:34Z"
+commit_sha = "fda58b0c6d9278b401b2297d6c3d52c87d019e8c"
+
+[feedstock_states.nomad-camels-driver-keysight-b2912a-feedstock.recipe_commit_cache]
+sha = "fda58b0c6d9278b401b2297d6c3d52c87d019e8c"
+message = "chore: convert recipe to v1 & -rendered with conda-smithy 2026.9.1 and conda-forge-pinning 2026.09.03.21.56.3"
+date = "2026-09-05T11:42:34Z"
+author_name = "conda-forge-webservices[bot]"
+author_email = "91080706+conda-forge-webservices[bot]@users.noreply.github.com"
+
 [feedstock_states.nomad-camels-driver-keysight-e5270b-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1333
 
+[feedstock_states.nomad-camels-driver-keysight-e5270b-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:19:54Z"
+commit_sha = "5f365a7ab2d8731ef41250bc3aae414a49bd74f2"
+
+[feedstock_states.nomad-camels-driver-keysight-e5270b-feedstock.recipe_commit_cache]
+sha = "5f365a7ab2d8731ef41250bc3aae414a49bd74f2"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:19:54Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.nomad-camels-driver-mechonics-cu30cl-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 754
+
+[feedstock_states.nomad-camels-driver-mechonics-cu30cl-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:27:05Z"
+commit_sha = "e21acb9c0232c08c7bf15ed9dee477bb73534bcf"
+
+[feedstock_states.nomad-camels-driver-mechonics-cu30cl-feedstock.recipe_commit_cache]
+sha = "e21acb9c0232c08c7bf15ed9dee477bb73534bcf"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:27:05Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.nomad-camels-driver-ni-daq-feedstock]
 recipe_type = "recipe_v1"
@@ -97573,9 +98873,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 1400
 
 [feedstock_states.nomad-camels-driver-swabianinstruments-timetagger-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 942
+
+[feedstock_states.nomad-camels-driver-swabianinstruments-timetagger-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:29:13Z"
+commit_sha = "d8f1b90df95407236b3daa42bf4f033eeefefdef"
+
+[feedstock_states.nomad-camels-driver-swabianinstruments-timetagger-feedstock.recipe_commit_cache]
+sha = "d8f1b90df95407236b3daa42bf4f033eeefefdef"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:29:13Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.nomad-camels-driver-thorlabs-k10cr1-feedstock]
 recipe_type = "meta_yaml"
@@ -97594,24 +98908,80 @@ date = "2026-04-25T06:36:08Z"
 commit_sha = "44f3036918a30010b2e9bb308856da4103c6611c"
 
 [feedstock_states.nomad-camels-driver-thorlabs-tlpm-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1152
 
+[feedstock_states.nomad-camels-driver-thorlabs-tlpm-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:28:03Z"
+commit_sha = "1509d70aea6111f50eb14e28b0894ce60ef8a541"
+
+[feedstock_states.nomad-camels-driver-thorlabs-tlpm-feedstock.recipe_commit_cache]
+sha = "1509d70aea6111f50eb14e28b0894ce60ef8a541"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:28:03Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.nomad-camels-driver-trinamic-tmcm-1110-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1150
 
+[feedstock_states.nomad-camels-driver-trinamic-tmcm-1110-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:28:27Z"
+commit_sha = "3ef6e7289c1709888a52eb9e82862e8af9e24c44"
+
+[feedstock_states.nomad-camels-driver-trinamic-tmcm-1110-feedstock.recipe_commit_cache]
+sha = "3ef6e7289c1709888a52eb9e82862e8af9e24c44"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:28:27Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.nomad-camels-driver-voltcraft-pps-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1478
 
+[feedstock_states.nomad-camels-driver-voltcraft-pps-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:22:14Z"
+commit_sha = "18e859156f3714465dacb9185f714a85ea49a97a"
+
+[feedstock_states.nomad-camels-driver-voltcraft-pps-feedstock.recipe_commit_cache]
+sha = "18e859156f3714465dacb9185f714a85ea49a97a"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:22:14Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.nomad-camels-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 10130
+
+[feedstock_states.nomad-camels-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:26:07Z"
+commit_sha = "bc137e27e97b4d98e5e5ce719043183237ebcc48"
+
+[feedstock_states.nomad-camels-feedstock.recipe_commit_cache]
+sha = "bc137e27e97b4d98e5e5ce719043183237ebcc48"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:26:07Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.nomad-driver-podman-feedstock]
 recipe_type = "meta_yaml"
@@ -97663,9 +99033,23 @@ date = "2026-09-02T18:47:21Z"
 commit_sha = "a166e93cae6ddee2f542b65791efcd65de0e9e28"
 
 [feedstock_states.nomad-parser-plugins-simulation-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-10-23T02:31:32.842016848+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 246
+
+[feedstock_states.nomad-parser-plugins-simulation-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:17:20Z"
+commit_sha = "342a89d8f7c2aefadf48e0ea25957a37d33b3f62"
+
+[feedstock_states.nomad-parser-plugins-simulation-feedstock.recipe_commit_cache]
+sha = "342a89d8f7c2aefadf48e0ea25957a37d33b3f62"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:17:20Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.nomad-parser-plugins-workflow-feedstock]
 recipe_type = "recipe_v1"
@@ -97679,9 +99063,23 @@ date = "2026-09-02T18:58:57Z"
 commit_sha = "9923ad643e419f5d2f6c4b5b1619921f85079465"
 
 [feedstock_states.nomad-schema-plugin-run-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-10-23T02:31:32.842016848+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 262
+
+[feedstock_states.nomad-schema-plugin-run-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:16:51Z"
+commit_sha = "3b3c890f4839963510081976de4d508379711a48"
+
+[feedstock_states.nomad-schema-plugin-run-feedstock.recipe_commit_cache]
+sha = "3b3c890f4839963510081976de4d508379711a48"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:16:51Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.nomad-schema-plugin-simulation-workflow-feedstock]
 recipe_type = "recipe_v1"
@@ -99618,9 +101016,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 3907
 
 [feedstock_states.ocifs-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1694
+
+[feedstock_states.ocifs-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:14:51Z"
+commit_sha = "732db51ac78b81c868b5efd9e693858dbed9b318"
+
+[feedstock_states.ocifs-feedstock.recipe_commit_cache]
+sha = "732db51ac78b81c868b5efd9e693858dbed9b318"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:14:51Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.ocl-icd-feedstock]
 recipe_type = "meta_yaml"
@@ -100857,9 +102269,23 @@ date = "2024-12-14T21:31:41Z"
 commit_sha = "3a9a0c833ddad4bc321a5ce0c150400ecb155190"
 
 [feedstock_states.open-clip-torch-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 9215
+
+[feedstock_states.open-clip-torch-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:15:49Z"
+commit_sha = "c72137a529b6e3aece5e165d27ba1c2f244f5642"
+
+[feedstock_states.open-clip-torch-feedstock.recipe_commit_cache]
+sha = "c72137a529b6e3aece5e165d27ba1c2f244f5642"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:15:49Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.open-exchange-feedstock]
 recipe_type = "meta_yaml"
@@ -102134,9 +103560,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 43437
 
 [feedstock_states.openphase-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1556
+
+[feedstock_states.openphase-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:18:32Z"
+commit_sha = "8d593ddb6a4af6d4357f3ebd31c33ec3de825df2"
+
+[feedstock_states.openphase-feedstock.recipe_commit_cache]
+sha = "8d593ddb6a4af6d4357f3ebd31c33ec3de825df2"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:18:32Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.openpisco-split-feedstock]
 recipe_type = "meta_yaml"
@@ -102384,14 +103824,6 @@ contribution_type = "new_feedstock"
 contributors = ["jeongseok-meta"]
 date = "2026-09-04T16:52:29Z"
 commit_sha = "bd286ea3fd5476581ad7d3c93184ca87a931ae16"
-
-[feedstock_states.opensim-feedstock.recipe_commit_cache]
-sha = "bd286ea3fd5476581ad7d3c93184ca87a931ae16"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T16:52:29Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.opensimplex-feedstock]
 recipe_type = "meta_yaml"
@@ -103301,9 +104733,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 23999
 
 [feedstock_states.opentypespec-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 5920
+
+[feedstock_states.opentypespec-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:38:54Z"
+commit_sha = "24c31279abdd4dc10bae82e80a1ad79bdc83576c"
+
+[feedstock_states.opentypespec-feedstock.recipe_commit_cache]
+sha = "24c31279abdd4dc10bae82e80a1ad79bdc83576c"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:38:54Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.openusd-feedstock]
 recipe_type = "recipe_v1"
@@ -103446,9 +104892,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 6412248
 
 [feedstock_states.opt_einsum_fx-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 101797
+
+[feedstock_states.opt_einsum_fx-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:47:43Z"
+commit_sha = "93890f071999879a4070a88a19b1aae203fb18e6"
+
+[feedstock_states.opt_einsum_fx-feedstock.recipe_commit_cache]
+sha = "93890f071999879a4070a88a19b1aae203fb18e6"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:47:43Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.optax-feedstock]
 recipe_type = "meta_yaml"
@@ -103693,9 +105153,23 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.oracle-ads-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1230
+
+[feedstock_states.oracle-ads-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:16:22Z"
+commit_sha = "4c74261efc5172040bb1fff7b80329c26865382f"
+
+[feedstock_states.oracle-ads-feedstock.recipe_commit_cache]
+sha = "4c74261efc5172040bb1fff7b80329c26865382f"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:16:22Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.oracle-instant-client-feedstock]
 recipe_type = "meta_yaml"
@@ -103958,9 +105432,23 @@ date = "2026-05-29T18:04:05Z"
 commit_sha = "3893a1825a62e8005b5adda6c561949d76935816"
 
 [feedstock_states.orderedset-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 290866
+
+[feedstock_states.orderedset-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["ocefpaf"]
+date = "2026-09-05T17:00:52Z"
+commit_sha = "01729808c35b6b5ace94cb80cdfe20fba1ae41b5"
+
+[feedstock_states.orderedset-feedstock.recipe_commit_cache]
+sha = "01729808c35b6b5ace94cb80cdfe20fba1ae41b5"
+message = "convert to v1"
+date = "2026-09-05T17:00:52Z"
+author_login = "ocefpaf"
+author_name = "Filipe Fernandes"
+author_email = "ocefpaf@gmail.com"
 
 [feedstock_states.orderly-set-feedstock]
 recipe_type = "recipe_v1"
@@ -105867,9 +107355,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 2235
 
 [feedstock_states.paper-qa-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 901
+
+[feedstock_states.paper-qa-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:09:35Z"
+commit_sha = "5ebae3f4d879862c4d27d97093ed941283304cbb"
+
+[feedstock_states.paper-qa-feedstock.recipe_commit_cache]
+sha = "5ebae3f4d879862c4d27d97093ed941283304cbb"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:09:35Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.paper-qa-pypdf-feedstock]
 recipe_type = "meta_yaml"
@@ -106004,9 +107506,23 @@ date = "2025-01-21T19:26:12Z"
 commit_sha = "7ebe2ff8bb6a8b7df1122fc31e8c8a9663fb7a94"
 
 [feedstock_states.parallel-numpy-rng-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 942
+
+[feedstock_states.parallel-numpy-rng-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:49:15Z"
+commit_sha = "1d5b4551efbc35c54e0898392092a77452f73624"
+
+[feedstock_states.parallel-numpy-rng-feedstock.recipe_commit_cache]
+sha = "1d5b4551efbc35c54e0898392092a77452f73624"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:49:15Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.parallel-ssh-feedstock]
 recipe_type = "recipe_v1"
@@ -107003,9 +108519,23 @@ recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
 
 [feedstock_states.pcodedmp-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 135929
+
+[feedstock_states.pcodedmp-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:33:38Z"
+commit_sha = "6b687a939bb86819f643c2268ee415b6c2d2967f"
+
+[feedstock_states.pcodedmp-feedstock.recipe_commit_cache]
+sha = "6b687a939bb86819f643c2268ee415b6c2d2967f"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:33:38Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pcpp-feedstock]
 recipe_type = "meta_yaml"
@@ -109180,14 +110710,6 @@ contributors = ["millsks"]
 date = "2026-09-04T21:19:54Z"
 commit_sha = "68ba1da43084fc1a7752734691f04181dec3aae5"
 
-[feedstock_states.pgadmin4-feedstock.recipe_commit_cache]
-sha = "68ba1da43084fc1a7752734691f04181dec3aae5"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T21:19:54Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.pgadmin4-python-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -109405,9 +110927,23 @@ date = "2026-07-23T19:58:15Z"
 commit_sha = "e87e1c33a43dc99d9cbb3d05ffc135d7675b3ada"
 
 [feedstock_states.phidata-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2797
+
+[feedstock_states.phidata-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:51:25Z"
+commit_sha = "2bdcd5cd52c44cbbff136907019c7e8f53000155"
+
+[feedstock_states.phidata-feedstock.recipe_commit_cache]
+sha = "2bdcd5cd52c44cbbff136907019c7e8f53000155"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:51:25Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.phidget22-feedstock]
 recipe_type = "meta_yaml"
@@ -112622,9 +114158,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 1172
 
 [feedstock_states.posebusters-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 3093
+
+[feedstock_states.posebusters-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:36:13Z"
+commit_sha = "2057233c1df1cfe78a3718a67b94704911315ce2"
+
+[feedstock_states.posebusters-feedstock.recipe_commit_cache]
+sha = "2057233c1df1cfe78a3718a67b94704911315ce2"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:36:13Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.poselib-feedstock]
 recipe_type = "recipe_v1"
@@ -112714,7 +114264,7 @@ commit_sha = "6112c2e72d649338afc8056599ee3d47e4ade6e3"
 [feedstock_states.pot-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 117476
+downloads = 114164
 
 [feedstock_states.potentials-feedstock]
 recipe_type = "recipe_v1"
@@ -113158,9 +114708,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 91331
 
 [feedstock_states.premai-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1753
+
+[feedstock_states.premai-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:15:36Z"
+commit_sha = "55fff32ccc5876bd9c19049901176297f3dc0654"
+
+[feedstock_states.premai-feedstock.recipe_commit_cache]
+sha = "55fff32ccc5876bd9c19049901176297f3dc0654"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:15:36Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.premailer-feedstock]
 recipe_type = "meta_yaml"
@@ -113486,9 +115050,23 @@ last_changed = "2025-09-24T02:29:26.859815961+00:00"
 downloads = 489
 
 [feedstock_states.prisms-jobs-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1536
+
+[feedstock_states.prisms-jobs-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:34:58Z"
+commit_sha = "a7b4bb9c95509225982e946044c5fbb22d32c6d2"
+
+[feedstock_states.prisms-jobs-feedstock.recipe_commit_cache]
+sha = "a7b4bb9c95509225982e946044c5fbb22d32c6d2"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:34:58Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.prison-feedstock]
 recipe_type = "meta_yaml"
@@ -115503,9 +117081,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 24724
 
 [feedstock_states.py2cfg-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1144
+
+[feedstock_states.py2cfg-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:13:44Z"
+commit_sha = "81b318517b0893fcef11710229f32e12d4a7f1df"
+
+[feedstock_states.py2cfg-feedstock.recipe_commit_cache]
+sha = "81b318517b0893fcef11710229f32e12d4a7f1df"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:13:44Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.py2cytoscape-feedstock]
 recipe_type = "meta_yaml"
@@ -115616,9 +117208,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 18044794
 
 [feedstock_states.py4vasp-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 3831
+
+[feedstock_states.py4vasp-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:52:15Z"
+commit_sha = "d903bef596896e70c95e1b55a2de7fb89f540548"
+
+[feedstock_states.py4vasp-feedstock.recipe_commit_cache]
+sha = "d903bef596896e70c95e1b55a2de7fb89f540548"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:52:15Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.py4xs-feedstock]
 recipe_type = "meta_yaml"
@@ -116721,9 +118327,23 @@ last_changed = "2025-10-14T02:30:00.486264905+00:00"
 downloads = 826
 
 [feedstock_states.pychromatic-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 867
+
+[feedstock_states.pychromatic-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:44:43Z"
+commit_sha = "da7ea75bd29202646f928bbb5b9c57ff19095de0"
+
+[feedstock_states.pychromatic-feedstock.recipe_commit_cache]
+sha = "da7ea75bd29202646f928bbb5b9c57ff19095de0"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:44:43Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pychromecast-feedstock]
 recipe_type = "recipe_v1"
@@ -116973,9 +118593,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 13743
 
 [feedstock_states.pycolt-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2058
+
+[feedstock_states.pycolt-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:38:06Z"
+commit_sha = "d3c7ea86fa6785c984fea898b2abc457e253d8b9"
+
+[feedstock_states.pycolt-feedstock.recipe_commit_cache]
+sha = "d3c7ea86fa6785c984fea898b2abc457e253d8b9"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:38:06Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pycomlink-feedstock]
 recipe_type = "meta_yaml"
@@ -117215,9 +118849,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 1147038
 
 [feedstock_states.pycrystal-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 101
+
+[feedstock_states.pycrystal-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:33:52Z"
+commit_sha = "5ddfcde8b4711c713debf37161358a594eea33d2"
+
+[feedstock_states.pycrystal-feedstock.recipe_commit_cache]
+sha = "5ddfcde8b4711c713debf37161358a594eea33d2"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:33:52Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pycsep-feedstock]
 recipe_type = "meta_yaml"
@@ -117619,14 +119267,42 @@ date = "2026-04-25T09:29:12Z"
 commit_sha = "5c0b063a4c7c22877a555e2c6f02a6042f3466a1"
 
 [feedstock_states.pydatamail_google-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 10974
 
+[feedstock_states.pydatamail_google-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:35:13Z"
+commit_sha = "fb034062e11278351f327b013f896dc51100cdf6"
+
+[feedstock_states.pydatamail_google-feedstock.recipe_commit_cache]
+sha = "fb034062e11278351f327b013f896dc51100cdf6"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:35:13Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.pydatamail_ml-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2237
+
+[feedstock_states.pydatamail_ml-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:49:15Z"
+commit_sha = "a2c9a0a4d220eeae905fcff2c82e7c1801d5f5a3"
+
+[feedstock_states.pydatamail_ml-feedstock.recipe_commit_cache]
+sha = "a2c9a0a4d220eeae905fcff2c82e7c1801d5f5a3"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:49:15Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pydataverse-feedstock]
 recipe_type = "meta_yaml"
@@ -119917,9 +121593,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 37708
 
 [feedstock_states.pyimapsync-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 4472
+
+[feedstock_states.pyimapsync-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:36:02Z"
+commit_sha = "dee401873d18ed82759759b66d9e650f742fec57"
+
+[feedstock_states.pyimapsync-feedstock.recipe_commit_cache]
+sha = "dee401873d18ed82759759b66d9e650f742fec57"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:36:02Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pyimgur-feedstock]
 recipe_type = "meta_yaml"
@@ -120159,19 +121849,61 @@ date = "2025-07-21T18:21:01Z"
 commit_sha = "03e5b505108cda2cc228b018eff4b09cfbb6a2d6"
 
 [feedstock_states.pyiron_ontology-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2301
 
+[feedstock_states.pyiron_ontology-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:18:06Z"
+commit_sha = "f26720b0fa1adf73d2ac30926a30a66b004c76c0"
+
+[feedstock_states.pyiron_ontology-feedstock.recipe_commit_cache]
+sha = "f26720b0fa1adf73d2ac30926a30a66b004c76c0"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:18:06Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.pyiron_potentialfit-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 5455
 
+[feedstock_states.pyiron_potentialfit-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:44:42Z"
+commit_sha = "973ddf11005ed7a64200babbdff707f54463030e"
+
+[feedstock_states.pyiron_potentialfit-feedstock.recipe_commit_cache]
+sha = "973ddf11005ed7a64200babbdff707f54463030e"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:44:42Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.pyiron_snippets-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 55707
+
+[feedstock_states.pyiron_snippets-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:10:44Z"
+commit_sha = "06e12482f7ea0a7ea194a36a2d20fabdd66898fe"
+
+[feedstock_states.pyiron_snippets-feedstock.recipe_commit_cache]
+sha = "06e12482f7ea0a7ea194a36a2d20fabdd66898fe"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:10:44Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pyiron_vasp-feedstock]
 recipe_type = "recipe_v1"
@@ -120185,9 +121917,23 @@ date = "2025-07-21T18:18:56Z"
 commit_sha = "d740846674a8e308893a878747441356c0801529"
 
 [feedstock_states.pyiron_workflow-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 5866
+
+[feedstock_states.pyiron_workflow-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:44:16Z"
+commit_sha = "0d6ddd14e69d0a692244e977f4fbaeaac0fb7b05"
+
+[feedstock_states.pyiron_workflow-feedstock.recipe_commit_cache]
+sha = "0d6ddd14e69d0a692244e977f4fbaeaac0fb7b05"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:44:16Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pyironflow-feedstock]
 recipe_type = "recipe_v1"
@@ -120404,14 +122150,6 @@ contributors = ["duncanmmacleod"]
 date = "2026-09-04T08:39:56Z"
 commit_sha = "fa5b88c3817e1c48ee3c23442cb8d3a2a9e5760b"
 
-[feedstock_states.pykerberos-feedstock.recipe_commit_cache]
-sha = "fa5b88c3817e1c48ee3c23442cb8d3a2a9e5760b"
-message = "convert to v1 recipe.yaml"
-date = "2026-09-04T08:39:56Z"
-author_login = "duncanmmacleod"
-author_name = "Duncan Macleod"
-author_email = "macleoddm@cardiff.ac.uk"
-
 [feedstock_states.pykerr-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -120423,9 +122161,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 1666
 
 [feedstock_states.pykmip-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1063
+
+[feedstock_states.pykmip-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:40:37Z"
+commit_sha = "b173b80d56b2f8dd3041e5204f83ac32975383e3"
+
+[feedstock_states.pykmip-feedstock.recipe_commit_cache]
+sha = "b173b80d56b2f8dd3041e5204f83ac32975383e3"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:40:37Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pykml-feedstock]
 recipe_type = "meta_yaml"
@@ -120653,9 +122405,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 70118
 
 [feedstock_states.pylgbst-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1032
+
+[feedstock_states.pylgbst-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:53:21Z"
+commit_sha = "6c19034243e86607bd3f81280a8814a035dec439"
+
+[feedstock_states.pylgbst-feedstock.recipe_commit_cache]
+sha = "6c19034243e86607bd3f81280a8814a035dec439"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:53:21Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pylha-feedstock]
 recipe_type = "recipe_v1"
@@ -121006,9 +122772,23 @@ date = "2025-09-04T11:37:22Z"
 commit_sha = "779b7fc812153d90e53bced0eb228cbe4ddca996"
 
 [feedstock_states.pymace-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 12768
+
+[feedstock_states.pymace-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:22:09Z"
+commit_sha = "10f7051663aac637716bfb495b94c505ae7be562"
+
+[feedstock_states.pymace-feedstock.recipe_commit_cache]
+sha = "10f7051663aac637716bfb495b94c505ae7be562"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:22:09Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pymaeparser-feedstock]
 recipe_type = "meta_yaml"
@@ -121320,7 +123100,7 @@ downloads = 11230
 [feedstock_states.pymeasure-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
-downloads = 16461
+downloads = 9029
 
 [feedstock_states.pymeasure-feedstock.attribution]
 contribution_type = "conversion"
@@ -121672,9 +123452,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 722
 
 [feedstock_states.pymov2gif-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 9433
+
+[feedstock_states.pymov2gif-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:35:39Z"
+commit_sha = "cf0f0416efb6e3e3f8ac80c1486fba3650e9df77"
+
+[feedstock_states.pymov2gif-feedstock.recipe_commit_cache]
+sha = "cf0f0416efb6e3e3f8ac80c1486fba3650e9df77"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:35:39Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pymove-feedstock]
 recipe_type = "meta_yaml"
@@ -121886,9 +123680,23 @@ date = "2024-09-29T21:02:39Z"
 commit_sha = "13027773c84facc0453b032f29b50245181e2c67"
 
 [feedstock_states.pymupdf-fonts-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 905
+
+[feedstock_states.pymupdf-fonts-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:40:10Z"
+commit_sha = "f9473f123bcd041acc35396efee29fa06b81a639"
+
+[feedstock_states.pymupdf-fonts-feedstock.recipe_commit_cache]
+sha = "f9473f123bcd041acc35396efee29fa06b81a639"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:40:10Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pymust-feedstock]
 recipe_type = "meta_yaml"
@@ -123156,14 +124964,42 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 241907
 
 [feedstock_states.pyprctl-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 8287
 
+[feedstock_states.pyprctl-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:40:19Z"
+commit_sha = "3be9ee3d59cd126b97638d3006134a47212edc5f"
+
+[feedstock_states.pyprctl-feedstock.recipe_commit_cache]
+sha = "3be9ee3d59cd126b97638d3006134a47212edc5f"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:40:19Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.pyprecice-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 17655
+
+[feedstock_states.pyprecice-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:29:15Z"
+commit_sha = "3ae46905b3e5f12ebb2f56893c7e98198e04ba3f"
+
+[feedstock_states.pyprecice-feedstock.recipe_commit_cache]
+sha = "3ae46905b3e5f12ebb2f56893c7e98198e04ba3f"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:29:15Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pyprep-feedstock]
 recipe_type = "meta_yaml"
@@ -123171,9 +125007,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 11062
 
 [feedstock_states.pypresseportal-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 766
+
+[feedstock_states.pypresseportal-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:44:06Z"
+commit_sha = "936992548a2dcd3d3fcacd29c3790fe0ad0db156"
+
+[feedstock_states.pypresseportal-feedstock.recipe_commit_cache]
+sha = "936992548a2dcd3d3fcacd29c3790fe0ad0db156"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:44:06Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pyprind-feedstock]
 recipe_type = "recipe_v1"
@@ -123469,9 +125319,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 2195
 
 [feedstock_states.pyqalloy-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1319
+
+[feedstock_states.pyqalloy-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:38:06Z"
+commit_sha = "16f306a87cc2f72ffbecdae2e7e6653871e12c7b"
+
+[feedstock_states.pyqalloy-feedstock.recipe_commit_cache]
+sha = "16f306a87cc2f72ffbecdae2e7e6653871e12c7b"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:38:06Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pyqg-feedstock]
 recipe_type = "meta_yaml"
@@ -123853,9 +125717,23 @@ date = "2026-01-23T16:37:51Z"
 commit_sha = "2bae8880cdd993309f4198276cbd014f7e0c0397"
 
 [feedstock_states.pyre-extensions-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 197853
+
+[feedstock_states.pyre-extensions-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:19:26Z"
+commit_sha = "55370d6c65d471568691af20dde11c54ed1d4518"
+
+[feedstock_states.pyre-extensions-feedstock.recipe_commit_cache]
+sha = "55370d6c65d471568691af20dde11c54ed1d4518"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:19:26Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pyre-feedstock]
 recipe_type = "meta_yaml"
@@ -123939,6 +125817,27 @@ contribution_type = "conversion"
 contributors = ["xylar"]
 date = "2026-07-20T19:09:45Z"
 commit_sha = "503f1f55a8ff4223e4a9ed6c68cb79c17588898f"
+
+[feedstock_states.pyreml-feedstock]
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
+
+[feedstock_states.pyreml-feedstock.attribution]
+contribution_type = "new_feedstock"
+contributors = [
+    "almarch",
+    "eddiewrc",
+]
+date = "2026-09-05T21:24:32Z"
+commit_sha = "df7d93b9a9c8a82e7e31e20d949e991dfa8e62fe"
+
+[feedstock_states.pyreml-feedstock.recipe_commit_cache]
+sha = "df7d93b9a9c8a82e7e31e20d949e991dfa8e62fe"
+message = "Initial feedstock commit with conda-smithy 2026.9.1."
+date = "2026-09-05T21:24:32Z"
+author_login = "conda-forge-admin"
+author_name = "conda-forge-admin"
+author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.pyremo-feedstock]
 recipe_type = "meta_yaml"
@@ -124513,9 +126412,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 27637
 
 [feedstock_states.pyscreener-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1002
+
+[feedstock_states.pyscreener-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:41:49Z"
+commit_sha = "7a869fdd5ecb162d75097351ff61550290057450"
+
+[feedstock_states.pyscreener-feedstock.recipe_commit_cache]
+sha = "7a869fdd5ecb162d75097351ff61550290057450"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:41:49Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pyscreenshot-feedstock]
 recipe_type = "meta_yaml"
@@ -124854,9 +126767,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 66172
 
 [feedstock_states.pysipfenn-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2718
+
+[feedstock_states.pysipfenn-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:20:50Z"
+commit_sha = "3af596b8a78ce75a6adb0d5f4f689491f6725ffa"
+
+[feedstock_states.pysipfenn-feedstock.recipe_commit_cache]
+sha = "3af596b8a78ce75a6adb0d5f4f689491f6725ffa"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:20:50Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pysis-feedstock]
 recipe_type = "meta_yaml"
@@ -125040,9 +126967,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 10053
 
 [feedstock_states.pysoundcard-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 4940
+
+[feedstock_states.pysoundcard-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:11:50Z"
+commit_sha = "3c8f5a4b8c94b112f7ebe545498ba1d84e3f3812"
+
+[feedstock_states.pysoundcard-feedstock.recipe_commit_cache]
+sha = "3c8f5a4b8c94b112f7ebe545498ba1d84e3f3812"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:11:50Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pysoundfile-feedstock]
 recipe_type = "recipe_v1"
@@ -125927,14 +127868,6 @@ contribution_type = "conversion"
 contributors = ["thewchan"]
 date = "2026-09-01T19:27:52Z"
 commit_sha = "b8a40d267d578e52d12dc5b036fbc4757da3d85c"
-
-[feedstock_states.pytermgui-feedstock.recipe_commit_cache]
-sha = "b8a40d267d578e52d12dc5b036fbc4757da3d85c"
-message = "Switch to v1"
-date = "2026-09-01T19:27:52Z"
-author_login = "thewchan"
-author_name = "Matt Chan"
-author_email = "thewchan@gmail.com"
 
 [feedstock_states.pytesseract-feedstock]
 recipe_type = "meta_yaml"
@@ -128228,9 +130161,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 837918
 
 [feedstock_states.python-iso639-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 149728
+
+[feedstock_states.python-iso639-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:37:57Z"
+commit_sha = "64fd56a7e9d9fb83834c79975092a929ce14eda0"
+
+[feedstock_states.python-iso639-feedstock.recipe_commit_cache]
+sha = "64fd56a7e9d9fb83834c79975092a929ce14eda0"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:37:57Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.python-javabridge-feedstock]
 recipe_type = "meta_yaml"
@@ -128996,9 +130943,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 116633
 
 [feedstock_states.python-sscha-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 6501
+
+[feedstock_states.python-sscha-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:34:06Z"
+commit_sha = "1f39650d7b3b132f536ea692a97ae8177b22abdf"
+
+[feedstock_states.python-sscha-feedstock.recipe_commit_cache]
+sha = "1f39650d7b3b132f536ea692a97ae8177b22abdf"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:34:06Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.python-statemachine-feedstock]
 recipe_type = "recipe_v1"
@@ -129104,24 +131065,6 @@ contribution_type = "conversion"
 contributors = ["wshanks"]
 date = "2026-09-04T14:23:19Z"
 commit_sha = "4e63527bcecde3d3eab8470999429388c6bcd470"
-
-[feedstock_states.python-subunit-feedstock.recipe_commit_cache]
-sha = "4e63527bcecde3d3eab8470999429388c6bcd470"
-message = """
-chore: convert recipe to v1 (#12)
-
-* chore: convert recipe to v1
-
-* MNT: Re-rendered with conda-smithy 2026.9.1 and conda-forge-pinning 2026.09.03.21.56.33
-
-Other tools:
-- conda-build 26.7.1
-- rattler-build 0.75.0
-- rattler-build-conda-compat 1.4.19"""
-date = "2026-09-04T14:23:19Z"
-author_login = "conda-forge-admin"
-author_name = "automatic conda-forge administrator"
-author_email = "condaforge@gmail.com"
 
 [feedstock_states.python-suitesparse-graphblas-feedstock]
 recipe_type = "meta_yaml"
@@ -129695,9 +131638,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 60109
 
 [feedstock_states.pytoolconfig-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1320016
+
+[feedstock_states.pytoolconfig-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:48:54Z"
+commit_sha = "4c42dec2988a62046c04aa99cb04e5108d36f64b"
+
+[feedstock_states.pytoolconfig-feedstock.recipe_commit_cache]
+sha = "4c42dec2988a62046c04aa99cb04e5108d36f64b"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:48:54Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pytools-feedstock]
 recipe_type = "meta_yaml"
@@ -129761,9 +131718,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 30716
 
 [feedstock_states.pytorch-minimize-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1299
+
+[feedstock_states.pytorch-minimize-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:54:04Z"
+commit_sha = "dc0d22eb79046c39dfd1ddeab2d7b5d6493f0e8e"
+
+[feedstock_states.pytorch-minimize-feedstock.recipe_commit_cache]
+sha = "dc0d22eb79046c39dfd1ddeab2d7b5d6493f0e8e"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:54:04Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.pytorch-model-summary-feedstock]
 recipe_type = "meta_yaml"
@@ -131219,19 +133190,6 @@ contributors = ["wshanks"]
 date = "2026-09-04T14:10:04Z"
 commit_sha = "c0d465628c85f905c8d0a7a62797186872fcf3f8"
 
-[feedstock_states.qiskit-finance-feedstock.recipe_commit_cache]
-sha = "c0d465628c85f905c8d0a7a62797186872fcf3f8"
-message = """
-chore: convert recipe to v1 (#11)
-
-* chore: convert recipe to v1 & -rendered with conda-smithy 2026.9.1 and conda-forge-pinning 2026.09.03.21.56.3
-
-* Add setuptools"""
-date = "2026-09-04T14:10:04Z"
-author_login = "conda-forge-admin"
-author_name = "automatic conda-forge administrator"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.qiskit-ibm-experiment-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -131274,17 +133232,6 @@ contributors = ["conda-forge-admin"]
 date = "2026-09-04T14:02:29Z"
 commit_sha = "11c7ffa1af5db7ae727726d59d84ef1425d67ca2"
 
-[feedstock_states.qiskit-machine-learning-feedstock.recipe_commit_cache]
-sha = "11c7ffa1af5db7ae727726d59d84ef1425d67ca2"
-message = """
-chore: convert recipe to v1 (#24)
-
-* chore: convert recipe to v1 & -rendered with conda-smithy 2026.9.1 and conda-forge-pinning 2026.09.03.21.56.3"""
-date = "2026-09-04T14:02:29Z"
-author_login = "conda-forge-admin"
-author_name = "automatic conda-forge administrator"
-author_email = "condaforge@gmail.com"
-
 [feedstock_states.qiskit-metal-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-12-10T02:49:44.832831398+00:00"
@@ -131306,17 +133253,6 @@ contribution_type = "conversion"
 contributors = ["conda-forge-admin"]
 date = "2026-09-04T14:03:14Z"
 commit_sha = "65a37f1d116b4ad5c49020a7d1b28ad831a42c8e"
-
-[feedstock_states.qiskit-optimization-feedstock.recipe_commit_cache]
-sha = "65a37f1d116b4ad5c49020a7d1b28ad831a42c8e"
-message = """
-chore: convert recipe to v1 (#12)
-
-* chore: convert recipe to v1 & -rendered with conda-smithy 2026.9.1 and conda-forge-pinning 2026.09.03.21.56.3"""
-date = "2026-09-04T14:03:14Z"
-author_login = "conda-forge-admin"
-author_name = "automatic conda-forge administrator"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.qiskit-qasm3-import-feedstock]
 recipe_type = "recipe_v1"
@@ -131909,14 +133845,6 @@ contributors = ["jkotan"]
 date = "2026-09-04T07:25:52Z"
 commit_sha = "e6608832937a55e28bb8319ffe639465bf15f890"
 
-[feedstock_states.qtchecker-feedstock.recipe_commit_cache]
-sha = "e6608832937a55e28bb8319ffe639465bf15f890"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T07:25:52Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.qtconsole-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -132384,14 +134312,6 @@ contributors = ["schloerke"]
 date = "2026-09-04T20:22:16Z"
 commit_sha = "67fbeb707929c59f883a89ce286995c1c2668526"
 
-[feedstock_states.querychat-feedstock.recipe_commit_cache]
-sha = "67fbeb707929c59f883a89ce286995c1c2668526"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T20:22:16Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.queryish-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2025-10-10T02:29:42.608909760+00:00"
@@ -132565,9 +134485,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 30211
 
 [feedstock_states.quimb-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 58266
+
+[feedstock_states.quimb-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:48:32Z"
+commit_sha = "d7f4bfe5101b987f34932eda6fc23abe45e2b793"
+
+[feedstock_states.quimb-feedstock.recipe_commit_cache]
+sha = "d7f4bfe5101b987f34932eda6fc23abe45e2b793"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:48:32Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.quippy-feedstock]
 recipe_type = "meta_yaml"
@@ -152266,14 +154200,6 @@ contributors = ["andre-merzky"]
 date = "2026-09-04T21:03:47Z"
 commit_sha = "d6ac2af2510586c6e5e81a83c27bbf6ac6c01382"
 
-[feedstock_states."radical.asyncflow-feedstock".recipe_commit_cache]
-sha = "d6ac2af2510586c6e5e81a83c27bbf6ac6c01382"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T21:03:47Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states."radical.entk-feedstock"]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -152293,14 +154219,6 @@ contribution_type = "new_feedstock"
 contributors = ["andre-merzky"]
 date = "2026-09-04T21:03:54Z"
 commit_sha = "8a32c3148e21e403e2eb6b8429aea50d9c517484"
-
-[feedstock_states."radical.orbit-feedstock".recipe_commit_cache]
-sha = "8a32c3148e21e403e2eb6b8429aea50d9c517484"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T21:03:54Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states."radical.pilot-feedstock"]
 recipe_type = "meta_yaml"
@@ -154416,9 +156334,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 47180
 
 [feedstock_states.read-version-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 498
+
+[feedstock_states.read-version-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:20:16Z"
+commit_sha = "d9d200452bce6af54b8ca9e8df3c23fa452f9cc4"
+
+[feedstock_states.read-version-feedstock.recipe_commit_cache]
+sha = "d9d200452bce6af54b8ca9e8df3c23fa452f9cc4"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:20:16Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.readabilipy-feedstock]
 recipe_type = "recipe_v1"
@@ -156367,9 +158299,23 @@ date = "2026-08-18T07:24:47Z"
 commit_sha = "37ebc3b5f202fe2f03ec45f87a03ec999ae49132"
 
 [feedstock_states.rfc3161ng-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 552
+
+[feedstock_states.rfc3161ng-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:21:23Z"
+commit_sha = "dd64f52044701a96dd3847f09a383a2db8aa2341"
+
+[feedstock_states.rfc3161ng-feedstock.recipe_commit_cache]
+sha = "dd64f52044701a96dd3847f09a383a2db8aa2341"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:21:23Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.rfc3339-feedstock]
 recipe_type = "meta_yaml"
@@ -156502,14 +158448,6 @@ contribution_type = "new_feedstock"
 contributors = ["andre-merzky"]
 date = "2026-09-04T21:04:01Z"
 commit_sha = "0ecd43f7b0272c9c681a5dd7ded4e643556a0823"
-
-[feedstock_states.rhapsody-py-feedstock.recipe_commit_cache]
-sha = "0ecd43f7b0272c9c681a5dd7ded4e643556a0823"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T21:04:01Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.rhash-feedstock]
 recipe_type = "meta_yaml"
@@ -159638,9 +161576,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 6841
 
 [feedstock_states.rxnmapper-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1781
+
+[feedstock_states.rxnmapper-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:36:39Z"
+commit_sha = "10cceff6b4180ab278c741935bff063a5a780b6c"
+
+[feedstock_states.rxnmapper-feedstock.recipe_commit_cache]
+sha = "10cceff6b4180ab278c741935bff063a5a780b6c"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:36:39Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.rxspencer-feedstock]
 recipe_type = "meta_yaml"
@@ -159675,14 +161627,42 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 1882
 
 [feedstock_states.ryven-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 3778
 
+[feedstock_states.ryven-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:32:54Z"
+commit_sha = "06cd4b3f4c1413f1008fd2a0eb686ec9d25d00b9"
+
+[feedstock_states.ryven-feedstock.recipe_commit_cache]
+sha = "06cd4b3f4c1413f1008fd2a0eb686ec9d25d00b9"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:32:54Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
+
 [feedstock_states.ryvencore-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 4674
+
+[feedstock_states.ryvencore-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:32:10Z"
+commit_sha = "20c3ce755a81a4b64e3aea0fbbde7f693bae9471"
+
+[feedstock_states.ryvencore-feedstock.recipe_commit_cache]
+sha = "20c3ce755a81a4b64e3aea0fbbde7f693bae9471"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:32:10Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.ryvencore-qt-feedstock]
 recipe_type = "meta_yaml"
@@ -161086,9 +163066,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 6319
 
 [feedstock_states.scanpdf-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 804
+
+[feedstock_states.scanpdf-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:53:43Z"
+commit_sha = "1b61f7e87483671c4f89769846790547c24caa77"
+
+[feedstock_states.scanpdf-feedstock.recipe_commit_cache]
+sha = "1b61f7e87483671c4f89769846790547c24caa77"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:53:43Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.scanpy-feedstock]
 recipe_type = "meta_yaml"
@@ -161903,14 +163897,6 @@ contribution_type = "new_feedstock"
 contributors = ["jkotan"]
 date = "2026-09-04T07:26:00Z"
 commit_sha = "c3268738afa910125c96cb0931ef2f635fb6df19"
-
-[feedstock_states.scingestor-feedstock.recipe_commit_cache]
-sha = "c3268738afa910125c96cb0931ef2f635fb6df19"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T07:26:00Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.scinumtools3-feedstock]
 recipe_type = "meta_yaml"
@@ -165211,9 +167197,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 3263808
 
 [feedstock_states.simplegmail-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1446
+
+[feedstock_states.simplegmail-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:33:16Z"
+commit_sha = "7ac218b82cd7574394b87f09e4331a6b7ae30889"
+
+[feedstock_states.simplegmail-feedstock.recipe_commit_cache]
+sha = "7ac218b82cd7574394b87f09e4331a6b7ae30889"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:33:16Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.simpleini-feedstock]
 recipe_type = "recipe_v1"
@@ -165570,9 +167570,23 @@ last_changed = "2026-02-15T03:06:44.706957964+00:00"
 downloads = 135
 
 [feedstock_states.sixelcrop-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2436
+
+[feedstock_states.sixelcrop-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:16:49Z"
+commit_sha = "27e836efee197fcf7430292d9658e5c04ae7b741"
+
+[feedstock_states.sixelcrop-feedstock.recipe_commit_cache]
+sha = "27e836efee197fcf7430292d9658e5c04ae7b741"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:16:49Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.sixs-feedstock]
 recipe_type = "meta_yaml"
@@ -165674,9 +167688,22 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 2219
 
 [feedstock_states.skia-pathops-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 109683
+
+[feedstock_states.skia-pathops-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["pavelzw"]
+date = "2026-09-05T10:21:06Z"
+commit_sha = "6f942c5176b2025a7d54543ad027ac2a3ec1b55f"
+
+[feedstock_states.skia-pathops-feedstock.recipe_commit_cache]
+sha = "6f942c5176b2025a7d54543ad027ac2a3ec1b55f"
+message = "chore: convert recipe to v1 & -rendered with conda-smithy 2026.9.1 and conda-forge-pinning 2026.09.03.21.56.3"
+date = "2026-09-05T10:21:06Z"
+author_name = "conda-forge-webservices[bot]"
+author_email = "91080706+conda-forge-webservices[bot]@users.noreply.github.com"
 
 [feedstock_states.skidl-feedstock]
 recipe_type = "meta_yaml"
@@ -165746,9 +167773,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 17933
 
 [feedstock_states.skipatom-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1109
+
+[feedstock_states.skipatom-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:51:22Z"
+commit_sha = "d04c42c7107bc5efff32cd0a170687bef888647d"
+
+[feedstock_states.skipatom-feedstock.recipe_commit_cache]
+sha = "d04c42c7107bc5efff32cd0a170687bef888647d"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:51:22Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.skl2onnx-feedstock]
 recipe_type = "recipe_v1"
@@ -166427,9 +168468,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 678
 
 [feedstock_states.smallworld-api-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1146
+
+[feedstock_states.smallworld-api-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:35:23Z"
+commit_sha = "1d8bc9a91f670d25efedd4dd6e402c5605a17135"
+
+[feedstock_states.smallworld-api-feedstock.recipe_commit_cache]
+sha = "1d8bc9a91f670d25efedd4dd6e402c5605a17135"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:35:23Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.smart-arg-feedstock]
 recipe_type = "meta_yaml"
@@ -166735,14 +168790,6 @@ contribution_type = "new_feedstock"
 contributors = ["rxm7706"]
 date = "2026-09-04T08:53:59Z"
 commit_sha = "03aad58a9dd67fb8b50198a337dfa0e014a9c922"
-
-[feedstock_states.smolagents-feedstock.recipe_commit_cache]
-sha = "03aad58a9dd67fb8b50198a337dfa0e014a9c922"
-message = "Initial feedstock commit with conda-smithy 2026.9.1."
-date = "2026-09-04T08:53:59Z"
-author_login = "conda-forge-admin"
-author_name = "conda-forge-admin"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
 
 [feedstock_states.smoothify-feedstock]
 recipe_type = "meta_yaml"
@@ -167618,9 +169665,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 3140
 
 [feedstock_states.son-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1016
+
+[feedstock_states.son-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:55:12Z"
+commit_sha = "8dc9927e13404690b8bdaa4ad1be345233cf65ea"
+
+[feedstock_states.son-feedstock.recipe_commit_cache]
+sha = "8dc9927e13404690b8bdaa4ad1be345233cf65ea"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:55:12Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.sonar-scanner-msbuild-feedstock]
 recipe_type = "recipe_v1"
@@ -169269,9 +171330,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 320623
 
 [feedstock_states.sphinx-pdj-theme-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2716
+
+[feedstock_states.sphinx-pdj-theme-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:38:32Z"
+commit_sha = "63a6ebd60926e49afc6159dcee4a3fd908242e9d"
+
+[feedstock_states.sphinx-pdj-theme-feedstock.recipe_commit_cache]
+sha = "63a6ebd60926e49afc6159dcee4a3fd908242e9d"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:38:32Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.sphinx-prompt-feedstock]
 recipe_type = "meta_yaml"
@@ -172184,17 +174259,6 @@ contributors = ["conda-forge-admin"]
 date = "2026-09-04T13:59:14Z"
 commit_sha = "bfaaf1cada5412d5cbde691260a56821e4671088"
 
-[feedstock_states.stestr-feedstock.recipe_commit_cache]
-sha = "bfaaf1cada5412d5cbde691260a56821e4671088"
-message = """
-chore: convert recipe to v1 (#12)
-
-* chore: convert recipe to v1 & -rendered with conda-smithy 2026.9.1 and conda-forge-pinning 2026.09.03.21.56.3"""
-date = "2026-09-04T13:59:14Z"
-author_login = "conda-forge-admin"
-author_name = "automatic conda-forge administrator"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.stevedore-feedstock]
 recipe_type = "meta_yaml"
 last_changed = "2025-06-22T12:20:59.983799+00:00"
@@ -172279,9 +174343,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 51522
 
 [feedstock_states.stk-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2200
+
+[feedstock_states.stk-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:23:41Z"
+commit_sha = "4aa9aaab937f8ccf4d04edf666645110de4ccfe6"
+
+[feedstock_states.stk-feedstock.recipe_commit_cache]
+sha = "4aa9aaab937f8ccf4d04edf666645110de4ccfe6"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:23:41Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.stlearn-feedstock]
 recipe_type = "meta_yaml"
@@ -172841,9 +174919,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 3172
 
 [feedstock_states.striprtf-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 109203
+
+[feedstock_states.striprtf-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:39:45Z"
+commit_sha = "dbcfc5a03dfa5115893e389173df56f82498147a"
+
+[feedstock_states.striprtf-feedstock.recipe_commit_cache]
+sha = "dbcfc5a03dfa5115893e389173df56f82498147a"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:39:45Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.stripy-feedstock]
 recipe_type = "meta_yaml"
@@ -173826,14 +175918,6 @@ contribution_type = "conversion"
 contributors = ["thewchan"]
 date = "2026-09-04T17:19:28Z"
 commit_sha = "d52e7e274187e6b0f1261352ba90b6ebfb9d33ef"
-
-[feedstock_states.swapper-feedstock.recipe_commit_cache]
-sha = "d52e7e274187e6b0f1261352ba90b6ebfb9d33ef"
-message = "Switch to v1"
-date = "2026-09-04T17:19:28Z"
-author_login = "thewchan"
-author_name = "Matt Chan"
-author_email = "thewchan@gmail.com"
 
 [feedstock_states.swashes-feedstock]
 recipe_type = "meta_yaml"
@@ -175465,9 +177549,23 @@ recipe_type = "meta_yaml"
 last_changed = "2026-04-11T03:07:30.302439841+00:00"
 
 [feedstock_states.tdscha-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 5369
+
+[feedstock_states.tdscha-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:34:32Z"
+commit_sha = "4e83c8240a0ef2f952b8f4855ac2cc2778a5d1a0"
+
+[feedstock_states.tdscha-feedstock.recipe_commit_cache]
+sha = "4e83c8240a0ef2f952b8f4855ac2cc2778a5d1a0"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:34:32Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.tea-feedstock]
 recipe_type = "recipe_v1"
@@ -175792,9 +177890,22 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 1654186
 
 [feedstock_states.tensordict-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 27477
+
+[feedstock_states.tensordict-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["conda-forge-webservices[bot]"]
+date = "2026-09-05T06:53:14Z"
+commit_sha = "6a46e37cff54251ead11e8c71ef3b9f06c9fb629"
+
+[feedstock_states.tensordict-feedstock.recipe_commit_cache]
+sha = "6a46e37cff54251ead11e8c71ef3b9f06c9fb629"
+message = "chore: convert recipe to v1 & -rendered with conda-smithy 2026.9.1 and conda-forge-pinning 2026.09.03.21.56.3"
+date = "2026-09-05T06:53:14Z"
+author_name = "conda-forge-webservices[bot]"
+author_email = "91080706+conda-forge-webservices[bot]@users.noreply.github.com"
 
 [feedstock_states.tensorflow-cpu-feedstock]
 recipe_type = "meta_yaml"
@@ -178636,9 +180747,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 3063119
 
 [feedstock_states.tokentrim-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 616
+
+[feedstock_states.tokentrim-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:38:23Z"
+commit_sha = "3d199ff6f868ee5aa76daa84bde0e90faedb31ea"
+
+[feedstock_states.tokentrim-feedstock.recipe_commit_cache]
+sha = "3d199ff6f868ee5aa76daa84bde0e90faedb31ea"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:38:23Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.tokyocabinet-feedstock]
 recipe_type = "recipe_v1"
@@ -179038,9 +181163,23 @@ date = "2026-04-30T08:59:53Z"
 commit_sha = "ff668e91afcde487b13738458f08e320c8b85e91"
 
 [feedstock_states.torch-ema-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 35732
+
+[feedstock_states.torch-ema-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:47:20Z"
+commit_sha = "088d10cff77003bdcab22d9a635f01480c69dd2e"
+
+[feedstock_states.torch-ema-feedstock.recipe_commit_cache]
+sha = "088d10cff77003bdcab22d9a635f01480c69dd2e"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:47:20Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.torch-fftconv-feedstock]
 recipe_type = "recipe_v1"
@@ -179131,9 +181270,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 1317
 
 [feedstock_states.torch-runstats-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 9575
+
+[feedstock_states.torch-runstats-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:39:51Z"
+commit_sha = "2111a11df4d000cff8589169d37c8e259d604619"
+
+[feedstock_states.torch-runstats-feedstock.recipe_commit_cache]
+sha = "2111a11df4d000cff8589169d37c8e259d604619"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:39:51Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.torch-scatter-feedstock]
 recipe_type = "meta_yaml"
@@ -179319,9 +181472,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 1627854
 
 [feedstock_states.torchopt-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 18768
+
+[feedstock_states.torchopt-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:42:27Z"
+commit_sha = "2e344f763f62e1c0df912ebbd589c6466c769452"
+
+[feedstock_states.torchopt-feedstock.recipe_commit_cache]
+sha = "2e344f763f62e1c0df912ebbd589c6466c769452"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:42:27Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.torchquad-feedstock]
 recipe_type = "meta_yaml"
@@ -181593,9 +183760,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 4604
 
 [feedstock_states.tt-sketch-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 12366
+
+[feedstock_states.tt-sketch-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:23:23Z"
+commit_sha = "bc750065bef53c8c9b0099e0361b75585ec686ef"
+
+[feedstock_states.tt-sketch-feedstock.recipe_commit_cache]
+sha = "bc750065bef53c8c9b0099e0361b75585ec686ef"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:23:23Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.ttach-feedstock]
 recipe_type = "meta_yaml"
@@ -181624,9 +183805,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 29778
 
 [feedstock_states.ttopt-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 561
+
+[feedstock_states.ttopt-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:34:50Z"
+commit_sha = "4d37e5178dd8b27128e3a77c227c12c08f778e8e"
+
+[feedstock_states.ttopt-feedstock.recipe_commit_cache]
+sha = "4d37e5178dd8b27128e3a77c227c12c08f778e8e"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:34:50Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.ttp-feedstock]
 recipe_type = "meta_yaml"
@@ -184077,9 +186272,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 2264201
 
 [feedstock_states.uf3-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 612
+
+[feedstock_states.uf3-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:52:33Z"
+commit_sha = "fe5b0fe779f90c49f27fa4ad97742952c6d56529"
+
+[feedstock_states.uf3-feedstock.recipe_commit_cache]
+sha = "fe5b0fe779f90c49f27fa4ad97742952c6d56529"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:52:33Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states."ufal.udpipe-feedstock"]
 recipe_type = "meta_yaml"
@@ -184182,9 +186391,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 4042
 
 [feedstock_states.uharfbuzz-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 42862
+
+[feedstock_states.uharfbuzz-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:57:07Z"
+commit_sha = "fd3b188ef51c63aa10d009cee2960b55b588e182"
+
+[feedstock_states.uharfbuzz-feedstock.recipe_commit_cache]
+sha = "fd3b188ef51c63aa10d009cee2960b55b588e182"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:57:07Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.uhd-feedstock]
 recipe_type = "meta_yaml"
@@ -184459,9 +186682,23 @@ date = "2025-12-08T06:09:11Z"
 commit_sha = "0793c3128fa20fd82320c263379e02ed675401b6"
 
 [feedstock_states.uncertainty-toolbox-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 5734
+
+[feedstock_states.uncertainty-toolbox-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:30:21Z"
+commit_sha = "a0e7186095ceb5e31ac17c76a184a1a56018f689"
+
+[feedstock_states.uncertainty-toolbox-feedstock.recipe_commit_cache]
+sha = "a0e7186095ceb5e31ac17c76a184a1a56018f689"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:30:21Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.uncommitted-feedstock]
 recipe_type = "meta_yaml"
@@ -184766,9 +187003,23 @@ date = "2026-02-26T06:35:30Z"
 commit_sha = "84c7a7c4153be41dfa77e37f02d0d1cdcc186b85"
 
 [feedstock_states.units-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 811
+
+[feedstock_states.units-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T12:19:01Z"
+commit_sha = "5b1e65bf7ce7caefeead9c285a38ce47d833395f"
+
+[feedstock_states.units-feedstock.recipe_commit_cache]
+sha = "5b1e65bf7ce7caefeead9c285a38ce47d833395f"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T12:19:01Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.unittest-xml-reporting-feedstock]
 recipe_type = "meta_yaml"
@@ -184973,9 +187224,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 602
 
 [feedstock_states.unstructured-client-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2680
+
+[feedstock_states.unstructured-client-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:37:04Z"
+commit_sha = "0f1afc8d707aff7b9cc8d9ff1ba55686aa6463a0"
+
+[feedstock_states.unstructured-client-feedstock.recipe_commit_cache]
+sha = "0f1afc8d707aff7b9cc8d9ff1ba55686aa6463a0"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:37:04Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.unstructured-feedstock]
 recipe_type = "recipe_v1"
@@ -185198,9 +187463,23 @@ last_changed = "2025-09-23T02:28:41.273280366+00:00"
 downloads = 255
 
 [feedstock_states.upstash-ratelimit-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 533
+
+[feedstock_states.upstash-ratelimit-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:14:06Z"
+commit_sha = "331abba132c245f870a6bfeeea9f7befd9770905"
+
+[feedstock_states.upstash-ratelimit-feedstock.recipe_commit_cache]
+sha = "331abba132c245f870a6bfeeea9f7befd9770905"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:14:06Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.upstash-redis-feedstock]
 recipe_type = "recipe_v1"
@@ -185278,9 +187557,23 @@ date = "2026-03-01T08:17:49Z"
 commit_sha = "0781eab6bcded676ad5faf18c6b0c2f6718f003d"
 
 [feedstock_states.uravu-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1257
+
+[feedstock_states.uravu-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:51:48Z"
+commit_sha = "47d61f68a29a8ee2971143b525dd72bb16174cd1"
+
+[feedstock_states.uravu-feedstock.recipe_commit_cache]
+sha = "47d61f68a29a8ee2971143b525dd72bb16174cd1"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:51:48Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.urbanaccess-feedstock]
 recipe_type = "meta_yaml"
@@ -185798,9 +188091,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 2898
 
 [feedstock_states.vabene-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 724
+
+[feedstock_states.vabene-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T11:24:07Z"
+commit_sha = "20c31710a243f4e79882465f02114feca96c1928"
+
+[feedstock_states.vabene-feedstock.recipe_commit_cache]
+sha = "20c31710a243f4e79882465f02114feca96c1928"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T11:24:07Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.vacumm-data-feedstock]
 recipe_type = "meta_yaml"
@@ -186820,9 +189127,23 @@ date = "2026-06-11T14:26:28Z"
 commit_sha = "df8d22944ce4c5b10714c8a1e479501ff612ea50"
 
 [feedstock_states.vharfbuzz-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1301
+
+[feedstock_states.vharfbuzz-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T13:39:21Z"
+commit_sha = "a0af9f88f85a0219aa6fab56802d3d91e231aedd"
+
+[feedstock_states.vharfbuzz-feedstock.recipe_commit_cache]
+sha = "a0af9f88f85a0219aa6fab56802d3d91e231aedd"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T13:39:21Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.vhs-feedstock]
 recipe_type = "recipe_v1"
@@ -187085,9 +189406,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 115134
 
 [feedstock_states.vise-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1493
+
+[feedstock_states.vise-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:43:51Z"
+commit_sha = "9539b976593f114ac6d6d5bfa4e72450b3df2caf"
+
+[feedstock_states.vise-feedstock.recipe_commit_cache]
+sha = "9539b976593f114ac6d6d5bfa4e72450b3df2caf"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:43:51Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.viser-feedstock]
 recipe_type = "recipe_v1"
@@ -188545,9 +190880,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 7168
 
 [feedstock_states.wannier90io-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 1387
+
+[feedstock_states.wannier90io-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:49:38Z"
+commit_sha = "8fd75e16ff00dc30c2b2197a6951921b5cb02f74"
+
+[feedstock_states.wannier90io-feedstock.recipe_commit_cache]
+sha = "8fd75e16ff00dc30c2b2197a6951921b5cb02f74"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:49:38Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.wannierberri-feedstock]
 recipe_type = "meta_yaml"
@@ -189199,19 +191548,6 @@ contributors = ["wshanks"]
 date = "2026-09-04T14:10:43Z"
 commit_sha = "f991a4bc58920cb86de03a3b759aaed4bb066bce"
 
-[feedstock_states.websocket-client-feedstock.recipe_commit_cache]
-sha = "f991a4bc58920cb86de03a3b759aaed4bb066bce"
-message = """
-chore: convert recipe to v1 (#72)
-
-* chore: convert recipe to v1 & -rendered with conda-smithy 2026.9.1 and conda-forge-pinning 2026.09.03.21.56.3
-
-* Add setuptools"""
-date = "2026-09-04T14:10:43Z"
-author_login = "conda-forge-admin"
-author_name = "automatic conda-forge administrator"
-author_email = "chrisburr73+conda-forge-admin@gmail.com"
-
 [feedstock_states.websocket-feedstock]
 recipe_type = "recipe_v1"
 last_changed = "2026-04-27T03:09:59.824672385+00:00"
@@ -189224,9 +191560,23 @@ date = "2026-04-26T18:04:06Z"
 commit_sha = "4f7d5dbc491624a080c8dce730632a84c4f7eb8d"
 
 [feedstock_states.websocket-server-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 733
+
+[feedstock_states.websocket-server-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:13:22Z"
+commit_sha = "e6b9304c41f7dc067dbce0444eb7090e9cd76788"
+
+[feedstock_states.websocket-server-feedstock.recipe_commit_cache]
+sha = "e6b9304c41f7dc067dbce0444eb7090e9cd76788"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:13:22Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.websocketpp-feedstock]
 recipe_type = "meta_yaml"
@@ -190733,9 +193083,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 4207
 
 [feedstock_states.xarg-python-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 2939
+
+[feedstock_states.xarg-python-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T08:35:48Z"
+commit_sha = "b0759bc7d3cc2fa9c1795a70786f28e22232f0dc"
+
+[feedstock_states.xarg-python-feedstock.recipe_commit_cache]
+sha = "b0759bc7d3cc2fa9c1795a70786f28e22232f0dc"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T08:35:48Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.xarpes-feedstock]
 recipe_type = "meta_yaml"
@@ -193156,9 +195520,23 @@ last_changed = "2025-06-22T12:20:59.983799+00:00"
 downloads = 28687
 
 [feedstock_states.yabadaba-feedstock]
-recipe_type = "meta_yaml"
-last_changed = "2025-06-22T12:20:59.983799+00:00"
+recipe_type = "recipe_v1"
+last_changed = "2026-09-06T06:51:10.749193896+00:00"
 downloads = 5343
+
+[feedstock_states.yabadaba-feedstock.attribution]
+contribution_type = "conversion"
+contributors = ["jan-janssen"]
+date = "2026-09-05T15:34:03Z"
+commit_sha = "698350cfeba334f6eb9d055b0b80dbc6e6cfbe50"
+
+[feedstock_states.yabadaba-feedstock.recipe_commit_cache]
+sha = "698350cfeba334f6eb9d055b0b80dbc6e6cfbe50"
+message = "Convert to v1 feedstock and use pixi as conda install tool"
+date = "2026-09-05T15:34:03Z"
+author_login = "jan-janssen"
+author_name = "Jan Janßen"
+author_email = "janssen@mpie.de"
 
 [feedstock_states.yachalk-feedstock]
 recipe_type = "recipe_v1"
