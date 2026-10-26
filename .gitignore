@@ -3,5 +3,5 @@ node_modules
 CLAUDE.md
 dist/
 web/src/stats.toml
-cf-graph-countyfair
+conda-forge-bot-data-node_attrs
 .env

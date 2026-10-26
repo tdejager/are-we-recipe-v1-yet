@@ -16,7 +16,7 @@ The project consists of two main components:
 - **Build**: Trunk for WASM compilation
 
 ### Data Collector (`data-collector/`)
-- **Purpose**: Analyzes conda-forge feedstocks via cf-graph-countyfair sparse checkout
+- **Purpose**: Analyzes conda-forge feedstocks via a sparse checkout of conda-forge-bot-data-node_attrs
 - **Output**: Generates `feedstock-stats.toml` with current statistics
 - **Method**: Uses git sparse checkout for efficient metadata access
 
@@ -58,7 +58,7 @@ pixi run collect-data-verbose # Run with verbose output
 ## 📊 Data Collection
 
 The data collector:
-1. Uses git sparse checkout to download cf-graph-countyfair metadata
+1. Uses git sparse checkout to download conda-forge-bot-data-node_attrs metadata
 2. Analyzes ~26k feedstock JSON files efficiently
 3. Detects Recipe v1 by checking `conda_build_tool: "rattler-build"` in conda-forge.yml
 4. Outputs statistics to `feedstock-stats.toml`

@@ -34,7 +34,7 @@ pub fn load_existing_stats(stats_path: &str) -> Result<FeedstockStats> {
 }
 
 /// Collect feesdstock statistics from node attributes files.
-/// Which are present in the `node_attrs` directory of the sparse checkout repository.
+/// Which are present in the sparse checkout of the `conda-forge-bot-data-node_attrs` repository.
 pub async fn collect_stats_from_node_attrs(
     force_reload: bool,
     verbose: bool,
@@ -51,9 +51,9 @@ pub async fn collect_stats_from_node_attrs(
     ensure_sparse_checkout_repo(force_reload, verbose)?;
 
     println!("📂 Scanning node_attrs directory...");
-    let node_attrs_path = format!("{}/node_attrs", CF_GRAPH_LOCAL_PATH);
+    let node_attrs_path = CF_GRAPH_LOCAL_PATH;
 
-    if !Path::new(&node_attrs_path).exists() {
+    if !Path::new(node_attrs_path).exists() {
         return Err(anyhow::anyhow!(
             "node_attrs directory not found at {}",
             node_attrs_path
@@ -61,8 +61,9 @@ pub async fn collect_stats_from_node_attrs(
     }
 
     // Count total JSON files first for progress bar
-    let json_files: Vec<_> = WalkDir::new(&node_attrs_path)
+    let json_files: Vec<_> = WalkDir::new(node_attrs_path)
         .into_iter()
+        .filter_entry(|entry| entry.file_name() != ".git")
         .filter_map(|e| e.ok())
         .filter(|entry| {
             entry.file_type().is_file() && entry.path().extension().is_some_and(|ext| ext == "json")
