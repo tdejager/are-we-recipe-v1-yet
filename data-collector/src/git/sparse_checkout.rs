@@ -14,8 +14,8 @@ pub fn ensure_sparse_checkout_repo(force_reload: bool, verbose: bool) -> Result<
     }
 
     if !repo_path.exists() {
-        println!("📥 Creating sparse checkout of cf-graph-countyfair repository...");
-        println!("🎯 Only downloading node_attrs directory (much faster than full clone)");
+        println!("📥 Creating sparse checkout of conda-forge-bot-data-node_attrs repository...");
+        println!("🎯 Only downloading sharded node_attrs directories (much faster than full clone)");
 
         // Create directory and initialize git
         fs::create_dir_all(repo_path).context("Failed to create repository directory")?;
@@ -75,11 +75,12 @@ pub fn ensure_sparse_checkout_repo(force_reload: bool, verbose: bool) -> Result<
 
         // Set sparse checkout patterns
         let sparse_checkout_path = repo_path.join(".git/info/sparse-checkout");
-        fs::write(&sparse_checkout_path, "node_attrs/*\n")
+        // Node attrs are sharded at the repo root as `<hex>/<hex>/<hex>/<hex>/<hex>/<name>.json`
+        fs::write(&sparse_checkout_path, "/[0-9a-f]/\n")
             .context("Failed to write sparse-checkout file")?;
 
         if verbose {
-            println!("✅ Sparse checkout pattern set to node_attrs/*");
+            println!("✅ Sparse checkout pattern set to /[0-9a-f]/");
         }
 
         // Pull with depth=1
@@ -112,8 +113,7 @@ pub fn ensure_sparse_checkout_repo(force_reload: bool, verbose: bool) -> Result<
         }
     } else {
         // Check if existing sparse checkout is valid
-        let node_attrs_path = repo_path.join("node_attrs");
-        if node_attrs_path.exists() {
+        if repo_path.join(".git").exists() && repo_path.join("0").exists() {
             if verbose {
                 println!("📂 Using existing sparse checkout");
             }

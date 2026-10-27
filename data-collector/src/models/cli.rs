@@ -25,7 +25,7 @@ pub struct Cli {
 
 #[derive(Subcommand)]
 pub enum Commands {
-    /// Analyze conda-forge feedstocks using cf-graph-countyfair data
+    /// Analyze conda-forge feedstocks using conda-forge-bot-data-node_attrs data
     Analyze {
         /// Force re-clone the repository even if it exists
         #[arg(long)]
