@@ -4,9 +4,15 @@ use indicatif::{ProgressBar, ProgressStyle};
 use rattler_conda_types::Version;
 use serde::Deserialize;
 use std::collections::HashMap;
+use std::time::Duration;
 
 const GRAPHQL_ENDPOINT: &str = "https://prefix.dev/api/graphql";
-const CONCURRENT_REQUESTS: usize = 50;
+// Each page asks prefix.dev for all-time download counts of 50 packages, which
+// is an expensive aggregation on their side. Keep the number of requests in
+// flight small so the backend can answer them instead of timing out.
+const CONCURRENT_REQUESTS: usize = 4;
+const MAX_ATTEMPTS: u32 = 3;
+const REQUEST_TIMEOUT: Duration = Duration::from_secs(120);
 const PACKAGES_PER_PAGE: u32 = 50;
 const TOP_VERSIONS_LIMIT: usize = 10;
 
@@ -48,7 +54,11 @@ struct DownloadCount {
 
 /// Fetch download counts for all conda-forge packages from prefix.dev GraphQL API
 pub async fn fetch_download_counts() -> Result<HashMap<String, u64>> {
-    let client = reqwest::Client::new();
+    let client = reqwest::Client::builder()
+        .user_agent("are-we-recipe-v1-yet/1.0 (+https://github.com/tdejager/are-we-recipe-v1-yet)")
+        .timeout(REQUEST_TIMEOUT)
+        .build()
+        .context("Failed to build HTTP client")?;
 
     // First, fetch to get total page count
     let total_pages = fetch_page_count(&client).await?;
@@ -67,7 +77,7 @@ pub async fn fetch_download_counts() -> Result<HashMap<String, u64>> {
     let results: Vec<Result<Vec<Package>>> = stream::iter(1..=total_pages)
         .map(|page| {
             let client = client.clone();
-            async move { fetch_page(&client, page).await }
+            async move { fetch_page_with_retry(&client, page).await }
         })
         .buffer_unordered(CONCURRENT_REQUESTS)
         .inspect(|_| pb.inc(1))
@@ -135,6 +145,22 @@ async fn fetch_page_count(client: &reqwest::Client) -> Result<u32> {
         .context("No page count in response")
 }
 
+/// Fetch a page, retrying a few times with a growing pause in between so a
+/// transient failure doesn't drop 50 packages from the statistics.
+async fn fetch_page_with_retry(client: &reqwest::Client, page: u32) -> Result<Vec<Package>> {
+    let mut attempt = 1;
+    loop {
+        match fetch_page(client, page).await {
+            Ok(packages) => return Ok(packages),
+            Err(_) if attempt < MAX_ATTEMPTS => {
+                tokio::time::sleep(Duration::from_secs(10 * attempt as u64)).await;
+                attempt += 1;
+            }
+            Err(e) => return Err(e),
+        }
+    }
+}
+
 /// Fetch a single page of packages with their download counts
 async fn fetch_page(client: &reqwest::Client, page: u32) -> Result<Vec<Package>> {
     let query = format!(
@@ -160,6 +186,8 @@ async fn fetch_page(client: &reqwest::Client, page: u32) -> Result<Vec<Package>>
         .json(&serde_json::json!({ "query": query }))
         .send()
         .await
+        .context(format!("Failed to fetch page {}", page))?
+        .error_for_status()
         .context(format!("Failed to fetch page {}", page))?
         .json()
         .await
